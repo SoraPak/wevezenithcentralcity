@@ -1,0 +1,1 @@
+import{_ as t,c as s,a as o,o as a}from"./KC2W2TYe.js";const n={};function r(c,e){return a(),s("div",null,e[0]||(e[0]=[o("h1",null,"Welcome to the Homepage",-1),o("p",null,"This is the homepage of the website.afdsafds",-1)]))}const f=t(n,[["render",r]]);export{f as default};

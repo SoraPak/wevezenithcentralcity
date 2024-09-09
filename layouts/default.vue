@@ -1,12 +1,16 @@
 <template>
   <div class="bodWrap">
     <header>
+      <h1>두산위브더제니스 센트럴시티</h1>
       <nav>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
+          <li><nuxt-link to="/about">사업개요</nuxt-link></li>
+          <li><nuxt-link to="/location">입지여건</nuxt-link></li>
+          <li><nuxt-link to="/complex">단지안내</nuxt-link></li>
+          <li><nuxt-link to="/space">세대안내</nuxt-link></li>
         </ul>
       </nav>
+      <div><span>010</span>9357.0669</div>
     </header>
     <main>
       <NuxtPage />

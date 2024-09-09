@@ -24,6 +24,7 @@ export default defineNuxtConfig({
     fallback: true // 404 페이지를 위해 필요
   },
   app: {
+    baseURL: '/',
     head: {
       title: '학정역 두산위브더제니스 센트럴시티',
       meta: [
