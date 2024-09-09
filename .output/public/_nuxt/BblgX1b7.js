@@ -1,0 +1,1 @@
+import{_ as t,c as n,a as o,o as a}from"./BRRAcWWp.js";const s={};function c(l,e){return a(),n("div",null,e[0]||(e[0]=[o("h1",null,"location",-1),o("p",null,"This is the about page of the website.",-1)]))}const i=t(s,[["render",c]]);export{i as default};
