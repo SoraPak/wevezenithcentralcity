@@ -1,11 +1,15 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  target: 'static', // 정적 사이트 빌드용 설정
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
   css: [
     '~/assets/css/reset.css',
     '~/assets/css/common.css',
   ],
+  generate: {
+    fallback: true, // 404 페이지를 위한 설정
+  },
   app: {
     head: {
       title: '학정역 두산위브더제니스 센트럴시티',
