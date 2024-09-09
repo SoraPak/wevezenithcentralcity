@@ -1,6 +1,8 @@
 # wevezenithcentralcity
 학정역 두산위브더제니스 센트럴시티 홈페이지 레포지터리
 
+학정역두산위브.kr
+
 
 ## Nuxt 3 Minimal Starter
 
