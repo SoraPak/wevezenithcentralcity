@@ -2,19 +2,24 @@
 export default defineNuxtConfig({
   nitro: {
     prerender: {
-      routes: ['/'] // 필요 없는 메타 파일을 생성하지 않도록 특정 경로만 지정
+      routes: ['/'] // 특정 경로만 사전 렌더링
     }
   },
+  // 라우터 기본 경로 설정
   router: {
     base: '/'
   },
-  target: 'static', // 정적 사이트 빌드용 설정
+  // 정적 사이트 빌드를 위한 타겟
+  target: 'static',
+  // Nuxt.js와의 호환성을 위한 설정
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
+  // 전역으로 적용될 CSS 파일들
   css: [
     '~/assets/css/reset.css',
     '~/assets/css/common.css',
   ],
+  // 빌드 시 파일 이름 설정
   build: {
     filenames: {
       app: ({ isDev }) => isDev ? '[name].js' : '[name].[contenthash].js',
@@ -25,9 +30,12 @@ export default defineNuxtConfig({
       video: ({ isDev }) => isDev ? '[path][name].[ext]' : 'videos/[name].[contenthash:7].[ext]'
     }
   },
+  // 정적 페이지 생성을 위한 설정
   generate: {
-    fallback: true // 404 페이지를 위해 필요
+    fallback: true, // 404 페이지 생성을 위한 설정
+    dir: '.output/public' // 빌드 결과물을 저장할 디렉토리 명시
   },
+  // 애플리케이션의 메타 데이터 및 전역 설정
   app: {
     baseURL: '/',
     head: {
