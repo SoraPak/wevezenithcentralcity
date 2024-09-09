@@ -12,13 +12,16 @@ export default defineNuxtConfig({
   ],
   build: {
     filenames: {
-      app: ({ isDev }) => (isDev ? '[name].js' : '[name].[contenthash].js'),
-      chunk: ({ isDev }) => (isDev ? '[name].js' : '[name].[contenthash].js'),
-      css: ({ isDev }) => (isDev ? '[name].css' : '[name].[contenthash].css'),
+      app: ({ isDev }) => isDev ? '[name].js' : '[name].[contenthash].js',
+      chunk: ({ isDev }) => isDev ? '[name].js' : '[name].[contenthash].js',
+      css: ({ isDev }) => isDev ? '[name].css' : '[name].[contenthash].css',
+      img: ({ isDev }) => isDev ? '[path][name].[ext]' : 'img/[name].[contenthash:7].[ext]',
+      font: ({ isDev }) => isDev ? '[path][name].[ext]' : 'fonts/[name].[contenthash:7].[ext]',
+      video: ({ isDev }) => isDev ? '[path][name].[ext]' : 'videos/[name].[contenthash:7].[ext]'
     }
   },
   generate: {
-    fallback: true, // 404 페이지를 위한 설정
+    fallback: true // 404 페이지를 위해 필요
   },
   app: {
     head: {
