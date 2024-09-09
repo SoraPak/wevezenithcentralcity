@@ -1,5 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  nitro: {
+    prerender: {
+      routes: ['/'] // 필요 없는 메타 파일을 생성하지 않도록 특정 경로만 지정
+    }
+  },
   router: {
     base: '/'
   },
