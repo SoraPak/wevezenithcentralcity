@@ -1,7 +1,7 @@
 <template>
   <div class="bodWrap">
     <header>
-      <h1 class="logo"><nuxt-link to="/"><img src="/public/images/logo.svg" alt="학정역 두산위브더제니스 센트럴시티"></nuxt-link></h1>
+      <h1 class="logo"><nuxt-link to="/"><img src="/images/logo.svg" alt="학정역 두산위브더제니스 센트럴시티"></nuxt-link></h1>
       <nav>
         <ul>
           <li><nuxt-link to="/about">사업개요</nuxt-link></li>
