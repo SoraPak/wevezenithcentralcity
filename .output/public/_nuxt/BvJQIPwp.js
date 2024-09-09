@@ -1,1 +1,0 @@
-import{_ as o,v as s,x as t,t as n}from"./BmfGEvMh.js";const a={};function r(l,e){return n(),s("div",null,e[0]||(e[0]=[t("h1",null,"Welcome to the Homepage",-1),t("p",null,"This is the homepage of the website.afdsafds",-1)]))}const f=o(a,[["render",r]]);export{f as default};

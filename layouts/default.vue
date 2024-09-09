@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bodWrap">
     <header>
       <nav>
         <ul>
@@ -16,3 +16,14 @@
     </footer>
   </div>
 </template>
+
+<style scoped>
+.bodWrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+main {
+  flex: 1;
+}
+</style>
