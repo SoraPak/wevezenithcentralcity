@@ -10,7 +10,7 @@
           <li><nuxt-link to="/space">세대안내</nuxt-link></li>
         </ul>
       </nav>
-      <div class="tel"><div><span>010</span>9357.0669</div></div>
+      <div class="tel"><small>010)</small>9357.0669</div>
     </header>
     <main>
       <NuxtPage />
@@ -54,7 +54,12 @@ main {
 .tel {
   margin-left: auto;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 600;
+}
+.tel small {
+  font-size: 60%;
 }
 nav {
   display: flex;
