@@ -26,7 +26,8 @@ export default defineNuxtConfig({
     }
   },
   generate: {
-    fallback: true // 404 페이지를 위해 필요
+    dir: 'dist',  // 정적 파일을 생성할 디렉토리 지정
+    fallback: true // 404 페이지 생성을 위해 필요
   },
   app: {
     baseURL: '/',
