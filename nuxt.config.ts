@@ -1,5 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  router: {
+    base: '/'
+  },
   target: 'static', // 정적 사이트 빌드용 설정
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
@@ -7,6 +10,13 @@ export default defineNuxtConfig({
     '~/assets/css/reset.css',
     '~/assets/css/common.css',
   ],
+  build: {
+    filenames: {
+      app: ({ isDev }) => (isDev ? '[name].js' : '[name].[contenthash].js'),
+      chunk: ({ isDev }) => (isDev ? '[name].js' : '[name].[contenthash].js'),
+      css: ({ isDev }) => (isDev ? '[name].css' : '[name].[contenthash].css'),
+    }
+  },
   generate: {
     fallback: true, // 404 페이지를 위한 설정
   },
