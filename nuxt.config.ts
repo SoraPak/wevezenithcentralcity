@@ -2,14 +2,10 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
-  nitro: {
-    preset: 'static'
-  },
   css: [
     '~/assets/css/reset.css', // Reset CSS 파일
   ],
   app: {
-    buildAssetsDir: '/_nuxt/',
     head: {
       title: '학정역 두산위브더제니스 센트럴시티',
       meta: [
