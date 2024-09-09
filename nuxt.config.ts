@@ -3,7 +3,8 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
   css: [
-    '~/assets/css/reset.css', // Reset CSS 파일
+    '~/assets/css/reset.css',
+    '~/assets/css/common.css',
   ],
   app: {
     head: {
