@@ -9,3 +9,4 @@
   from = "/_nuxt/*"
   to = "/index.html"
   status = 200
+
