@@ -1,6 +1,6 @@
 [build]
   command = "npm run generate"
-  publish = ".output/public"
+  publish = "dist"
 
 [context.production.environment]
   NODE_ENV = 'production'
@@ -9,4 +9,3 @@
   from = "/_nuxt/*"
   to = "/index.html"
   status = 200
-
