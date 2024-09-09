@@ -24,6 +24,9 @@ export default defineNuxtConfig({
     dir: 'dist',  // 정적 파일을 생성할 디렉토리 지정
     fallback: true // 404 페이지 생성을 위해 필요
   },
+  nitro: {
+    preset: 'static'
+  },
   app: {
     baseURL: '/',
     head: {
