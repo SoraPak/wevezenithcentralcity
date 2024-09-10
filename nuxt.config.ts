@@ -21,7 +21,7 @@ export default defineNuxtConfig({
     }
   },
   generate: {
-    dir: 'dist',  // 정적 파일을 생성할 디렉토리 지정
+    dir: '.output/public',  // 정적 파일을 생성할 디렉토리 지정
     fallback: true // 404 페이지 생성을 위해 필요
   },
   nitro: {
