@@ -14,7 +14,7 @@
 </template>
 <style scoped>
 .hero {
-  background: url("/images/landing/hero/bg_main.png") no-repeat center bottom #001135;
+  background: url("/images/landing/hero/bg_main.jpg") no-repeat center bottom #001135;
   background-size: 1344px auto;
   /* height: 1500px; */
   height: 840px;
