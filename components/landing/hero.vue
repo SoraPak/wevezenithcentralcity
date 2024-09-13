@@ -1,16 +1,16 @@
 <template>
-  <div class="hero">
+  <section class="hero">
     <!-- h1 class="logo"><img src="/images/full_logo_w.svg" width="160" alt="두산위브더제니스 센트럴시티"></h1 -->
-    <h2 class="ttl">
+    <h1 class="ttl">
       <img src="/images/landing/hero/ttl01.png" width="425" alt="대구 랜드마크의 자격">
       <img src="/images/landing/hero/ttl02.png" width="558" alt="오직, 제니스">
       <img src="/images/landing/hero/ttl03.png" width="581" alt="대구 또 하나의 랜드마크, 새로운 제니스가 옵니다">
-    </h2>
+    </h1>
     <div class="textBox1">
       <p class="text1"><img src="/images/simple_logo_w.svg" width="400" alt="두산위브더제니스 센트럴시티"></p>
       <p class="text2"><img src="/images/landing/hero/text02.png" width="395" alt="전용 84・115・143・191㎡ | 총 1,098세대"></p>
     </div>
-  </div>
+  </section>
 </template>
 <style scoped>
 .hero {
@@ -30,6 +30,12 @@
   bottom: 0;
   width: 100%;
   background: url("/images/landing/hero/bg_bottom.png") no-repeat center bottom;
+  
+}
+@media only screen and (max-width: 1344px) {
+  .hero::before {
+    background-size: 1344px auto;
+  }
 }
 .logo {
   position: absolute;
