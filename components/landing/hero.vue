@@ -21,6 +21,16 @@
   color: #ffffff;
   position: relative;
 }
+.hero::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background: url("/images/landing/hero/bg_bottom.png") no-repeat center bottom;
+}
 .logo {
   position: absolute;
   left: 50%;
