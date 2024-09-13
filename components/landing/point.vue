@@ -54,11 +54,9 @@
   bottom: 0;
   width: 100%;
   background: url("/images/landing/point/bg_bottom.png") no-repeat center bottom;
-  
 }
 .point_inner {
-  width: 100%;
-  max-width: 840px;
+  width: 840px;
   margin: 0 auto;
   position: relative;
 
