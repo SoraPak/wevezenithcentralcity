@@ -42,6 +42,19 @@
 <style scoped>
 .point {
   color: #606563;
+  position: relative;
+  padding-bottom: 210px;
+}
+.point::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background: url("/images/landing/point/bg_bottom.png") no-repeat center bottom;
+  
 }
 .point_inner {
   width: 100%;
