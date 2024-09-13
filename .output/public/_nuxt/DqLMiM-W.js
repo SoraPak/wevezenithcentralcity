@@ -1,0 +1,1 @@
+import{_ as t,c as s,a as o,o as a}from"./DjoE3X-w.js";const c={},n={class:"location"};function l(r,e){return a(),s("section",n,e[0]||(e[0]=[o("h1",null,"location",-1),o("p",null,"This is the about page of the website.",-1)]))}const _=t(c,[["render",l],["__scopeId","data-v-879df6f6"]]);export{_ as default};
