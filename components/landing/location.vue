@@ -20,7 +20,7 @@
     color: #fff;
     margin-top: -70px;
     position: relative;
-    padding-bottom: 250px;
+    padding-bottom: 14vw;
   }
   .location::before {
     content: "";
@@ -31,10 +31,10 @@
     bottom: 0;
     width: 100%;
     background: url("/images/landing/location/bg_bottom.png") no-repeat center bottom;
+    background-size: 100% auto;
   }
   .location_inner {
-    width: 100%;
-    max-width: 840px;
+    width: 840px;
     margin: 0 auto;
     position: relative;
     height: 635px;
