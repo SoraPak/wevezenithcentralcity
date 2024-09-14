@@ -18,7 +18,6 @@
   .location {
     background: #0182e0;
     color: #fff;
-    margin-top: -70px;
     position: relative;
     padding-bottom: 14vw;
   }
