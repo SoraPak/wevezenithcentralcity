@@ -19,7 +19,7 @@
     background: #0182e0;
     color: #fff;
     position: relative;
-    padding-bottom: 28.5vw;
+    padding-bottom: 785px;
   }
   .location::before {
     content: "";
@@ -29,9 +29,10 @@
     top: 0;
     bottom: -1px;
     width: 100%;
-    background: url("/images/landing/location/bg_bottom.png") no-repeat right bottom;
-    background-size: 100% auto;
+    background: url("/images/landing/location/bg_bottom.png") no-repeat center bottom;
+    background-size: 2688px auto;
   }
+  /*
   @media only screen and (max-width: 1344px) {
     .location {
       padding-bottom: 405px;
@@ -39,7 +40,7 @@
     .location::before {
       background-size: 1344px auto;
     }
-  }
+  }*/
   .location_inner {
     width: 840px;
     margin: 0 auto;
