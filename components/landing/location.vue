@@ -19,7 +19,7 @@
     background: #0182e0;
     color: #fff;
     position: relative;
-    padding-bottom: 7.5vw;
+    padding-bottom: 28.5vw;
   }
   .location::before {
     content: "";
@@ -34,7 +34,7 @@
   }
   @media only screen and (max-width: 1344px) {
     .location {
-      padding-bottom: 125px;
+      padding-bottom: 405px;
     }
     .location::before {
       background-size: 1344px auto;

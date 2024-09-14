@@ -15,8 +15,9 @@
 <style scoped>
 .landingWrap {
   min-width: 840px;
+  overflow: hidden;
 }
- 
+
 </style>
 
 <script setup>
