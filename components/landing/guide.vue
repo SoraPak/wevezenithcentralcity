@@ -11,6 +11,14 @@
       <div class="section01">
         <div class="location">
           <img src="/images/landing/guide/map.jpg" width="309" alt="">
+          <div class="right">
+            <dl>
+              <dt>모델하우스</dt>
+              <dd>대구광역시 북구 태전동 1213번지 (대구과학대 정문 앞 주차장)</dd>
+            </dl>
+            <a class="btMap" href="https://kko.to/P0aas7dXbe" target="_blank">카카오지도<br>바로가기</a>
+            <p class="tel"><img src="/images/landing/guide/img_tel.png" width="438" alt="두산위브더제니스 센트럴시티 전화번호:01093570669"></p>
+          </div>
         </div>
       </div>
 
@@ -19,6 +27,9 @@
 </template>
 
 <style scoped>
+
+
+
   .guide {
     background: #082379;
     color: #fff;
@@ -82,11 +93,62 @@
     border: 3px solid #0d2161;
     margin: 0 auto;
     background: #fff;
-    color: #000f3a;
-    padding: 23px;
+    color: #082379;
+    padding: 25px;
     position: absolute;
     border-radius: 25px;
     top: 400px;
+    font-size: 24px;
+    box-sizing: border-box;
+  }
+  .location {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+  }
+  .location dl {
+    width: 330px;
+    line-height: 140%;
+  }
+  .location dt {
+    margin-bottom: 10px;
+    padding-left: 15px;
+    position: relative;
+  }
+  .location dt::before{
+    content: "";
+    display: block;
+    width: 6px;
+    height: 20px;
+    background: #0d2161;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+  }
+  .right {
+    margin-left: 20px;
+    flex: 1;
+  }
+  .btMap {
+    font-size: 17px;
+    color: #fff;
+    background: #082379;
+    height: 102px;
+    width: 102px;
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .tel {
+    padding: 11px 0 9px;
+    border-top: 3px solid #082379;
+    border-bottom: 3px solid #082379;
+    margin-top: 12px;
   }
 
 </style>
