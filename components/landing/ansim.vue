@@ -22,6 +22,26 @@
     color: #fff;
     position: relative;
   }
+  /* 
+  .ansim::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: -1px;
+    width: 100%;
+    background: url("/images/landing/ansim/bg_bottom.png") no-repeat left bottom;
+    background-size: 100% auto;
+  }
+  @media only screen and (max-width: 1344px) {
+    .ansim {
+      padding-bottom: 268px;
+    }
+    .ansim::before {
+      background-size: 1344px auto;
+    }
+  } */
   .ansim_inner {
     width: 840px;
     margin: 0 auto;
