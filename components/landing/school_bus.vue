@@ -2,6 +2,7 @@
   <section class="school_bus">
     <div class="school_bus_inner">
       <img class="img01" src="/images/landing/school_bus/img01.png" width="288" alt="">
+      <img class="img02" src="/images/landing/school_bus/img02.png" width="380" alt="">
       <img class="img03" src="/images/landing/school_bus/img03.png" width="118" alt="">
       <img class="img04" src="/images/landing/school_bus/img03.png" width="92" alt="">
       <img class="img05" src="/images/landing/school_bus/img03.png" width="92" alt="">
@@ -51,7 +52,7 @@
   bottom: 0;
 }
 .school_bus_inner {
-  height: 610px;
+  height: 575px;
   width: 840px;
   margin: 0 auto;
   position: relative;
@@ -79,12 +80,17 @@
 .ttl span:last-child {
   color: #f5f210;
 }
-.img01, .img03, .img04, .img05 {
+.img01, .img02, .img03, .img04, .img05 {
   position: absolute;
 }
 .img01 {
   right: -91px;
   top: -20px;
+}
+.img02 {
+  left: -140px;
+  bottom: 37px;
+  z-index: 3;
 }
 .img03{
   left: -85px;
@@ -100,18 +106,19 @@
 }
 .text01 {
   font-size: 28px;
-  margin-top: 15px;
+  margin-top: 17px;
+  font-weight: 400;
 }
 .text02 {
   font-size: 33px;
   font-weight: 600;
   line-height: 140%;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 .text03 {
   color: #fff;
   font-size: 14px;
-  margin-right: 40px;
-  margin-top: 20px;
+  margin-right: 20px;
+  margin-top: 10px;
 }
 </style>
