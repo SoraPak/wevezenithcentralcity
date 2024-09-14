@@ -1,6 +1,6 @@
 <template>
   <section class="why">
-    <div class="bgTop"><!-- img src="/images/landing/why/bg_top_s.png" alt="" --></div>
+    <div class="bgTop"></div>
     <div class="why_inner"> 
       <div class="bg"><span></span><span></span><span></span></div>
       <h1 class="ttl">
