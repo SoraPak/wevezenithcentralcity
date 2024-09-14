@@ -1,10 +1,18 @@
 <template>
-  <div>
-    <h1>홈페이지 개발중... 감사합니다</h1>
-    <p>This is the homepage of the website.afdsafds</p>
-  </div>
+  <section class="why">
+    <div class="why_inner"> 
+
+      
+    </div>
+  </section>
 </template>
 
-<script setup>
-
-</script>
+<style scoped>
+.why {
+  position: relative;
+}
+.why::before {
+  content: "";
+  position: absolute;
+}
+</style>
