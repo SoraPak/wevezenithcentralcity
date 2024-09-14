@@ -3,7 +3,7 @@
     <div class="model_house_inner">
       <div class="bg"></div>
       <h1 class="ttl"><img src="/images/landing/model_house/ttl01.png" width="517" alt="모델하우스 방문 예약하고 특별한 선물을 받아가세요!"></h1>
-      <p class="text"><img src="/images/landing/model_house/text01.png" width="517" alt="모델하우스 방문 예약하고 특별한 선물을 받아가세요!"></p>
+      <p class="text"><img src="/images/landing/model_house/text01.png" width="517" alt="9월 22일 까지 박소라 과장을 지정하고 모델하우스를 방문하시면 선물 추첨권을 드립니다!"></p>
 
 
     </div>
@@ -32,7 +32,7 @@
     width: 840px;
     margin: 0 auto;
     position: relative;
-    height: 490px;
+    height: 860px;
   }
   .model_house_inner::before {
     content: "";
