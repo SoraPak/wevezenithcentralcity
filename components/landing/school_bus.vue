@@ -28,6 +28,7 @@
   background: url("/images/landing/school_bus/bg02.png") repeat-x center bottom;
   background-size: 1px auto;
   text-align: center;
+  color: #000f3a;
 }
 .school_bus::before {
   content: "";
@@ -73,6 +74,7 @@
   font-size: 81px;
   text-align: center;
   line-height: 120%;
+  color: #000f3a;
 }
 .ttl span:first-child {
   color: #fff;
