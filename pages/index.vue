@@ -8,6 +8,7 @@
     <school_bus />
     <community />
     <reviews />
+    <model_house />
     <guide />
   </div>
 </template>
@@ -35,5 +36,6 @@
   import school_bus from '~/components/landing/school_bus.vue'
   import community from '~/components/landing/community.vue'
   import reviews from '~/components/landing/reviews.vue'
+  import model_house from '~/components/landing/model_house.vue'
   import guide from '~/components/landing/guide.vue'
 </script>
