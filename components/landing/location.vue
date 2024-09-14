@@ -19,7 +19,7 @@
     background: #0182e0;
     color: #fff;
     position: relative;
-    padding-bottom: 14vw;
+    padding-bottom: 7.5vw;
   }
   .location::before {
     content: "";
@@ -27,10 +27,18 @@
     left: 0;
     right: 0;
     top: 0;
-    bottom: 0;
+    bottom: -1px;
     width: 100%;
-    background: url("/images/landing/location/bg_bottom.png") no-repeat center bottom;
+    background: url("/images/landing/location/bg_bottom.png") no-repeat right bottom;
     background-size: 100% auto;
+  }
+  @media only screen and (max-width: 1344px) {
+    .location {
+      padding-bottom: 125px;
+    }
+    .location::before {
+      background-size: 1344px auto;
+    }
   }
   .location_inner {
     width: 840px;
@@ -43,41 +51,41 @@
     z-index: 1;
   }
   .ttl {
-    top: -90px;
+    top: -140px;
     right: -20px;
   }
   .img01 {
     left: -20px;
-    top: -60px;
+    top: -110px;
   }
   .text01 {
-    top: 65px;
+    top: 15px;
     right: -50px;
   }
   .text02 {
-    top: 170px;
+    top: 120px;
     right: -25px;
   }
   .img02 {
-    top: 290px;
+    top: 240px;
     right: 10px;
   }
   .text03 {
-    top: 450px;
+    top: 400px;
     left: -22px;
   }
   .text04 {
-    top: 556px;
+    top: 506px;
     left: -26px;
   }
   .img03 {
-    right: 306px;
-    top: 210px;
+    right: 302px;
+    top: 156px;
     z-index: 0;
   }
   .img04 {
     right: 190px;
-    top: 210px;
+    top: 160px;
     z-index: 0;
   }
 </style>

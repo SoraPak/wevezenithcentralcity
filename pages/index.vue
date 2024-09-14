@@ -12,6 +12,13 @@
   </div>
 </template>
 
+<style scoped>
+.landingWrap {
+  min-width: 840px;
+}
+ 
+</style>
+
 <script setup>
   // 레이아웃을 비활성화
   definePageMeta({
