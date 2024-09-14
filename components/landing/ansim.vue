@@ -26,7 +26,7 @@
     width: 840px;
     margin: 0 auto;
     position: relative;
-    height: 520px;
+    height: 490px;
   }
   .bg {
     position: absolute;
