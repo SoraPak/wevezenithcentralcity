@@ -61,6 +61,8 @@
     background: url("/images/landing/why/bg_top.png") no-repeat left bottom;
     background-size: 100% auto;
     position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
     width: 2688px;
     height: 735px;
     top: -252px;
@@ -74,7 +76,7 @@
     width: 840px;
     margin: 0 auto;
     position: relative;
-    height: 740px;
+    height: 680px;
     padding-top: 210px;
   }
   .bg {
