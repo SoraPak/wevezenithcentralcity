@@ -85,7 +85,7 @@
     top: -365px;
   }
   .section01 {
-    width: 672px;
+    width: 622px;
     margin: 0 auto;
     margin-top: -170px;
     color: #606563;
