@@ -174,12 +174,16 @@
 }
 .ttl {
   width: 780px;
+  height: 100px;
   text-align: center;
   border-top: 3px solid #fff;
   border-bottom: 3px solid #fff;
   position: relative;
   margin: 0 auto;
   padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .ttl::before {
   content: "";
@@ -195,10 +199,20 @@
 }
 .ttl span:first-child {
   font-size: 41px;
+  white-space: nowrap;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, 0);
+
 }
 .ttl span:last-child {
   font-size: 63px;
-  margin-top: 40px;
+  white-space: nowrap;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 .ttl span {
   display: block;

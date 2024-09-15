@@ -14,7 +14,7 @@
           <div class="right">
             <dl>
               <dt>모델하우스</dt>
-              <dd>대구광역시 북구 태전동 1213번지 (대구과학대 정문 앞 주차장)</dd>
+              <dd>대구광역시 북구 태전동 1213번지<br>(대구과학대 정문 앞 주차장)</dd>
             </dl>
             <a class="btMap" href="https://kko.to/P0aas7dXbe" target="_blank">카카오지도<br>바로가기</a>
             <p class="tel"><img src="/images/landing/guide/img_tel.png" width="438" alt="두산위브더제니스 센트럴시티 전화번호:01093570669"></p>
@@ -98,7 +98,7 @@
     position: absolute;
     border-radius: 25px;
     top: 400px;
-    font-size: 24px;
+    font-size: 22px;
     box-sizing: border-box;
   }
   .location {
@@ -107,13 +107,14 @@
     position: relative;
   }
   .location dl {
-    width: 330px;
+    width: 340px;
     line-height: 140%;
   }
   .location dt {
     margin-bottom: 10px;
     padding-left: 15px;
     position: relative;
+    font-weight: 600;
   }
   .location dt::before{
     content: "";
@@ -135,7 +136,7 @@
     color: #fff;
     background: #082379;
     height: 102px;
-    width: 102px;
+    width: 112px;
     display: flex;
     position: absolute;
     right: 0;
@@ -143,6 +144,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    line-height: 150%;
   }
   .tel {
     padding: 11px 0 9px;
