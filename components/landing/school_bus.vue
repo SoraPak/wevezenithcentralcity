@@ -119,7 +119,7 @@
 }
 .text03 {
   color: #fff;
-  font-size: 14px;
+  font-size: 13px;
   margin-right: 20px;
   margin-top: 10px;
 }

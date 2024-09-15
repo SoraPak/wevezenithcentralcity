@@ -111,11 +111,11 @@
   }
 
   .bg span:nth-child(3) {
-    bottom: -20px;
-    left: -360px;
-    width: 529px;
+    bottom: 60px;
+    left: -690px;
+    width: 809px;
     height: 623px;
-    background: url("/images/landing/why/bg03.png") no-repeat center center;
+    background: url(/images/landing/why/bg03.png) no-repeat center center;
     background-size: 100% auto;
   }
 
@@ -152,7 +152,7 @@
   }
 
   .pList dt{
-    font-size: 28px;
+    font-size: 27px;
     font-weight: bold;
     margin-bottom: 10px;
   }
