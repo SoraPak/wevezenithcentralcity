@@ -1,5 +1,6 @@
 <template>
   <div class="landingWrap">
+    <r_nav />
     <hero />
     <point />
     <location />
@@ -18,7 +19,6 @@
   min-width: 840px;
   overflow: hidden;
 }
-
 </style>
 
 <script setup>
@@ -28,6 +28,8 @@
   })
 
   // 섹션 컴포넌트들 불러오기
+
+  import r_nav from '~/components/landing/r_nav.vue'
   import hero from '~/components/landing/hero.vue'
   import point from '~/components/landing/point.vue'
   import location from '~/components/landing/location.vue'

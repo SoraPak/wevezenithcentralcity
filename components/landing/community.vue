@@ -18,7 +18,7 @@
 <style scoped>
   .community {
     position: relative;
-    height: 1360px;
+    height: 1330px;
     color: #000f3a;
   }
   .community::before {

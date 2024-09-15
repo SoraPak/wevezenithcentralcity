@@ -152,6 +152,7 @@
     border-top: 3px solid #082379;
     border-bottom: 3px solid #082379;
     margin-top: 12px;
+    text-align: center;
   }
 
 </style>
