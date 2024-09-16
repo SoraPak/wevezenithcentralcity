@@ -67,4 +67,11 @@
   /* bottom:806px; */
   top:335px;
 }
+
+/* sp */
+@media only screen and (max-width: 1344px) {
+  .hero::before {
+    background-size: 1344px auto;
+  }
+}
 </style>
