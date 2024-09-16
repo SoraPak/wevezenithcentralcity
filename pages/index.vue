@@ -6,8 +6,8 @@
     <location />
     <ansim />
     <why />
-    <!-- school_bus />
-    <community />
+    <school_bus />
+    <!-- community />
     <reviews />
     <model_house />
     <guide / -->

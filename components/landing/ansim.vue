@@ -140,7 +140,7 @@
 
   .ttl {
     top: -21vw;
-    left: 13vw;
+    left: 18vw;
   }
   .ttl img {
     width: 70vw;
