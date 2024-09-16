@@ -2,7 +2,7 @@
   <div class="landingWrap">
     <r_nav />
     <hero />
-    <point />
+    <!-- point />
     <location />
     <ansim />
     <why />
@@ -10,13 +10,12 @@
     <community />
     <reviews />
     <model_house />
-    <guide />
+    <guide / -->
   </div>
 </template>
 
 <style scoped>
 .landingWrap {
-  min-width: 840px;
   overflow: hidden;
 }
 </style>
