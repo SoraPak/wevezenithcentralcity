@@ -218,8 +218,9 @@
 
   .why_inner {
     max-width: 100%;
-    height: 140vw;
-    padding-top: 210px;
+    height: auto;
+    min-height: 167vw;
+    padding-top: 25vw;
   }
   .bg span:nth-child(1) {
     top: 31vw;
