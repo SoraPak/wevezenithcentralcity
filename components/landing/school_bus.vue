@@ -134,10 +134,10 @@
     background-size: 100% auto;
     width: 101vw;
     height: 7vw;
-    bottom: 7vw;
+    bottom: 3.6vw;
   }
   .school_bus_inner {
-    height: 120vw;
+    height: 115vw;
     max-width: 100%;
   }
   .ttl {
@@ -180,9 +180,7 @@
   }
   .text03 {
     font-size: 2.7vw;
-    margin-right: 0;
-    margin-top: 17vw;
-    margin: 26vw 29vw 0 34vw;
+    margin: 23vw 29vw 0 34vw;
     line-height: 160%;
     word-break: keep-all;
   }

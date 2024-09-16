@@ -7,8 +7,8 @@
     <ansim />
     <why />
     <school_bus />
-    <!-- community />
-    <reviews />
+    <community />
+    <!-- reviews />
     <model_house />
     <guide / -->
   </div>
