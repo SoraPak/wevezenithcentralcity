@@ -360,7 +360,7 @@ const onSlideChange = (swiper) => {
   background: #be9167;
   color: #fff;
   padding-top: 14vw;
-  padding-bottom: 0;
+  padding-bottom: 13vw;
 }
 
 .ttl {

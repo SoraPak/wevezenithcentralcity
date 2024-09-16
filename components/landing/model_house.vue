@@ -29,7 +29,7 @@
     
   }
   .model_house_inner {
-    width: 840px;
+    max-width: 840px;
     margin: 0 auto;
     position: relative;
     height: 860px;
@@ -56,4 +56,48 @@
     right: -31px;
     top: 80px;
   }
+
+  
+
+/* sp */
+@media only screen and (max-width: 950px) {
+
+  .model_house::before {
+    background-size: 100% auto;
+    width: 101vw;
+    height: 41vw;
+    top: -21vw;    
+  }
+  .model_house_inner {
+    max-width: 100%;
+    height: auto;
+    padding-top: 5vw;
+    padding-bottom: 80vw;
+  }
+  .model_house_inner::before {
+    top: -12vw;
+    right: -136vw;
+    width: 153vw;
+    height: 100vw;
+  }
+  .ttl, .text {
+    position: relative;
+    text-align: center;
+    left: 0;
+    top: 0;
+  }
+  .ttl img, .text img {
+    margin: 0 auto;
+  }
+  .ttl img {
+    width: 77vw;
+  }
+  .text {
+    margin-top: 5vw;
+  }
+  .text img {
+    width: 77vw;
+  }
+
+}
 </style>
