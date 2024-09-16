@@ -114,7 +114,13 @@
 /* sp */
 @media only screen and (max-width: 950px) {
   .point {
-    background-size: 813vw auto;
+    padding-bottom: 10vw;
+  }
+  .point::before {
+    background-size: 101vw auto;
+  }
+  .point_inner {
+    max-width: 100%;
   }
   .point_ttl {
     margin-top: 7vw;

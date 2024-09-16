@@ -3,8 +3,8 @@
     <r_nav />
     <hero />
     <point />
-    <!-- location />
-    <ansim />
+    <location />
+    <!-- ansim />
     <why />
     <school_bus />
     <community />
