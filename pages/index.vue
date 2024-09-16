@@ -4,8 +4,8 @@
     <hero />
     <point />
     <location />
-    <!-- ansim />
-    <why />
+    <ansim />
+    <!-- why />
     <school_bus />
     <community />
     <reviews />
