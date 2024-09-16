@@ -115,7 +115,7 @@
   }
   .ansim_inner {
     max-width: 100%;
-    height: 140vw;
+    height: 162vw;
   }
 
   .bg span:nth-child(1) {
@@ -165,7 +165,7 @@
   .section01 {
     width: 93vw;
     padding: 4vw;
-    font-size: 3.6vw;
+    font-size: 3.8vw;
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
