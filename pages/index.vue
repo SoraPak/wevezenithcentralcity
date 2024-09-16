@@ -2,8 +2,8 @@
   <div class="landingWrap">
     <r_nav />
     <hero />
-    <!-- point />
-    <location />
+    <point />
+    <!-- location />
     <ansim />
     <why />
     <school_bus />
