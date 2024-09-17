@@ -3,6 +3,8 @@
     <div class="model_house_inner">
       <div class="bg"></div>
       <h1 class="ttl"><img src="/images/landing/model_house/ttl01.png" width="517" alt="모델하우스 방문 예약하고 특별한 선물을 받아가세요!"></h1>
+      <img class="img01" src="/images/landing/model_house/img01.png" width="494" alt="">
+      
       <p class="text"><img src="/images/landing/model_house/text01.png" width="517" alt="9월 22일 까지 박소라 과장을 지정하고 모델하우스를 방문하시면 선물 추첨권을 드립니다!"></p>
 
 
@@ -51,9 +53,15 @@
     right: 0;
     top: -80px;
   }
+  .img01 {
+    position: absolute;
+    left: -140px;
+    top: -50px;
+
+  }
   .text {
     position: absolute;
-    right: -31px;
+    right: -19px;
     top: 80px;
   }
 
@@ -91,6 +99,14 @@
   }
   .ttl img {
     width: 77vw;
+  }
+  .img01 {
+    position: relative;
+    display: block;
+    margin: 4vw auto;
+    width: 90vw;
+    left: auto;
+    top: auto;
   }
   .text {
     margin-top: 5vw;
