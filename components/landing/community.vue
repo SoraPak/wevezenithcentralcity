@@ -121,6 +121,11 @@ const items = ref([
   }
   .swiper-slide img {
     width: 55vw;
+    margin-bottom: 1vw;
+  }
+  .swiper-slide span {
+    font-size: 3.5vw;
+
   }
 }
 </style>
