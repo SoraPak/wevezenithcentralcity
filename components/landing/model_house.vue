@@ -72,7 +72,7 @@
     max-width: 100%;
     height: auto;
     padding-top: 5vw;
-    padding-bottom: 80vw;
+    padding-bottom: 40vw;
   }
   .model_house_inner::before {
     top: -12vw;

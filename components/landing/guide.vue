@@ -16,7 +16,7 @@
               <dt>모델하우스</dt>
               <dd>대구광역시 북구 태전동 1213번지<br>(대구과학대 정문 앞 주차장)</dd>
             </dl>
-            <a class="btMap" href="https://kko.to/P0aas7dXbe" target="_blank">카카오지도<br>바로가기</a>
+            <a class="btMap" href="https://kko.to/P0aas7dXbe" target="_blank"> 카카오지도 <br>바로가기</a>
             <p class="tel"><img src="/images/landing/guide/img_tel.png" width="438" alt="두산위브더제니스 센트럴시티 전화번호:01093570669"></p>
           </div>
         </div>
@@ -48,7 +48,7 @@
     
   }
   .guide_inner {
-    width: 840px;
+    max-width: 840px;
     margin: 0 auto;
     position: relative;
     height: 840px;
@@ -154,5 +154,110 @@
     margin-top: 12px;
     text-align: center;
   }
+
+
+
+
+  
+
+/* sp */
+@media only screen and (max-width: 950px) {
+
+
+
+  .guide::before {
+    background-size: 100% auto;
+    width: 201vw;
+    height: 34vw;
+    top: -10vw;    
+  }
+  .guide_inner {
+    max-width: 100%;
+    height: 214vw;
+  }
+
+  .ttl{
+    top: -35vw;
+  }
+  .ttl img{
+    width: 90vw;
+  }
+  .text {
+    top: -9vw;
+  }
+  .text img {
+    width: 64vw;
+  }
+  .guideImgs {
+    top: 97vw;
+  }
+  .guideImgs img:nth-child(2) {
+    left: -36px;
+    bottom: 3vw;
+    width: 49.8vw;
+  }
+  .guideImgs img:nth-child(1) {
+    right: -50px;
+    bottom: 9vw;
+    width: 64vw;
+  }
+  .guideImgs img:nth-child(3) {
+    right: 25vw;
+    bottom: 5vw;
+    width: 60vw;
+  }
+  
+  .section01 {
+    width: 94vw;
+    border: 0.6vw solid #0d2161;
+    padding: 5vw;
+    border-radius: 5vw;
+    top: 79vw;
+    font-size: 5vw;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .location {
+    display: block;
+  }
+  .location > img {
+    width: 100%;
+  }
+  .location dl {
+    width: 100%;
+  }
+  .location dt {
+    margin-bottom: 1vw;
+    padding-left: 3vw;
+  }
+  .location dt::before{
+    width: 1.5vw;
+    height: 5vw;
+  }
+  .right {
+    margin-left: 0;
+  }
+  .btMap {
+    font-size: 4vw;
+    height: 13vw;
+    width: 100%;
+    position: relative;
+    margin-top: 2vw;
+  }
+  .btMap br {
+    display: none;
+  }
+  .tel {
+    padding: 3.2vw 0 2vw;
+    border-top: 0.6vw solid #082379;
+    border-bottom: 0.6vw solid #082379;
+    margin-top: 3vw;
+  }
+  .tel img {
+    width: 100%;
+  }
+
+
+}
 
 </style>

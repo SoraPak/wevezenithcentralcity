@@ -11,7 +11,7 @@
     <reviews class="reviews" />
     <sp_reviews class="sp_reviews" />
     <model_house />
-    <!-- guide / -->
+    <guide />
   </div>
 </template>
 
