@@ -4,9 +4,12 @@
       <h1 class="ttl"><img src="/images/landing/guide/ttl01.png" width="648" alt="당신의 프리미엄 라이프를 안내할 분양팀 상담사"></h1>
       <p class="text"><img src="/images/landing/guide/text01.png" width="403" alt="전화번호 단디 보고 오이소~^^"></p>
       <div class="guideImgs">
-        <img src="/images/landing/guide/img03.png" width="449" alt="박소라 과장">
-        <img src="/images/landing/guide/img02.png" width="361" alt="이지안 과장">
-        <img src="/images/landing/guide/img01.png" width="420" alt="신현주 팀장">
+        <img class="name03" src="/images/landing/guide/name03.png" width="165" alt="신현주 팀장">
+        <img class="img03" src="/images/landing/guide/img03.png" width="449" alt="">
+        <img class="name02" src="/images/landing/guide/name02.png" width="165" alt="이지안 과장">
+        <img class="img02" src="/images/landing/guide/img02.png" width="361" alt="">
+        <img class="name01" src="/images/landing/guide/name01.png" width="165" alt="박소라 과장">
+        <img class="img01" src="/images/landing/guide/img01.png" width="420" alt="">
       </div>
       <div class="section01">
         <div class="location">
@@ -76,18 +79,36 @@
   .guideImgs img {
     position: absolute;
   }
-  .guideImgs img:nth-child(2) {
+  .guideImgs .img02 {
     left: -57px;
     bottom: -68px;
   }
-  .guideImgs img:nth-child(1) {
+  .guideImgs .img03 {
     right: -75px;
     bottom: 0;
   }
-  .guideImgs img:nth-child(3) {
+  .guideImgs .img01 {
     right: 234px;
     bottom: 0;
   }
+  .guideImgs .name01,
+  .guideImgs .name02,
+  .guideImgs .name03 {
+    z-index: 1;
+  }
+  .guideImgs .name01 {
+    bottom: 90px;
+    right: -60px;
+  }
+  .guideImgs .name02{
+    left: -70px;
+    bottom: 90px;
+  }
+  .guideImgs .name03 {
+    right: 224px;
+    bottom: 160px;
+  }
+
   .section01 {
     width: 100%;
     border: 3px solid #0d2161;
@@ -191,20 +212,38 @@
   .guideImgs {
     top: 97vw;
   }
-  .guideImgs img:nth-child(2) {
+  .guideImgs .img02 {
     left: -36px;
     bottom: 3vw;
     width: 49.8vw;
   }
-  .guideImgs img:nth-child(1) {
+  .guideImgs .img03 {
     right: -50px;
     bottom: 9vw;
     width: 64vw;
   }
-  .guideImgs img:nth-child(3) {
+  .guideImgs .img01 {
     right: 25vw;
     bottom: 5vw;
     width: 60vw;
+  }
+  .guideImgs .name01,
+  .guideImgs .name02,
+  .guideImgs .name03 {
+    width: 24vw;
+  }
+
+  .guideImgs .name01 {
+    bottom: 27vw;
+    right: 2vw;
+  }
+  .guideImgs .name02{
+    left: 2vw;
+    bottom: 27vw;
+  }
+  .guideImgs .name03 {
+    right: 40vw;
+    bottom: 21vw;
   }
   
   .section01 {
