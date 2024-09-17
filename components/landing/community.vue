@@ -66,4 +66,39 @@
   .imgList li{
     margin: 0 13px;
   }
+  .imgList li span {
+    white-space: nowrap;
+  }
+
+
+  /* sp */
+@media only screen and (max-width: 950px) {
+  .community {
+    height: 161vw;
+  }
+  .community::before {
+    background-size: 101vw auto;
+  }
+  .ttl {
+    top: 0;
+  }
+  .ttl img {
+    width: 81vw;
+  }
+  .img01 {
+    top: 25vw;
+    width: 100vw;
+  }
+  .imgList {
+    top: 112vw;
+    font-size: 3.4vw;
+  }
+  .imgList li{
+    margin: 0 2vw;
+    line-height: 150%;
+  }
+  .imgList img {
+    width: 55vw;
+  }
+}
 </style>
