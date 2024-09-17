@@ -6,8 +6,8 @@
     <img class="img01" src="/images/landing/community/img.jpg" width="885" alt="">
 
     <!-- 롤링 배너 -->
-    <div class="rolling-container">
-      <ul class="imgList" ref="imgListRef">
+    <div class="rolling-container" @mouseenter="stopRolling" @mouseleave="startRolling">
+      <ul class="imgList" ref="imgListRef" @mousedown="isMobile ? startDrag : null" @mousemove="isMobile ? onDrag : null" @mouseup="isMobile ? endDrag : null" @mouseleave="isMobile ? endDrag : null" @touchstart="startDrag" @touchmove="onDrag" @touchend="endDrag">
         <li v-for="(item, index) in itemsToShow" :key="index" class="imgListItem">
           <img :src="item.imgSrc" :alt="item.altText">
           <span>{{ item.text }}</span>
@@ -20,7 +20,6 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 
-// 원본 아이템 리스트
 const items = ref([
   { imgSrc: '/images/landing/community/img01.jpg', text: '피트니스 센터, 웨이트 존, GX룸', altText: '피트니스 센터' },
   { imgSrc: '/images/landing/community/img02.jpg', text: '자녀들을 위한 키즈카페와 작은 도서관', altText: '키즈카페' },
@@ -35,8 +34,14 @@ const itemsToShow = ref([...items.value, ...items.value, ...items.value]);
 const imgListRef = ref(null);
 let translateX = 0;
 let interval;
+let isDragging = false;
+let startX = 0;
+let currentTranslateX = 0;
+let isMobile = ref(false); // 모바일 환경 여부를 판단하는 변수
 
 onMounted(() => {
+  isMobile.value = window.innerWidth <= 950; // 화면 크기가 950px 이하일 경우 모바일로 간주
+
   const imgList = imgListRef.value;
   const itemWidth = imgList.children[0].clientWidth + 20; // 각 아이템의 너비 + 간격
   const totalItems = items.value.length;
@@ -45,28 +50,93 @@ onMounted(() => {
   translateX = -(totalItems * itemWidth);
   imgList.style.transform = `translateX(${translateX}px)`;
 
-  // 무한 롤링 구현
+  // 모바일 및 PC에서 롤링 시작
+  startRolling();
+});
+
+onBeforeUnmount(() => {
+  stopRolling(); // 컴포넌트 해제 시 롤링 정지
+});
+
+function startRolling() {
+  const imgList = imgListRef.value;
+  const itemWidth = imgList.children[0].clientWidth + 20;
+  const totalItems = items.value.length;
+
   interval = setInterval(() => {
     translateX -= 1; // 1px씩 왼쪽으로 이동
     imgList.style.transition = "transform 0.05s linear";
     imgList.style.transform = `translateX(${translateX}px)`;
 
-    // 맨 끝에 도달하면 트랜지션 없이 처음으로 되돌아감
+    // 끝에 도달하면 트랜지션 없이 처음으로 이동
     if (Math.abs(translateX) >= totalItems * itemWidth * 2) {
-      imgList.style.transition = "none"; // 트랜지션 제거
-      translateX = -(totalItems * itemWidth); // 중간으로 복귀
+      imgList.style.transition = "none";
+      translateX = -(totalItems * itemWidth);
       imgList.style.transform = `translateX(${translateX}px)`;
 
       setTimeout(() => {
-        imgList.style.transition = "transform 0.05s linear"; // 다시 트랜지션 활성화
+        imgList.style.transition = "transform 0.05s linear";
       }, 50);
     }
-  }, 20); // 배너 이동 속도
-});
+  }, 20); // 일정한 속도로 이동
+}
 
-onBeforeUnmount(() => {
-  clearInterval(interval); // 컴포넌트가 해제될 때 인터벌 정리
-});
+function stopRolling() {
+  clearInterval(interval); // 롤링 멈추기
+}
+
+// 스와이프 관련 기능 (모바일에서만 동작)
+function startDrag(event) {
+  if (!isMobile.value) return; // PC에서는 스와이프 기능을 동작하지 않음
+
+  isDragging = true;
+  startX = event.type.includes('touch') ? event.touches[0].clientX : event.clientX;
+  currentTranslateX = translateX;
+  stopRolling(); // 드래그 중에는 롤링 멈춤
+}
+
+function onDrag(event) {
+  if (!isDragging) return;
+
+  const currentX = event.type.includes('touch') ? event.touches[0].clientX : event.clientX;
+  const deltaX = currentX - startX;
+
+  translateX = currentTranslateX + deltaX;
+  imgListRef.value.style.transform = `translateX(${translateX}px)`;
+}
+
+function endDrag() {
+  isDragging = false;
+  correctPosition();
+  startRolling(); // 드래그 끝나면 롤링 다시 시작
+}
+
+function correctPosition() {
+  const imgList = imgListRef.value;
+  const itemWidth = imgList.children[0].clientWidth + 20;
+  const totalItems = items.value.length;
+
+  // 리스트의 양쪽 끝에 복제된 아이템들이 있으므로 복제 영역을 넘어갈 경우 자연스럽게 원본 영역으로 이동
+  if (translateX > -(totalItems * itemWidth)) {
+    imgList.style.transition = "none";
+    translateX = -(totalItems * itemWidth * 2) + (translateX + totalItems * itemWidth);
+    imgList.style.transform = `translateX(${translateX}px)`;
+
+    setTimeout(() => {
+      imgList.style.transition = "transform 0.05s linear";
+    }, 50);
+  }
+
+  if (Math.abs(translateX) >= totalItems * itemWidth * 2) {
+    imgList.style.transition = "none";
+    translateX = -(totalItems * itemWidth);
+    imgList.style.transform = `translateX(${translateX}px)`;
+
+    setTimeout(() => {
+      imgList.style.transition = "transform 0.05s linear";
+    }, 50);
+  }
+}
 </script>
 
 <style scoped>
@@ -152,6 +222,9 @@ onBeforeUnmount(() => {
   }
   .rolling-container {
     top: 112vw;
+  }
+  .imgListItem {
+    margin-right: 2vw;
   }
   .imgListItem img {
     width: 55vw;
