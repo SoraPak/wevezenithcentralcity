@@ -4,11 +4,26 @@
       <h1 class="ttl"><img src="/images/landing/community/ttl.png" width="584" alt="입주민을 위한 고품격 커뮤니티 CLUB ZENITH"></h1>
       <img class="img01" src="/images/landing/community/img.jpg" width="885" alt="">
       <ol class="imgList">
-        <li><img src="/images/landing/community/img01.jpg" width="371" alt="">피트니스 센터, 웨이트 존, GX룸</li>
-        <li><img src="/images/landing/community/img02.jpg" width="371" alt="">자녀들을 위한 키즈카페와 작은 도서관</li>
-        <li><img src="/images/landing/community/img03.jpg" width="371" alt="">카페테리아와 휴게 라운지</li>
-        <li><img src="/images/landing/community/img04.jpg" width="371" alt="">칠곡 최초의 온탕, 냉탕 사우나</li>
-        <li><img src="/images/landing/community/img05.jpg" width="371" alt="">실내 골프 연습장 및 스크린 골프</li>
+        <li>
+          <img src="/images/landing/community/img01.jpg" width="371" alt="">
+          <span>피트니스 센터, 웨이트 존, GX룸</span>
+        </li>
+        <li>
+          <img src="/images/landing/community/img02.jpg" width="371" alt="">
+          <span>자녀들을 위한 키즈카페와 작은 도서관</span>
+        </li>
+        <li>
+          <img src="/images/landing/community/img03.jpg" width="371" alt="">
+          <span>카페테리아와 휴게 라운지</span>
+        </li>
+        <li>
+          <img src="/images/landing/community/img04.jpg" width="371" alt="">
+          <span>칠곡 최초의 온탕, 냉탕 사우나</span>
+        </li>
+        <li>
+          <img src="/images/landing/community/img05.jpg" width="371" alt="">
+          <span>실내 골프 연습장 및 스크린 골프</span>
+        </li>
       </ol>
 
 
@@ -51,36 +66,4 @@
   .imgList li{
     margin: 0 13px;
   }
-
-
-  /* sp */
-@media only screen and (max-width: 950px) {
-  .community {
-    height: 161vw;
-  }
-  .community::before {
-    background-size: 101vw auto;
-  }
-  .ttl {
-    top: 0;
-  }
-  .ttl img {
-    width: 81vw;
-  }
-  .img01 {
-    top: 25vw;
-    width: 100vw;
-  }
-  .imgList {
-    top: 112vw;
-    font-size: 3.4vw;
-  }
-  .imgList li{
-    margin: 0 2vw;
-    line-height: 150%;
-  }
-  .imgList img {
-    width: 55vw;
-  }
-}
 </style>
