@@ -124,7 +124,7 @@ const items = ref([
     margin-bottom: 1vw;
   }
   .swiper-slide span {
-    font-size: 3.5vw;
+    font-size: 3.1vw;
 
   }
 }
