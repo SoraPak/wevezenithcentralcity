@@ -58,13 +58,13 @@ const items = ref([
   background-size: 2688px auto;
 }
 
-.tlt, .img01, .imgListSwiper {
+.ttl, .img01, .imgListSwiper {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.tlt {
+.ttl {
   top: -20px;
 }
 
