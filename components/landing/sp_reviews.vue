@@ -275,7 +275,7 @@
             <dd>
               <div class="text"><p v-for="(content, i) in review.content" :key="i">{{ content }}</p></div>
               
-              <p>{{ review.author }}</p>
+              <p class="name">{{ review.author }}</p>
               <img :src="review.img" width="166" :alt="review.title" />
             </dd>
           </dl>
@@ -447,7 +447,7 @@ const onSlideChange = (swiper) => {
   line-height: 140%;
 }
 
-.reviewCon dd p:last-child {
+.reviewCon dd .name {
   font-weight: 600;
 }
 
