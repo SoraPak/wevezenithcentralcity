@@ -1,1 +1,0 @@
-import{_ as o,c as s,a as t,o as a}from"./DjoE3X-w.js";const n={};function r(c,e){return a(),s("div",null,e[0]||(e[0]=[t("h1",null,"About Us",-1),t("p",null,"This is the about page of the website.",-1)]))}const u=o(n,[["render",r]]);export{u as default};

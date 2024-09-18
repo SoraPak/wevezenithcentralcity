@@ -1,0 +1,1 @@
+import{_ as t,c as a,a as s,o}from"./Cxtd6-06.js";const n={};function c(r,e){return o(),a("div",null,e[0]||(e[0]=[s("h1",null,"space",-1),s("p",null,"This is the about page of the website.",-1)]))}const p=t(n,[["render",c]]);export{p as default};
