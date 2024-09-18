@@ -194,7 +194,7 @@
   }
   .guide_inner {
     max-width: 100%;
-    height: 214vw;
+    height: 225vw;
   }
 
   .ttl{

@@ -219,8 +219,8 @@
   .why_inner {
     max-width: 100%;
     height: auto;
-    min-height: 166vw;
     padding-top: 25vw;
+    padding-bottom: 32vw;
   }
   .bg span:nth-child(1) {
     top: 31vw;
@@ -271,7 +271,8 @@
     left: -16vw;
   }
   .pList {
-    top: 43vw;
+    position: relative;
+    top: 18vw;
     left: 0;
     width: auto;
     padding: 0 5vw;

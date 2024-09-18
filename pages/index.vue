@@ -1,6 +1,7 @@
 <template>
   <div class="landingWrap">
-    <r_nav />
+    <r_nav class="rNav" />
+    <sp_r_nav class="sp_rNav" />
     <hero />
     <point />
     <location />
@@ -19,17 +20,21 @@
 .landingWrap {
   overflow: hidden;
 }
-.sp_reviews {
+.sp_reviews, .sp_rNav {
   display: none;
 }
 
+
 /* sp */
 @media only screen and (max-width: 950px) {
-  .reviews {
+  .reviews, .rNav{
     display: none;
   }
   .sp_reviews {
     display: block;
+  }
+  .sp_rNav {
+    display: flex;
   }
 }
 </style>
@@ -41,7 +46,7 @@
   })
 
   // 섹션 컴포넌트들 불러오기
-
+  import sp_r_nav from '~/components/landing/sp_r_nav.vue'
   import r_nav from '~/components/landing/r_nav.vue'
   import hero from '~/components/landing/hero.vue'
   import point from '~/components/landing/point.vue'
