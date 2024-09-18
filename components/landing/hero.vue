@@ -10,6 +10,12 @@
       <p class="text1"><img src="/images/simple_logo_w.svg" width="400" alt="두산위브더제니스 센트럴시티"></p>
       <p class="text2"><img src="/images/landing/hero/text02.png" width="395" alt="전용 84・115・143・191㎡ | 총 1,098세대"></p>
     </div>
+    <ul class="terms">
+      <li><img src="/images/landing/hero/list01.png" width="162" alt="학정 역 칠곡경대병원 역 더블역세권"></li>
+      <li><img src="/images/landing/hero/list02.png" width="162" alt="중도금 무이자"></li>
+      <li><img src="/images/landing/hero/list03.png" width="162" alt="전매 무제한"></li>
+      <li><img src="/images/landing/hero/list04.png" width="162" alt="계약금 500만원"></li>
+    </ul>
   </section>
 </template>
 <style scoped>
@@ -66,5 +72,71 @@
   transform: translate(-50%, 0);
   /* bottom:806px; */
   top:335px;
+}
+
+.terms {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+/* sp */
+@media only screen and (max-width: 950px) {
+
+  .hero {
+    background-size: 740px auto;
+    background-size: 227vw auto;
+    height: 157vw;
+  }
+  .hero::before {
+    background-size: 101vw auto;
+  }
+  .ttl {
+    height: 110px;
+    height: 29vw;
+    top: 16vw;
+  }
+  .ttl img:nth-child(1) {
+    width: 215px;
+    width: 57.3vw;
+    height: auto;
+  }
+  .ttl img:nth-child(2) {
+    width: 282px;
+    width: 75vw;
+    height: auto;
+  }
+  .ttl img:nth-child(3) {
+    width: 295px;
+    width: 78.5vw;
+    height: auto;
+  }
+  .textBox1 {
+    top: 210px;
+    top: 52vw;
+  }
+  .text1 img {
+    width: 198px;
+    width: 53vw;
+  }
+  .text2 img {
+    width: 198px;
+    width: 52.5vw;
+  }
+  .terms {
+    display: flex;
+    top: 56vw;
+  }
+  .terms li {
+    margin: 1.2vw;
+  }
+  .terms img {
+    width: 21.5vw;
+  }
+  
 }
 </style>

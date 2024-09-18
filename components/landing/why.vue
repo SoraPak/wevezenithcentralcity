@@ -4,10 +4,12 @@
     <div class="why_inner"> 
       <div class="bg"><span></span><span></span><span></span></div>
       <h1 class="ttl">
-        <img class="img01" src="/images/landing/why/ttl01.png" width="513" alt="내집마련 기회, 지금이 적기!">
-        <img class="img02" src="/images/landing/why/ttl02.png" width="681" alt="왜 두산위브더제니스 센트럴시티인가?">
+        <img class="ttl01" src="/images/landing/why/ttl01.png" width="513" alt="내집마련 기회, 지금이 적기!">
+        <img class="ttl02" src="/images/landing/why/ttl02.png" width="681" alt="왜 두산위브더제니스 센트럴시티인가?">
+        <img class="spTtl02" src="/images/landing/why/sp_ttl02.png" width="179" alt="왜 두산위브더제니스 센트럴시티인가?">
       </h1>
-      <img class="img01" src="/images/landing/why/img01.png" width="675" alt="">
+      <img class="img01" src="/images/landing/why/img01.png" width="675" alt="박소라 과장">
+      <img class="spImg01" src="/images/landing/why/sp_img01.png" width="208" alt="박소라 과장">
       <div class="pList">
         <dl>
           <dt>계약금 5%로, 입주 때까지 추가 목돈 無</dt>
@@ -73,7 +75,7 @@
   }
 
   .why_inner {
-    width: 840px;
+    max-width: 840px;
     margin: 0 auto;
     position: relative;
     height: 680px;
@@ -132,17 +134,24 @@
     left: 50%;
     transform: translate(-50%, 0);
   }
-  .ttl img:first-child {
+  .ttl .ttl01 {
     top: 0;
   }
-  .ttl img:last-child {
+  .ttl .ttl02 {
     top: 80px;
+  }
+
+  .ttl .spTtl02 {
+    display: none;
   }
 
   .img01 {
     position: absolute;
     left: -330px;
     top: 90px;
+  }
+  .spImg01 {
+    display: none;
   }
   .pList {
     position: absolute;
@@ -192,5 +201,109 @@
   .pList dl:nth-child(5)::before {
     content: "5.";
   }
+
+
+  /* sp */
+@media only screen and (max-width: 950px) {
+
+
+  .why {
+
+  }
+  .why .bgTop {
+    top: -28vw;
+    height: 28vw;
+    width: 101vw;
+  }
+
+  .why_inner {
+    max-width: 100%;
+    height: auto;
+    min-height: 166vw;
+    padding-top: 25vw;
+  }
+  .bg span:nth-child(1) {
+    top: 31vw;
+    right: -60vw;
+    width: 84vw;
+    height: 76vw;
+  }
+
+  .bg span:nth-child(2) {
+    bottom: 20vw;
+    right: -28vw;
+    width: 74vw;
+    height: 74vw;
+  }
+
+  .bg span:nth-child(3) {
+    bottom: -41vw;
+    left: -40vw;
+    width: 110vw;
+    height: 165vw;
+  }
+
+  .ttl {
+    top: -18vw;
+    left: 69vw;
+    width: 0;
+  }
+  .ttl .ttl01 {
+    width: 68vw;
+  }
+  .ttl .ttl02 {
+    display: none;
+  }
+  .ttl .spTtl02 {
+    display: block;
+    top: 12vw;
+    width: 48vw;
+  }
+
+  .img01 {
+    display: none;
+  }
+  .spImg01 {
+    display: block;
+    width: 57.8vw;
+    position: absolute;
+    top: -32vw;
+    left: -16vw;
+  }
+  .pList {
+    top: 43vw;
+    left: 0;
+    width: auto;
+    padding: 0 5vw;
+    word-break: keep-all;
+  }
+
+  .pList dt{
+    margin-bottom: 1vw;
+    font-size: 4.5vw;
+    line-height: 130%;
+  }
+  .pList dd {
+    font-size: 3.8vw;
+    line-height: 140%;
+  }
+  .pList dd br {
+    display: none;
+  }
+  .pList dl {
+    margin-top:3vw;
+    padding-left: 12vw;
+  }
+  .pList dl::before {
+    font-size: 11vw;
+    padding-top: 2vw;
+    left: 0;
+  }
+  .pList dl:nth-child(2),
+  .pList dl:nth-child(3),
+  .pList dl:nth-child(4) {
+    margin-left: 0;
+  }
+}
 
 </style>

@@ -54,22 +54,10 @@
 }
 .school_bus_inner {
   height: 575px;
-  width: 840px;
+  max-width: 840px;
   margin: 0 auto;
   position: relative;
 }
-/*
-.school_bus_inner::before {
-  content: "";
-  display: block;
-  position: absolute;
-  background: url("/images/landing/school_bus/bg01.png") no-repeat center center;
-  background-size: 1008px auto;
-  top: -120%;
-  bottom: 0;
-  right: 0;
-  left: 0;
-}*/
 .ttl {
   font-size: 81px;
   text-align: center;
@@ -122,5 +110,81 @@
   font-size: 13px;
   margin-right: 20px;
   margin-top: 10px;
+}
+
+
+
+
+
+
+
+/* sp */
+@media only screen and (max-width: 950px) {
+
+  .school_bus {
+    background-size: 0.13vw auto;
+  }
+  .school_bus::before {
+    background-size: 100% auto;
+    width: 101vw;
+    height: 6vw;
+    top: -5.6vw;
+  }
+  .school_bus::after {
+    background-size: 100% auto;
+    width: 101vw;
+    height: 7vw;
+    bottom: 3.6vw;
+  }
+  .school_bus_inner {
+    height: 115vw;
+    max-width: 100%;
+  }
+  .ttl {
+    font-size: 11.5vw;
+    padding-top: 9vw;
+  }
+  .img01 {
+    right: -8vw;
+    top: 37vw;
+    width: 41vw;
+  }
+  .img02 {
+    left: -11vw;
+    bottom: 1vw;
+    width: 53vw;
+  }
+  .img03{
+    left: -7vw;
+    top: 3vw;
+    width: 18vw;
+  }
+  .img04{
+    left: 5vw;
+    top: 140px;
+    width: 14vw;
+    
+  }
+  .img05 {
+    right: -7vw;
+    top: 6vw;
+    width: 14vw;
+  }
+  .text01 {
+    font-size: 4.6vw;
+    margin-top: 1vw;
+  }
+  .text02 {
+    font-size: 4.8vw;
+    margin-top: 2vw;
+  }
+  .text03 {
+    font-size: 2.7vw;
+    margin: 23vw 29vw 0 34vw;
+    line-height: 160%;
+    word-break: keep-all;
+  }
+
+
 }
 </style>

@@ -8,7 +8,8 @@
     <why />
     <school_bus />
     <community />
-    <reviews />
+    <reviews class="reviews" />
+    <sp_reviews class="sp_reviews" />
     <model_house />
     <guide />
   </div>
@@ -16,8 +17,20 @@
 
 <style scoped>
 .landingWrap {
-  min-width: 840px;
   overflow: hidden;
+}
+.sp_reviews {
+  display: none;
+}
+
+/* sp */
+@media only screen and (max-width: 950px) {
+  .reviews {
+    display: none;
+  }
+  .sp_reviews {
+    display: block;
+  }
 }
 </style>
 
@@ -38,6 +51,7 @@
   import school_bus from '~/components/landing/school_bus.vue'
   import community from '~/components/landing/community.vue'
   import reviews from '~/components/landing/reviews.vue'
+  import sp_reviews from '~/components/landing/sp_reviews.vue'
   import model_house from '~/components/landing/model_house.vue'
   import guide from '~/components/landing/guide.vue'
 </script>
