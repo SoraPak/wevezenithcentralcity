@@ -5,6 +5,11 @@
     </div>
     <div class="section02">
       <p class="telNo"><span>010)</span><span>9357</span><span>0669</span></p>
+
+      <a class="kakaoBut" href="https://open.kakao.com/o/saZEcwPg" target="_blank">
+        <img src="/images/landing/r_nav/kakao.png" width="62" alt="">
+        카톡상담
+      </a>
     </div>
   </div>
 </template>
@@ -19,7 +24,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 2px;
   z-index: 1000;
-  min-height: 565px;
+  min-height: 665px;
   overflow: hidden;
 }
 .section01 {
@@ -34,6 +39,7 @@
   top: -12px;
   left: 50%;
   transform: translate(-50%, 0);
+  z-index: 2;
 }
 .section02 {
   position: absolute;
@@ -41,7 +47,22 @@
   top: 190px;
   background: url("/images/landing/r_nav/img01.png") no-repeat center 115px;
   background-size: 287px auto;
-  height: 700px;
+  height: 100%;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.kakaoBut {
+  color: #fae100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 370px;
+}
+.kakaoBut > img {
+  margin-bottom: 5px;
 }
 .telNo {
   position: absolute;
