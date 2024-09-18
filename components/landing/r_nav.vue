@@ -12,7 +12,7 @@
 .rNav {
   border: 1px solid #b5eeff4d;
   position: fixed;
-  right: calc((100vw - 840px) / 2 - 320px); /* 840px 본문을 기준으로 오른쪽 정렬 */
+  right: calc((100vw - 840px) / 2 - 300px); /* 840px 본문을 기준으로 오른쪽 정렬 */
   top: 100px;
   width: 130px;
   background-color: #000f3a;
