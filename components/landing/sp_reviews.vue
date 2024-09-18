@@ -18,16 +18,18 @@
         @swiper="updateSlideHeights"
       >
         <swiper-slide v-for="(review, index) in reviews" :key="index">
-          <dl ref="slides">
-            <dt>{{ review.title }}</dt>
-            <dd>
-              <div class="text">
-                <p v-for="(content, i) in review.content" :key="i">{{ content }}</p>
-              </div>
-              <p class="name" v-html="review.author"></p>
-              <img :src="review.img" width="166" :alt="review.title" />
-            </dd>
-          </dl>
+          <div class="item" ref="slides">
+            <dl>
+              <dt>{{ review.title }}</dt>
+              <dd>
+                <div class="text">
+                  <p v-for="(content, i) in review.content" :key="i">{{ content }}</p>
+                </div>
+                <p class="name" v-html="review.author"></p>
+                <img :src="review.img" width="166" :alt="review.title" />
+              </dd>
+            </dl>
+          </div>
         </swiper-slide>
       </swiper>
     </div>
@@ -131,7 +133,7 @@ const updateSlideHeights = () => {
     let maxHeightVw = (maxHeightPx / window.innerWidth) * 100;
 
     // 10vw를 뺀 최종 높이
-    maxHeightVw = Math.max(maxHeightVw - 5, 0); // 최소값을 0으로 제한
+    maxHeightVw = Math.max(maxHeightVw + 14, 0); // 최소값을 0으로 제한
 
     // 최대 높이로 모든 슬라이드 높이 설정 (vw 단위)
     slides.value.forEach((slide) => {
@@ -205,7 +207,6 @@ onMounted(() => {
 .reviewCon.fade-in {
   opacity: 1; /* 로딩 완료 후 나타남 */
 }
-
 .reviewCon dl {
   background: #fff;
   color: #000f3a;
@@ -247,8 +248,6 @@ onMounted(() => {
 
 .reviewCon dd .name {
   font-weight: 600;
-  position: absolute;
-  bottom: 5vw;
 }
 
 /* 하단 네비게이션 점 스타일 */
