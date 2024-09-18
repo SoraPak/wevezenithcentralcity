@@ -72,6 +72,7 @@
 }
 .subConSet {
   margin-top: 90px;
+  word-break: keep-all;
 }
 .subCon {
   display: flex;

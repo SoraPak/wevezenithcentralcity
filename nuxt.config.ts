@@ -49,6 +49,7 @@ export default defineNuxtConfig({
         { name: 'twitter:title', content: '학정역 두산위브더제니스 센트럴시티' },
         { name: 'twitter:description', content: '대구 랜드마크의 자격 오직, 제니스! 대구 또 하나의 랜드마크, 새로운 제니스가 옵니다. 학정역, 칠곡경대병원역 더블 역세권, 중도금 무이자, 전매 무제한, 계약금500만원! 모델하우스에서 박소라 과정을 찾아주시면 푸짐한 사은품 증정!!' },
         { name: 'twitter:image', content: '/og_img.png' },
+        { name: 'google-site-verification', content: '8XjrzoC28K-Keo7hRTrzehBGCffpPWP85oDamXsNgI0' }
       ],
       link: [
         { rel: 'apple-touch-icon', sizes: '180x180', href: '/icon.svg' },
