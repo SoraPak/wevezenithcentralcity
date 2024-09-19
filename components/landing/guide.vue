@@ -2,7 +2,7 @@
   <section class="guide">
     <div class="guide_inner">
       <h1 class="ttl"><img src="/images/landing/guide/ttl01.png" width="648" alt="당신의 프리미엄 라이프를 안내할 분양팀 상담사"></h1>
-      <p class="text"><img src="/images/landing/guide/text01.png" width="403" alt="전화번호 단디 보고 오이소~^^"></p>
+      <p class="text"><img src="/images/landing/guide/text01.png" height="76" alt="카톡으로 예약 단디 하고 오이소~^^"></p>
       <div class="guideImgs">
         <img class="name03" src="/images/landing/guide/name03.png" width="165" alt="신현주 팀장">
         <img class="img03" src="/images/landing/guide/img03.png" width="449" alt="">
@@ -214,7 +214,7 @@
     top: -9vw;
   }
   .text img {
-    width: 64vw;
+    height: 12vw;
   }
   .guideImgs {
     top: 97vw;
