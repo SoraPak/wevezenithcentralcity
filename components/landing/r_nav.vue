@@ -103,6 +103,12 @@
   width: 62px;
   height: 62px;
   margin-bottom: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.kakaoBut > span:hover {
+  background-color: #fff069;
+  transform: scale(1.1);
+
 }
 
 .kakaoBut img {
