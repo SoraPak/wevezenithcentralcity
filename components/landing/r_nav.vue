@@ -8,7 +8,7 @@
     </div>
     <div class="section03">
       <a class="kakaoBut" href="https://open.kakao.com/o/saZEcwPg" target="_blank">
-        <img src="/images/landing/r_nav/kakao.png" width="62" alt="">
+        <img src="/images/landing/r_nav/kakao.svg" width="45" alt="">
         카톡상담
       </a>
     </div>
@@ -67,8 +67,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  
   margin-top: 35px;
 }
+.kakaoBut img {
+  width: 62px;
+  height: 62px;
+  background-color: #fae100;
+  border-radius: 13px;
+}
+
 .kakaoBut > img {
   margin-bottom: 5px;
 }
