@@ -140,7 +140,7 @@ useScrollAnimation([ttlRef01, ttlRef02, subConSet01, subConSet02,subConSet03, su
     padding-bottom: 10vw;
   }
   .point::before {
-    background-size: 101vw auto;
+    background-size: 102vw auto;
   }
   .point_inner {
     max-width: 100%;
