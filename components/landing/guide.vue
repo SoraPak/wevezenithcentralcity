@@ -167,7 +167,14 @@
     align-items: center;
     text-align: center;
     line-height: 150%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
   }
+  .btMap:hover {
+    background-color: #0b35c0;
+    transform: scale(1.1);
+  }
+
+
   .tel {
     padding: 11px 0 9px;
     border-top: 3px solid #082379;

@@ -2,9 +2,9 @@
   <section class="hero">
     <!-- h1 class="logo"><img src="/images/full_logo_w.svg" width="160" alt="두산위브더제니스 센트럴시티"></h1 -->
     <h1 class="ttl">
-      <img src="/images/landing/hero/ttl01.png" width="425" alt="대구 랜드마크의 자격">
-      <img src="/images/landing/hero/ttl02.png" width="558" alt="오직, 제니스">
-      <img src="/images/landing/hero/ttl03.png" width="581" alt="대구 또 하나의 랜드마크, 새로운 제니스가 옵니다">
+      <img class="from-left" ref="ttlRef01" src="/images/landing/hero/ttl01.png" width="425" alt="대구 랜드마크의 자격">
+      <img class="fade-in" ref="ttlRef02" src="/images/landing/hero/ttl02.png" width="558" alt="오직, 제니스">
+      <img class="from-right" ref="ttlRef03" src="/images/landing/hero/ttl03.png" width="581" alt="대구 또 하나의 랜드마크, 새로운 제니스가 옵니다">
     </h1>
     <div class="textBox1">
       <p class="text1"><img src="/images/simple_logo_w.svg" width="400" alt="두산위브더제니스 센트럴시티"></p>
@@ -18,6 +18,18 @@
     </ul>
   </section>
 </template>
+<script setup>
+import { ref } from 'vue';
+import { useScrollAnimation } from '~/composables/useScrollAnimation';
+
+const ttlRef01 = ref(null);
+const ttlRef02 = ref(null);
+const ttlRef03 = ref(null);
+
+// 요소들이 스크롤될 때 애니메이션 적용
+useScrollAnimation([ttlRef01, ttlRef02, ttlRef03]);
+</script>
+
 <style scoped>
 .hero {
   background: url("/images/landing/hero/bg_main.jpg") no-repeat center bottom #001135;
