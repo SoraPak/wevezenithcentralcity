@@ -47,8 +47,8 @@ body {
   /* 왼쪽에서 페이드인 */
   .from-left {
     opacity: 0;
-    transform: translateX(-100%);
-    transition: all 1s ease;
+    transform: translateX(-100px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   }
   .from-left.show {
     opacity: 1;
@@ -58,8 +58,8 @@ body {
   /* 오른쪽에서 페이드인 */
   .from-right {
     opacity: 0;
-    transform: translateX(100%);
-    transition: all 1s ease;
+  transform: translateX(100px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   }
   .from-right.show {
     opacity: 1;
@@ -88,3 +88,7 @@ body {
     transform: scale(1);
   }
   
+  .animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
