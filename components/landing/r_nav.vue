@@ -118,6 +118,10 @@
   animation: bounce 2s ease-in-out infinite; /* 1.5초 애니메이션, 4초 대기 */
   position: relative; /* 튀어오름 애니메이션을 위해 relative 사용 */
   z-index: 2; /* 이미지가 위로 튀어나오도록 z-index 설정 */
+  animation-play-state: running;
+}
+.kakaoBut:hover img {
+  animation: none;
 }
 
 .telNo {
