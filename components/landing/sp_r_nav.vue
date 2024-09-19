@@ -57,8 +57,41 @@ onMounted(() => {
   color: #371d1e;
 }
 
+
+/* 튀어오르는 애니메이션 정의 */
+@keyframes bounce {
+  0% {
+    transform: translateY(0) scaleY(1); /* 처음 위치와 기본 크기 */
+    animation-timing-function: ease-out; /* 빠르게 튀어오름 */
+  }
+  15% {
+    transform: translateY(-30px) scaleY(1.1); /* 위로 튀어오를 때 height가 커짐 */
+    animation-timing-function: ease-out; /* 높이 올라갈수록 느려짐 */
+  }
+  20% {
+    transform: translateY(-30px) scaleY(1.1); /* 멈칫 */
+    animation-timing-function: ease-in; /* 빠르게 떨어짐 */
+  }
+  35% {
+    transform: translateY(0) scaleY(0.9); /* 내려올 때 height가 줄어듦 */
+  }
+  50% {
+    transform: translateY(0) scaleY(1); /* 원래 위치와 크기로 돌아옴 */
+  }
+  100% {
+    transform: translateY(0) scaleY(1); /* 마지막 프레임에서 3초 대기 */
+  }
+}
+
+
 .sp_rNav .kakao a::before {
   background-image: url("/images/landing/r_nav/kakao.svg");
+  animation: bounce 2s ease-in-out infinite; /* 애니메이션 적용 */
+  display: block;
+  width: 10vw;
+  height: 10vw;
+  background-size: 100% auto;
+  margin-right: 1.5vw;
 }
 
 .sp_rNav .call a {
