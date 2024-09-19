@@ -1,5 +1,5 @@
 <template>
- <div class="rNav">
+  <div class="rNav">
     <div class="section01">
       <img src="/images/landing/r_nav/text01.png" width="75" alt="선착순 분양중">
     </div>
@@ -8,13 +8,13 @@
     </div>
     <div class="section03">
       <a class="kakaoBut" href="https://open.kakao.com/o/saZEcwPg" target="_blank">
-        <img src="/images/landing/r_nav/kakao.svg" width="45" alt="">
-        카톡상담
+        <span><img src="/images/landing/r_nav/kakao.svg" width="45" alt=""></span>
+        톡상담/예약
       </a>
     </div>
-    
   </div>
 </template>
+
 <style scoped>
 .rNav {
   border: 1px solid #b5eeff4d;
@@ -67,19 +67,53 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  
   margin-top: 35px;
+  overflow: visible; /* 이미지가 버튼 밖으로 튀어나가도록 설정 */
 }
+
+/* 튀어오르는 애니메이션 정의 */
+@keyframes bounce {
+  0% {
+    transform: translateY(0) scaleY(1); /* 처음 위치와 기본 크기 */
+    animation-timing-function: ease-out; /* 빠르게 튀어오름 */
+  }
+  15% {
+    transform: translateY(-30px) scaleY(1.1); /* 위로 튀어오를 때 height가 커짐 */
+    animation-timing-function: ease-out; /* 높이 올라갈수록 느려짐 */
+  }
+  20% {
+    transform: translateY(-30px) scaleY(1.1); /* 멈칫 */
+    animation-timing-function: ease-in; /* 빠르게 떨어짐 */
+  }
+  35% {
+    transform: translateY(0) scaleY(0.9); /* 내려올 때 height가 줄어듦 */
+  }
+  50% {
+    transform: translateY(0) scaleY(1); /* 원래 위치로 돌아옴 */
+  }
+  100% {
+    transform: translateY(0) scaleY(1); /* 마지막 프레임에서 4초 대기 */
+  }
+}
+
+.kakaoBut > span {
+  background-color: #fae100;
+  border-radius: 13px;
+  display: flex;
+  width: 62px;
+  height: 62px;
+  margin-bottom: 5px;
+}
+
 .kakaoBut img {
   width: 62px;
   height: 62px;
-  background-color: #fae100;
   border-radius: 13px;
+  animation: bounce 2s ease-in-out infinite; /* 1.5초 애니메이션, 4초 대기 */
+  position: relative; /* 튀어오름 애니메이션을 위해 relative 사용 */
+  z-index: 2; /* 이미지가 위로 튀어나오도록 z-index 설정 */
 }
 
-.kakaoBut > img {
-  margin-bottom: 5px;
-}
 .telNo {
   position: absolute;
   font-size: 39px;
