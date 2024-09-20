@@ -138,7 +138,7 @@
     margin: 0 auto;
   }
   .ttl img {
-    width: 77vw;
+    width: 84vw;
   }
   .img01 {
     position: relative;
@@ -150,37 +150,41 @@
   }
   .text {
     top: 25vw;
+    width: 100%
   }
   .gift01 {
     width: 35vw;
-    left: 1vw;
+    left: 11vw;
     top: 0;
   }
   .gift02 {
     width: 38vw;
-    right: -2vw;
+    right: 8vw;
     top: 2vw;
   }
   .gift03 {
     width: 37vw;
-    left: 0;
+    left: 10vw;
     bottom: auto;
     top: 25vw;
   }
   .gift04 {
     width: 34vw;
-    right: 0px;
+    right: 10vw;
     bottom: auto;
     top: 25vw;
   }
   .text img:first-child {
     width: 77vw;
-    padding-top: 52vw;
+    position: absolute;
+    top: 52vw;
+    left: 50%;
+    transform: translate(-50%, 0);
   }
   .text02 {
     font-size: 3.5vw;
     text-align: center;
-    padding-top: 127vw;
+    padding-top: 126vw;
     line-height: 160%;
   }
   .text02 li {
