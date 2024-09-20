@@ -4,8 +4,14 @@
       <div class="bg"></div>
       <h1 class="ttl"><img src="/images/landing/model_house/ttl01.png" width="517" alt="모델하우스 방문 예약하고 특별한 선물을 받아가세요!"></h1>
      
-      <p class="text"><img src="/images/landing/model_house/text01.png" width="738" alt="9월30 까지박소라 과장을 지정하고
-모델하우스를 방문하시면상품권을 드립니다. 그냥오면 없음"></p>
+      <p class="text">
+        <img src="/images/landing/model_house/text01.png" width="738" alt="9월30 까지 박소라 과장을 지정하고
+모델하우스를 방문하시면 상품권을 드립니다. 그냥오면 없음">
+        <img class="gift01" src="/images/landing/model_house/gift01.png" width="300" alt="">
+        <img class="gift02" src="/images/landing/model_house/gift02.png" width="320" alt="">
+        <img class="gift03" src="/images/landing/model_house/gift03.png" width="310" alt="">
+        <img class="gift04" src="/images/landing/model_house/gift04.png" width="280" alt="">
+      </p>
       <ul class="text02">
         <li>
           ※ 네이버페이, 배달의민족, CU, 신세계 중 하나
@@ -14,8 +20,6 @@
           ※ 상품권 종류는 변경 될 가능성이있습니다 
         </li>
       </ul>
-
-
     </div>
   </section>
 </template>
@@ -74,6 +78,26 @@
     transform: translate(-50%, 0);
     top: 80px;
   }
+  .gift01 {
+    position: absolute;
+    left: -330px;
+    top: 0;
+  }
+  .gift02 {
+    position: absolute;
+    right: -360px;
+    top: 20px;
+  }
+  .gift03 {
+    position: absolute;
+    left: -260px;
+    bottom: -40px;
+  }
+  .gift04 {
+    position: absolute;
+    right: -240px;
+    bottom: -30px;
+  }
   .text02 {
     font-size: 21px;
     text-align: center;
@@ -127,13 +151,36 @@
   .text {
     top: 25vw;
   }
-  .text img {
+  .gift01 {
+    width: 35vw;
+    left: 1vw;
+    top: 0;
+  }
+  .gift02 {
+    width: 38vw;
+    right: -2vw;
+    top: 2vw;
+  }
+  .gift03 {
+    width: 37vw;
+    left: 0;
+    bottom: auto;
+    top: 25vw;
+  }
+  .gift04 {
+    width: 34vw;
+    right: 0px;
+    bottom: auto;
+    top: 25vw;
+  }
+  .text img:first-child {
     width: 77vw;
+    padding-top: 52vw;
   }
   .text02 {
     font-size: 3.5vw;
     text-align: center;
-    padding-top: 73vw;
+    padding-top: 127vw;
     line-height: 160%;
   }
   .text02 li {
