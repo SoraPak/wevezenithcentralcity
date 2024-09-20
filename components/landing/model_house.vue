@@ -3,9 +3,17 @@
     <div class="model_house_inner">
       <div class="bg"></div>
       <h1 class="ttl"><img src="/images/landing/model_house/ttl01.png" width="517" alt="모델하우스 방문 예약하고 특별한 선물을 받아가세요!"></h1>
-      <img class="img01" src="/images/landing/model_house/img01.png" width="494" alt="">
-      
-      <p class="text"><img src="/images/landing/model_house/text01.png" width="517" alt="9월 22일 까지 박소라 과장을 지정하고 모델하우스를 방문하시면 선물 추첨권을 드립니다!"></p>
+     
+      <p class="text"><img src="/images/landing/model_house/text01.png" width="738" alt="9월30 까지박소라 과장을 지정하고
+모델하우스를 방문하시면상품권을 드립니다. 그냥오면 없음"></p>
+      <ul class="text02">
+        <li>
+          ※ 네이버페이, 배달의민족, CU, 신세계 중 하나
+        </li>
+        <li>
+          ※ 상품권 종류는 변경 될 가능성이있습니다 
+        </li>
+      </ul>
 
 
     </div>
@@ -34,7 +42,7 @@
     max-width: 840px;
     margin: 0 auto;
     position: relative;
-    height: 860px;
+    height: 1120px;
   }
   .model_house_inner::before {
     content: "";
@@ -50,7 +58,8 @@
   }
   .ttl {
     position: absolute;
-    right: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
     top: -80px;
   }
   .img01 {
@@ -61,8 +70,18 @@
   }
   .text {
     position: absolute;
-    right: -19px;
+    left: 50%;
+    transform: translate(-50%, 0);
     top: 80px;
+  }
+  .text02 {
+    font-size: 21px;
+    text-align: center;
+    padding-top: 590px;
+    line-height: 160%;
+  }
+  .text02 li {
+    margin-top: 10px;
   }
 
   
@@ -88,10 +107,7 @@
     width: 153vw;
     height: 100vw;
   }
-  .ttl, .text {
-    position: relative;
-    text-align: center;
-    left: 0;
+  .ttl {
     top: 0;
   }
   .ttl img, .text img {
@@ -109,10 +125,19 @@
     top: auto;
   }
   .text {
-    margin-top: 5vw;
+    top: 25vw;
   }
   .text img {
     width: 77vw;
+  }
+  .text02 {
+    font-size: 3.5vw;
+    text-align: center;
+    padding-top: 73vw;
+    line-height: 160%;
+  }
+  .text02 li {
+    margin-top: 1vw;
   }
 
 }
