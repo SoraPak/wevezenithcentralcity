@@ -136,10 +136,18 @@
   .ttl {
     font-size: 11.5vw;
     padding-top: 8vw;
-    height: 28vw;
+    height: 25.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 3.5vw;
   }
   .ttl img{
     width: 70vw;
+  }
+  .ttl img:last-child{
+    margin-top: auto;
   }
   .img01 {
     right: -8vw;
