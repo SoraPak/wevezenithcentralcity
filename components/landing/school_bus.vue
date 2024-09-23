@@ -7,8 +7,8 @@
       <img class="img04" src="/images/landing/school_bus/img03.png" width="92" alt="">
       <img class="img05" src="/images/landing/school_bus/img03.png" width="92" alt="">
       <h1 class="ttl">
-        <img src="/images/landing/school_bus/ttl01.svg" height="76" alt="안심통학">
-        <img src="/images/landing/school_bus/ttl02.svg" height="76" alt="셔틀버스 지원!">
+        <img src="/images/landing/school_bus/ttl01.svg" width="472" alt="안심통학">
+        <img src="/images/landing/school_bus/ttl02.svg" width="472" alt="셔틀버스 지원!">
       </h1>
       <p class="text01"><img src="/images/landing/school_bus/text01.svg" height="33" alt="(2년 지원 예정)"></p>
       <p class="text02"><img src="/images/landing/school_bus/text02.svg" width="342" alt="원스톱 안심통학을위한 아파트 정문부터 학교까지 통학용 셔틀버스지원"></p>
@@ -138,7 +138,7 @@
     padding-top: 8vw;
   }
   .ttl img{
-    height: 10vw;
+    width: 70vw;
   }
   .img01 {
     right: -8vw;
@@ -157,7 +157,7 @@
   }
   .img04{
     left: 5vw;
-    top: 140px;
+    top: 37vw;
     width: 14vw;
     
   }
