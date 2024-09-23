@@ -95,17 +95,11 @@
   margin-top: 17px;
   font-weight: 400;
 }
-.text01 img {
-  height: 4.5vw;
-}
 .text02 {
   font-size: 33px;
   font-weight: 600;
   line-height: 140%;
   margin-top: 40px;
-}
-.text02 img {
-  width: 48vw;
 }
 .text03 {
   color: #fff;

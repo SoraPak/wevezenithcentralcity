@@ -1,8 +1,8 @@
 <template>
   <section class="reviews">
     <h1 class="ttl">
-      <span>지금 바로 두산위브더제니스 센트럴시티와 함께</span>
-      <span>프리미엄 라이프를 준비하세요!</span>
+      <img src="/images/landing/reviews/ttl01.svg" alt="지금 바로 두산위브더제니스 센트럴시티와 함께">
+      <img src="/images/landing/reviews/ttl02.svg" alt="프리미엄 라이프를 준비하세요!">
     </h1>
     <div class="pagination">
       <span v-for="(dot, index) in reviews.length" :key="index" :class="{ active: currentSlide === index }">.</span>
@@ -171,6 +171,12 @@ onMounted(() => {
   justify-content: center;
   align-items: center;
   line-height: 0;
+}
+.ttl img {
+  width: 88vw;
+}
+.ttl img:last-child {
+  margin-top: 2.4vw;
 }
 
 .ttl::before {

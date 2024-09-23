@@ -222,6 +222,11 @@
   left: 50%;
   transform: translate(-50%, 0);
 }
+
+.ttl img:last-child {
+  margin-top: 20px;
+}
+
 .ttl span:first-child {
   font-size: 41px;
   white-space: nowrap;
