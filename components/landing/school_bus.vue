@@ -95,24 +95,20 @@
   margin-top: 17px;
   font-weight: 400;
 }
+
 .text02 {
   font-size: 33px;
   font-weight: 600;
   line-height: 140%;
   margin-top: 40px;
 }
+
 .text03 {
   color: #fff;
   font-size: 13px;
   margin-right: 20px;
   margin-top: 10px;
 }
-
-
-
-
-
-
 
 
 /* sp */
@@ -139,7 +135,7 @@
   }
   .ttl {
     font-size: 11.5vw;
-    padding-top: 9vw;
+    padding-top: 8vw;
   }
   .ttl img{
     height: 10vw;
@@ -174,9 +170,15 @@
     font-size: 4.6vw;
     margin-top: 0;
   }
+  .text01 img {
+    height: 4.5vw;
+  }
   .text02 {
     font-size: 4.8vw;
     margin: 1vw 22vw;
+  }
+  .text02 img {
+    width: 48vw;
   }
   .text03 {
     font-size: 2.7vw;
