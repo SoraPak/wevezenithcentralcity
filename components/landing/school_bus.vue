@@ -176,13 +176,15 @@
   }
   .text02 {
     font-size: 4.8vw;
-    margin-top: 2vw;
+    margin: 2vw 22vw;
   }
   .text03 {
     font-size: 2.7vw;
-    margin: 23vw 29vw 0 34vw;
+    margin: 0 29vw 0 34vw;
     line-height: 160%;
     word-break: keep-all;
+    position: absolute;
+    bottom: 11vw;
   }
 
 
