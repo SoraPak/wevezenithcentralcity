@@ -8,8 +8,8 @@
       <img class="spImg01" src="/images/landing/ansim/sp_img01.png" width="363" alt="">
       <dl class="section01">
         <dt><img src="/images/landing/ansim/sub_ttl.png" width="444" alt="계약조건 안심 보장제 실시!"></dt>
-        <dd>분양정책 등의 변경으로 최초 공급계약체결 당시의<br>
-        조건 대비 유리하게 변경될경우, 기존계약자에 대하여<br>
+        <dd>분양정책 등의 변경으로 최초 공급계약체결 당시의 
+        조건 대비 유리하게 변경될경우, 기존계약자에 대하여 
         변경된 계약조건으로 소급하여 혜택을 부여하는제도 
         </dd>
       </dl>
@@ -100,6 +100,7 @@
     font-size: 25px;
     line-height: 160%;
     position: relative;
+    word-break: keep-all;
   }
 
 
@@ -115,7 +116,9 @@
   }
   .ansim_inner {
     max-width: 100%;
-    height: 162vw;
+    padding-top: 88vw;
+    height: auto;
+    padding-bottom: 34vw;
   }
 
   .bg span:nth-child(1) {
@@ -166,10 +169,10 @@
     width: 93vw;
     padding: 4vw;
     font-size: 3.8vw;
-    position: absolute;
+    position: relative;
     left: 50%;
     transform: translate(-50%, 0);
-    top: 90vw;
+    /* top: 90vw; */
     z-index: 2;
     box-sizing: border-box;
     border-radius: 3vw;
