@@ -1,7 +1,7 @@
 <template>
   <ul class="sp_rNav" :class="{ 'animate': isMounted }">
-    <li class="kakao"><a href="https://open.kakao.com/o/saZEcwPg" target="_blank">카톡상담/예약</a></li>
-    <li class="call"><a href="tel:010-9357-0669" target="_blank">전화상담/예약</a></li>
+    <li class="kakao"><a href="https://open.kakao.com/o/saZEcwPg" target="_blank"><img src="/images/landing/r_nav/text_kakao.svg" alt="카톡상담/예약"></a></li>
+    <li class="call"><a href="tel:010-9357-0669" target="_blank"><img src="/images/landing/r_nav/text_call.svg" alt="전화상담/예약"></a></li>
   </ul>
 </template>
 
@@ -50,11 +50,15 @@ onMounted(() => {
   height: 10vw;
   background-size: 100% auto;
   margin-right: 1.5vw;
+  margin-left: -3vw;
 }
 
 .sp_rNav .kakao a {
   background: #fae100;
   color: #371d1e;
+}
+.sp_rNav li img {
+  width: 26vw;
 }
 
 
@@ -91,7 +95,6 @@ onMounted(() => {
   width: 10vw;
   height: 10vw;
   background-size: 100% auto;
-  margin-right: 1.5vw;
 }
 
 .sp_rNav .call a {
