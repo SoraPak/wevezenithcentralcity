@@ -7,15 +7,11 @@
       <img class="img04" src="/images/landing/school_bus/img03.png" width="92" alt="">
       <img class="img05" src="/images/landing/school_bus/img03.png" width="92" alt="">
       <h1 class="ttl">
-        <span>안심통학</span><br>
-        <span>셔틀버스 지원!</span>
+        <img src="/images/landing/school_bus/ttl01.svg" height="76" alt="안심통학">
+        <img src="/images/landing/school_bus/ttl02.svg" height="76" alt="셔틀버스 지원!">
       </h1>
-      <p class="text01">(2년 지원 예정)</p>
-      <p class="text02">
-        원스톱 안심통학을위한<br>
-        아파트 정문부터 학교까지<br>
-        통학용 셔틀버스지원
-      </p>
+      <p class="text01"><img src="/images/landing/school_bus/text01.svg" height="33" alt="(2년 지원 예정)"></p>
+      <p class="text02"><img src="/images/landing/school_bus/text02.svg" width="342" alt="원스톱 안심통학을위한 아파트 정문부터 학교까지 통학용 셔틀버스지원"></p>
       <p class="text03">※학정지구 내 초등학교 신설시 셔틀버스 지원계획이 변경 또는 취소될 수 있습니다. </p>
       
     </div>
@@ -99,11 +95,17 @@
   margin-top: 17px;
   font-weight: 400;
 }
+.text01 img {
+  height: 4.5vw;
+}
 .text02 {
   font-size: 33px;
   font-weight: 600;
   line-height: 140%;
   margin-top: 40px;
+}
+.text02 img {
+  width: 48vw;
 }
 .text03 {
   color: #fff;
@@ -111,6 +113,7 @@
   margin-right: 20px;
   margin-top: 10px;
 }
+
 
 
 
@@ -144,6 +147,9 @@
     font-size: 11.5vw;
     padding-top: 9vw;
   }
+  .ttl img{
+    height: 10vw;
+  }
   .img01 {
     right: -8vw;
     top: 37vw;
@@ -172,11 +178,11 @@
   }
   .text01 {
     font-size: 4.6vw;
-    margin-top: 1vw;
+    margin-top: 0;
   }
   .text02 {
     font-size: 4.8vw;
-    margin: 2vw 22vw;
+    margin: 1vw 22vw;
   }
   .text03 {
     font-size: 2.7vw;
