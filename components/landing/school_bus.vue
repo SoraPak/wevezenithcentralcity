@@ -136,6 +136,7 @@
   .ttl {
     font-size: 11.5vw;
     padding-top: 8vw;
+    height: 28vw;
   }
   .ttl img{
     width: 70vw;
