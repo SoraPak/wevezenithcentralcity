@@ -183,6 +183,7 @@ function correctPosition() {
 .imgList {
   display: flex;
   transition: transform 0.05s linear;
+  
 }
 
 .imgListItem {
@@ -190,6 +191,7 @@ function correctPosition() {
   flex-direction: column;
   margin-right: 20px; /* 간격 조절 */
   flex-shrink: 0; /* 아이템이 줄어들지 않도록 설정 */
+  width: 371px;
 }
 
 .imgListItem img {
@@ -200,6 +202,7 @@ function correctPosition() {
 .imgListItem span {
   font-size: 16px;
   color: #000f3a;
+  word-break:keep-all;
 }
 
 /* 반응형 설정 */
@@ -225,6 +228,7 @@ function correctPosition() {
   }
   .imgListItem {
     margin-right: 2vw;
+    width: 55vw;
   }
   .imgListItem img {
     width: 55vw;
