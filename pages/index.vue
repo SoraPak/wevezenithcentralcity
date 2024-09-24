@@ -1,5 +1,5 @@
 <template>
-  <div class="landingWrap">
+  <div class="landingWrap" ref="landingWrap">
     <r_nav class="rNav" />
     <sp_r_nav class="sp_rNav" />
     <hero />
@@ -19,14 +19,17 @@
 <style scoped>
 .landingWrap {
   overflow: hidden;
+  opacity: 0; /* 초기 상태에서 안 보이게 설정 */
+  transition: opacity 0.5s ease-in-out; /* 페이드인 애니메이션 */
 }
+
 .sp_reviews, .sp_rNav {
   display: none;
 }
 
 /* sp */
 @media only screen and (max-width: 950px) {
-  .reviews, .rNav{
+  .reviews, .rNav {
     display: none;
   }
   .sp_reviews {
@@ -39,7 +42,7 @@
 </style>
 
 <script setup>
-import { onMounted } from 'vue';
+import { onMounted, nextTick, ref } from 'vue';
 
 // 레이아웃을 비활성화
 definePageMeta({
@@ -61,7 +64,9 @@ import sp_reviews from '~/components/landing/sp_reviews.vue'
 import model_house from '~/components/landing/model_house.vue'
 import guide from '~/components/landing/guide.vue'
 
-// 창 크기가 변경될 때를 감지하여 950px 이하일 때 페이지를 리로드하는 함수
+const landingWrap = ref(null);
+
+// 화면 크기 변경을 감지하고 950px 이하로 전환될 때 페이지를 리로드하는 함수
 const checkResponsiveAndReload = () => {
   let lastWidth = window.innerWidth;
   window.addEventListener('resize', () => {
@@ -74,8 +79,14 @@ const checkResponsiveAndReload = () => {
   });
 };
 
-// 컴포넌트가 마운트되면 크기 변경 감지 시작
+// 페이지 로드 시 페이드인 효과 적용
 onMounted(() => {
+  // 페이지가 로드되면 opacity를 1로 변경하여 페이드인 효과를 실행
+  nextTick(() => {
+    landingWrap.value.style.opacity = '1';
+  });
+
+  // 반응형 화면 전환 시 리로드 감지
   checkResponsiveAndReload();
 });
 </script>
