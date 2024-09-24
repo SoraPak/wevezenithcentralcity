@@ -3,6 +3,7 @@
     <div class="location_inner">
       <h1 class="ttl fade-in" ref="ttlRef01"><img src="/images/landing/location/ttl.png" width="358" alt="빨라진 교통 어디로든 빠르게"></h1>
       <img class="img01" src="/images/landing/location/img01.png" width="474" alt="">
+      <p class="img01Text"><a href="https://kko.to/DrTCNa27qH" target="_blank"><span>현장</span>대구광역시 학정동 732-1번지 일원</a></p>
       <p class="text01 from-right" ref="text01"><img src="/images/landing/location/text01.png" height="90" alt="더블 역세권 학정역 도보 2분"></p>
       <p class="text02 from-right" ref="text02"><img src="/images/landing/location/text02.png" height="90" alt="대구 4차 순환도로 시내외 어디든 빠른 이동"></p>
       <p class="text03 from-left" ref="text03"><img src="/images/landing/location/text03.png" height="90" alt="구미IC,혁신도시,성서공단,동대구역 주요 거점 빠른 접근성"></p>
@@ -73,6 +74,29 @@ useScrollAnimation([ttlRef01, text01, text02, text03, text04]);
     left: -20px;
     top: -110px;
   }
+  .img01Text {
+    font-size: 20px;
+    padding-top: 380px;
+    width: 474px;
+    text-align: center;
+    margin-left: -20px;
+    line-height: 140%;
+  }
+  .img01Text a {
+    color: #fff;
+    transition: color 0.3s ease, font-size 0.3s ease;
+  }
+  .img01Text a:hover {
+    color: rgb(204, 216, 255);
+    font-size: 110%;
+  }
+  .img01Text a > span {
+    padding: 3px;
+    background: #ffc600;
+    color: #0182e0;
+    border-radius: 3px;
+    margin-right: 8px;
+  }
   .text01 {
     top: 15px;
     right: 0;
@@ -86,11 +110,11 @@ useScrollAnimation([ttlRef01, text01, text02, text03, text04]);
     right: 10px;
   }
   .text03 {
-    top: 400px;
+    top: 430px;
     left: 20px;
   }
   .text04 {
-    top: 506px;
+    top: 536px;
     left: 0;
   }
   .img03 {
@@ -130,6 +154,20 @@ useScrollAnimation([ttlRef01, text01, text02, text03, text04]);
     top: 4vw;
     left: -8vw;
   }
+
+  .img01Text {
+    font-size: 3vw;
+    padding-top: 72vw;
+    width: 37vw;
+    margin-left: 0;
+        
+  }
+  .img01Text a > span {
+    padding: 0.5vw;
+    border-radius: 1vw;
+    margin-right: 1vw;
+  }
+
   .text01 img, .text02 img, .text03 img, .text04 img {
     height: 12vw;
 
@@ -148,12 +186,12 @@ useScrollAnimation([ttlRef01, text01, text02, text03, text04]);
     width: 59vw;
   }
   .text03 {
-    top: 77vw;
-    left: -0.5vw;
+    top: 82vw;
+    left: -1.5vw;
   }
   .text04 {
-    top: 92.3vw;
-    left: -3.5vw;
+    top: 97.3vw;
+    left: -4.5vw;
   }
   .img03 {
     right: 30vw;
