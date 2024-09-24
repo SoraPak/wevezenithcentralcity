@@ -183,6 +183,7 @@ function correctPosition() {
 .imgList {
   display: flex;
   transition: transform 0.05s linear;
+  line-height: 120%;
   
 }
 
