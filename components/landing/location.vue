@@ -157,10 +157,9 @@ useScrollAnimation([ttlRef01, text01, text02, text03, text04]);
 
   .img01Text {
     font-size: 3vw;
-    padding-top: 72vw;
-    width: 37vw;
     margin-left: 0;
-        
+    width: 40vw;
+    padding: 72vw 0 0 1vw;
   }
   .img01Text a > span {
     padding: 0.5vw;
