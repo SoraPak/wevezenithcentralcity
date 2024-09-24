@@ -201,7 +201,9 @@
   }
   .guide_inner {
     max-width: 100%;
-    height: 225vw;
+    height: auto;
+    padding-bottom: 20vw;
+    padding-top: 80vw;
   }
 
   .ttl{
@@ -258,10 +260,10 @@
     border: 0.6vw solid #0d2161;
     padding: 5vw;
     border-radius: 5vw;
-    top: 79vw;
+    top: auto;
     font-size: 5vw;
-    left: 50%;
-    transform: translate(-50%, 0);
+    left: auto;
+    position: relative;
   }
   .location {
     display: block;
