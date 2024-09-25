@@ -227,25 +227,23 @@ onMounted(() => {
     width: 100vw;
   }
   .text01 {
-    left: 50%;
-    transform: translate(-50%, 0);
+    left: 0;
     top: -1vw;
+    text-align: center;
+    width: 100%;
   }
   .text01 img {
-    width: 96vw;
+    width: 88vw;
   }
   .section01 {
     width: 93vw;
     padding: 4vw;
     font-size: 3.8vw;
     position: relative;
-    left: 50%;
-    transform: translate(-50%, 0);
-    /* top: 90vw; */
     z-index: 2;
     box-sizing: border-box;
     border-radius: 3vw;
-    margin: 0;
+    margin: 0 auto;
   }
   .section01 dt img{
     width: 62vw;
