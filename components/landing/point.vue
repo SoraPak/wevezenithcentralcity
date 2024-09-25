@@ -78,6 +78,7 @@
   display: flex;
   align-items: flex-start;
   width: 100%;
+  position: relative;
 }
 .subCon dl {
   flex: 1;
@@ -162,15 +163,20 @@
     margin-top: 1vw;
   }
   .subCon2 dt {
-    margin-left: -2vw;
-    margin-right: -13vw;
+    margin-left: 0;
+    margin-right: 0;
+    position: absolute;
+    left: -2vw;
+
   }
   .subCon3 dt {
     margin-left: -3vw;
   }
   .subCon4 dt {
-    margin-left: -2vw;
-    margin-right: -9vw;
+    margin-left: 0;
+    margin-right: 0;
+    position: absolute;
+    left: -2vw;
   }
 
 
