@@ -26,6 +26,7 @@ const section01Ref = ref(null);
 onMounted(() => {
   const options = {
     threshold: 0.1, // 요소가 10% 보이면 애니메이션 트리거
+    rootMargin: '0px 0px -300px 0px' // 화면 하단에서 300px 정도 더 내려가면 트리거
   };
 
   const observer = new IntersectionObserver((entries) => {
@@ -42,6 +43,7 @@ onMounted(() => {
   observer.observe(spImg01Ref.value);
   observer.observe(section01Ref.value);
 });
+
 </script>
 
 <style scoped>
@@ -82,7 +84,7 @@ onMounted(() => {
     height: 518px;
     background: url("/images/landing/ansim/bg01.png") no-repeat center center;
     background-size: 100% auto;
-    animation: randomMovement1 10s infinite ease-in-out;
+    animation: randomMovement1 40s infinite cubic-bezier(0.42, 0.0, 0.58, 1.0);
   }
 
   .bg span:nth-child(2) {
@@ -92,7 +94,7 @@ onMounted(() => {
     height: 594px;
     background: url("/images/landing/ansim/bg02.png") no-repeat center center;
     background-size: 100% auto;
-    animation: randomMovement2 12s infinite ease-in-out;
+    animation: randomMovement2 80s infinite cubic-bezier(0.42, 0.0, 0.58, 1.0);
   }
 
   .bg span:nth-child(3) {
@@ -102,32 +104,35 @@ onMounted(() => {
     height: 621px;
     background: url("/images/landing/ansim/bg03.png") no-repeat center center;
     background-size: 100% auto;
-    animation: randomMovement3 15s infinite ease-in-out;
+    animation: randomMovement3 45s infinite cubic-bezier(0.42, 0.0, 0.58, 1.0);
   }
 
 
   /* 확대된 범위로 애니메이션 수정 */
   @keyframes randomMovement1 {
     0% { transform: translate(0, 0); }
-    25% { transform: translate(-50px, 75px); }
-    50% { transform: translate(75px, -50px); }
-    75% { transform: translate(-75px, -50px); }
+    20% { transform: translate(100px, -50px); }
+    40% { transform: translate(-120px, 80px); }
+    60% { transform: translate(90px, -100px); }
+    80% { transform: translate(-50px, 50px); }
     100% { transform: translate(0, 0); }
   }
 
   @keyframes randomMovement2 {
     0% { transform: translate(0, 0); }
-    25% { transform: translate(100px, -75px); }
-    50% { transform: translate(-75px, 100px); }
-    75% { transform: translate(50px, -50px); }
+    20% { transform: translate(-80px, 100px); }
+    40% { transform: translate(120px, -60px); }
+    60% { transform: translate(-100px, 90px); }
+    80% { transform: translate(50px, -50px); }
     100% { transform: translate(0, 0); }
   }
 
   @keyframes randomMovement3 {
     0% { transform: translate(0, 0); }
-    25% { transform: translate(-75px, 50px); }
-    50% { transform: translate(50px, -75px); }
-    75% { transform: translate(-25px, 75px); }
+    20% { transform: translate(75px, -120px); }
+    40% { transform: translate(-90px, 80px); }
+    60% { transform: translate(50px, 50px); }
+    80% { transform: translate(-50px, -100px); }
     100% { transform: translate(0, 0); }
   }
 
