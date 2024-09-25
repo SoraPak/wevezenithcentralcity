@@ -77,6 +77,7 @@
 .subCon {
   display: flex;
   align-items: flex-start;
+  width: 100vw;
 }
 .subCon > img {
   margin-top: -40px;
@@ -85,6 +86,7 @@
   margin-top: 15px;
   position: relative;
   z-index: 2;
+  flex: 1;
 }
 .subCon dd {
   padding: 20px;
