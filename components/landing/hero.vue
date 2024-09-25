@@ -7,14 +7,14 @@
       <img class="from-right" ref="ttlRef03" src="/images/landing/hero/ttl03.png" width="581" alt="대구 또 하나의 랜드마크, 새로운 제니스가 옵니다">
     </h1>
     <div class="textBox1">
-      <p class="text1"><img src="/images/simple_logo_w.svg" width="400" alt="두산위브더제니스 센트럴시티"></p>
-      <p class="text2"><img src="/images/landing/hero/text02.png" width="395" alt="전용 84・115・143・191㎡ | 총 1,098세대"></p>
+      <p class="text1"><img src="/images/simple_logo_w.svg" width="370" alt="두산위브더제니스 센트럴시티"></p>
+      <p class="text2"><img src="/images/landing/hero/text02.png" width="365" alt="전용 84・115・143・191㎡ | 총 1,098세대"></p>
     </div>
     <ul class="terms">
-      <li><img src="/images/landing/hero/list01.png" width="162" alt="학정 역 칠곡경대병원 역 더블역세권"></li>
-      <li><img src="/images/landing/hero/list02.png" width="162" alt="중도금 무이자"></li>
-      <li><img src="/images/landing/hero/list03.png" width="162" alt="전매 무제한"></li>
-      <li><img src="/images/landing/hero/list04.png" width="162" alt="계약금 500만원"></li>
+      <li><img src="/images/landing/hero/list01.png" width="152" alt="학정 역 칠곡경대병원 역 더블역세권"></li>
+      <li><img src="/images/landing/hero/list02.png" width="152" alt="중도금 무이자"></li>
+      <li><img src="/images/landing/hero/list03.png" width="152" alt="전매 무제한"></li>
+      <li><img src="/images/landing/hero/list04.png" width="152" alt="계약금 500만원"></li>
     </ul>
   </section>
 </template>
@@ -83,20 +83,20 @@ useScrollAnimation([ttlRef01, ttlRef02, ttlRef03]);
   left: 50%;
   transform: translate(-50%, 0);
   /* bottom:806px; */
-  top:335px;
+  top:345px;
 }
 
 .terms {
   position: absolute;
   left: 50%;
-  top: 340px;
+  top: 350px;
   transform: translate(-50%, 0);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .terms li {
-  margin: 10px;
+  margin: 11px;
 }
 
 /* sp */
