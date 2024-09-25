@@ -169,7 +169,7 @@ onMounted(() => {
 
   .img01.animate, .spImg01.animate {
     animation: dropBounce 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards,
-              shake 0.5s ease-in-out 2s infinite; /* 지진 효과 추가 */
+              shake 0.7s ease-in-out 1s infinite; /* 지진 효과 추가 */
   }
 
 
