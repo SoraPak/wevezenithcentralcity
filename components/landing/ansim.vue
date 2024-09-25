@@ -76,12 +76,13 @@ onMounted(() => {
     position: absolute;
   }
   .bg span:nth-child(1) {
-    top: -440px;
-    right: -490px;
+    top: -620px;
+    right: -600px;
     width: 577px;
     height: 518px;
     background: url("/images/landing/ansim/bg01.png") no-repeat center center;
     background-size: 100% auto;
+    animation: randomMovement1 10s infinite ease-in-out;
   }
 
   .bg span:nth-child(2) {
@@ -91,15 +92,43 @@ onMounted(() => {
     height: 594px;
     background: url("/images/landing/ansim/bg02.png") no-repeat center center;
     background-size: 100% auto;
+    animation: randomMovement2 12s infinite ease-in-out;
   }
 
   .bg span:nth-child(3) {
-    bottom: -390px;
+    bottom: -100px;
     right: -900px;
     width: 872px;
     height: 621px;
     background: url("/images/landing/ansim/bg03.png") no-repeat center center;
     background-size: 100% auto;
+    animation: randomMovement3 15s infinite ease-in-out;
+  }
+
+
+  /* 확대된 범위로 애니메이션 수정 */
+  @keyframes randomMovement1 {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(-50px, 75px); }
+    50% { transform: translate(75px, -50px); }
+    75% { transform: translate(-75px, -50px); }
+    100% { transform: translate(0, 0); }
+  }
+
+  @keyframes randomMovement2 {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(100px, -75px); }
+    50% { transform: translate(-75px, 100px); }
+    75% { transform: translate(50px, -50px); }
+    100% { transform: translate(0, 0); }
+  }
+
+  @keyframes randomMovement3 {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(-75px, 50px); }
+    50% { transform: translate(50px, -75px); }
+    75% { transform: translate(-25px, 75px); }
+    100% { transform: translate(0, 0); }
   }
 
 
