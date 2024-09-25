@@ -1,8 +1,8 @@
 <template>
   <section class="reviews">
     <h1 class="ttl">
-      <img src="/images/landing/reviews/ttl01.svg" alt="지금 바로 두산위브더제니스 센트럴시티와 함께">
-      <img src="/images/landing/reviews/ttl02.svg" alt="프리미엄 라이프를 준비하세요!">
+      <img loading="lazy" src="/images/landing/reviews/ttl01.svg" alt="지금 바로 두산위브더제니스 센트럴시티와 함께">
+      <img loading="lazy" src="/images/landing/reviews/ttl02.svg" alt="프리미엄 라이프를 준비하세요!">
     </h1>
     <div class="pagination">
       <span v-for="(dot, index) in reviews.length" :key="index" :class="{ active: currentSlide === index }">.</span>
@@ -26,7 +26,7 @@
                   <p v-for="(content, i) in review.content" :key="i">{{ content }}</p>
                 </div>
                 <p class="name" v-html="review.author"></p>
-                <img :src="review.img" width="166" :alt="review.title" />
+                <img loading="lazy" :src="review.img" width="166" :alt="review.title" />
               </dd>
             </dl>
           </div>

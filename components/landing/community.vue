@@ -1,15 +1,15 @@
 <template>
   <section class="community">
     <h1 class="ttl">
-      <img src="/images/landing/community/ttl.png" width="584" alt="입주민을 위한 고품격 커뮤니티 CLUB ZENITH">
+      <img loading="lazy" src="/images/landing/community/ttl.png" width="584" alt="입주민을 위한 고품격 커뮤니티 CLUB ZENITH">
     </h1>
-    <img class="img01" src="/images/landing/community/img.jpg" width="885" alt="">
+    <img loading="lazy" class="img01" src="/images/landing/community/img.jpg" width="885" alt="">
 
     <!-- 롤링 배너 -->
     <div class="rolling-container" @mouseenter="stopRolling" @mouseleave="startRolling">
       <ul class="imgList" ref="imgListRef" @mousedown="isMobile ? startDrag : null" @mousemove="isMobile ? onDrag : null" @mouseup="isMobile ? endDrag : null" @mouseleave="isMobile ? endDrag : null" @touchstart="startDrag" @touchmove="onDrag" @touchend="endDrag">
         <li v-for="(item, index) in itemsToShow" :key="index" class="imgListItem">
-          <img :src="item.imgSrc" :alt="item.altText">
+          <img loading="lazy" :src="item.imgSrc" :alt="item.altText">
           <span>{{ item.text }}</span>
         </li>
       </ul>

@@ -1,6 +1,6 @@
 <template>
   <header>
-    <img src="/images/header.jpg" alt="헤더 이미지" />
+    <img loading="lazy" src="/images/header.jpg" alt="헤더 이미지" />
     <nav>
       <!-- 네비게이션 메뉴 -->
     </nav>
