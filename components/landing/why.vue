@@ -4,12 +4,12 @@
     <div class="why_inner"> 
       <div class="bg"><span></span><span></span><span></span></div>
       <h1 class="ttl">
-        <img class="ttl01" src="/images/landing/why/ttl01.png" width="513" alt="내집마련 기회, 지금이 적기!">
-        <img class="ttl02" src="/images/landing/why/ttl02.png" width="681" alt="왜 두산위브더제니스 센트럴시티인가?">
-        <img class="spTtl02" src="/images/landing/why/sp_ttl02.png" width="179" alt="왜 두산위브더제니스 센트럴시티인가?">
+        <img loading="lazy" class="ttl01" src="/images/landing/why/ttl01.png" width="513" alt="내집마련 기회, 지금이 적기!">
+        <img loading="lazy" class="ttl02" src="/images/landing/why/ttl02.png" width="681" alt="왜 두산위브더제니스 센트럴시티인가?">
+        <img loading="lazy" class="spTtl02" src="/images/landing/why/sp_ttl02.png" width="179" alt="왜 두산위브더제니스 센트럴시티인가?">
       </h1>
-      <img class="img01" src="/images/landing/why/img01.png" width="675" alt="박소라 과장">
-      <img class="spImg01" src="/images/landing/why/sp_img01.png" width="208" alt="박소라 과장">
+      <img loading="lazy" class="img01" src="/images/landing/why/img01.png" width="675" alt="박소라 과장">
+      <img loading="lazy" class="spImg01" src="/images/landing/why/sp_img01.png" width="208" alt="박소라 과장">
       <div class="pList">
         <dl>
           <dt>계약금 5%로, 입주 때까지 추가 목돈 無</dt>

@@ -29,7 +29,7 @@
               <p>
                 읍내동 66세<br>대성떡방앗간
               </p>
-              <img src="/images/landing/reviews/img06.png" width="166" alt="">
+              <img loading="lazy" src="/images/landing/reviews/img06.png" width="166" alt="">
             </dd>
           </dl>
           <dl>
@@ -57,7 +57,7 @@
               <p>
                 태전동 58세 김**
               </p>
-              <img src="/images/landing/reviews/img01.png" width="166" alt="">
+              <img loading="lazy" src="/images/landing/reviews/img01.png" width="166" alt="">
             </dd>
           </dl>
 
@@ -89,7 +89,7 @@
               <p>
                 읍내동 62세 함**
               </p>
-              <img src="/images/landing/reviews/img03.png" width="166" alt="">
+              <img loading="lazy" src="/images/landing/reviews/img03.png" width="166" alt="">
             </dd>
           </dl>
         </div>
@@ -126,7 +126,7 @@
               <p>
                 도남동 43세 윤**
               </p>
-              <img src="/images/landing/reviews/img02.png" width="166" alt="">
+              <img loading="lazy" src="/images/landing/reviews/img02.png" width="166" alt="">
             </dd>
           </dl>
           <dl>
@@ -148,7 +148,7 @@
               <p>
                 구암동 30세 박**
               </p>
-              <img src="/images/landing/reviews/img05.png" width="166" alt="">
+              <img loading="lazy" src="/images/landing/reviews/img05.png" width="166" alt="">
             </dd>
           </dl>
           <dl>
@@ -182,7 +182,7 @@
               <p>
                 동천동 35세 최**
               </p>
-              <img src="/images/landing/reviews/img04.png" width="166" alt="">
+              <img loading="lazy" src="/images/landing/reviews/img04.png" width="166" alt="">
             </dd>
           </dl>
         </div>

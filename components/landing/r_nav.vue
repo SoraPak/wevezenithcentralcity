@@ -1,14 +1,14 @@
 <template>
   <div class="rNav">
     <div class="section01">
-      <img src="/images/landing/r_nav/text01.png" width="75" alt="선착순 분양중">
+      <img loading="lazy" src="/images/landing/r_nav/text01.png" width="75" alt="선착순 분양중">
     </div>
     <div class="section02">
       <p class="telNo"><a href="tel:010-9357-0669" target="_blank"><span>010)</span><span>9357</span><span>0669</span></a></p>
     </div>
     <div class="section03">
       <a class="kakaoBut" href="https://open.kakao.com/o/saZEcwPg" target="_blank">
-        <span><img src="/images/landing/r_nav/kakao.svg" width="45" alt=""></span>
+        <span><img loading="lazy" src="/images/landing/r_nav/kakao.svg" width="45" alt=""></span>
         톡상담/예약
       </a>
     </div>

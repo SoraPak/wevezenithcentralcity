@@ -1,26 +1,26 @@
 <template>
   <section id="guide" class="guide">
     <div class="guide_inner">
-      <h1 class="ttl"><img src="/images/landing/guide/ttl01.png" width="648" alt="당신의 프리미엄 라이프를 안내할 분양팀 상담사"></h1>
-      <p class="text"><img src="/images/landing/guide/text01.png" height="76" alt="카톡으로 예약 단디 하고 오이소~^^"></p>
+      <h1 class="ttl"><img loading="lazy" src="/images/landing/guide/ttl01.png" width="648" alt="당신의 프리미엄 라이프를 안내할 분양팀 상담사"></h1>
+      <p class="text"><img loading="lazy" src="/images/landing/guide/text01.png" height="76" alt="카톡으로 예약 단디 하고 오이소~^^"></p>
       <div class="guideImgs">
-        <img class="name03" src="/images/landing/guide/name03.png" width="165" alt="신현주 팀장">
-        <img class="img03" src="/images/landing/guide/img03.png" width="449" alt="">
-        <img class="name02" src="/images/landing/guide/name02.png" width="165" alt="이지안 과장">
-        <img class="img02" src="/images/landing/guide/img02.png" width="361" alt="">
-        <img class="name01" src="/images/landing/guide/name01.png" width="165" alt="박소라 과장">
-        <img class="img01" src="/images/landing/guide/img01.png" width="420" alt="">
+        <img loading="lazy" class="name03" src="/images/landing/guide/name03.png" width="165" alt="신현주 팀장">
+        <img loading="lazy" class="img03" src="/images/landing/guide/img03.png" width="449" alt="">
+        <img loading="lazy" class="name02" src="/images/landing/guide/name02.png" width="165" alt="이지안 과장">
+        <img loading="lazy" class="img02" src="/images/landing/guide/img02.png" width="361" alt="">
+        <img loading="lazy" class="name01" src="/images/landing/guide/name01.png" width="165" alt="박소라 과장">
+        <img loading="lazy" class="img01" src="/images/landing/guide/img01.png" width="420" alt="">
       </div>
       <div class="section01">
         <div class="location">
-          <img src="/images/landing/guide/map.jpg" width="309" alt="">
+          <img loading="lazy" src="/images/landing/guide/map.jpg" width="309" alt="">
           <div class="right">
             <dl>
               <dt>모델하우스</dt>
               <dd>대구광역시 북구 태전동 1213번지<br>(대구과학대 정문 앞 주차장)</dd>
             </dl>
             <a class="btMap" href="https://kko.to/P0aas7dXbe" target="_blank"> 카카오지도 <br>바로가기</a>
-            <p class="tel"><img src="/images/landing/guide/img_tel.png" width="438" alt="두산위브더제니스 센트럴시티 전화번호:01093570669"></p>
+            <p class="tel"><img loading="lazy" src="/images/landing/guide/img_tel.png" width="438" alt="두산위브더제니스 센트럴시티 전화번호:01093570669"></p>
           </div>
         </div>
       </div>

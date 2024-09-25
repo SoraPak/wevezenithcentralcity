@@ -1,17 +1,17 @@
 <template>
   <section class="school_bus">
     <div class="school_bus_inner">
-      <img class="img01" src="/images/landing/school_bus/img01.png" width="288" alt="">
-      <img class="img02" src="/images/landing/school_bus/img02.png" width="380" alt="">
-      <img class="img03" src="/images/landing/school_bus/img03.png" width="118" alt="">
-      <img class="img04" src="/images/landing/school_bus/img03.png" width="92" alt="">
-      <img class="img05" src="/images/landing/school_bus/img03.png" width="92" alt="">
+      <img loading="lazy" class="img01" src="/images/landing/school_bus/img01.png" width="288" alt="">
+      <img loading="lazy" class="img02" src="/images/landing/school_bus/img02.png" width="380" alt="">
+      <img loading="lazy" class="img03" src="/images/landing/school_bus/img03.png" width="118" alt="">
+      <img loading="lazy" class="img04" src="/images/landing/school_bus/img03.png" width="92" alt="">
+      <img loading="lazy" class="img05" src="/images/landing/school_bus/img03.png" width="92" alt="">
       <h1 class="ttl">
-        <img src="/images/landing/school_bus/ttl01.svg" width="472" alt="안심통학">
-        <img src="/images/landing/school_bus/ttl02.svg" width="472" alt="셔틀버스 지원!">
+        <img loading="lazy" src="/images/landing/school_bus/ttl01.svg" width="472" alt="안심통학">
+        <img loading="lazy" src="/images/landing/school_bus/ttl02.svg" width="472" alt="셔틀버스 지원!">
       </h1>
-      <p class="text01"><img src="/images/landing/school_bus/text01.svg" height="33" alt="(2년 지원 예정)"></p>
-      <p class="text02"><img src="/images/landing/school_bus/text02.svg" width="342" alt="원스톱 안심통학을위한 아파트 정문부터 학교까지 통학용 셔틀버스지원"></p>
+      <p class="text01"><img loading="lazy" src="/images/landing/school_bus/text01.svg" height="33" alt="(2년 지원 예정)"></p>
+      <p class="text02"><img loading="lazy" src="/images/landing/school_bus/text02.svg" width="342" alt="원스톱 안심통학을위한 아파트 정문부터 학교까지 통학용 셔틀버스지원"></p>
       <p class="text03">※학정지구 내 초등학교 신설시 셔틀버스 지원계획이 변경 또는 취소될 수 있습니다. </p>
       
     </div>
