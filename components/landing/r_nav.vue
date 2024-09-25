@@ -148,4 +148,11 @@
 .telNo span {
   display: block;
 }
+
+
+@media only screen and (max-width: 1450px) {
+  .rNav {
+    right: 0;
+  }
+}
 </style>
