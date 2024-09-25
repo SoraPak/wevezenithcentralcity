@@ -64,7 +64,29 @@ export default defineNuxtConfig({
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
         { rel: 'canonical', href: 'https://xn--hu1bq8p65bh1h6oby7bg90c.kr/' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap' },
-      ]
+      ],
+      script: [
+        // Google Tag Manager 스크립트 추가
+        {
+          hid: 'gtag',
+          src: 'https://www.googletagmanager.com/gtag/js?id=G-L9HLE0RYGD',
+          async: true
+        },
+        {
+          hid: 'gtag-config',
+          innerHTML: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-L9HLE0RYGD');
+          `,
+          type: 'text/javascript',
+          charset: 'utf-8'
+        }
+      ],
+      __dangerouslyDisableSanitizersByTagID: {
+        'gtag-config': ['innerHTML']
+      }
     }
   },
   modules: [
