@@ -35,7 +35,7 @@ useScrollAnimation([ttlRef01, ttlRef02, ttlRef03]);
   background: url("/images/landing/hero/bg_main.jpg") no-repeat center bottom #001135;
   background-size: 1344px auto;
   /* height: 1500px; */
-  height: 840px;
+  height: 1014px;
   color: #ffffff;
   position: relative;
 }
@@ -89,11 +89,14 @@ useScrollAnimation([ttlRef01, ttlRef02, ttlRef03]);
 .terms {
   position: absolute;
   left: 50%;
+  top: 340px;
   transform: translate(-50%, 0);
   display: flex;
   justify-content: center;
   align-items: center;
-  display: none;
+}
+.terms li {
+  margin: 10px;
 }
 
 /* sp */
