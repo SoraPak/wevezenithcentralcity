@@ -104,6 +104,64 @@ onMounted(() => {
     transform: translateX(0); /* 왼쪽에서 원래 위치로 */
   }
 
+  /* 배경 요소들에 대해 부드럽게 더 넓은 범위로 맴도는 애니메이션 */
+  .bg span:nth-child(1), 
+  .bg span:nth-child(2), 
+  .bg span:nth-child(3) {
+    animation: floatAround1 20s infinite cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  /* 각각의 배경 요소들에 대해 다른 애니메이션을 적용하여 제각각 움직이게 함 */
+  .bg span:nth-child(2) {
+    animation: floatAround2 25s infinite cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  .bg span:nth-child(3) {
+    animation: floatAround3 30s infinite cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  /* 첫 번째 배경 요소의 애니메이션 */
+  @keyframes floatAround1 {
+    0% {
+      transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    50% {
+      transform: translate(40px, -20px) rotate(10deg) scale(1.1); /* 더 넓은 범위로 이동하고 회전 */
+    }
+    100% {
+      transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+  }
+
+  /* 두 번째 배경 요소의 애니메이션 */
+  @keyframes floatAround2 {
+    0% {
+      transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    50% {
+      transform: translate(-35px, 30px) rotate(-8deg) scale(1.08); /* 더 넓은 범위로 이동하고 회전 */
+    }
+    100% {
+      transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+  }
+
+  /* 세 번째 배경 요소의 애니메이션 */
+  @keyframes floatAround3 {
+    0% {
+      transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    50% {
+      transform: translate(30px, -40px) rotate(7deg) scale(1.1); /* 더 넓은 범위로 이동하고 회전 */
+    }
+    100% {
+      transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+  }
+
+
+
+
   .why {
     background: #dce2f6;
     color: #000f3a;
