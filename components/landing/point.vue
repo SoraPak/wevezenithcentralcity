@@ -156,7 +156,10 @@
     height: 6.1vw;
   }
   .subCon dd {
-    display: none;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
   }
   .subCon1 dt {
     margin-left: -7vw;
@@ -166,7 +169,7 @@
     margin-left: 0;
     margin-right: 0;
     position: absolute;
-    left: -2vw;
+    left: -2.5vw;
 
   }
   .subCon3 dt {
@@ -176,7 +179,7 @@
     margin-left: 0;
     margin-right: 0;
     position: absolute;
-    left: -2vw;
+    left: -2.5vw;
   }
 
 
