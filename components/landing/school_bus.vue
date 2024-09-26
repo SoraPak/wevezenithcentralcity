@@ -129,7 +129,7 @@ onMounted(() => {
 
 /* 구름 3개의 애니메이션에 다른 속도와 딜레이 적용 */
 .img03.animate {
-  animation: dropBounce 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards, cloudFloatUp 5s ease-in-out infinite;
+  animation: dropBounce 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards, cloudFloatUp 8s ease-in-out infinite;
 }
 
 .img04.animate {
@@ -138,7 +138,7 @@ onMounted(() => {
 }
 
 .img05.animate {
-  animation: dropBounce 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards, cloudFloatUp 5s ease-in-out infinite;
+  animation: dropBounce 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards, cloudFloatUp 4s ease-in-out infinite;
   animation-delay: 0.4s; /* 애니메이션 딜레이 추가 */
 }
 
