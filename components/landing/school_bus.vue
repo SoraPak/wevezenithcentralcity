@@ -32,9 +32,15 @@ const img04Ref = ref(null);
 const img05Ref = ref(null);
 
 onMounted(() => {
-  const options = {
-    threshold: 0.1, // 요소가 10% 보이면 애니메이션 트리거
-    rootMargin: '0px 0px -300px 0px'
+  // 일반 요소들에 적용될 옵저버 설정 (기존 rootMargin 유지)
+  const defaultOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -300px 0px' // 기존 설정 유지
+  };
+
+  const fastTriggerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px 0px 0px' // img01, img02에 적용할 더 빠른 트리거
   };
 
   const observer = new IntersectionObserver((entries) => {
@@ -43,19 +49,30 @@ onMounted(() => {
         entry.target.classList.add('animate');
       }
     });
-  }, options);
+  }, defaultOptions);
 
-  // 요소가 존재하는지 확인한 후 옵저버 설정
+  const fastObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+      }
+    });
+  }, fastTriggerOptions);
+
+  // 일반 옵저버를 사용하는 요소들
   if (ttlImg01Ref.value) observer.observe(ttlImg01Ref.value);
   if (ttlImg02Ref.value) observer.observe(ttlImg02Ref.value);
   if (text01Ref.value) observer.observe(text01Ref.value);
   if (text02Ref.value) observer.observe(text02Ref.value);
-  if (img01Ref.value) observer.observe(img01Ref.value);
-  if (img02Ref.value) observer.observe(img02Ref.value);
   if (img03Ref.value) observer.observe(img03Ref.value);
   if (img04Ref.value) observer.observe(img04Ref.value);
   if (img05Ref.value) observer.observe(img05Ref.value);
+
+  // 빠른 트리거를 사용하는 img01, img02
+  if (img01Ref.value) fastObserver.observe(img01Ref.value);
+  if (img02Ref.value) fastObserver.observe(img02Ref.value);
 });
+
 </script>
 
 
