@@ -233,7 +233,7 @@ onMounted(() => {
     transform: translateY(0); /* 기본 상태 */
   }
   50% {
-    transform: translateY(-1px); /* 살짝 위로 이동 */
+    transform: translateY(-2px); /* 살짝 위로 이동 */
   }
   100% {
     transform: translateY(0); /* 다시 원래 위치 */
@@ -246,7 +246,7 @@ onMounted(() => {
     transform: translateY(0); /* 기본 상태 */
   }
   50% {
-    transform: translateY(1px); /* 좀 더 위로 이동 */
+    transform: translateY(2px); /* 좀 더 위로 이동 */
   }
   100% {
     transform: translateY(0); /* 다시 원래 위치 */
