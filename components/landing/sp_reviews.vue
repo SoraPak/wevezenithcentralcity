@@ -26,7 +26,7 @@
                   <p v-for="(content, i) in review.content" :key="i">{{ content }}</p>
                 </div>
                 <p class="name" v-html="review.author"></p>
-                <img loading="lazy" :src="review.img" width="166" :alt="review.title" />
+                <img :src="review.img" width="166" :alt="review.title" />
               </dd>
             </dl>
           </div>
