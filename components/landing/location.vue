@@ -4,10 +4,10 @@
       <h1 class="ttl fade-in" ref="ttlRef01"><img loading="lazy" src="/images/landing/location/ttl.png" width="358" alt="빨라진 교통 어디로든 빠르게"></h1>
       <img loading="lazy" class="img01" src="/images/landing/location/img01.png" width="474" alt="">
       <p class="img01Text"><a href="https://kko.to/DrTCNa27qH" target="_blank"><span>현장</span>대구광역시 학정동 732-1번지 일원</a></p>
-      <p class="text01 from-right" ref="text01"><img loading="lazy" src="/images/landing/location/text01.png" height="90" alt="더블 역세권 학정역 도보 2분"></p>
-      <p class="text02 from-right" ref="text02"><img loading="lazy" src="/images/landing/location/text02.png" height="90" alt="대구 4차 순환도로 시내외 어디든 빠른 이동"></p>
-      <p class="text03 from-left" ref="text03"><img loading="lazy" src="/images/landing/location/text03.png" height="90" alt="구미IC,혁신도시,성서공단,동대구역 주요 거점 빠른 접근성"></p>
-      <p class="text04 from-left" ref="text04"><img loading="lazy" src="/images/landing/location/text04.png" height="90" alt="대구경북신공항 개발 향후 교통 및 인프라 확충"></p>
+      <p class="text01 from-right" ref="text01"><img src="/images/landing/location/text01.png" height="90" alt="더블 역세권 학정역 도보 2분"></p>
+      <p class="text02 from-right" ref="text02"><img src="/images/landing/location/text02.png" height="90" alt="대구 4차 순환도로 시내외 어디든 빠른 이동"></p>
+      <p class="text03 from-left" ref="text03"><img src="/images/landing/location/text03.png" height="90" alt="구미IC,혁신도시,성서공단,동대구역 주요 거점 빠른 접근성"></p>
+      <p class="text04 from-left" ref="text04"><img src="/images/landing/location/text04.png" height="90" alt="대구경북신공항 개발 향후 교통 및 인프라 확충"></p>
       <img loading="lazy" class="img02" src="/images/landing/location/img02.png" width="394" alt="">
       <img loading="lazy" class="img03" src="/images/landing/location/img03.png" width="183" alt="">
       <img loading="lazy" class="img04" src="/images/landing/location/img04.png" width="140" alt="">
