@@ -108,7 +108,7 @@ onMounted(() => {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-40px); /* 위로 올라가는 구름 */
+    transform: translateY(-20px); /* 위로 올라가는 구름 */
   }
   100% {
     transform: translateY(0);
@@ -120,7 +120,7 @@ onMounted(() => {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(40px); /* 아래로 내려가는 구름 */
+    transform: translateY(20px); /* 아래로 내려가는 구름 */
   }
   100% {
     transform: translateY(0);
