@@ -4,55 +4,105 @@
     <div class="why_inner"> 
       <div class="bg"><span></span><span></span><span></span></div>
       <h1 class="ttl">
-        <img loading="lazy" class="ttl01" src="/images/landing/why/ttl01.png" width="513" alt="내집마련 기회, 지금이 적기!">
-        <img loading="lazy" class="ttl02" src="/images/landing/why/ttl02.png" width="681" alt="왜 두산위브더제니스 센트럴시티인가?">
-        <img loading="lazy" class="spTtl02" src="/images/landing/why/sp_ttl02.png" width="179" alt="왜 두산위브더제니스 센트럴시티인가?">
+        <img loading="lazy" class="ttl01" ref="ttl01Ref" src="/images/landing/why/ttl01.png" width="513" alt="내집마련 기회, 지금이 적기!">
+        <img loading="lazy" class="ttl02" ref="ttl02Ref" src="/images/landing/why/ttl02.png" width="681" alt="왜 두산위브더제니스 센트럴시티인가?">
+        <img loading="lazy" class="spTtl02" ref="spTtl02Ref" src="/images/landing/why/sp_ttl02.png" width="179" alt="왜 두산위브더제니스 센트럴시티인가?">
       </h1>
       <img loading="lazy" class="img01" src="/images/landing/why/img01.png" width="675" alt="박소라 과장">
       <img loading="lazy" class="spImg01" src="/images/landing/why/sp_img01.png" width="208" alt="박소라 과장">
       <div class="pList">
-        <dl>
-          <dt>계약금 5%로, 입주 때까지 추가 목돈 無</dt>
-          <dd>
-            후분양과는 달리 선분양이기 때문에 입주 때까지 자금 준비에<br>
-            여유가 있어 부담이 적고, 중도금 무이자 단지로 추가 부담이 없음
-          </dd>
-        </dl>
-        <dl>
-          <dt>입주시기(2027년), 대구 부동산 호황 전망</dt>
-          <dd>
-            최근 인허가 및 착공 물량 급감으로 희소가치가높아져 2~3년뒤<br>
-            집값이 오를 수 있고 지역의 준공 후 미분양도 소진 될 전망
-          </dd>
-        </dl>
-        <dl>
-          <dt>대구에서 미래 개발비전이 가장 풍부한 곳</dt>
-          <dd>
-            학정지구단위 계획과 공항프런트 개발 발표, 대구경북신공항 및<br>
-            50사단 이전시 수혜가 예상되는 대구의 큰 비전이 모이는 곳
-          </dd>
-        </dl>
-        <dl>
-          <dt>희소가치 높은 1,000세대 이상 대단지 프리미엄</dt>
-          <dd>
-            대단지 아파트는 그규모만큼 풍부한 부대시설과 우수한 상품성 및<br>
-            상징성으로 지역 내 시세를 리딩하는 프리미엄 아파트가 된다!!
-          </dd>
-        </dl>
-        <dl>
-          <dt>검증된 두산위브더제니스의 브랜드파워</dt>
-          <dd>
-            대구의 랜드마크이자 대구 상위1%를 위한 최고급 아파트로 인정받는<br>
-            브랜드로 향후 칠곡 내에서도 랜드마크의 자부심을 선사할 것이다
-          </dd>
+        <dl v-for="(item, index) in pListItems" :key="index" :ref="el => pListItemsRef[index] = el">
+          <dt>{{ item.title }}</dt>
+          <dd>{{ item.content }}</dd>
         </dl>
       </div>
-      
     </div>
   </section>
 </template>
 
+<script setup>
+import { ref, onMounted } from 'vue';
+
+const ttl01Ref = ref(null);
+const ttl02Ref = ref(null);
+const spTtl02Ref = ref(null);
+const pListItemsRef = ref([]); // ref 배열 초기화
+
+const pListItems = [
+  { title: "계약금 5%로, 입주 때까지 추가 목돈 無", content: "후분양과는 달리 선분양이기 때문에 입주 때까지 자금 준비에 여유가 있어 부담이 적고, 중도금 무이자 단지로 추가 부담이 없음" },
+  { title: "입주시기(2027년), 대구 부동산 호황 전망", content: "최근 인허가 및 착공 물량 급감으로 희소가치가 높아져 2~3년 뒤 집값이 오를 수 있고, 지역의 준공 후 미분양도 소진 될 전망" },
+  { title: "대구에서 미래 개발비전이 가장 풍부한 곳", content: "학정지구단위 계획과 공항프런트 개발 발표, 대구경북신공항 및 50사단 이전 시 수혜가 예상되는 대구의 큰 비전이 모이는 곳" },
+  { title: "희소가치 높은 1,000세대 이상 대단지 프리미엄", content: "대단지 아파트는 그 규모만큼 풍부한 부대시설과 우수한 상품성 및 상징성으로 지역 내 시세를 리딩하는 프리미엄 아파트가 된다!" },
+  { title: "검증된 두산위브더제니스의 브랜드파워", content: "대구의 랜드마크이자 대구 상위 1%를 위한 최고급 아파트로 인정받는 브랜드로, 향후 칠곡 내에서도 랜드마크의 자부심을 선사할 것이다" }
+];
+
+onMounted(() => {
+  const options = {
+    threshold: 0.2, // 요소가 20% 보이면 애니메이션 트리거
+    rootMargin: '0px 0px -100px 0px',
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+      }
+    });
+  }, options);
+
+  // Observe each element for the animation
+  observer.observe(ttl01Ref.value);  // .ttl01 요소를 감지하여 애니메이션 적용
+  observer.observe(ttl02Ref.value);  // .ttl02 요소를 감지하여 애니메이션 적용
+  observer.observe(spTtl02Ref.value);  // .spTtl02 요소 감지
+
+  // pListItems 요소들에도 적용
+  pListItemsRef.value.forEach(item => observer.observe(item)); // 배열로 설정된 각 요소를 observe
+});
+</script>
+
 <style scoped>
+  .ttl02, .spTtl02, .pList dl {
+    opacity: 0;
+    transform: translateX(-50px); /* 기본적으로 왼쪽에서 시작 */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  /* .ttl01 오른쪽에서 왼쪽으로 나타나는 애니메이션 */
+  .ttl01 {
+    opacity: 0;
+    transform: translateX(100px); /* 오른쪽에서 시작 */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .ttl01.animate {
+    opacity: 1;
+    transform: translateX(0); /* 왼쪽으로 이동하여 제자리 */
+  }
+
+  /* 풍선처럼 부풀어오르는 애니메이션 */
+  .ttl02.animate, .spTtl02.animate {
+    opacity: 1;
+    transform: scale(1); /* 원래 크기로 돌아옴 */
+    animation: balloonPop 0.8s ease-out forwards;
+  }
+
+  @keyframes balloonPop {
+    0% {
+      transform: scale(0.5);
+    }
+    60% {
+      transform: scale(1.1); /* 살짝 더 부풀어오름 */
+    }
+    100% {
+      transform: scale(1); /* 원래 크기로 */
+    }
+  }
+
+  /* 왼쪽에서 오른쪽으로 나타나는 애니메이션 */
+  .pList dl.animate {
+    opacity: 1;
+    transform: translateX(0); /* 왼쪽에서 원래 위치로 */
+  }
 
   .why {
     background: #dce2f6;
@@ -123,13 +173,12 @@
 
   .ttl {
     position: absolute;
-    left: 50%;
+    left: -270px;
     top: -110px;
-    transform: translate(-50%, 0);
     width: 682px;
     text-align: center;
   }
-  .ttl img{
+  .ttl img {
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
@@ -245,7 +294,7 @@
 
   .ttl {
     top: -18vw;
-    left: 69vw;
+    left: 35vw;
     width: 0;
   }
   .ttl .ttl01 {
@@ -257,6 +306,7 @@
   .ttl .spTtl02 {
     display: block;
     top: 12vw;
+    left: 11vw;
     width: 48vw;
   }
 
