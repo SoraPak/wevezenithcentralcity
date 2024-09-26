@@ -10,13 +10,13 @@
         <div class="subCon subCon1">
           <img loading="lazy" src="/images/landing/point/img01.jpg" width="462" alt="">
           <dl>
-            <dt><img loading="lazy" src="/images/landing/point/sub_ttl01.png" height="82" alt="대구 3호선 학정역 역세권로 4차 순환도로 인접"></dt>
+            <dt><img src="/images/landing/point/sub_ttl01.png" height="82" alt="대구 3호선 학정역 역세권로 4차 순환도로 인접"></dt>
             <dd>학정 역 초역세권에 위치하고,칠곡경대병원 역과 더불어 더블역세권을 자랑합니다. 4차 순환도로와도 가까워 교통이 매우 편리!</dd>
           </dl>
         </div>
         <div class="subCon subCon2">
           <dl>
-            <dt><img loading="lazy" src="/images/landing/point/sub_ttl02.png" height="82" alt="팔거천 수변 산책로와 자연과 함께하는 힐링 라이프"></dt>
+            <dt><img src="/images/landing/point/sub_ttl02.png" height="82" alt="팔거천 수변 산책로와 자연과 함께하는 힐링 라이프"></dt>
             <dd>가족과 함께 산책하거나 자전거를 타며 건강한 생활을 즐길 수 있습니다. 도시 속에서 자연을 누릴 수 있는 특별한 주거 환경을 경험해 보세요</dd>
           </dl>
           <img loading="lazy" src="/images/landing/point/img02.jpg" width="462" alt="">
@@ -24,13 +24,13 @@
         <div class="subCon subCon3">
           <img loading="lazy" src="/images/landing/point/img03.jpg" width="462" alt="">
           <dl>
-            <dt><img loading="lazy" src="/images/landing/point/sub_ttl03.png" height="44" alt="대규모 커뮤니티 시설"></dt>
+            <dt><img src="/images/landing/point/sub_ttl03.png" height="44" alt="대규모 커뮤니티 시설"></dt>
             <dd>사우나, 피트니스, 실내 골프연습, 키즈카페, 도서관, 독서실, 카페테리아, 휴게라운지 등 다양한 커뮤니티 시설!</dd>
           </dl>
         </div>
         <div class="subCon subCon4">
           <dl>
-            <dt><img loading="lazy" src="/images/landing/point/sub_ttl04.png" height="82" alt="1,098세대 대단지로 투자 가치와 프리미엄 생활 "></dt>
+            <dt><img src="/images/landing/point/sub_ttl04.png" height="82" alt="1,098세대 대단지로 투자 가치와 프리미엄 생활 "></dt>
             <dd>대구의 새로운 랜드마크로 자리잡을 두산위브더제니스 센트럴시티 에서 프리미엄 라이프를 시작하세요!</dd>
           </dl>
           <img loading="lazy" src="/images/landing/point/img04.jpg" width="462" alt="">
