@@ -110,6 +110,7 @@ onMounted(() => {
 
 
 .point {
+  background: #fff;
   color: #606563;
   position: relative;
   padding-bottom: 210px;
@@ -134,7 +135,7 @@ onMounted(() => {
 }
 .point_ttl {
   text-align: center;
-  margin-top: 50px;
+  padding-top: 50px;
 }
 .point_ttl img:last-child {
   margin-top: 10px;
@@ -199,7 +200,7 @@ onMounted(() => {
     max-width: 100%;
   }
   .point_ttl {
-    margin-top: 7vw;
+    padding-top: 7vw;
   }
   .point_ttl img:nth-child(1) {
     width: 57vw; 

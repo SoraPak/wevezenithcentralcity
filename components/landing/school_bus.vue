@@ -272,7 +272,6 @@ onMounted(() => {
     background-size: 100% auto;
     width: 101vw;
     height: 7vw;
-    bottom: 3.6vw;
   }
   .school_bus_inner {
     height: 115vw;
