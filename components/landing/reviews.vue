@@ -116,7 +116,7 @@
                 것 같습니다.
               </p>
               <p>
-                동천동 35세 최**
+                동천동 35세 박**
               </p>
               <img loading="lazy" src="/images/landing/reviews/img04.png" width="166" alt="">
             </dd>
@@ -140,7 +140,7 @@
                 된다고 하니 믿고 계약했습니다.
               </p>
               <p>
-                구암동 30세 박**
+                구암동 30세 김**
               </p>
               <img loading="lazy" src="/images/landing/reviews/img05.png" width="166" alt="">
             </dd>
@@ -168,7 +168,7 @@
                 있을 것 같아요. 
               </p>
               <p>
-                태전동 58세 김**
+                태전동 58세 신**
               </p>
               <img loading="lazy" src="/images/landing/reviews/img01.png" width="166" alt="">
             </dd>
@@ -200,7 +200,7 @@
                 고민이 점점 기울고 있어요.
               </p>
               <p>
-                읍내동 62세 함**
+                읍내동 62세 박**
               </p>
               <img loading="lazy" src="/images/landing/reviews/img03.png" width="166" alt="">
             </dd>
