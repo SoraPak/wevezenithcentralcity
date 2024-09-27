@@ -22,8 +22,6 @@ body {
     margin:0 auto;
     font-optical-sizing: auto;
     font-style: normal;
-
-
     /* font-family: 'BMJUA', sans-serif; */
     font-size: 16px;
     line-height: 160%;
@@ -31,6 +29,8 @@ body {
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
+    background: #01143a;
+    color: #fff;
   }
 
 /* 공통 애니메이션 */
