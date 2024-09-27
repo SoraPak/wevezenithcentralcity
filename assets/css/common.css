@@ -29,8 +29,6 @@ body {
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
-    background: #01143a;
-    color: #fff;
   }
 
 /* 공통 애니메이션 */
