@@ -143,6 +143,7 @@ function correctPosition() {
 .community {
   position: relative;
   height: 1330px;
+  background: #fff;
   color: #000f3a;
 }
 
