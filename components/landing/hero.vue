@@ -1,5 +1,5 @@
 <template>
-  <section class="hero">
+  <section class="hero" ref="heroRef">
     <h1 class="ttl">
       <img ref="img1" src="/images/landing/hero/ttl01.png" width="425" alt="대구 랜드마크의 자격">
       <img ref="img2" src="/images/landing/hero/ttl02.png" width="558" alt="오직, 제니스">
@@ -20,10 +20,11 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 
+const heroRef = ref(null);
 const img1 = ref(null);
 const img2 = ref(null);
 const img3 = ref(null);
-const termsItems = ref([]); // 배열로 초기화
+const termsItems = ref([]);
 
 const termsList = [
   { imgSrc: "/images/landing/hero/list01.png", altText: "학정 역 칠곡경대병원 역 더블역세권" },
@@ -40,32 +41,45 @@ const addToTermsRefs = (el, index) => {
 };
 
 onMounted(() => {
-  const animateImagesAndTerms = () => {
-    setTimeout(() => img1.value.classList.add('animate'), 0); // img1 애니메이션 바로 시작
-    setTimeout(() => img3.value.classList.add('animate'), 400); // img3 애니메이션 약간의 지연 후 시작
-    setTimeout(() => img2.value.classList.add('animate'), 1000); // img2 애니메이션 img1, img3 후에 시작
-    setTimeout(() => {
-      termsItems.value.forEach((item, index) => {
-        setTimeout(() => {
-          item.classList.add('animate');
-
-          // 첫 번째 terms li 요소의 애니메이션 중간 시점에 흔들림 트리거
-          if (index === 0) {
-            setTimeout(() => {
-              // 애니메이션 중간 시점에 body 흔들림 추가
-              document.body.classList.add('shake');
-              setTimeout(() => {
-                document.body.classList.remove('shake'); // 흔들림 애니메이션 종료 후 클래스 제거
-              }, 500); // 흔들림 지속 시간 (500ms)
-            }, 600); // 첫 번째 li 애니메이션이 시작된 후 500ms 후에 트리거
-          }
-        }, 200 * index); // terms 리스트 항목들이 차례대로 나타남
-      });
-    }, 1600); // img2 애니메이션이 끝난 후 terms 애니메이션 시작
+  const options = {
+    threshold: 0.2, // 요소가 20% 보이면 애니메이션 트리거
   };
 
-  animateImagesAndTerms();
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // 애니메이션을 트리거
+        setTimeout(() => img1.value.classList.add('animate'), 0); // img1 애니메이션 바로 시작
+        setTimeout(() => img3.value.classList.add('animate'), 400); // img3 애니메이션 약간의 지연 후 시작
+        setTimeout(() => img2.value.classList.add('animate'), 1000); // img2 애니메이션 img1, img3 후에 시작
+        setTimeout(() => {
+          termsItems.value.forEach((item, index) => {
+            setTimeout(() => {
+              item.classList.add('animate');
+
+              // 첫 번째 terms li 요소의 애니메이션 중간 시점에 흔들림 트리거
+              if (index === 0) {
+                setTimeout(() => {
+                  // 애니메이션 중간 시점에 body 흔들림 추가
+                  document.body.classList.add('shake');
+                  setTimeout(() => {
+                    document.body.classList.remove('shake'); // 흔들림 애니메이션 종료 후 클래스 제거
+                  }, 500); // 흔들림 지속 시간 (500ms)
+                }, 600); // 첫 번째 li 애니메이션이 시작된 후 500ms 후에 트리거
+              }
+            }, 200 * index); // terms 리스트 항목들이 차례대로 나타남
+          });
+        }, 1600); // img2 애니메이션이 끝난 후 terms 애니메이션 시작
+
+        // 애니메이션 실행 후 observer 해제
+        observer.unobserve(heroRef.value);
+      }
+    });
+  }, options);
+
+  observer.observe(heroRef.value);
 });
+
 </script>
 
 
