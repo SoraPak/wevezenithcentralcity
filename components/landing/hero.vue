@@ -1,36 +1,203 @@
 <template>
   <section class="hero">
-    <!-- h1 class="logo"><img src="/images/full_logo_w.svg" width="160" alt="두산위브더제니스 센트럴시티"></h1 -->
     <h1 class="ttl">
-      <img class="from-left" ref="ttlRef01" src="/images/landing/hero/ttl01.png" width="425" alt="대구 랜드마크의 자격">
-      <img class="fade-in" ref="ttlRef02" src="/images/landing/hero/ttl02.png" width="558" alt="오직, 제니스">
-      <img class="from-right" ref="ttlRef03" src="/images/landing/hero/ttl03.png" width="581" alt="대구 또 하나의 랜드마크, 새로운 제니스가 옵니다">
+      <img ref="img1" src="/images/landing/hero/ttl01.png" width="425" alt="대구 랜드마크의 자격">
+      <img ref="img2" src="/images/landing/hero/ttl02.png" width="558" alt="오직, 제니스">
+      <img ref="img3" src="/images/landing/hero/ttl03.png" width="581" alt="대구 또 하나의 랜드마크, 새로운 제니스가 옵니다">
     </h1>
     <div class="textBox1">
       <p class="text1"><img src="/images/simple_logo_w.svg" width="370" alt="두산위브더제니스 센트럴시티"></p>
       <p class="text2"><img src="/images/landing/hero/text02.png" width="365" alt="전용 84・115・143・191㎡ | 총 1,098세대"></p>
     </div>
     <ul class="terms">
-      <li><img src="/images/landing/hero/list01.png" width="152" alt="학정 역 칠곡경대병원 역 더블역세권"></li>
-      <li><img src="/images/landing/hero/list02.png" width="152" alt="중도금 무이자"></li>
-      <li><img src="/images/landing/hero/list03.png" width="152" alt="전매 무제한"></li>
-      <li><img src="/images/landing/hero/list04.png" width="152" alt="계약금 500만원"></li>
+      <li v-for="(item, index) in termsList" :key="index" :ref="el => addToTermsRefs(el, index)">
+        <img width="152" :src="item.imgSrc" :alt="item.altText" />
+      </li>
     </ul>
   </section>
 </template>
+
 <script setup>
-import { ref } from 'vue';
-import { useScrollAnimation } from '~/composables/useScrollAnimation';
+import { ref, onMounted } from 'vue';
 
-const ttlRef01 = ref(null);
-const ttlRef02 = ref(null);
-const ttlRef03 = ref(null);
+const img1 = ref(null);
+const img2 = ref(null);
+const img3 = ref(null);
+const termsItems = ref([]); // 배열로 초기화
 
-// 요소들이 스크롤될 때 애니메이션 적용
-useScrollAnimation([ttlRef01, ttlRef02, ttlRef03]);
+const termsList = [
+  { imgSrc: "/images/landing/hero/list01.png", altText: "학정 역 칠곡경대병원 역 더블역세권" },
+  { imgSrc: "/images/landing/hero/list02.png", altText: "중도금 무이자" },
+  { imgSrc: "/images/landing/hero/list03.png", altText: "전매 무제한" },
+  { imgSrc: "/images/landing/hero/list04.png", altText: "계약금 500만원" }
+];
+
+// termsItems 배열에 요소를 추가하는 함수
+const addToTermsRefs = (el, index) => {
+  if (el) {
+    termsItems.value[index] = el;
+  }
+};
+
+onMounted(() => {
+  const animateImagesAndTerms = () => {
+    setTimeout(() => img1.value.classList.add('animate'), 0); // img1 애니메이션 바로 시작
+    setTimeout(() => img3.value.classList.add('animate'), 400); // img3 애니메이션 약간의 지연 후 시작
+    setTimeout(() => img2.value.classList.add('animate'), 1000); // img2 애니메이션 img1, img3 후에 시작
+    setTimeout(() => {
+      termsItems.value.forEach((item, index) => {
+        setTimeout(() => {
+          item.classList.add('animate');
+
+          // 첫 번째 terms li 요소의 애니메이션 중간 시점에 흔들림 트리거
+          if (index === 0) {
+            setTimeout(() => {
+              // 애니메이션 중간 시점에 body 흔들림 추가
+              document.body.classList.add('shake');
+              setTimeout(() => {
+                document.body.classList.remove('shake'); // 흔들림 애니메이션 종료 후 클래스 제거
+              }, 500); // 흔들림 지속 시간 (500ms)
+            }, 600); // 첫 번째 li 애니메이션이 시작된 후 500ms 후에 트리거
+          }
+        }, 200 * index); // terms 리스트 항목들이 차례대로 나타남
+      });
+    }, 1600); // img2 애니메이션이 끝난 후 terms 애니메이션 시작
+  };
+
+  animateImagesAndTerms();
+});
 </script>
 
+
+
+
+
+<style>
+@keyframes bodyShake {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-10px, 0);
+  }
+  20% {
+    transform: translate(10px, 0);
+  }
+  30% {
+    transform: translate(-10px, 0);
+  }
+  40% {
+    transform: translate(10px, 0);
+  }
+  50% {
+    transform: translate(-10px, 0);
+  }
+  60% {
+    transform: translate(10px, 0);
+  }
+  70% {
+    transform: translate(-10px, 0);
+  }
+  80% {
+    transform: translate(10px, 0);
+  }
+  90% {
+    transform: translate(-10px, 0);
+  }
+}
+
+body.shake {
+  animation: bodyShake 0.5s ease-in-out;
+}
+</style>
+
+
+
 <style scoped>
+/* 초기 상태: 애니메이션 전 모든 요소는 투명하게 시작 */
+.ttl img {
+  opacity: 0;
+  transform: translateX(0);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* 첫 번째 이미지: 왼쪽에서 슬라이드 인 */
+.ttl img:nth-child(1) {
+  transform: translateX(-100px); /* 왼쪽에서 시작 */
+}
+
+.ttl img:nth-child(1).animate {
+  opacity: 1;
+  transform: translateX(0); /* 제자리로 이동 */
+}
+
+/* 세 번째 이미지: 오른쪽에서 슬라이드 인 */
+.ttl img:nth-child(3) {
+  transform: translateX(100px); /* 오른쪽에서 시작 */
+}
+
+.ttl img:nth-child(3).animate {
+  opacity: 1;
+  transform: translateX(0); /* 제자리로 이동 */
+}
+
+/* 두 번째 이미지: 페이드인 애니메이션 */
+.ttl img:nth-child(2) {
+  opacity: 0;
+}
+
+.ttl img:nth-child(2).animate {
+  opacity: 1;
+  transform: translateX(0); /* 페이드인되며 등장 */
+}
+
+
+/* terms 리스트 항목들: 풍선처럼 부풀어오르는 애니메이션 */
+.terms li {
+  opacity: 0;
+  transform: scale(0); /* 크기를 0으로 시작 */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.terms li.animate {
+  opacity: 1;
+  animation: dynamicBalloonPop 1s cubic-bezier(0.25, 0.75, 0.5, 1.25) forwards;
+}
+
+/* terms li들이 차례대로 등장하도록 delay를 설정 */
+.terms li:nth-child(1).animate {
+  transition-delay: 0.2s;
+}
+
+.terms li:nth-child(2).animate {
+  transition-delay: 0.4s;
+}
+
+.terms li:nth-child(3).animate {
+  transition-delay: 0.6s;
+}
+
+.terms li:nth-child(4).animate {
+  transition-delay: 0.8s;
+}
+
+/* 풍선처럼 생동감 있게 부풀어오르는 애니메이션 */
+@keyframes dynamicBalloonPop {
+  0% {
+    transform: scale(0); /* 완전히 작게 시작 */
+  }
+  50% {
+    transform: scale(1.3); /* 더 크게 부풀어오름 */
+  }
+  70% {
+    transform: scale(0.9); /* 살짝 작아졌다가 */
+  }
+  100% {
+    transform: scale(1); /* 최종 크기로 돌아옴 */
+  }
+}
+
+
 .hero {
   background: url("/images/landing/hero/bg_main.jpg") no-repeat center bottom #001135;
   background-size: 1344px auto;
@@ -72,10 +239,10 @@ useScrollAnimation([ttlRef01, ttlRef02, ttlRef03]);
   justify-content: center;
   align-items: center;
 }
-.ttl img:first-child {
+.ttl img:nth-child(1) {
   margin-bottom: auto;
 }
-.ttl img:last-child {
+.ttl img:nth-child(3){
   margin-top: auto;
 }
 .textBox1 {
