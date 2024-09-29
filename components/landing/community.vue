@@ -1,9 +1,9 @@
 <template>
   <section class="community">
-    <h1 class="ttl">
+    <h1 class="ttl" ref="ttlRef">
       <img loading="lazy" src="/images/landing/community/ttl.png" width="584" alt="입주민을 위한 고품격 커뮤니티 CLUB ZENITH">
     </h1>
-    <img loading="lazy" class="img01" src="/images/landing/community/img.jpg" width="885" alt="">
+    <img loading="lazy" ref="img01Ref" class="img01" src="/images/landing/community/img.jpg" width="885" alt="">
 
     <!-- 롤링 배너 -->
     <div class="rolling-container" @mouseenter="stopRolling" @mouseleave="startRolling">
@@ -17,9 +17,13 @@
   </section>
 </template>
 
+
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 
+const ttlRef = ref(null);
+const img01Ref = ref(null); // img01 요소에 대한 참조 추가
+const imgListRef = ref(null);
 const items = ref([
   { imgSrc: '/images/landing/community/img01.jpg', text: '피트니스 센터, 웨이트 존, GX룸', altText: '피트니스 센터' },
   { imgSrc: '/images/landing/community/img02.jpg', text: '자녀들을 위한 키즈카페와 작은 도서관', altText: '키즈카페' },
@@ -28,34 +32,60 @@ const items = ref([
   { imgSrc: '/images/landing/community/img05.jpg', text: '실내 골프 연습장 및 스크린 골프', altText: '스크린 골프' }
 ]);
 
-// 아이템 리스트를 복제하여 양쪽에 추가 (3배로 늘려서 무한 롤링 효과)
 const itemsToShow = ref([...items.value, ...items.value, ...items.value]);
 
-const imgListRef = ref(null);
 let translateX = 0;
 let interval;
 let isDragging = false;
 let startX = 0;
 let currentTranslateX = 0;
-let isMobile = ref(false); // 모바일 환경 여부를 판단하는 변수
+let isMobile = ref(false);
 
 onMounted(() => {
-  isMobile.value = window.innerWidth <= 950; // 화면 크기가 950px 이하일 경우 모바일로 간주
+  isMobile.value = window.innerWidth <= 950;
 
   const imgList = imgListRef.value;
-  const itemWidth = imgList.children[0].clientWidth + 20; // 각 아이템의 너비 + 간격
+  const itemWidth = imgList.children[0].clientWidth + 20;
   const totalItems = items.value.length;
 
-  // 처음에는 가운데 실제 리스트를 보여줌 (복제 리스트의 중간 지점으로 시작)
   translateX = -(totalItems * itemWidth);
   imgList.style.transform = `translateX(${translateX}px)`;
 
-  // 모바일 및 PC에서 롤링 시작
+  // 롤링 배너 시작
   startRolling();
+
+  // Intersection Observer를 이용하여 .ttl 및 .img01 애니메이션 트리거
+  const options = {
+    threshold: 0.1, // 요소가 10% 보일 때 트리거 (이전보다 더 낮은 비율)
+    rootMargin: '0px 0px -300px 0px', // 요소가 화면에 더 늦게 들어올 때 트리거되도록 설정
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        if (entry.target === ttlRef.value) {
+          entry.target.classList.add('animate-down');
+          observer.unobserve(entry.target); // 애니메이션 이후에 관찰 중지 (한번만 실행되도록)
+        }
+        if (entry.target === img01Ref.value) {
+          entry.target.classList.add('animate-drop');
+          observer.unobserve(entry.target); // 애니메이션 이후에 관찰 중지 (한번만 실행되도록)
+        }
+      }
+    });
+  }, options);
+
+  // 요소가 존재하는지 확인 후 관찰 시작
+  if (ttlRef.value) {
+    observer.observe(ttlRef.value);
+  }
+  if (img01Ref.value) {
+    observer.observe(img01Ref.value);
+  }
 });
 
 onBeforeUnmount(() => {
-  stopRolling(); // 컴포넌트 해제 시 롤링 정지
+  stopRolling();
 });
 
 function startRolling() {
@@ -64,11 +94,10 @@ function startRolling() {
   const totalItems = items.value.length;
 
   interval = setInterval(() => {
-    translateX -= 1; // 1px씩 왼쪽으로 이동
+    translateX -= 1;
     imgList.style.transition = "transform 0.05s linear";
     imgList.style.transform = `translateX(${translateX}px)`;
 
-    // 끝에 도달하면 트랜지션 없이 처음으로 이동
     if (Math.abs(translateX) >= totalItems * itemWidth * 2) {
       imgList.style.transition = "none";
       translateX = -(totalItems * itemWidth);
@@ -78,21 +107,20 @@ function startRolling() {
         imgList.style.transition = "transform 0.05s linear";
       }, 50);
     }
-  }, 20); // 일정한 속도로 이동
+  }, 20);
 }
 
 function stopRolling() {
-  clearInterval(interval); // 롤링 멈추기
+  clearInterval(interval);
 }
 
-// 스와이프 관련 기능 (모바일에서만 동작)
 function startDrag(event) {
-  if (!isMobile.value) return; // PC에서는 스와이프 기능을 동작하지 않음
+  if (!isMobile.value) return;
 
   isDragging = true;
   startX = event.type.includes('touch') ? event.touches[0].clientX : event.clientX;
   currentTranslateX = translateX;
-  stopRolling(); // 드래그 중에는 롤링 멈춤
+  stopRolling();
 }
 
 function onDrag(event) {
@@ -108,7 +136,7 @@ function onDrag(event) {
 function endDrag() {
   isDragging = false;
   correctPosition();
-  startRolling(); // 드래그 끝나면 롤링 다시 시작
+  startRolling();
 }
 
 function correctPosition() {
@@ -116,7 +144,6 @@ function correctPosition() {
   const itemWidth = imgList.children[0].clientWidth + 20;
   const totalItems = items.value.length;
 
-  // 리스트의 양쪽 끝에 복제된 아이템들이 있으므로 복제 영역을 넘어갈 경우 자연스럽게 원본 영역으로 이동
   if (translateX > -(totalItems * itemWidth)) {
     imgList.style.transition = "none";
     translateX = -(totalItems * itemWidth * 2) + (translateX + totalItems * itemWidth);
@@ -139,6 +166,9 @@ function correctPosition() {
 }
 </script>
 
+
+
+
 <style scoped>
 .community {
   position: relative;
@@ -159,18 +189,67 @@ function correctPosition() {
   background-size: 2688px auto;
 }
 
-.ttl, .img01 {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+.ttl {
+  opacity: 0;
+  transform: translateY(-100px); /* 위에서 시작 */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.ttl {
-  top: -20px;
+.ttl.animate-down {
+  opacity: 1;
+  transform: translateY(0); /* 제자리로 이동 */
 }
 
 .img01 {
-  top: 155px;
+  opacity: 0;
+  transform: translateY(-200px); /* 위에서 시작 */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.img01.animate-drop {
+  opacity: 1;
+  animation: dropAndShake 1s ease-out forwards;
+}
+
+/* 위에서 떨어지면서 양옆으로 흔들리는 애니메이션 */
+@keyframes dropAndShake {
+  0% {
+    transform: translateY(-200px);
+  }
+  60% {
+    transform: translateY(20px);
+  }
+  75% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+
+  /* 흔들림 효과 추가 */
+  70% {
+    transform: translateY(20px) rotate(3deg);
+  }
+  80% {
+    transform: translateY(10px) rotate(-3deg);
+  }
+  90% {
+    transform: translateY(5px) rotate(2deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+
+
+.img01 {
+  display: block;
+  margin: 10px auto 0;
+}
+
+.ttl {
+  margin-top: -20px;
+  text-align: center;
 }
 
 /* 롤링 배너 스타일 */
@@ -216,13 +295,14 @@ function correctPosition() {
     background-size: 101vw auto;
   }
   .ttl {
-    top: 0;
+    margin-top: 0;
+    padding-top: 3vw;
   }
   .ttl img {
     width: 81vw;
   }
   .img01 {
-    top: 25vw;
+    margin-top: 3vw;
     width: 100vw;
   }
   .rolling-container {
