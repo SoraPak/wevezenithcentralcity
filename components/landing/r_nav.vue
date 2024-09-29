@@ -46,7 +46,7 @@
 .section02 {
   position: absolute;
   width: 100%;
-  top: 190px;
+  bottom: 103px;
   background: url("/images/landing/r_nav/img01.png") no-repeat center 115px;
   background-size: 287px auto;
   height: 376px;
@@ -58,7 +58,7 @@
 .section03 {
   position: absolute;
   width: 100%;
-  top: 534px;
+  bottom: -10px;
   height: 150px;
   background-color: #0f308c;
 }
@@ -153,6 +153,30 @@
 @media only screen and (max-width: 1450px) {
   .rNav {
     right: 0;
+  }
+}
+@media only screen and (max-height: 860px) {
+  .rNav {
+    top: auto;
+    bottom: 0;
+  }
+}
+@media only screen and (max-height: 680px) {
+  .rNav {
+    min-height: 495px;
+  }
+  .section01 {
+    display: none;
+  }
+}
+@media only screen and (max-height: 500px) {
+  .rNav {
+    min-height: 255px;
+    background: #0f308c;
+  }
+  .section02 {
+    bottom: -143px;
+    background: none;
   }
 }
 </style>
