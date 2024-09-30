@@ -54,7 +54,7 @@
     max-width: 840px;
     margin: 0 auto;
     position: relative;
-    height: 840px;
+    height: 730px;
   }
 
   .ttl{

@@ -1,19 +1,46 @@
 <template>
-  <ul class="sp_rNav" :class="{ 'animate': isMounted }">
+  <ul ref="spRNav" class="sp_rNav" :class="{ 'animate': isMounted }">
     <li class="kakao"><a href="https://open.kakao.com/o/saZEcwPg" target="_blank"><img loading="lazy" src="/images/landing/r_nav/text_kakao.svg" alt="카톡상담/예약"></a></li>
     <li class="call"><a href="tel:010-9357-0669" target="_blank"><img loading="lazy" src="/images/landing/r_nav/text_call.svg" alt="전화상담/예약"></a></li>
   </ul>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 
 const isMounted = ref(false)
+const spRNav = ref(null)
+
+const adjustSpRNavPosition = () => {
+  const footer = document.querySelector('footer')
+  if (footer && spRNav.value) {
+    const footerRect = footer.getBoundingClientRect()
+    const viewportHeight = window.innerHeight
+    if (footerRect.top < viewportHeight) {
+      // footer가 화면에 보이는 경우, bottom 값을 조정하여 겹치지 않게 함
+      const overlapHeight = viewportHeight - footerRect.top
+      spRNav.value.style.bottom = `${overlapHeight}px`
+    } else {
+      // footer가 보이지 않을 경우 기본 위치로 설정
+      spRNav.value.style.bottom = '0'
+    }
+  }
+}
 
 onMounted(() => {
   isMounted.value = true
+  window.addEventListener('scroll', adjustSpRNavPosition)
+  window.addEventListener('resize', adjustSpRNavPosition)
+  adjustSpRNavPosition()
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', adjustSpRNavPosition)
+  window.removeEventListener('resize', adjustSpRNavPosition)
 })
 </script>
+
+
 <style scoped>
 .sp_rNav {
   display: flex;
@@ -25,6 +52,7 @@ onMounted(() => {
   width: 100vw;
   font-size: 4.3vw;
   transition: bottom 0.5s ease-in-out; /* 부드러운 슬라이드 효과 */
+  transition: all 0.3s ease;
 }
 
 .sp_rNav.animate {

@@ -1,5 +1,5 @@
 <template>
-  <div class="rNav">
+  <div ref="rNavRef" class="rNav">
     <div class="section01">
       <img loading="lazy" src="/images/landing/r_nav/text01.png" width="75" alt="선착순 분양중">
     </div>
@@ -15,6 +15,41 @@
   </div>
 </template>
 
+<script setup>
+import { ref, onMounted } from 'vue';
+
+const rNavRef = ref(null);
+const footerRef = ref(null);
+
+onMounted(() => {
+  // footer 컴포넌트를 선택
+  const footerElement = document.querySelector('footer');
+
+  if (!footerElement) {
+    console.warn('Footer element not found');
+    return;
+  }
+
+  const options = {
+    root: null,
+    threshold: 0.1, // footer의 10%가 화면에 보일 때 트리거
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        rNavRef.value.classList.add('min');
+      } else {
+        rNavRef.value.classList.remove('min');
+      }
+    });
+  }, options);
+
+  // footer 요소 관찰 시작
+  observer.observe(footerElement);
+});
+</script>
+
 <style scoped>
 .rNav {
   border: 1px solid #b5eeff4d;
@@ -28,6 +63,7 @@
   z-index: 1000;
   min-height: 675px;
   overflow: hidden;
+  transition: all 0.3s ease;
 }
 .section01 {
   background: url("/images/landing/r_nav/bg.png") no-repeat center center;
@@ -147,6 +183,20 @@
 
 .telNo span {
   display: block;
+}
+
+.rNav.min{
+  top: auto;
+  bottom: 0;
+  right: 0;
+  min-height: 135px;
+  background: #0f308c;
+}
+.rNav.min .section01 {
+  display: none;
+}
+.rNav.min .section02 {
+  display: none;
 }
 
 
