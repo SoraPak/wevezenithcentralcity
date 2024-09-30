@@ -1,19 +1,21 @@
 <template>
   <div class="landingWrap" ref="landingWrap">
-    <r_nav class="rNav" />
-    <sp_r_nav class="sp_rNav" />
-    <hero />
-    <point />
-    <location />
-    <ansim />
-    <why />
-    <school_bus />
-    <community />
-    <reviews class="reviews" />
-    <sp_reviews class="sp_reviews" />
-    <model_house />
-    <guide />
+    <R_nav class="rNav" />
+    <Sp_r_nav class="sp_rNav" />
+    <Hero />
+    <Point />
+    <Location />
+    <Ansim />
+    <Why />
+    <School_bus />
+    <Community />
+    <Reviews class="reviews" />
+    <Sp_reviews class="sp_reviews" />
+    <Model_house />
+    <Guide />
+    <!-- Footer / -->
   </div>
+ 
 </template>
 
 <style scoped>
@@ -50,19 +52,20 @@ definePageMeta({
 })
 
 // 섹션 컴포넌트들 불러오기
-import sp_r_nav from '~/components/landing/sp_r_nav.vue'
-import r_nav from '~/components/landing/r_nav.vue'
-import hero from '~/components/landing/hero.vue'
-import point from '~/components/landing/point.vue'
-import location from '~/components/landing/location.vue'
-import ansim from '~/components/landing/ansim.vue'
-import why from '~/components/landing/why.vue'
-import school_bus from '~/components/landing/school_bus.vue'
-import community from '~/components/landing/community.vue'
-import reviews from '~/components/landing/reviews.vue'
-import sp_reviews from '~/components/landing/sp_reviews.vue'
-import model_house from '~/components/landing/model_house.vue'
-import guide from '~/components/landing/guide.vue'
+import Sp_r_nav from '~/components/landing/sp_r_nav.vue'
+import R_nav from '~/components/landing/r_nav.vue'
+import Hero from '~/components/landing/hero.vue'
+import Point from '~/components/landing/point.vue'
+import Location from '~/components/landing/location.vue'
+import Ansim from '~/components/landing/ansim.vue'
+import Why from '~/components/landing/why.vue'
+import School_bus from '~/components/landing/school_bus.vue'
+import Community from '~/components/landing/community.vue'
+import Reviews from '~/components/landing/reviews.vue'
+import Sp_reviews from '~/components/landing/sp_reviews.vue'
+import Model_house from '~/components/landing/model_house.vue'
+import Guide from '~/components/landing/guide.vue'
+import Footer from '~/components/footer.vue'
 
 const landingWrap = ref(null);
 
