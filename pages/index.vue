@@ -13,7 +13,7 @@
     <Sp_reviews class="sp_reviews" />
     <Model_house />
     <Guide />
-    <!-- Footer / -->
+    <G_footer />
   </div>
  
 </template>
@@ -65,7 +65,7 @@ import Reviews from '~/components/landing/reviews.vue'
 import Sp_reviews from '~/components/landing/sp_reviews.vue'
 import Model_house from '~/components/landing/model_house.vue'
 import Guide from '~/components/landing/guide.vue'
-import Footer from '~/components/footer.vue'
+import G_footer from '~/components/footer.vue'
 
 const landingWrap = ref(null);
 
