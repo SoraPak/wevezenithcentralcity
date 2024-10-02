@@ -20,7 +20,7 @@
               <dd>대구광역시 북구 태전동 1213번지<br>(대구과학대 정문 앞 주차장)</dd>
             </dl>
             <a class="btMap" href="https://kko.to/P0aas7dXbe" target="_blank"> 카카오지도 <br>바로가기</a>
-            <p class="tel"><img loading="lazy" src="/images/landing/guide/img_tel.png" width="438" alt="두산위브더제니스 센트럴시티 전화번호:01093570669"></p>
+            <p class="tel"><img loading="lazy" src="/images/landing/guide/img_tel.png" width="438" alt="두산위브더제니스 센트럴시티 전화번호:01082368942"></p>
           </div>
         </div>
       </div>
