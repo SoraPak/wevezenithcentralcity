@@ -5,7 +5,7 @@
       <h1 class="ttl"><img loading="lazy" src="/images/landing/model_house/ttl01.png" width="517" alt="모델하우스 방문 예약하고 특별한 선물을 받아가세요!"></h1>
      
       <p class="text">
-        <img loading="lazy" src="/images/landing/model_house/text01.png" width="738" alt="9월30 까지 박소라 과장을 지정하고
+        <img loading="lazy" src="/images/landing/model_house/text01.png" width="738" alt="10월31 까지 박소라 과장을 지정하고
 모델하우스를 방문하시면 상품권을 드립니다. 그냥오면 없음">
         <img loading="lazy" class="gift01" src="/images/landing/model_house/gift01.png" width="300" alt="">
         <img loading="lazy" class="gift02" src="/images/landing/model_house/gift02.png" width="320" alt="">
