@@ -1,6 +1,7 @@
 <template>
   <ul ref="spRNav" class="sp_rNav" :class="{ 'animate': isMounted }">
     <li class="kakao"><a href="https://open.kakao.com/me/wevehj" target="_blank"><img loading="lazy" src="/images/landing/r_nav/text_kakao.svg" alt="카톡상담/예약"></a></li>
+    
     <li class="call"><a href="tel:010-8236-8942" target="_blank"><img loading="lazy" src="/images/landing/r_nav/text_call.svg" alt="전화상담/예약"></a></li>
   </ul>
 </template>
