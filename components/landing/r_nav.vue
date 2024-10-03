@@ -7,7 +7,7 @@
       <p class="telNo"><a href="tel:010-8236-8942" target="_blank"><span>010)</span><span>8236</span><span>8942</span></a></p>
     </div>
     <div class="section03">
-      <a class="kakaoBut" href="https://open.kakao.com/o/saZEcwPg" target="_blank">
+      <a class="kakaoBut" href="https://open.kakao.com/me/wevehj" target="_blank">
         <span><img loading="lazy" src="/images/landing/r_nav/kakao.svg" width="45" alt=""></span>
         톡상담/예약
       </a>
