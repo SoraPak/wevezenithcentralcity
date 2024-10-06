@@ -39,7 +39,7 @@ onMounted(() => {
 
   const delayedOptions = {
     threshold: 0.1,
-    rootMargin: '0px 0px -400px 0px',  // 스크롤을 더 내린 후 트리거 되게끔 설정
+    rootMargin: '0px 0px -600px 0px',  // 스크롤을 더 내린 후 트리거 되게끔 설정
   };
 
   const observer = new IntersectionObserver((entries) => {

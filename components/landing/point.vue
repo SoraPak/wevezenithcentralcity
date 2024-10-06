@@ -59,7 +59,10 @@ const subCon4DtRef = ref(null);
 const subCon4DdRef = ref(null);
 
 onMounted(() => {
-  const options = { threshold: 0.1 };
+  const options = {
+    threshold: 0.1, // 요소가 10% 보이면 애니메이션 트리거
+    rootMargin: '0px 0px -200px 0px' // 화면 하단에서 300px 정도 더 내려가면 트리거
+  };
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
