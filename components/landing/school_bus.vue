@@ -35,7 +35,7 @@ onMounted(() => {
   // 일반 요소들에 적용될 옵저버 설정 (기존 rootMargin 유지)
   const defaultOptions = {
     threshold: 0.1,
-    rootMargin: '0px 0px -300px 0px' // 기존 설정 유지
+    rootMargin: '0px 0px -500px 0px' // 기존 설정 유지
   };
 
   const fastTriggerOptions = {

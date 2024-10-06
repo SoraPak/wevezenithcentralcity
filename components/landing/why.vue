@@ -39,7 +39,7 @@ const pListItems = [
 onMounted(() => {
   const options = {
     threshold: 0.2, // 요소가 20% 보이면 애니메이션 트리거
-    rootMargin: '0px 0px -100px 0px',
+    rootMargin: '0px 0px -200px 0px',
   };
 
   const observer = new IntersectionObserver((entries) => {
