@@ -4,7 +4,7 @@
         <span>지금 바로 두산위브더제니스 센트럴시티와 함께</span>
         <span>프리미엄 라이프를 준비하세요!</span>
       </h1>
-      <div class="reviewCon">
+      <div class="reviewCon" ref="reviewConRef">
         <div>
           <dl>
             <dt>30년 만에 새 아파트로 갈아탔어요!</dt>
@@ -211,7 +211,68 @@
   </section>
 </template>
 
+<script setup>
+import { ref, onMounted } from 'vue';
+
+const reviewConRef = ref(null);
+
+onMounted(() => {
+  // 각 dl 요소를 관찰하여 애니메이션을 적용합니다.
+  const dlElements = reviewConRef.value.querySelectorAll('dl');
+
+  const options = {
+    threshold: 0.2, // 요소의 20%가 보일 때 트리거
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-float');
+        observer.unobserve(entry.target); // 애니메이션 이후에는 관찰 중지
+      }
+    });
+  }, options);
+
+  dlElements.forEach((dl) => observer.observe(dl));
+});
+</script>
+
+
 <style scoped>
+
+.reviewCon dl {
+  opacity: 0;
+  transform: translateY(100px); /* 아래에서 시작 */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reviewCon dl.animate-float {
+  opacity: 1;
+  transform: translateY(0);
+  animation: balloonFloat 1s ease-out forwards;
+}
+
+/* 부드럽게 떠오르는 풍선 애니메이션 */
+@keyframes balloonFloat {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+
+
 .reviews {
   background: #be9167;
   color: #fff;
