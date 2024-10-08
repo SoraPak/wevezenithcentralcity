@@ -19,7 +19,7 @@
           <img class="event02_ghost ghost3" loading="lazy" src="/images/landing/halloween/img_ghost.png" width="136" alt="">        </h2>
         <p class="evnet02_text" ref="event02TextRef"><img loading="lazy" src="/images/landing/halloween/text02.png" width="460" alt="쿠폰 저장 후 계약 시, 박소라 과장이 정성껏 기른 의성 호박 증정! (수량 소진 시 까지)"></p>
       </div>
-      <a class="pumpkin">
+      <a class="pumpkin" @click="showAlert">
         <div class="pumpkin_imgs" ref="pumpkinImgsRef">
           <img loading="lazy" src="/images/landing/halloween/img_pumpkin.png" width="536" alt="">
           <img loading="lazy" src="/images/landing/halloween/img_pumpkin_off.png" width="536" alt="">
@@ -34,6 +34,11 @@
 
 <script setup>
 import { ref, onMounted } from 'vue';
+
+// 클릭 이벤트 핸들러 함수 정의
+const showAlert = () => {
+  alert("준비중! 10월 10일부터~");
+};
 
 const pumpkinImgsRef = ref(null);
 const ttlRef = ref(null);
