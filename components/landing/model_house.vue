@@ -46,7 +46,10 @@
     max-width: 840px;
     margin: 0 auto;
     position: relative;
-    height: 1120px;
+    height: 1120px; 
+    /* halloween
+    height: 620px;
+    z-index: 1; */
   }
   .model_house_inner::before {
     content: "";
