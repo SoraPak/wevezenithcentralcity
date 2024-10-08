@@ -37,6 +37,7 @@
     background: #082379;
     color: #fff;
     position: relative;
+    /*margin-top: 390px;  halloween */
   }
   .guide::before {
     content: "";
