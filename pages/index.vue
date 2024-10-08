@@ -12,7 +12,7 @@
     <Reviews class="reviews" />
     <Sp_reviews class="sp_reviews" />
     <Model_house />
-    <!-- Halloween / -->
+    <Halloween />
     <Guide />
     <G_footer />
   </div>

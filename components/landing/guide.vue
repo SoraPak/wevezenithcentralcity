@@ -37,7 +37,7 @@
     background: #082379;
     color: #fff;
     position: relative;
-    /*margin-top: 390px;  halloween */
+    margin-top: 390px;  /* halloween */
   }
   .guide::before {
     content: "";
@@ -192,7 +192,9 @@
 /* sp */
 @media only screen and (max-width: 950px) {
 
-
+  .guide {
+    margin-top: 88vw;
+  }
 
   .guide::before {
     background-size: 100% auto;
