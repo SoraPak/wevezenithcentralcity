@@ -61,7 +61,7 @@ onMounted(() => {
 
   // 뷰포트 높이를 기준으로 20vh를 계산하여 rootMargin에 적용
   const viewportHeight = window.innerHeight;
-  const rootMarginValue = `0px 0px -${0.35 * viewportHeight}px 0px`; // 40vh -> px
+  const rootMarginValue = `0px 0px -${0.35 * viewportHeight}px 0px`; // 35vh -> px
 
   // pumpkin 애니메이션에만 rootMarginValue 적용
   const pumpkinObserver = new IntersectionObserver((entries) => {
@@ -89,8 +89,9 @@ onMounted(() => {
 
   pumpkinObserver.observe(pumpkinImgsRef.value);
 
-  // 다른 요소들에 대한 기본 observer
-  const animateElements = [event01TtlElement, event01TextElement, event02TtlElement, event02TextElement, halloweenInnerAfterElement, evnet01SweetElement];
+  // 다른 요소들에 대한 기본 observer (rootMargin을 -5vw로 설정)
+  const rootMarginForOtherElements = `0px 0px -${0.1 * viewportHeight}px 0px`;
+  const animateElements = [ttlElement, event01TtlElement, event01TextElement, event02TtlElement, event02TextElement, halloweenInnerAfterElement, evnet01SweetElement];
   
   const popupObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -98,7 +99,7 @@ onMounted(() => {
         entry.target.classList.add('popup-rise');
       }
     });
-  }, { threshold: 0.5 });
+  }, { threshold: 0.5, rootMargin: rootMarginForOtherElements });
 
   animateElements.forEach(el => {
     if (el) {
