@@ -89,7 +89,7 @@ onMounted(() => {
 
   pumpkinObserver.observe(pumpkinImgsRef.value);
 
-  // 다른 요소들에 대한 기본 observer (rootMargin을 -5vw로 설정)
+  // 다른 요소들에 대한 기본 observer (rootMargin을 -5vh로 설정)
   const rootMarginForOtherElements = `0px 0px -${0.1 * viewportHeight}px 0px`;
   const animateElements = [ttlElement, event01TtlElement, event01TextElement, event02TtlElement, event02TextElement, halloweenInnerAfterElement, evnet01SweetElement];
   
@@ -683,7 +683,7 @@ onMounted(() => {
     display: block;
     width: 39vw;
     position: absolute;
-    right: 11vw;
+    right: 16.5vw;
     bottom: 24vw;
     transform: rotate(12deg);
   }
