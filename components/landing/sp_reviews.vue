@@ -1,5 +1,5 @@
 <template>
-  <section class="reviews">
+  <section id="reviews" class="reviews">
     <h1 class="ttl">
       <img loading="lazy" src="/images/landing/reviews/ttl01.svg" alt="지금 바로 두산위브더제니스 센트럴시티와 함께">
       <img loading="lazy" src="/images/landing/reviews/ttl02.svg" alt="프리미엄 라이프를 준비하세요!">
@@ -43,6 +43,17 @@ import { ref, onMounted, nextTick } from 'vue';
 
 // 리뷰 데이터
 const reviews = ref([
+  {
+    title: "공원과 키즈카페까지! 아이들에게 딱 맞는 아파트 계약 성공!",
+    content: [
+      "박소라 과장님의 홈페이지를 보고 모델하우스를 방문하게 됐어요. 지금 5살 된 첫째와 곧 태어날 둘째를 위해, 층간소음 스트레스 없이 키울 수 있는 필로티 2층을 선택했습니다.",
+      "여긴 정말 아이들 키우기 최적의 환경인 것 같아요! 키즈카페가 단지 안에 있어서 언제든 안전하게 놀 수 있고, 작은 도서관과 독서실은 학습 공간으로 딱이더라고요. 게다가 팔거천 수변공원이랑 공원들이 단지 주변에 있어서 아이들이 자연 속에서 마음껏 뛰어놀 수 있는 점도 정말 마음에 들었어요.",
+      "차 없는 지상공간 덕분에 자전거나 스쿠터 타기도 안전해서 부모로서 걱정이 확 줄었고요. 그리고 커뮤니티 시설도 다양해서 아이들이 즐겁게 생활할 수 있을 것 같아요.",
+      "이런 환경은 두 아이를 안전하게 키우고 싶은 저에게 최적의 선택이었고, 고민 없이 바로 2층으로 계약했어요! 두산위브더제니스 센트럴시티는 아이들을 키우기 위한 안전하고 행복한 공간을 제공하는 아파트라, 부모님들께 적극 추천합니다!"
+    ],
+    author: "태전동 30대 유**",
+    img: "/images/landing/reviews/img08.png"
+  },
   {
     title: "30년 만에 새 아파트로 갈아탔어요!",
     content: [
