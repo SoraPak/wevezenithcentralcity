@@ -36,7 +36,7 @@
       <button @click="closePopup">× 닫기</button>
       <div class="popupCon_body">
         <p>아래 쿠폰을 저장 해 주세요</p>
-        <img class="coupon" loading="lazy" src="/images/landing/halloween/coupon.jpg" alt="쿠폰">
+        <img class="coupon" loading="lazy" src="/images/landing/halloween/2024halloween.jpg" alt="쿠폰">
       </div>
       
     </div>
