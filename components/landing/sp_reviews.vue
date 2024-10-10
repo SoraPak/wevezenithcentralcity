@@ -1,5 +1,5 @@
 <template>
-  <section id="reviews" class="reviews">
+  <section id="reviews_sp" class="reviews">
     <h1 class="ttl">
       <img loading="lazy" src="/images/landing/reviews/ttl01.svg" alt="지금 바로 두산위브더제니스 센트럴시티와 함께">
       <img loading="lazy" src="/images/landing/reviews/ttl02.svg" alt="프리미엄 라이프를 준비하세요!">
