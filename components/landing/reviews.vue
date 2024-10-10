@@ -1,5 +1,5 @@
 <template>
-  <section class="reviews">
+  <section id="reviews" class="reviews">
       <h1 class="ttl">
         <span>지금 바로 두산위브더제니스 센트럴시티와 함께</span>
         <span>프리미엄 라이프를 준비하세요!</span>
