@@ -124,9 +124,9 @@
                 이런 환경은 두 아이를 안전하게 키우고 싶은 저에게 최적의 선택이었고, 고민 없이 바로 2층으로 계약했어요! 두산위브더제니스 센트럴시티는 아이들을 키우기 위한 안전하고 행복한 공간을 제공하는 아파트라, 부모님들께 적극 추천합니다!
               </p>
               <p>
-                읍내동 30대 유**
+                태전동 30대 유**
               </p>
-              <img loading="lazy" src="/images/landing/reviews/img03.png" width="166" alt="">
+              <img loading="lazy" src="/images/landing/reviews/img08.png" width="166" alt="">
             </dd>
           </dl>
 
