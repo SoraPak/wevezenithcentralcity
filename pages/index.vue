@@ -95,10 +95,19 @@ const checkHashAndRedirect = () => {
     }
   }
 
+  if (window.location.hash === '#reviews_sp') {
+    // 화면 크기가 950px 이상일 때
+    if (window.innerWidth > 950) {
+      router.push({ hash: '#reviews' });  // #reviews로 리다이렉트
+    }
+  }
+
   // 화면 크기 변화 감지 시 다시 체크
   window.addEventListener('resize', () => {
     if (window.location.hash === '#reviews' && window.innerWidth <= 950) {
       router.push({ hash: '#reviews_sp' });
+    } else if (window.location.hash === '#reviews_sp' && window.innerWidth > 950) {
+      router.push({ hash: '#reviews' });
     }
   });
 };
@@ -113,8 +122,7 @@ onMounted(() => {
   // 반응형 화면 전환 시 리로드 감지
   checkResponsiveAndReload();
 
-  // 페이지가 로드될 때 해시(#reviews)를 체크하여 리다이렉트 처리
+  // 페이지가 로드될 때 해시(#reviews 또는 #reviews_sp)를 체크하여 리다이렉트 처리
   checkHashAndRedirect();
 });
 </script>
-
