@@ -31,14 +31,13 @@
     </div>
   </section>
 
-  <section v-if="isPopupOpen" class="halloweenPopup" @click.self="closePopup">
+  <section :class="{'halloweenPopup': true, 'hide-popup': !isPopupOpen}" @click.self="closePopup">
     <div class="popupCon">
       <button @click="closePopup">× 닫기</button>
       <div class="popupCon_body">
         <p>아래 쿠폰을 저장 해 주세요</p>
         <img class="coupon" loading="lazy" src="/images/landing/halloween/2024halloween.jpg" alt="쿠폰">
       </div>
-      
     </div>
   </section>
 </template>
@@ -56,9 +55,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: popupFadeIn 0.5s ease forwards;
     overflow-y: auto;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
   }
+  .hide-popup {
+    opacity: 0;
+    visibility: hidden;
+  }
+
   .halloweenPopup::before{
     content: "";
     display: block;
@@ -77,10 +83,14 @@
     z-index: 2;
     position: relative;
     text-align: center;
-    animation: popupSlideIn 0.5s ease forwards;
     box-sizing: border-box;
     overflow: hidden;
     border-radius: 10px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  .hide-popup .popupCon {
+    transform: translateY(50px);
+    opacity: 0;
   }
   .popupCon_body {
     padding:2vh;
@@ -106,48 +116,6 @@
     align-items: center;
   }
 
-@keyframes popupFadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes popupSlideIn {
-  from {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.halloweenPopup[style*="display: none;"] {
-  animation: popupFadeOut 0.5s ease forwards;
-}
-
-@keyframes popupFadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
-
-@media only screen and (max-height: 520px) {
-  .halloweenPopup {
-    align-items: start;
-  }
-  .popupCon_body {
-    padding:20px;
-  }
-}
 
 /* sp */
 @media only screen and (max-width: 950px) {
@@ -181,10 +149,11 @@ const openPopup = () => {
 };
 
 const closePopup = () => {
+  // 팝업이 닫힐 때 애니메이션이 먼저 실행되도록 함
   isPopupOpen.value = false;
 };
 
-// 팝업이 열리면 body의 스크롤을 막고 닫히면 스크롤을 허용
+// 팝업이 열리면 body 스크롤을 막고 닫힐 때 허용
 watch(isPopupOpen, (newVal) => {
   if (newVal) {
     document.body.style.overflow = 'hidden';
