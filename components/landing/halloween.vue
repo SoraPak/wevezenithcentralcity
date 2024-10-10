@@ -25,7 +25,7 @@
           <img loading="lazy" src="/images/landing/halloween/img_pumpkin_off.png" width="536" alt="">
         </div>
         <img class="coupon_img" loading="lazy" src="/images/landing/halloween/btn_coupon.png" width="381" alt="">
-        <img class="coupon_img_sp" loading="lazy" src="/images/landing/halloween/btn_coupon_sp.png" alt="">
+        <img class="coupon_img_sp" ref="couponImgSpRef" loading="lazy" src="/images/landing/halloween/btn_coupon_sp.png" alt="">
       </a>
       <img class="light" loading="lazy" src="/images/landing/halloween/bg_light.jpg" width="1344" alt="">
     </div>
@@ -79,6 +79,8 @@
     text-align: center;
     animation: popupSlideIn 0.5s ease forwards;
     box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
   }
   .popupCon_body {
     padding:2vh;
@@ -99,6 +101,9 @@
     width: 100%;
     padding: 7px 10px;
     background: #e0dffc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
 @keyframes popupFadeIn {
@@ -153,6 +158,7 @@
     width: 100%;
     margin: 4vw;
     font-size: 5vw;
+    border-radius: 1vw;
   }
   .coupon {
     width: 100%;
@@ -165,7 +171,7 @@
 </style>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, watch } from 'vue';
 
 // 팝업 상태 관리
 const isPopupOpen = ref(false);
@@ -195,9 +201,11 @@ const event02TtlRef = ref(null);
 const event02TextRef = ref(null);
 const halloweenInnerAfterRef = ref(null);
 const evnet01SweetRef = ref(null);
+const couponImgSpRef = ref(null);
 
 onMounted(() => {
   const pumpkinImgs = pumpkinImgsRef.value.querySelectorAll('img');
+  const couponImgSpElement = couponImgSpRef.value;
   const ttlElement = ttlRef.value;
   const event01TtlElement = event01TtlRef.value;
   const event01TextElement = event01TextRef.value;
@@ -210,12 +218,13 @@ onMounted(() => {
   const viewportHeight = window.innerHeight;
   const rootMarginValue = `0px 0px -${0.35 * viewportHeight}px 0px`; // 35vh -> px
 
-  // pumpkin 애니메이션에만 rootMarginValue 적용
+  // pumpkin 애니메이션과 coupon_img_sp 애니메이션을 같은 트리거 시점에 적용
   const pumpkinObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         // 깜빡이는 애니메이션 실행
         pumpkinImgs[1].classList.add('pumpkin-blink');
+        couponImgSpElement.classList.add('animate-coupon-img'); // .coupon_img_sp 애니메이션 추가
 
         // 깜빡임 애니메이션 후 은은하게 일렁이는 효과 시작
         setTimeout(() => {
@@ -266,6 +275,7 @@ onMounted(() => {
   ttlObserver.observe(ttlRef.value);
 });
 </script>
+
 
 
 
@@ -619,6 +629,7 @@ onMounted(() => {
   bottom: 35px;
   right: -166px;
   cursor: pointer;
+  z-index: 1;
 }
 .pumpkin_imgs{
   position: relative;
@@ -633,19 +644,22 @@ onMounted(() => {
   top: 0;
   left: 0;
 }
+.coupon_img_sp {
+  display: none;
+}
 .coupon_img {
   position: absolute;
   bottom: 6px;
-  left: -11px;
+  left: 46px;
   transition: transform 0.3s ease;
 }
 .pumpkin:hover .coupon_img  {
   
   transform: scale(1.1);
 }
-.coupon_img_sp {
-  display: none;
-}
+
+
+
 
 
 /* sp */
@@ -830,15 +844,38 @@ onMounted(() => {
     display: block;
     width: 39vw;
     position: absolute;
-    right: 16.5vw;
+    right: 14.5vw;
     bottom: 24vw;
     transform: rotate(12deg);
   }
+
+  .coupon_img_sp {
+    opacity: 0;
+    transform: translateX(-50px) rotate(0deg); /* 시작 시 왼쪽에서 오른쪽으로 살짝 기울어지지 않은 상태 */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* 애니메이션 트랜지션 */
+  }
+
+  .animate-coupon-img {
+    animation: couponMove 0.5s ease forwards;
+  }
+
+  /* keyframes 설정 */
+  @keyframes couponMove {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px) rotate(0deg); /* 왼쪽에서 시작 */
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0) rotate(12deg); /* 오른쪽으로 살짝 기울어지면서 끝 */
+    }
+  }
+
   .halloween_inner_after {
     width: 73vw;
     height: 51vw;
     left: auto;
-    right: -17vw;
+    right: -13vw;
     z-index: 1;
     top: 149vw;
     pointer-events: none;
