@@ -46,6 +46,7 @@
 
 <script setup>
 import { onMounted, nextTick, ref } from 'vue';
+import { useRouter } from 'nuxt/app';
 
 // 레이아웃을 비활성화
 definePageMeta({
@@ -70,6 +71,7 @@ import Halloween from '~/components/landing/halloween.vue'
 import G_footer from '~/components/footer.vue'
 
 const landingWrap = ref(null);
+const router = useRouter();  // Nuxt의 useRouter 사용
 
 // 화면 크기 변경을 감지하고 950px 이하로 전환될 때 페이지를 리로드하는 함수
 const checkResponsiveAndReload = () => {
@@ -84,6 +86,23 @@ const checkResponsiveAndReload = () => {
   });
 };
 
+// 화면 크기와 URL 해시(#reviews)를 체크하고 리다이렉트 처리
+const checkHashAndRedirect = () => {
+  if (window.location.hash === '#reviews') {
+    // 화면 크기가 950px 이하일 때
+    if (window.innerWidth <= 950) {
+      router.push({ hash: '#reviews_sp' });  // #reviews_sp로 리다이렉트
+    }
+  }
+
+  // 화면 크기 변화 감지 시 다시 체크
+  window.addEventListener('resize', () => {
+    if (window.location.hash === '#reviews' && window.innerWidth <= 950) {
+      router.push({ hash: '#reviews_sp' });
+    }
+  });
+};
+
 // 페이지 로드 시 페이드인 효과 적용
 onMounted(() => {
   // 페이지가 로드되면 opacity를 1로 변경하여 페이드인 효과를 실행
@@ -93,5 +112,9 @@ onMounted(() => {
 
   // 반응형 화면 전환 시 리로드 감지
   checkResponsiveAndReload();
+
+  // 페이지가 로드될 때 해시(#reviews)를 체크하여 리다이렉트 처리
+  checkHashAndRedirect();
 });
 </script>
+
