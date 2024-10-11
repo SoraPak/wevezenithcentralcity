@@ -2,8 +2,8 @@
   <section class="ansim">
     <div class="ansim_inner">
       <div class="bg"><span></span><span></span><span></span></div>
-      <h1 class="ttl" ref="ttlRef"><img loading="lazy" src="/images/landing/ansim/ttl.png" width="571" alt="할인 분양 걱정 NO! 후계약자와 동일한 혜택 보장!"></h1>
-      <p class="text01" ref="text01Ref"><img loading="lazy" src="/images/landing/ansim/text01.png" width="600" alt="지금 바로 프리미엄 동호수 선택하세요"></p>
+      <h1 class="ttl" ref="ttlRef"><img loading="lazy" src="/images/landing/ansim/ttl.png" width="480" alt="할인 기다리다 놓친다!! 후계약자와 동일한 혜택 보장!"></h1>
+      <p class="text01" ref="text01Ref"><img loading="lazy" src="/images/landing/ansim/text01.png" width="600" alt="로얄동 매진임박"></p>
       <img class="img01" ref="img01Ref" src="/images/landing/ansim/img01.png" width="496" alt="">
       <img class="spImg01" ref="spImg01Ref" src="/images/landing/ansim/sp_img01.png" width="363" alt="">
       <dl class="section01" ref="section01Ref">
@@ -142,7 +142,7 @@ onMounted(() => {
     z-index: 2;
   }
   .ttl {
-    top: -520px;
+    top: -547px;
   }
   .img01 {
     right: -100px;
@@ -153,7 +153,7 @@ onMounted(() => {
   }
   .text01 {
     left: -57px;
-    top: -365px;
+    top: -405px;
   }
   .section01 {
     width: 622px;
@@ -219,7 +219,7 @@ onMounted(() => {
   }
   .ansim_inner {
     max-width: 100%;
-    padding-top: 88vw;
+    padding-top: 97vw;
     height: auto;
     padding-bottom: 34vw;
   }
@@ -257,7 +257,7 @@ onMounted(() => {
   .spImg01 {
     display: block;
     right: -7vw;
-    top: 34vw;
+    top: 43vw;
     width: 100vw;
   }
   .text01 {

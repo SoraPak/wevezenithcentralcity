@@ -488,10 +488,10 @@ onMounted(() => {
 
 }
 .halloween_inner_after {
-  width: 749px;
+  bottom: -56px;
   height: 515px;
-  left: -283px;
-  bottom: -37px;
+  left: -191px;
+  width: 749px;
 }
 .ttl {
   position: absolute;
