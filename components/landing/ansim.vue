@@ -1,5 +1,5 @@
 <template>
-  <section class="ansim">
+  <section id="ansim" class="ansim">
     <div class="ansim_inner">
       <div class="bg"><span></span><span></span><span></span></div>
       <h1 class="ttl" ref="ttlRef"><img loading="lazy" src="/images/landing/ansim/ttl.png" width="480" alt="할인 기다리다 놓친다!! 후계약자와 동일한 혜택 보장!"></h1>

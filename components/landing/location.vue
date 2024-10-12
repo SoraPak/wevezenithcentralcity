@@ -1,5 +1,5 @@
 <template>
-  <section class="location">
+  <section id="location" class="location">
     <div class="location_inner">
       <h1 class="ttl fade-in" ref="ttlRef01"><img loading="lazy" src="/images/landing/location/ttl.png" width="358" alt="빨라진 교통 어디로든 빠르게"></h1>
       <img loading="lazy" class="img01" ref="img01Ref" src="/images/landing/location/img01.png" width="474" alt="">

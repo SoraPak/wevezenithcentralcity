@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer id="footer">
       <div class="cont1">
         <div><img src="/images/logo_zenith_w.svg" width="195" alt="" /></div>
         <div><img src="/images/footer/footer_tel1.png" width="226" alt="" /></div>
