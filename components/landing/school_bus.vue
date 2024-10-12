@@ -1,5 +1,5 @@
 <template>
-  <section class="school_bus">
+  <section id="school_bus" class="school_bus">
     <div class="school_bus_inner">
       <img loading="lazy" class="img01" ref="img01Ref" src="/images/landing/school_bus/img01.png" width="288" alt="">
       <img loading="lazy" class="img02" ref="img02Ref" src="/images/landing/school_bus/img02.png" width="380" alt="">

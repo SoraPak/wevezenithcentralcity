@@ -1,5 +1,5 @@
 <template>
-  <section class="hero" ref="heroRef">
+  <section id="top" class="hero" ref="heroRef">
     <h1 class="ttl">
       <img ref="img1" src="/images/landing/hero/ttl01.png" width="425" alt="대구 랜드마크의 자격">
       <img ref="img2" src="/images/landing/hero/ttl02.png" width="558" alt="오직, 제니스">

@@ -1,5 +1,5 @@
 <template>
-  <section class="model_house">
+  <section id="model_house" class="model_house">
     <div class="model_house_inner">
       <div class="bg"></div>
       <h1 class="ttl"><img loading="lazy" src="/images/landing/model_house/ttl01.png" width="517" alt="모델하우스 방문 예약하고 특별한 선물을 받아가세요!"></h1>

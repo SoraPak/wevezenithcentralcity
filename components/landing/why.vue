@@ -1,5 +1,5 @@
 <template>
-  <section class="why">
+  <section id="why" class="why">
     <div class="bgTop"></div>
     <div class="why_inner"> 
       <div class="bg"><span></span><span></span><span></span></div>

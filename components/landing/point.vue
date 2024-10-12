@@ -1,5 +1,5 @@
 <template>
-  <section class="point">
+  <section id="point" class="point">
     <div class="point_inner">
       <h1 class="point_ttl">
         <img ref="pointTtlRef01" loading="lazy" src="/images/logo.svg" width="400" alt="두산위브더제니스 센트럴시티">
