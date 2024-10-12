@@ -66,7 +66,7 @@ export default defineNuxtConfig({
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap' },
       ],
       script: [
-        // Google Tag Manager 스크립트
+        // Google Tag Manager 스크립트 추가
         {
           hid: 'gtag',
           src: 'https://www.googletagmanager.com/gtag/js?id=G-L9HLE0RYGD',
@@ -82,28 +82,10 @@ export default defineNuxtConfig({
           `,
           type: 'text/javascript',
           charset: 'utf-8'
-        },
-        // Google Ads 스크립트 추가
-        {
-          hid: 'google-ads',
-          src: 'https://www.googletagmanager.com/gtag/js?id=AW-16713596997',
-          async: true
-        },
-        {
-          hid: 'google-ads-config',
-          innerHTML: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-16713596997');
-          `,
-          type: 'text/javascript',
-          charset: 'utf-8'
         }
       ],
       __dangerouslyDisableSanitizersByTagID: {
-        'gtag-config': ['innerHTML'],
-        'google-ads-config': ['innerHTML']
+        'gtag-config': ['innerHTML']
       }
     }
   },
