@@ -59,6 +59,29 @@ onMounted(() => {
     position: relative;
     height: 490px;
   }
+  .ansim_inner::after {
+    content: "";
+    display: block;
+    width: 1444px;
+    height: 1447px;
+    background: url("/images/landing/ansim/bg_o.jpg") no-repeat center center;
+    background-size: 100% auto;
+    position: absolute;
+    right: -620px;
+    top: -870px;
+    mix-blend-mode: screen;
+    animation: rotateInfinite 70s linear infinite;
+  }
+  /* 회전 애니메이션 */
+  @keyframes rotateInfinite {
+    0% {
+      transform: rotate(0deg); /* 시작 상태 */
+    }
+    100% {
+      transform: rotate(360deg); /* 한 바퀴 회전 */
+    }
+  }
+  
   .ttl, .text01, .img01, .spImg01, .section01 {
     opacity: 0;
     transform: translateY(-50px);
@@ -221,16 +244,17 @@ onMounted(() => {
 
 /* sp */
 @media only screen and (max-width: 950px) {
-
-
-  .ansim {
-
-  }
   .ansim_inner {
     max-width: 100%;
     padding-top: 95vw;
     height: auto;
     padding-bottom: 34vw;
+  }
+  .ansim_inner::after {
+    width: 300vw;
+    height: 302vw;
+    right: -124vw;
+    top: -70vw;
   }
 
   .bg span:nth-child(1) {
