@@ -2,9 +2,10 @@
   <section id="ansim" class="ansim">
     <div class="ansim_inner">
       <div class="bg"><span></span><span></span><span></span></div>
-      <h1 class="ttl" ref="ttlRef"><img loading="lazy" src="/images/landing/ansim/ttl.png" width="480" alt="할인 기다리다 놓친다!! 후계약자와 동일한 혜택 보장!"></h1>
-      <p class="text01" ref="text01Ref"><img loading="lazy" src="/images/landing/ansim/text01.png" width="600" alt="로얄동 매진임박"></p>
-      <img class="img01" ref="img01Ref" src="/images/landing/ansim/img01.png" width="496" alt="">
+      <h1 class="ttl" ref="ttlRef"><img loading="lazy" src="/images/landing/ansim/ttl.png" width="445" alt="할인 기다리다 놓친다!! 후계약자와 동일한 혜택 보장!"></h1>
+      <img class="logo" src="/images/full_logo_w.svg" width="219" alt="두산위브더제니스 센트럴시티" />
+      <p class="text01" ref="text01Ref"><img loading="lazy" src="/images/landing/ansim/text01.png" width="616" alt="로얄동 매진임박"></p>
+      <img class="img01" ref="img01Ref" src="/images/landing/ansim/img01.png" width="447" alt="">
       <img class="spImg01" ref="spImg01Ref" src="/images/landing/ansim/sp_img01.png" width="363" alt="">
       <dl class="section01" ref="section01Ref">
         <dt><img loading="lazy" src="/images/landing/ansim/sub_ttl.png" width="444" alt="계약조건 안심 보장제 실시!"></dt>
@@ -141,24 +142,31 @@ onMounted(() => {
     position: absolute;
     z-index: 2;
   }
+
+  .logo {
+    position: absolute;
+    right: 0;
+    top: -570px;
+  }
   .ttl {
-    top: -547px;
+    top: -524px;
+    left: 80px;
   }
   .img01 {
-    right: -100px;
-    top: -597px;
+    right: -179px;
+    top: -430px;
   }
   .spImg01 {
     display: none;
   }
   .text01 {
-    left: -57px;
-    top: -405px;
+    left: -25px;
+    top: -400px;
   }
   .section01 {
     width: 622px;
     margin: 0 auto;
-    margin-top: -170px;
+    margin-top: -197px;
     color: #606563;
     background: #fff;
     padding: 33px;
@@ -168,6 +176,7 @@ onMounted(() => {
     line-height: 160%;
     position: relative;
     word-break: keep-all;
+    z-index: 2;
   }
 
   
@@ -219,7 +228,7 @@ onMounted(() => {
   }
   .ansim_inner {
     max-width: 100%;
-    padding-top: 97vw;
+    padding-top: 95vw;
     height: auto;
     padding-bottom: 34vw;
   }
@@ -243,7 +252,13 @@ onMounted(() => {
     display: none;
   }
 
-
+  .logo {
+    width: 29vw;
+    top: 78vw;
+    left: 4vw;
+    z-index: 3;
+  }
+  
   .ttl {
     top: -21vw;
     left: 18vw;
@@ -252,13 +267,14 @@ onMounted(() => {
     width: 70vw;
   }
   .img01 {
+    
     display: none;
   }
   .spImg01 {
     display: block;
-    right: -7vw;
-    top: 43vw;
-    width: 100vw;
+    right: -12vw;
+    top: 42vw;
+    width: 105vw;
   }
   .text01 {
     left: 0;
@@ -267,7 +283,7 @@ onMounted(() => {
     width: 100%;
   }
   .text01 img {
-    width: 88vw;
+    width: 93vw;
   }
   .section01 {
     width: 93vw;
