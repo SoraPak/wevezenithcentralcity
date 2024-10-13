@@ -4,7 +4,17 @@
       <div class="bg"><span></span><span></span><span></span></div>
       <h1 class="ttl" ref="ttlRef"><img loading="lazy" src="/images/landing/ansim/ttl.png" width="445" alt="할인 기다리다 놓친다!! 후계약자와 동일한 혜택 보장!"></h1>
       <img class="logo" src="/images/full_logo_w.svg" width="219" alt="두산위브더제니스 센트럴시티" />
-      <p class="text01" ref="text01Ref"><img loading="lazy" src="/images/landing/ansim/text01.png" width="616" alt="로얄동 매진임박"></p>
+      <p class="text01" ref="text01Ref">
+        <span class="siren sirenL">
+          <img class="off" src="/images/landing/ansim/siren.png" alt="">
+          <img class="on" src="/images/landing/ansim/siren_on.png" alt="">
+        </span>
+        <span class="siren sirenR">
+          <img class="off" src="/images/landing/ansim/siren.png" alt="">
+          <img class="on" src="/images/landing/ansim/siren_on.png" alt="">
+        </span>
+        <img loading="lazy" src="/images/landing/ansim/text01.png" width="616" alt="로얄동 매진임박">
+      </p>
       <img class="img01" ref="img01Ref" src="/images/landing/ansim/img01.png" width="447" alt="">
       <img class="spImg01" ref="spImg01Ref" src="/images/landing/ansim/sp_img01.png" width="363" alt="">
       <dl class="section01" ref="section01Ref">
@@ -185,7 +195,74 @@ onMounted(() => {
   .text01 {
     left: -25px;
     top: -400px;
+    width: 616px;
   }
+  .siren {
+    width: 157px;
+    height: 157px;
+    display: block;
+    position: absolute;
+  }
+  .siren > img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+  }
+  .siren .off {
+    opacity: 1; /* 기본적으로 꺼진 상태 */
+    transition: opacity 0.3s ease;
+  }
+
+  .siren .on {
+    opacity: 0; /* 기본적으로 켜지지 않은 상태 */
+    transition: opacity 0.3s ease;
+  }
+
+  .sirenL {
+    left: -8px;
+    top: 54px;
+  }
+  .sirenR {
+    right: 4px;
+    top: 54px;
+  }
+
+  @keyframes sirenBlinkLeft {
+    0%, 100% {
+      opacity: 1; /* 불이 꺼진 상태 */
+    }
+    50% {
+      opacity: 0; /* 불이 켜진 상태 */
+    }
+  }
+
+  @keyframes sirenBlinkRight {
+    0%, 100% {
+      opacity: 0; /* 불이 켜진 상태 */
+    }
+    50% {
+      opacity: 1; /* 불이 꺼진 상태 */
+    }
+  }
+
+  .sirenL .off {
+    animation: sirenBlinkLeft 1s infinite; /* 왼쪽 사이렌 교대로 깜빡이는 애니메이션 */
+  }
+
+  .sirenL .on {
+    animation: sirenBlinkRight 1s infinite; /* 왼쪽 사이렌 교대로 깜빡이는 애니메이션 */
+  }
+
+  .sirenR .off {
+    animation: sirenBlinkRight 1s infinite; /* 오른쪽 사이렌 교대로 깜빡이는 애니메이션 */
+  }
+
+  .sirenR .on {
+    animation: sirenBlinkLeft 1s infinite; /* 오른쪽 사이렌 교대로 깜빡이는 애니메이션 */
+  }
+
   .section01 {
     width: 622px;
     margin: 0 auto;
@@ -306,8 +383,22 @@ onMounted(() => {
     text-align: center;
     width: 100%;
   }
-  .text01 img {
+  .text01 > img {
     width: 93vw;
+  }
+  .siren {
+    width: 28vw;
+    height: 28vw;
+    display: block;
+    position: absolute;
+  }
+  .sirenL {
+    left: 0;
+    top: 5vw;
+  }
+  .sirenR {
+    right: 0;
+    top: 5vw;
   }
   .section01 {
     width: 93vw;
