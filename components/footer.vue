@@ -1,7 +1,7 @@
 <template>
   <footer id="footer">
       <div class="cont1">
-        <div><img src="/images/logo_zenith_w.svg" width="195" alt="" /></div>
+        <div><img src="/images/logo_zenith_w.svg" width="195" alt="두산위브더제니스 센트럴시티" /></div>
         <div><img src="/images/footer/footer_tel1.png" width="226" alt="" /></div>
       </div>
       <div class="coop">
