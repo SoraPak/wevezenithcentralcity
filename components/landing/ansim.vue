@@ -221,11 +221,11 @@ onMounted(() => {
   }
 
   .sirenL {
-    left: -8px;
+    left: 0;
     top: 54px;
   }
   .sirenR {
-    right: 4px;
+    right: 0;
     top: 54px;
   }
 
