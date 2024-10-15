@@ -244,25 +244,25 @@ onMounted(() => {
 /* 초기 상태에서 보이지 않도록 opacity를 0으로 설정 */
 .img01, .img03, .img02, .text {
   opacity: 0;
-  transform: translateY(200px) scale(0.6); /* 더 밑에서 시작하도록 설정 */
+  transform: translateY(20vw) scale(0.6); /* 더 밑에서 시작하도록 설정 */
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 /* 탄력적으로 땅에서 솟아나는 애니메이션 */
 @keyframes bounceUp {
   0% {
-    transform: translateY(200px) scale(0.6); /* 더 밑에서 시작, 작아진 상태 */
+    transform: translateY(20vw) scale(0.6); /* 더 밑에서 시작, 작아진 상태 */
     opacity: 0; /* 투명하게 시작 */
   }
   50% {
-    transform: translateY(-50px) scale(1.15); /* 위로 튀어오르며 확대, 더 위로 튀어오름 */
+    transform: translateY(-2vw) scale(1.1); /* 위로 튀어오르며 확대, 더 위로 튀어오름 */
     opacity: 1; /* 불투명하게 */
   }
   70% {
-    transform: translateY(20px) scale(0.9); /* 조금 내려오면서 축소 */
+    transform: translateY(2vw) scale(0.9); /* 조금 내려오면서 축소 */
   }
   85% {
-    transform: translateY(-10px) scale(1.05); /* 살짝 위로 올라가며 확대 */
+    transform: translateY(-1vw) scale(1.02); /* 살짝 위로 올라가며 확대 */
   }
   100% {
     transform: translateY(0) scale(1); /* 원래 위치로 돌아옴 */
@@ -276,7 +276,7 @@ onMounted(() => {
     transform: translateY(0); /* 기본 위치 */
   }
   50% {
-    transform: translateY(-10px); /* 위로 살짝 올라감 */
+    transform: translateY(-1vw); /* 위로 살짝 올라감 */
   }
   100% {
     transform: translateY(0); /* 원래 위치로 돌아옴 */
@@ -304,7 +304,7 @@ onMounted(() => {
 /* 초기 상태에서 보이지 않도록 설정 */
 .name03, .name01, .name02 {
   opacity: 0;
-  transform: translateX(100px); /* 오른쪽에서 시작 */
+  transform: translateX(10vw); /* 오른쪽에서 시작 */
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
@@ -312,13 +312,14 @@ onMounted(() => {
 @keyframes fadeInRight {
   0% {
     opacity: 0;
-    transform: translateX(100px); /* 오른쪽에서 시작 */
+    transform: translateX(10vw); /* 오른쪽에서 시작 */
   }
   100% {
     opacity: 1;
     transform: translateX(0); /* 원래 위치로 */
   }
 }
+
 
 /* 각각의 애니메이션 효과 */
 .name03.animate {
@@ -336,7 +337,6 @@ onMounted(() => {
 
 /* sp */
 @media only screen and (max-width: 950px) {
-
   .guide {
     margin-top: 88vw;
   }
@@ -388,18 +388,20 @@ onMounted(() => {
   .guideImgs .name02,
   .guideImgs .name03 {
     width: 24vw;
+    opacity: 0; /* 처음에 보이지 않음 */
+    transform: translateX(100px); /* 오른쪽에서 시작 */
   }
 
   .guideImgs .name01 {
     bottom: 27vw;
-    right: 2vw;
+    right: 9vw;
   }
   .guideImgs .name02{
     left: 2vw;
     bottom: 27vw;
   }
   .guideImgs .name03 {
-    right: 40vw;
+    right: 39vw;
     bottom: 21vw;
   }
   
