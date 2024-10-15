@@ -2,14 +2,14 @@
   <section id="guide" class="guide">
     <div class="guide_inner">
       <h1 class="ttl"><img loading="lazy" src="/images/landing/guide/ttl01.png" width="648" alt="당신의 프리미엄 라이프를 안내할 분양팀 상담사"></h1>
-      <p class="text"><img loading="lazy" src="/images/landing/guide/text01.png" height="76" alt="카톡으로 예약 단디 하고 오이소~^^"></p>
+      <p class="text" ref="textRef"><img loading="lazy" src="/images/landing/guide/text01.png" height="76" alt="카톡으로 예약 단디 하고 오이소~^^"></p>
       <div class="guideImgs">
-        <img loading="lazy" class="name03" src="/images/landing/guide/name03.png" width="165" alt="신현주 팀장">
-        <img loading="lazy" class="img03" src="/images/landing/guide/img03.png" width="449" alt="">
-        <img loading="lazy" class="name02" src="/images/landing/guide/name02.png" width="165" alt="이서은 과장">
-        <img loading="lazy" class="img02" src="/images/landing/guide/img02.png" width="361" alt="">
-        <img loading="lazy" class="name01" src="/images/landing/guide/name01.png" width="165" alt="박소라 과장">
-        <img loading="lazy" class="img01" src="/images/landing/guide/img01.png" width="420" alt="">
+        <img loading="lazy" class="name03" ref="name03Ref" src="/images/landing/guide/name03.png" width="165" alt="신현주 팀장">
+        <img loading="lazy" class="img03" ref="img03Ref" src="/images/landing/guide/img03.png" width="449" alt="">
+        <img loading="lazy" class="name02" ref="name02Ref" src="/images/landing/guide/name02.png" width="165" alt="이서은 과장">
+        <img loading="lazy" class="img02" ref="img02Ref" src="/images/landing/guide/img02.png" width="361" alt="">
+        <img loading="lazy" class="name01" ref="name01Ref" src="/images/landing/guide/name01.png" width="165" alt="박소라 과장">
+        <img loading="lazy" class="img01" ref="img01Ref" src="/images/landing/guide/img01.png" width="420" alt="">
       </div>
       <div class="section01">
         <div class="location">
@@ -28,6 +28,62 @@
     </div>
   </section>
 </template>
+
+<script setup>
+import { ref, onMounted } from 'vue';
+
+const img01Ref = ref(null);
+const img02Ref = ref(null);
+const img03Ref = ref(null);
+const textRef = ref(null);
+const name01Ref = ref(null);
+const name02Ref = ref(null);
+const name03Ref = ref(null);
+
+onMounted(() => {
+  const options = {
+    threshold: 0.1, // 요소가 10% 보이면 애니메이션 트리거
+    rootMargin: '0px 0px -100px 0px', // 화면 하단에서 100px 정도 더 내려가면 트리거
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+      }
+    });
+  }, options);
+
+  // 요소들에 대해 옵저버 적용
+  observer.observe(img01Ref.value);
+  observer.observe(img03Ref.value);
+  observer.observe(img02Ref.value);
+  observer.observe(textRef.value);
+
+  // 이름 애니메이션 순서 적용
+  const nameObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+      }
+    });
+  }, options);
+
+  // 순차적으로 이름 애니메이션 적용
+  setTimeout(() => {
+    nameObserver.observe(name03Ref.value);
+  }, 1500);
+
+  setTimeout(() => {
+    nameObserver.observe(name01Ref.value);
+  }, 1800);
+
+  setTimeout(() => {
+    nameObserver.observe(name02Ref.value);
+  }, 2100);
+});
+</script>
+
 
 <style scoped>
 
@@ -66,8 +122,8 @@
   }
   .text {
     position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
+    width: 100%;
+    text-align: center;
     top: -233px;
     z-index: 1;
   }
@@ -185,9 +241,98 @@
   }
 
 
+/* 초기 상태에서 보이지 않도록 opacity를 0으로 설정 */
+.img01, .img03, .img02, .text {
+  opacity: 0;
+  transform: translateY(200px) scale(0.6); /* 더 밑에서 시작하도록 설정 */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
 
+/* 탄력적으로 땅에서 솟아나는 애니메이션 */
+@keyframes bounceUp {
+  0% {
+    transform: translateY(200px) scale(0.6); /* 더 밑에서 시작, 작아진 상태 */
+    opacity: 0; /* 투명하게 시작 */
+  }
+  50% {
+    transform: translateY(-50px) scale(1.15); /* 위로 튀어오르며 확대, 더 위로 튀어오름 */
+    opacity: 1; /* 불투명하게 */
+  }
+  70% {
+    transform: translateY(20px) scale(0.9); /* 조금 내려오면서 축소 */
+  }
+  85% {
+    transform: translateY(-10px) scale(1.05); /* 살짝 위로 올라가며 확대 */
+  }
+  100% {
+    transform: translateY(0) scale(1); /* 원래 위치로 돌아옴 */
+    opacity: 1; /* 최종적으로 완전히 보이도록 설정 */
+  }
+}
 
-  
+/* 둥실둥실 움직이는 애니메이션 */
+@keyframes float {
+  0% {
+    transform: translateY(0); /* 기본 위치 */
+  }
+  50% {
+    transform: translateY(-10px); /* 위로 살짝 올라감 */
+  }
+  100% {
+    transform: translateY(0); /* 원래 위치로 돌아옴 */
+  }
+}
+
+/* 애니메이션이 적용될 때 땅에서 튀어오르는 효과 */
+.img01.animate {
+  animation: bounceUp 1.2s cubic-bezier(0.22, 0.61, 0.36, 1.0) forwards;
+}
+
+.img03.animate {
+  animation: bounceUp 1.2s 0.3s cubic-bezier(0.22, 0.61, 0.36, 1.0) forwards; /* 0.3초 딜레이 */
+}
+
+.img02.animate {
+  animation: bounceUp 1.2s 0.6s cubic-bezier(0.22, 0.61, 0.36, 1.0) forwards; /* 0.6초 딜레이 */
+}
+
+.text.animate {
+  animation: bounceUp 1.2s 0.9s cubic-bezier(0.22, 0.61, 0.36, 1.0) forwards, 
+             float 2.5s infinite ease-in-out 1.7s; /* 나타난 후 둥실둥실 애니메이션 */
+}
+
+/* 초기 상태에서 보이지 않도록 설정 */
+.name03, .name01, .name02 {
+  opacity: 0;
+  transform: translateX(100px); /* 오른쪽에서 시작 */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* 오른쪽에서 부드럽게 나타나는 애니메이션 */
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px); /* 오른쪽에서 시작 */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* 원래 위치로 */
+  }
+}
+
+/* 각각의 애니메이션 효과 */
+.name03.animate {
+  animation: fadeInRight 1s 1.5s ease forwards; /* 1.5초 후에 애니메이션 시작 */
+}
+
+.name01.animate {
+  animation: fadeInRight 1s 1.8s ease forwards; /* 1.8초 후에 애니메이션 시작 */
+}
+
+.name02.animate {
+  animation: fadeInRight 1s 2.1s ease forwards; /* 2.1초 후에 애니메이션 시작 */
+}
+
 
 /* sp */
 @media only screen and (max-width: 950px) {
