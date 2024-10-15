@@ -96,7 +96,12 @@ export default defineNuxtConfig({
   sitemap: {
     hostname: 'https://xn--hu1bq8p65bh1h6oby7bg90c.kr',
     gzip: true,
-    routes: []  // 필요시 추가 경로 지정 가능
+    routes: async () => {
+      // 동적으로 라우트를 가져오는 부분 (예: 데이터베이스나 API로부터 가져옴)
+      const staticRoutes = [
+        '/'
+      ];
+    },
   },
   robots: {
     UserAgent: '*',

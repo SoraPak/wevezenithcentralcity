@@ -1,2 +1,6 @@
+# START nuxt-robots (indexable)
 User-agent: *
 Allow: /
+
+Sitemap: https://xn--hu1bq8p65bh1h6oby7bg90c.kr/sitemap.xml
+# END nuxt-robots
