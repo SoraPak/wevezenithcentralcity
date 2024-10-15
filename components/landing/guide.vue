@@ -4,12 +4,12 @@
       <h1 class="ttl"><img loading="lazy" src="/images/landing/guide/ttl01.png" width="648" alt="당신의 프리미엄 라이프를 안내할 분양팀 상담사"></h1>
       <p class="text" ref="textRef"><img loading="lazy" src="/images/landing/guide/text01.png" height="76" alt="카톡으로 예약 단디 하고 오이소~^^"></p>
       <div class="guideImgs">
-        <img loading="lazy" class="name03" ref="name03Ref" src="/images/landing/guide/name03.png" width="165" alt="신현주 팀장">
-        <img loading="lazy" class="img03" ref="img03Ref" src="/images/landing/guide/img03.png" width="449" alt="">
-        <img loading="lazy" class="name02" ref="name02Ref" src="/images/landing/guide/name02.png" width="165" alt="이서은 과장">
-        <img loading="lazy" class="img02" ref="img02Ref" src="/images/landing/guide/img02.png" width="361" alt="">
-        <img loading="lazy" class="name01" ref="name01Ref" src="/images/landing/guide/name01.png" width="165" alt="박소라 과장">
-        <img loading="lazy" class="img01" ref="img01Ref" src="/images/landing/guide/img01.png" width="420" alt="">
+        <img class="name03" ref="name03Ref" src="/images/landing/guide/name03.png" width="165" alt="신현주 팀장">
+        <img class="img03" ref="img03Ref" src="/images/landing/guide/img03.png" width="449" alt="">
+        <img class="name02" ref="name02Ref" src="/images/landing/guide/name02.png" width="165" alt="이서은 과장">
+        <img class="img02" ref="img02Ref" src="/images/landing/guide/img02.png" width="361" alt="">
+        <img class="name01" ref="name01Ref" src="/images/landing/guide/name01.png" width="165" alt="박소라 과장">
+        <img class="img01" ref="img01Ref" src="/images/landing/guide/img01.png" width="420" alt="">
       </div>
       <div class="section01">
         <div class="location">
