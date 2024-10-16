@@ -26,6 +26,7 @@
         <div class="left">
           <p class="tel"><img loading="lazy" src="/images/landing/guide/img_tel.png" width="410" alt="두산위브더제니스 센트럴시티 전화번호:15551924"></p>
           <p class="telText"><strong>일로 이사</strong> 할 시간!</p>
+          <p class="comment">모델하우스는 사전예약제 및 담당자 지정제로 운영되고 있습니다(당일예약 가능). 모델하우스 카운터에서<strong>박소라 과장</strong>을 찾아주세요.</p>
         </div>
         <ul class="links">
           <li class="kakao"><a href="https://open.kakao.com/me/wevehj" target="_blank">카톡으로<br>모델하우스<br>투어 예약하기</a></li>
@@ -250,6 +251,7 @@ onMounted(() => {
   */
   .left {
     margin-right: 20px;
+    flex: 1;
   }
   .tel {
     /* padding: 11px 0 9px;
@@ -259,7 +261,35 @@ onMounted(() => {
   .telText {
     text-align: center;
     line-height: 160%;
+    position: relative;
+    padding-bottom: 10px;
   }
+  .telText > strong {
+    color: #ff008b;
+  }
+  .comment {
+    color: #ff008b;
+    text-align: center;
+    border: 2px solid #ff008b;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 17px;
+    line-height: 140%;
+  }
+  .comment > strong {
+    background: #ffff6f;
+  }
+  /* 
+  .telText:before {
+    content: "";
+    height: 3px;
+    background-color: #092379;
+    width: 90%;
+    position: absolute;
+    bottom: 0;
+    left:50%;
+    transform:translateX(-50%);
+  } */
   .tel {
     flex: 1;
     margin-bottom: 10px;
@@ -537,7 +567,19 @@ onMounted(() => {
   }
   .telText {
     font-size: 5vw;
+    padding-bottom: 2vw;
   }
+  .comment {
+    border: 0.5vw solid #ff008b;
+    color: #ff008b;
+    border-radius: 1vw;
+    padding: 2vw 3vw;
+    font-size: 4.2vw;
+  }
+  /* 
+  .telText:before {
+    height: 0.5vw;
+  } */
   .tel img {
     width: 100%;
   }

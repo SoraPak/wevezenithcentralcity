@@ -11,10 +11,10 @@
           <img src="/images/footer/footer_partner3.png" height="20"alt="시공:두산건설(주)" />
         </div>
         <div class="detail">
-          <ul class="location">
+          <!-- ul class="location">
             <li><em>현장 :</em> 대구광역시 학정동 732-1번지 일원</li>
             <li><em>견본주택 :</em> 대구광역시 북구 태전동 1213번지</li>
-          </ul>
+          </ul -->
           <div class="copy1">
             <ul>
               <li>
@@ -93,9 +93,6 @@ footer {
   font-weight: 500;
   color: #bf9364;
   font-style: normal;
-}
-.copy1 ul {
-  margin-top: 20px;
 }
 .copy1 ul li {
   position: relative;
