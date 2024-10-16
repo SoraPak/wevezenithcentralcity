@@ -41,9 +41,12 @@ const name02Ref = ref(null);
 const name03Ref = ref(null);
 
 onMounted(() => {
+  const viewportHeight = window.innerHeight;
+  const rootMarginValue = `0px 0px -${0.1 * viewportHeight}px 0px`; // 동적으로 rootMargin 계산
+
   const options = {
     threshold: 0.1, // 요소가 10% 보이면 애니메이션 트리거
-    rootMargin: '0px 0px -100px 0px', // 화면 하단에서 100px 정도 더 내려가면 트리거
+    rootMargin: rootMarginValue, // 계산된 rootMargin 값 사용
   };
 
   const observer = new IntersectionObserver((entries) => {
@@ -83,6 +86,7 @@ onMounted(() => {
   }, 2100);
 });
 </script>
+
 
 
 <style scoped>
