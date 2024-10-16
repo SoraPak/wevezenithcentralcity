@@ -25,7 +25,7 @@
         </div -->
         <div class="left">
           <p class="tel"><img loading="lazy" src="/images/landing/guide/img_tel.png" width="410" alt="두산위브더제니스 센트럴시티 전화번호:15551924"></p>
-          <p class="telText"><strong>일로 이사</strong> 할 시간!</p>
+          <p class="telText"><strong>일로 이사</strong> 오소!</p>
           <p class="comment">모델하우스는 사전예약제 및 담당자 지정제로 운영되고 있습니다(당일예약 가능). 모델하우스 카운터에서 <strong>박소라 과장</strong>을 찾아주세요.</p>
         </div>
         <ul class="links">
@@ -263,9 +263,10 @@ onMounted(() => {
     line-height: 160%;
     position: relative;
     padding-bottom: 10px;
+    font-size: 30px;
   }
   .telText > strong {
-    color: #ff008b;
+    color: #e20000;
   }
   .comment {
     color: #ff008b;
@@ -292,7 +293,6 @@ onMounted(() => {
   } */
   .tel {
     flex: 1;
-    margin-bottom: 10px;
   }
   .links {
     display: flex;
@@ -566,7 +566,7 @@ onMounted(() => {
     margin-bottom: 1vw;
   }
   .telText {
-    font-size: 5vw;
+    font-size: 6vw;
     padding-bottom: 2vw;
   }
   .comment {
