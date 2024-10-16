@@ -23,8 +23,14 @@
             <p class="tel"><img loading="lazy" src="/images/landing/guide/img_tel.png" width="438" alt="두산위브더제니스 센트럴시티 전화번호:15551924"></p>
           </div>
         </div -->
-        <p class="tel"><img loading="lazy" src="/images/landing/guide/img_tel.png" width="438" alt="두산위브더제니스 센트럴시티 전화번호:15551924"></p>
-        <p class="telText">새 집으로 이사할 시간!</p>
+        <div class="left">
+          <p class="tel"><img loading="lazy" src="/images/landing/guide/img_tel.png" width="410" alt="두산위브더제니스 센트럴시티 전화번호:15551924"></p>
+          <p class="telText"><strong>일로 이사</strong> 할 시간!</p>
+        </div>
+        <ul class="links">
+          <li class="kakao"><a href="https://open.kakao.com/me/wevehj" target="_blank">카톡으로<br>모델하우스<br>투어 예약하기</a></li>
+          <li class="call"><a href="tel:1555-1924" target="_blank">전화로<br>모델하우스<br>투어 예약하기</a></li>
+        </ul>
       </div>
 
     </div>
@@ -184,6 +190,8 @@ onMounted(() => {
     top: 400px;
     font-size: 22px;
     box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
   }
 
   /* 
@@ -240,10 +248,68 @@ onMounted(() => {
     }
 
   */
-  .tel, .telText {
+  .left {
+    margin-right: 20px;
+  }
+  .tel {
     /* padding: 11px 0 9px;
     margin-top: 12px; */
     text-align: center;
+  }
+  .telText {
+    text-align: center;
+    line-height: 160%;
+  }
+  .tel {
+    flex: 1;
+    margin-bottom: 10px;
+  }
+  .links {
+    display: flex;
+  }
+  .links li {
+    flex: 1;
+  }
+  .links li a {
+    width: 100%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 140%;
+    flex-direction: column;
+    padding: 10px;
+    box-sizing: border-box;
+    min-width: 160px;
+    max-width: 200px;
+  }
+  .links li a::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-size: 100% auto;
+  }
+
+
+  .links .kakao a {
+    background: #fae100;
+    color: #371d1e;
+  }
+  .links .call {
+    display: none;
+  }
+  .links .call a {
+    background: #07299e;
+    color: #fff;
+  }
+  .links .kakao a::before {
+    background-image: url("/images/landing/r_nav/kakao.svg");
+  }
+  .links .call a::before {
+    background-image: url("/images/landing/r_nav/call.svg");
   }
   
 
@@ -421,6 +487,7 @@ onMounted(() => {
     font-size: 5vw;
     left: auto;
     position: relative;
+    display: block;
   }
   /*
     .location {
@@ -461,8 +528,44 @@ onMounted(() => {
       margin-top: 3vw;
     }
     */
+
+  .left {
+    margin-right: 0;
+  }  
+  .tel {
+    margin-bottom: 1vw;
+  }
+  .telText {
+    font-size: 5vw;
+  }
   .tel img {
     width: 100%;
+  }
+
+
+  .links {
+    margin-top: 4vw;
+  }
+  .links li a {
+    font-size: 4vw;
+    padding: 10px;
+    min-width: 100%;
+    max-width: 100%;
+  }
+  .links li a::before {
+    width: 10vw;
+    height: 10vw;
+  }
+
+  .links li a {
+    font-size: 4vw;
+  }
+  .links li a::before {
+      width: 10vw;
+      height: 10vw;
+  }
+  .links .call {
+    display: block;
   }
 
 
