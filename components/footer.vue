@@ -61,7 +61,7 @@ footer {
 }
 .coop {
   width: 100%;
-  display: flex;
+  /* display: flex; */
   justify-content: space-between;
   flex-direction: row-reverse;
 }
@@ -93,6 +93,9 @@ footer {
   font-weight: 500;
   color: #bf9364;
   font-style: normal;
+}
+.copy1 {
+  margin-top: 10px;
 }
 .copy1 ul li {
   position: relative;
