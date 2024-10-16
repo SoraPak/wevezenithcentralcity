@@ -4,7 +4,7 @@
       <img loading="lazy" src="/images/landing/r_nav/text01.png" width="75" alt="선착순 분양중">
     </div>
     <div class="section02">
-      <p class="telNo"><a href="tel:010-8236-8942" target="_blank"><span>010)</span><span>8236</span><span>8942</span></a></p>
+      <p class="telNo"><a href="tel:1555-1924" target="_blank"><span>Tel:</span><span>1555</span><span>1924</span></a></p>
     </div>
     <div class="section03">
       <a class="kakaoBut" href="https://open.kakao.com/me/wevehj" target="_blank">

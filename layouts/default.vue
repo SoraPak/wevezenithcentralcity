@@ -10,7 +10,7 @@
           <li><nuxt-link to="/space">세대안내</nuxt-link></li>
         </ul>
       </nav>
-      <div class="tel"><small>010)</small>8236.8942</div>
+      <div class="tel"><small>)</small>1555.1924</div>
     </header>
     <main>
       <NuxtPage />

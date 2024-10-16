@@ -3,7 +3,7 @@
     <div class="location_inner">
       <h1 class="ttl fade-in" ref="ttlRef01"><img loading="lazy" src="/images/landing/location/ttl.png" width="358" alt="빨라진 교통 어디로든 빠르게"></h1>
       <img loading="lazy" class="img01" ref="img01Ref" src="/images/landing/location/img01.png" width="474" alt="">
-      <p class="img01Text"><a href="https://kko.to/DrTCNa27qH" target="_blank"><span>현장</span>대구광역시 학정동 732-1번지 일원</a></p>
+      <!-- p class="img01Text"><a href="https://kko.to/DrTCNa27qH" target="_blank"><span>현장</span>대구광역시 학정동 732-1번지 일원</a></!-->
       <p class="text01 from-right" ref="text01"><img src="/images/landing/location/text01.png" height="90" alt="더블 역세권 학정역 도보 2분"></p>
       <p class="text02 from-right" ref="text02"><img src="/images/landing/location/text02.png" height="90" alt="대구 4차 순환도로 시내외 어디든 빠른 이동"></p>
       <p class="text03 from-left" ref="text03"><img src="/images/landing/location/text03.png" height="90" alt="구미IC,혁신도시,성서공단,동대구역 주요 거점 빠른 접근성"></p>
@@ -113,6 +113,7 @@ onMounted(() => {
   z-index: 5;
 }
 
+/*
 .img01Text {
   font-size: 20px;
   padding-top: 380px;
@@ -139,7 +140,7 @@ onMounted(() => {
   border-radius: 3px;
   margin-right: 8px;
 }
-
+*/
 .text01 {
   top: 15px;
   right: 0;
@@ -157,12 +158,12 @@ onMounted(() => {
 }
 
 .text03 {
-  top: 430px;
+  top: 400px;
   left: 20px;
 }
 
 .text04 {
-  top: 536px;
+  top: 506px;
   left: 0;
 }
 
@@ -280,18 +281,19 @@ onMounted(() => {
     left: -8vw;
   }
 
-  .img01Text {
-    font-size: 3vw;
-    margin-left: 0;
-    width: 40vw;
-    padding: 72vw 0 0 1vw;
-  }
-  .img01Text a > span {
-    padding: 0.5vw;
-    border-radius: 1vw;
-    margin-right: 1vw;
-  }
-
+  /* 
+    .img01Text {
+      font-size: 3vw;
+      margin-left: 0;
+      width: 40vw;
+      padding: 72vw 0 0 1vw;
+    }
+    .img01Text a > span {
+      padding: 0.5vw;
+      border-radius: 1vw;
+      margin-right: 1vw;
+    }
+  */
   .text01 img, .text02 img, .text03 img, .text04 img {
     height: 12vw;
   }
@@ -310,11 +312,11 @@ onMounted(() => {
     width: 59vw;
   }
   .text03 {
-    top: 82vw;
+    top: 77vw;
     left: -1.5vw;
   }
   .text04 {
-    top: 97.3vw;
+    top: 92.3vw;
     left: -4.5vw;
   }
   .img03 {
