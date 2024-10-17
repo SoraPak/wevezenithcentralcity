@@ -1,5 +1,5 @@
 <template>
-  <section class="community">
+  <section id="community" class="community">
     <h1 class="ttl" ref="ttlRef">
       <img loading="lazy" src="/images/landing/community/ttl.png" width="584" alt="입주민을 위한 고품격 커뮤니티 CLUB ZENITH">
     </h1>
