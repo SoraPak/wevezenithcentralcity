@@ -123,7 +123,7 @@
               <p>즐겁고 특별한 경험을 하며 계약할 수 있어 너무 만족해요. 고민 중이신 분들, 꼭 모델하우스 방문해보세요!</p>
 
               <p>
-                국우동 30대 박**
+                남산동 30대 박**
               </p>
               <img loading="lazy" src="/images/landing/reviews/img09.png" width="166" alt="">
             </dd>
