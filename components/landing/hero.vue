@@ -89,19 +89,11 @@ onMounted(() => {
 
   observer.observe(heroRef.value);
 
-  // 스크롤 시 .scroll 요소 페이드 아웃
+  // 스크롤 시 .scroll 요소 빠르게 페이드 아웃
   const handleScroll = () => {
     const scrollElement = scrollRef.value;
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const fadeOutPoint = 100; // 페이드 아웃을 시작할 스크롤 위치
-    const fadeOutRange = 100; // 페이드 아웃이 완료되는 범위 (100px)
-
-    if (scrollTop > fadeOutPoint) {
-      const opacity = Math.max(0, 1 - (scrollTop - fadeOutPoint) / fadeOutRange);
-      scrollElement.style.opacity = opacity;
-    } else {
-      scrollElement.style.opacity = 1; // 페이드 아웃 전에는 완전한 불투명 상태
-    }
+    scrollElement.style.transition = 'opacity 0.3s ease-out'; // 빠른 페이드 아웃 (0.3초)
+    scrollElement.style.opacity = 0; // 스크롤 시 즉시 투명하게
   };
 
   window.addEventListener('scroll', handleScroll);
