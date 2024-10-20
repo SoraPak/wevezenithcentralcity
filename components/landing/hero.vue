@@ -88,6 +88,28 @@ onMounted(() => {
   }, options);
 
   observer.observe(heroRef.value);
+
+  // 스크롤 시 .scroll 요소 페이드 아웃
+  const handleScroll = () => {
+    const scrollElement = scrollRef.value;
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const fadeOutPoint = 100; // 페이드 아웃을 시작할 스크롤 위치
+    const fadeOutRange = 100; // 페이드 아웃이 완료되는 범위 (100px)
+
+    if (scrollTop > fadeOutPoint) {
+      const opacity = Math.max(0, 1 - (scrollTop - fadeOutPoint) / fadeOutRange);
+      scrollElement.style.opacity = opacity;
+    } else {
+      scrollElement.style.opacity = 1; // 페이드 아웃 전에는 완전한 불투명 상태
+    }
+  };
+
+  window.addEventListener('scroll', handleScroll);
+
+  // 컴포넌트가 제거될 때 스크롤 이벤트 리스너 제거
+  onUnmounted(() => {
+    window.removeEventListener('scroll', handleScroll);
+  });
 });
 
 </script>
@@ -296,8 +318,9 @@ body.shake {
   justify-content: center;
   align-items: center;
   width: 100%;
-  position: absolute;
-  bottom: 12px;
+  position: fixed;
+  z-index: 1;
+  bottom: 50px;
   opacity: 0;
   transition: opacity 1s ease-in;
 }
@@ -384,7 +407,7 @@ body.shake {
     width: 21.5vw;
   }
   .scroll {
-    bottom: 2vw;
+    bottom: 24vw;
   }
   .scrollText {
     width: 14vw;
