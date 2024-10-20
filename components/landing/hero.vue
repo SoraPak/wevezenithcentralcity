@@ -322,6 +322,7 @@ body.shake {
   z-index: 1;
   bottom: 50px;
   opacity: 0;
+  pointer-events: none;
   transition: opacity 1s ease-in;
 }
 
