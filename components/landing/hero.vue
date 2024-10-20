@@ -403,10 +403,10 @@ body.shake {
     bottom: 24vw;
   }
   .scrollText {
-    width: 14vw;
+    width: 16vw;
   }
   .scrollImg {
-    width: 14vw;
+    width: 16vw;
   }
   /* 공통 위아래 둥실 애니메이션 */
   @keyframes floatVertical {
