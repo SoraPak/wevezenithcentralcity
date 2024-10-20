@@ -14,6 +14,10 @@
         <img width="152" :src="item.imgSrc" :alt="item.altText" />
       </li>
     </ul>
+    <div class="scroll" ref="scrollRef">
+      <img class="scrollText" src="/images/landing/hero/scrolIText.png" width="87" alt="">
+      <img class="scrollImg" src="/images/landing/hero/scrollImg.png" width="82" alt="">
+    </div>
   </section>
 </template>
 
@@ -24,6 +28,7 @@ const heroRef = ref(null);
 const img1 = ref(null);
 const img2 = ref(null);
 const img3 = ref(null);
+const scrollRef = ref(null);
 const termsItems = ref([]);
 
 const termsList = [
@@ -69,6 +74,11 @@ onMounted(() => {
               }
             }, 200 * index); // terms 리스트 항목들이 차례대로 나타남
           });
+
+          setTimeout(() => {
+            scrollRef.value.classList.add('fade-in');
+          }, 1600 + termsItems.value.length * 200);
+
         }, 1600); // img2 애니메이션이 끝난 후 terms 애니메이션 시작
 
         // 애니메이션 실행 후 observer 해제
@@ -279,6 +289,46 @@ body.shake {
 .terms li {
   margin: 11px;
 }
+.scroll {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  bottom: 12px;
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+.scroll.fade-in {
+  opacity: .8;
+}
+
+/* 공통 위아래 둥실 애니메이션 */
+@keyframes floatVertical {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* scrollText와 scrollImg에 다른 애니메이션 딜레이 적용 */
+.scrollText {
+  animation: floatVertical 3s ease-in-out infinite;
+  animation-delay: 0s; /* 즉시 시작 */
+}
+
+.scrollImg {
+  animation: floatVertical 3s ease-in-out infinite;
+  animation-delay: .5s; /* 1.5초 지연 후 시작 */
+}
+
+
+
 
 /* sp */
 @media only screen and (max-width: 950px) {
@@ -332,6 +382,22 @@ body.shake {
   }
   .terms img {
     width: 21.5vw;
+  }
+
+  .scrollText {
+    width: 17vw;
+  }
+  .scrollImg {
+    width: 17vw;
+  }
+  /* 공통 위아래 둥실 애니메이션 */
+  @keyframes floatVertical {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-.6vw);
+    }
   }
   
 }
