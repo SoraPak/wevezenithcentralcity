@@ -383,12 +383,14 @@ body.shake {
   .terms img {
     width: 21.5vw;
   }
-
+  .scroll {
+    bottom: 2vw;
+  }
   .scrollText {
-    width: 17vw;
+    width: 14vw;
   }
   .scrollImg {
-    width: 17vw;
+    width: 14vw;
   }
   /* 공통 위아래 둥실 애니메이션 */
   @keyframes floatVertical {
