@@ -33,13 +33,14 @@ const img04Ref = ref(null);  // 추가
 useScrollAnimation([ttlRef01, text01, text02, text03, text04]);
 
 onMounted(() => {
+  const viewportHeight = window.innerHeight;
   const options = {
     threshold: 0.1,
   };
 
   const delayedOptions = {
     threshold: 0.1,
-    rootMargin: '0px 0px -600px 0px',  // 스크롤을 더 내린 후 트리거 되게끔 설정
+    rootMargin: `0px 0px -${0.35 * viewportHeight}px 0px`,  // 스크롤을 더 내린 후 트리거 되게끔 설정
   };
 
   const observer = new IntersectionObserver((entries) => {
