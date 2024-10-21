@@ -143,7 +143,7 @@ defineExpose({
 @media only screen and (max-width: 950px) {
   .popupCon {
     width: 100%;
-    margin: 4vw;
+    margin: 3vw;
     font-size: 4.5vw;
     border-radius: 1vw;
   }
@@ -151,7 +151,7 @@ defineExpose({
     font-size: 6vw;
   }
   .popupCon_body {
-    padding:4vw;
+    padding:3vw;
   }
 }
 </style>
