@@ -19,7 +19,7 @@
           <img class="event02_ghost ghost3" loading="lazy" src="/images/landing/halloween/img_ghost.png" width="136" alt="">        </h2>
         <p class="evnet02_text" ref="event02TextRef"><img loading="lazy" src="/images/landing/halloween/text02.png" width="460" alt="쿠폰 저장 후 계약 시, 박소라 과장이 정성껏 기른 의성 호박 증정! (수량 소진 시 까지)"></p>
       </div>
-      <a class="pumpkin" @click="openPopup">
+      <a class="pumpkin" @click="showPopup">
         <div class="pumpkin_imgs" ref="pumpkinImgsRef">
           <img loading="lazy" src="/images/landing/halloween/img_pumpkin.png" width="536" alt="">
           <img loading="lazy" src="/images/landing/halloween/img_pumpkin_off.png" width="536" alt="">
@@ -31,70 +31,14 @@
     </div>
   </section>
 
-  <section :class="{'halloweenPopup': true, 'hide-popup': !isPopupOpen}" @click.self="closePopup">
-    <div class="popupCon">
-      <button @click="closePopup">× 닫기</button>
-      <div class="popupCon_body">
-        <p>아래 쿠폰을 저장 해 주세요</p>
-        <img class="coupon" loading="lazy" src="/images/landing/halloween/2024halloween.jpg" alt="쿠폰">
-      </div>
-    </div>
-  </section>
+  <!-- Popup 컴포넌트 사용 -->
+  <Popup ref="popupRef">
+    <p>아래 쿠폰을 저장 해 주세요</p>
+    <img class="coupon" loading="lazy" src="/images/landing/halloween/2024halloween.jpg" alt="쿠폰">
+  </Popup>
 </template>
 
 <style scoped>
-  .halloweenPopup {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    z-index: 10000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow-y: auto;
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
-  }
-  .hide-popup {
-    opacity: 0;
-    visibility: hidden;
-  }
-
-  .halloweenPopup::before{
-    content: "";
-    display: block;
-    background: #000000a5;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-  }
-  .popupCon {
-    background: #fff;
-    color: #000;
-    z-index: 2;
-    position: relative;
-    text-align: center;
-    box-sizing: border-box;
-    overflow: hidden;
-    border-radius: 10px;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-  }
-  .hide-popup .popupCon {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  .popupCon_body {
-    padding:2vh;
-  }
   .popupCon_body > p {
     margin-bottom: 10px;
   }
@@ -102,65 +46,27 @@
     height: 80vh;
     min-height: 416px;
   }
-  .popupCon button {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    margin: 0;
-    width: 100%;
-    padding: 7px 10px;
-    background: #e0dffc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-
 /* sp */
 @media only screen and (max-width: 950px) {
-  .halloweenPopup {
-    align-items: start;
-  }
-  .popupCon {
-    width: 100%;
-    margin: 4vw;
-    font-size: 5vw;
-    border-radius: 1vw;
-  }
   .coupon {
     width: 100%;
     height: auto;
-  }
-  .popupCon button {
-    font-size: 6vw;
   }
 }
 </style>
 
 <script setup>
-import { ref, onMounted, watch } from 'vue';
+import Popup from '~/components/landing/popup.vue';
+import { ref, onMounted } from 'vue';
 
-// 팝업 상태 관리
-const isPopupOpen = ref(false);
+const popupRef = ref(null);
 
-const openPopup = () => {
-  isPopupOpen.value = true;
-};
-
-const closePopup = () => {
-  // 팝업이 닫힐 때 애니메이션이 먼저 실행되도록 함
-  isPopupOpen.value = false;
-};
-
-// 팝업이 열리면 body 스크롤을 막고 닫힐 때 허용
-watch(isPopupOpen, (newVal) => {
-  if (newVal) {
-    document.body.style.overflow = 'hidden';
-  } else {
-    document.body.style.overflow = '';
+// 팝업을 여는 함수
+const showPopup = () => {
+  if (popupRef.value) {
+    popupRef.value.openPopup(); // 팝업 열기
   }
-});
+};
 
 const pumpkinImgsRef = ref(null);
 const ttlRef = ref(null);
