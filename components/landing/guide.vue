@@ -26,7 +26,7 @@
         <div class="left">
           <p class="tel"><img loading="lazy" src="/images/landing/guide/img_tel.png" width="410" alt="두산위브더제니스 센트럴시티 전화번호:15551924"></p>
           <p class="telText"><strong>일로 이사</strong> 오소!</p>
-          <p class="comment">모델하우스는 <strong>사전예약 및 담당자 지정제</strong>로 운영되고 있습니다(당일예약 가능). 모델하우스 카운터에서 <strong>박소라 과장</strong>을 찾아주세요.(박소라 과장을 안 찾아오시면 선물이 제공 안되요ㅠㅠ)</p>
+          <p class="comment">모델하우스는 <strong>사전예약 및 담당자 지정제</strong>로 운영되고 있습니다(당일예약 가능). 모델하우스 카운터에서 <strong>박소라 과장</strong>을 찾아주세요.<span style="font-weight: bolder; font-size: 83%; color: #e20000;">박소라 과장 안 찾아오시면 선물이 제공 안되요ㅠㅠ</span></p>
         </div>
         <ul class="links">
           <li class="kakao"><a href="https://open.kakao.com/me/wevehj" target="_blank">카톡으로<br>모델하우스<br>투어 예약하기</a></li>
