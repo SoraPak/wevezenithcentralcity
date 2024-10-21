@@ -44,10 +44,13 @@
   }
   .coupon {
     height: 80vh;
-    min-height: 416px;
+    display: block;
   }
 /* sp */
 @media only screen and (max-width: 950px) {
+  .popupCon_body > p {
+    margin-bottom: 2vw;
+  }
   .coupon {
     width: 100%;
     height: auto;
