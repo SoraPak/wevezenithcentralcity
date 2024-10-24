@@ -186,8 +186,7 @@ onMounted(() => {
     max-width: 840px;
     margin: 0 auto;
     position: relative;
-    height: 680px;
-    padding-top: 210px;
+    padding-top: 790px;
   }
   .bg {
     position: absolute;
@@ -327,7 +326,7 @@ onMounted(() => {
     max-width: 100%;
     height: auto;
     padding-top: 25vw;
-    padding-bottom: 32vw;
+    padding-bottom: 28vw;
   }
   .bg span:nth-child(1) {
     top: 31vw;

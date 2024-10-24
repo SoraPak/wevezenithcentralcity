@@ -225,7 +225,7 @@ onMounted(() => {
 }
 .img03{
   left: -85px;
-  top: -70px;
+  top: -60px;
 }
 .img04{
   left: 130px;
