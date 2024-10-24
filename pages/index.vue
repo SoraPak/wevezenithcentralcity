@@ -7,6 +7,7 @@
     <Location />
     <Ansim />
     <Why />
+    <Study />
     <School_bus />
     <Community />
     <Reviews class="reviews" />
@@ -61,6 +62,7 @@ import Point from '~/components/landing/point.vue'
 import Location from '~/components/landing/location.vue'
 import Ansim from '~/components/landing/ansim.vue'
 import Why from '~/components/landing/why.vue'
+import Study from '~/components/landing/study.vue'
 import School_bus from '~/components/landing/school_bus.vue'
 import Community from '~/components/landing/community.vue'
 import Reviews from '~/components/landing/reviews.vue'
