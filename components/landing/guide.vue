@@ -10,7 +10,19 @@
         <img class="img02" ref="img02Ref" src="/images/landing/guide/img02.png" width="361" alt="">
         <img class="name01" ref="name01Ref" src="/images/landing/guide/name01.png" width="165" alt="박소라 과장">
         <img class="img01" ref="img01Ref" src="/images/landing/guide/img01.png" width="420" alt="">
-      </div>
+        <!-- a @click="showPopup('popup3')">
+          <img class="name03" ref="name03Ref" src="/images/landing/guide/name03.png" width="165" alt="신현주 팀장">
+          <img class="img03" ref="img03Ref" src="/images/landing/guide/img03.png" width="449" alt="">
+        </a>
+        <a @click="showPopup('popup2')">
+          <img class="name02" ref="name02Ref" src="/images/landing/guide/name02.png" width="165" alt="이서은 과장">
+          <img class="img02" ref="img02Ref" src="/images/landing/guide/img02.png" width="361" alt="">
+        </a>
+        <a @click="showPopup('popup1')">
+          <img class="name01" ref="name01Ref" src="/images/landing/guide/name01.png" width="165" alt="박소라 과장">
+          <img class="img01" ref="img01Ref" src="/images/landing/guide/img01.png" width="420" alt="">
+        </a -->
+        </div>
       <div class="section01">
         <!-- div class="location">
           <img loading="lazy" src="/images/landing/guide/map.jpg" width="309" alt="">
@@ -36,10 +48,40 @@
 
     </div>
   </section>
+  <!-- 팝업 정의 -->
+<Popup ref="popup1">
+  <h1 class="popup_ttl"><img loading="lazy" src="/images/landing/guide/popupTtl.svg" width="420" alt="고것좀 알고 잡다"></h1>
+  <img class="popup_img01" loading="lazy" src="/images/landing/guide/popupImg01.jpg" width="100%" alt="">
+</Popup>
+
+<Popup ref="popup2">
+  coming soon..
+</Popup>
+
+<Popup ref="popup3">
+  coming soon..
+</Popup>
 </template>
 
 <script setup>
+import Popup from '~/components/landing/popup.vue';
 import { ref, onMounted } from 'vue';
+
+// 팝업 레퍼런스 설정
+const popup1 = ref(null);
+const popup2 = ref(null);
+const popup3 = ref(null);
+
+// 팝업을 여는 함수
+const showPopup = (popupId) => {
+  if (popupId === 'popup1' && popup1.value) {
+    popup1.value.openPopup();
+  } else if (popupId === 'popup2' && popup2.value) {
+    popup2.value.openPopup();
+  } else if (popupId === 'popup3' && popup3.value) {
+    popup3.value.openPopup();
+  }
+};
 
 const img01Ref = ref(null);
 const img02Ref = ref(null);
