@@ -32,7 +32,10 @@ __pycache__/
 # Local Netlify folder
 .netlify
 <<<<<<< HEAD
+<<<<<<< HEAD
 public/images/landing/study/bank/bg.mp4
 public/images/landing/guide/Small Little Orange Lights 4K Relaxing Screensaver.mp4
+=======
+>>>>>>> 0d65ed5c433558474385e8ab5cc289ce1a0664d2
 =======
 >>>>>>> 0d65ed5c433558474385e8ab5cc289ce1a0664d2
