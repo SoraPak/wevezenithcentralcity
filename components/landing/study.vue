@@ -14,7 +14,7 @@
       </p>
       <dl class="event">
         <dt>종로엠스쿨 인적성 검사 실시</dt>
-        <dd>주말에 모델하우스에 방문하고 18만원 상당의 인적성 검사 받자!!</dd>
+        <dd>주말에 모델하우스에 방문하고 18만원 상당의 인적성 검사 받자!</dd>
         <dd><span class="subTtl">일시</span>24년 10월 26(토) ~ 27(일) <br><em>주말 단 이틀!</em></dd>
         <dd><span class="subTtl">대상</span>모델하우스 방문 고객 <br>(성별 연령 제한 없음)</dd>
         <dd><span class="subTtl">위치</span>두산위브더제니스 센트럴시티 <br>모델하우스</dd>
@@ -311,6 +311,11 @@
     border-radius: 3vw;
     font-size: 3.9vw;
   }
+  .subTtl {
+    border: .5vw solid #01114f;
+    border-radius: 1.5vw;
+    padding: .6vw 1.5vw;
+  }
   .event dt {
     border-radius: 2vw;
   }
@@ -320,7 +325,7 @@
   .event em::before {
     height: 2vw;
     bottom: -.5vw;
-  } 
+  }
   .event .call a {
     pointer-events: auto;
   }
