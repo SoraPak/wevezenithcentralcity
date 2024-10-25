@@ -12,6 +12,22 @@
         <img loading="lazy" src="/images/landing/study/text01.png" width="443" alt="">
         <img loading="lazy" src="/images/landing/study/jongro_logo.svg" width="437" alt="">
       </p>
+      <dl class="event">
+        <dt>종로엠스쿨 인적성 검사 실시</dt>
+        <dd><span class="subTtl">일시</span>24년 10월 26(토) ~ 27(일) <br><em>주말 단 이틀!</em></dd>
+        <dd><span class="subTtl">대상</span>모델하우스 방문 고객<br>(성별 연령 제한 없음)</dd>
+        <dd><span class="subTtl">위치</span>두산위브더제니스 센트럴시티<br>모델하우스</dd>
+        <dd class="call">
+          <span class="subTtl">방문예약</span>
+          <a href="tel:1555-1924" target="_blank">
+            <em><span>15</span>55-19<span>24</span></em>
+          </a><br>
+          <span class="subText">(<strong>일로이사</strong> 오소!)</span>
+        </dd>
+        <dd class="comment">
+          ※ 모델하우스는 예약, 담당자 지정제로 운영되고 있습니다. 카운터에서 <em>박소라</em> 과장을 찾아주세요!
+        </dd>
+      </dl>
     </div>
     <div class="box">
       <div class="box_inner">
@@ -45,6 +61,7 @@
   margin: 0 auto;
   position: relative;
   z-index: 2;
+  padding-bottom: 30px;
 }
 .flag::after {
   content: "";
@@ -88,6 +105,94 @@
 }
 .text01 > img:first-child {
   margin-bottom: 24px;
+}
+.event {
+  width: 500px;
+  background: #fff;
+  color: #01114f;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 20px;
+  border: 5px solid #db1983;
+  font-size: 19px;
+  line-height: 160%;
+}
+.event dt {
+  background: #db1983;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.event dd {
+  margin-bottom: 10px;
+  margin-left: 3.2em;
+  text-indent: -3.2em;
+}
+.event dd br {
+  display: none;
+}
+.event dd:last-child {
+  margin-bottom: 0;
+}
+.event em {
+  position: relative;
+  font-style: normal;
+}
+.event em::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 10px;
+  width: 100%;
+  bottom: -3px;
+  right: 0;
+  background: #ffd84473;
+  mix-blend-mode: darken;
+}
+.event .call {
+  margin-left: 4.7em;
+  text-indent: -4.7em;
+}
+.event .call a {
+  color: inherit;
+  pointer-events: none;
+}
+.event .call em{
+  font-size: 40px;
+  font-weight: bold;
+}
+.event .call em:before {
+  bottom: 3px;
+}
+.event .call em span {
+  color: #db1983;
+}
+.event .call .subText {
+  padding-left: 10px;
+  font-size: 80%;
+}
+.event .call .subText strong {
+  color: #db1983;
+  
+}
+.event .comment {
+  font-size: 80%;
+  margin-left: 1.5em;
+  text-indent: -1.5em;
+  line-height: 150%;
+}
+.event .comment em{
+  color: #db1983;
+}
+.subTtl {
+  padding: 3px 7px;
+  border-radius: 8px;
+  border: 2px solid #01114f;
+  font-weight: bold;
+  font-size: 90%;
+  margin-right: 10px;
 }
 .box {
   background: #b0bbe2;
@@ -163,6 +268,7 @@
 @media only screen and (max-width: 950px) {
   .flag {
     width: 90vw;
+    padding-bottom: 4vw;
   }
   .flag::after {
     width: 90vw;
@@ -196,6 +302,32 @@
   }
   .text01 > img:last-child {
     width: 48vw;
+  }
+  .event {
+    width: 60vw;
+    border: 1vw solid #db1983;
+    padding: 3vw;
+    border-radius: 3vw;
+    font-size: 3.4vw;
+  }
+  .event dt {
+    border-radius: 2vw;
+  }
+  .event dd br {
+    display: inline-block;
+  }
+  .event em::before {
+    height: 2vw;
+    bottom: -.5vw;
+  } 
+  .event .call a {
+    pointer-events: auto;
+  }
+  .event .call em {
+    font-size: 8vw;
+  }
+  .event .call em:before {
+    bottom: 1vw;
   }
   .box {
     padding-bottom: 10.5vw;
