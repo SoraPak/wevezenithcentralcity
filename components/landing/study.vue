@@ -214,6 +214,7 @@
 }
 .event .comment em{
   color: #db1983;
+  font-weight: bold;
 }
 .subTtl {
   padding: 3px 7px;
