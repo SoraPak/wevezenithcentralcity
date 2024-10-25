@@ -58,6 +58,21 @@
   color: #fff;
   position: relative;
 }
+.study::before {
+  content: "";
+  display: block;
+  background-image: url("/images/landing/study/flagpole.png"), url("/images/landing/study/flagpole_right.png");
+  background-size: auto 100%, 100% 100%;
+  background-repeat: no-repeat, no-repeat;
+  background-position: left center, 1234px center;
+  height: 76px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: -40px;
+  right: 0;
+  z-index: 5;
+}
 .bg {
   position: absolute;
   width: 100%;
@@ -296,6 +311,12 @@
 
 /* sp */
 @media only screen and (max-width: 950px) {
+  .study::before {
+    height: 12vw;
+    top: -7vw;
+    left: -14vw;
+    width: 130vw;
+  }
   .flag {
     width: 90vw;
     padding-bottom: 4vw;
