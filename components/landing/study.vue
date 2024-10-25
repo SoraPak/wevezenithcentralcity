@@ -3,7 +3,7 @@
     <div class="flag">
       <h1 class="ttls">
         <img class="ttl01" loading="lazy" src="/images/logo.svg" width="384" alt="두산위브더제니스 센트럴시티">
-        <img class="ttl02" loading="lazy" src="/images/landing/study/ttl.png" width="624" alt="교육 특화 아파트">
+        <img class="ttl02" loading="lazy" src="/images/landing/study/ttl.png" width="624" alt="칠곡최초 교육 특화 아파트">
       </h1>
       <div class="medals">
         <img loading="lazy" src="/images/landing/study/medal.png" width="309" alt="">
