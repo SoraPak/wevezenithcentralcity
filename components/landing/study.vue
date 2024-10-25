@@ -1,5 +1,8 @@
 <template>
   <section id="study" class="study">
+    <div class="bg">
+      <img src="/images/landing/study/bg_space.png" width="100%" alt="">
+    </div>
     <div class="flag">
       <h1 class="ttls">
         <img class="ttl01" loading="lazy" src="/images/logo.svg" width="384" alt="두산위브더제니스 센트럴시티">
@@ -54,6 +57,31 @@
   background-color:#082379;
   color: #fff;
   position: relative;
+}
+.bg {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.bg > img {
+  position: relative;
+  z-index: 2;
+}
+.bg::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("/images/landing/study/bg.jpg") no-repeat center top;
+  background-size: 100% auto;
+  mix-blend-mode: hard-light;
+  opacity: 45%;
 }
 .flag {
   background: url("/images/landing/study/bg01_bd.png") repeat-y center top;
@@ -275,6 +303,18 @@
     width: 90vw;
     height: 25vw;
     bottom: -25vw;
+  }
+
+  .bg {
+    height: 90vw;
+  }
+  .bg > img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  .bg::after {
+    background-size: cover;
   }
   .ttls {
     padding: 9vw 0 4vw;
