@@ -422,30 +422,30 @@
   .box_text01 > img:nth-child(1) {
     width: 17vw;
     left: -5vw;
-    top: -3.2vw;
+    top: -3.7vw;
   }
   .box_text01 > img:nth-child(2) {
     width: 29vw;
-    top: 2vw;
+    top: 1.5vw;
     left: 3vw;
   }
   .box_text01 > img:nth-child(3) {
     width: 25vw;
-    top: 8.5vw;
+    top: 8vw;
     left: 13vw;
   }
   .box_text01 > img:nth-child(4) {
     width: 36vw;
-    top: 20.5vw;
+    top: 20vw;
     left: 13vw;
   }
   .box_text01 > img:nth-child(5) {
     width: 24vw;
-    top: 31.5vw;
+    top: 31vw;
     right: 0;
   }
   .box_text02 {
-    top: 19vw;
+    top: 18vw;
     right: 2vw;
   }
   .box_text02 > img {
