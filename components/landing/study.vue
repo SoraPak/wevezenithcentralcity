@@ -350,6 +350,7 @@
     padding: 3vw;
     border-radius: 3vw;
     font-size: 3.9vw;
+    line-height: 140%;
   }
   .subTtl {
     border: .5vw solid #01114f;
