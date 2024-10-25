@@ -44,7 +44,7 @@
           <img loading="lazy" src="/images/landing/study/text06.png" width="186" alt="(자녀 수 무제한)">
         </p>
         <p class="box_text02">
-          <img loading="lazy" src="/images/landing/study/text07.png" width="270" alt="두 자녀시 2년간 720만원 혜택!!">
+          <img loading="lazy" src="/images/landing/study/text07.png" width="250" alt="두 과목 두 자녀 수강 시, 2년 간 1,440만 원 혜택!!">
         </p>
       </div>
     </div>
