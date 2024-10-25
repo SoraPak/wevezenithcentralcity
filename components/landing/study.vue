@@ -15,8 +15,8 @@
       <dl class="event">
         <dt>종로엠스쿨 인적성 검사 실시</dt>
         <dd><span class="subTtl">일시</span>24년 10월 26(토) ~ 27(일) <br><em>주말 단 이틀!</em></dd>
-        <dd><span class="subTtl">대상</span>모델하우스 방문 고객<br>(성별 연령 제한 없음)</dd>
-        <dd><span class="subTtl">위치</span>두산위브더제니스 센트럴시티<br>모델하우스</dd>
+        <dd><span class="subTtl">대상</span>모델하우스 방문 고객 <br>(성별 연령 제한 없음)</dd>
+        <dd><span class="subTtl">위치</span>두산위브더제니스 센트럴시티 <br>모델하우스</dd>
         <dd class="call">
           <span class="subTtl">방문예약</span>
           <a href="tel:1555-1924" target="_blank">
@@ -304,11 +304,11 @@
     width: 48vw;
   }
   .event {
-    width: 60vw;
-    border: 1vw solid #db1983;
+    width: 63vw;
+    border: .8vw solid #db1983;
     padding: 3vw;
     border-radius: 3vw;
-    font-size: 3.4vw;
+    font-size: 3.9vw;
   }
   .event dt {
     border-radius: 2vw;
