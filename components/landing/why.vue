@@ -186,7 +186,7 @@ onMounted(() => {
     max-width: 840px;
     margin: 0 auto;
     position: relative;
-    padding-top: 790px;
+    padding-top: 810px;
   }
   .bg {
     position: absolute;
