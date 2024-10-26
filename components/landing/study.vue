@@ -187,9 +187,23 @@ onMounted(() => {
   justify-content: center;
   align-items: center;
 }
-.medals img {
-  margin-bottom: 20px
+
+@keyframes floatOnly {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
+
+.medals img {
+  margin-bottom: 20px;
+  animation: floatOnly 3s ease-in-out infinite;
+  transform-origin: center;
+  will-change: transform;
+}
+
 .text01 {
   padding-top: 75px;
   padding-bottom: 30px;
