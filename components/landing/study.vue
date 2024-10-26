@@ -59,7 +59,7 @@
           <img loading="lazy" src="/images/landing/study/text06.png" width="186" alt="(자녀 수 무제한)">
         </p>
         <p class="box_text02">
-          <img loading="lazy" src="/images/landing/study/text07.png" width="270" alt="두 자녀시 2년간 720만원 혜택!!">
+          <img loading="lazy" src="/images/landing/study/text07.png" width="250" alt="두 과목 두 자녀 수강 시, 2년 간 1,440만 원 혜택!!">
         </p>
       </div>
     </div>
@@ -91,6 +91,21 @@ onMounted(() => {
   background-color:#082379;
   color: #fff;
   position: relative;
+}
+.study::before {
+  content: "";
+  display: block;
+  background-image: url("/images/landing/study/flagpole.png"), url("/images/landing/study/flagpole_right.png");
+  background-size: auto 100%, 100% 100%;
+  background-repeat: no-repeat, no-repeat;
+  background-position: left center, 1234px center;
+  height: 76px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: -40px;
+  right: 0;
+  z-index: 5;
 }
 .bg {
   position: absolute;
@@ -276,6 +291,7 @@ onMounted(() => {
 }
 .event .comment em{
   color: #db1983;
+  font-weight: bold;
 }
 .subTtl {
   padding: 3px 7px;
@@ -326,37 +342,43 @@ onMounted(() => {
 }
 .box_text01 > img:nth-child(1) {
   position: absolute;
-  top: -5px;
+  top: -15px;
   left: 0;
 }
 .box_text01 > img:nth-child(2) {
   position: absolute;
-  top: 35px;
+  top: 25px;
   left: 0;
 }
 .box_text01 > img:nth-child(3) {
   position: absolute;
-  top: 93px;
+  top: 81px;
   left: 150px;
 }
 .box_text01 > img:nth-child(4) {
   position: absolute;
-  top: 203px;
+  top: 188px;
   right: -40px;
 }
 .box_text01 > img:nth-child(5) {
   position: absolute;
-  top: 300px;
+  top: 282px;
   right: -50px;
 }
 .box_text02 {
   position: absolute;
   right: -10px;
-  top: 350px;
+  top: 334px;
 }
 
 /* sp */
 @media only screen and (max-width: 950px) {
+  .study::before {
+    height: 12vw;
+    top: -7vw;
+    left: -14vw;
+    width: 130vw;
+  }
   .flag {
     width: 90vw;
     padding-bottom: 4vw;
@@ -416,6 +438,7 @@ onMounted(() => {
     padding: 3vw;
     border-radius: 3vw;
     font-size: 3.9vw;
+    line-height: 140%;
   }
   .subTtl {
     border: .5vw solid #01114f;
@@ -471,31 +494,31 @@ onMounted(() => {
   }
   .box_text01 > img:nth-child(1) {
     width: 17vw;
-    left: -5vw;
-    top: -2.2vw;
+    left: 2vw;
+    top: -3.2vw;
   }
   .box_text01 > img:nth-child(2) {
     width: 29vw;
-    top: 3vw;
+    top: 2vw;
     left: 7vw;
   }
   .box_text01 > img:nth-child(3) {
     width: 25vw;
-    top: 9.5vw;
+    top: 8vw;
     left: 13vw;
   }
   .box_text01 > img:nth-child(4) {
     width: 36vw;
-    top: 21.5vw;
+    top: 20vw;
     left: 13vw;
   }
   .box_text01 > img:nth-child(5) {
     width: 24vw;
-    top: 32.5vw;
+    top: 31vw;
     right: 0;
   }
   .box_text02 {
-    top: 19vw;
+    top: 18vw;
     right: 2vw;
   }
   .box_text02 > img {
