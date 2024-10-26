@@ -390,7 +390,7 @@ onMounted(() => {
   }
 
   .bg {
-    height: 90vw;
+    height: 170vw;
   }
   .bg > img {
     position: absolute;
@@ -399,7 +399,7 @@ onMounted(() => {
   }
   .bg-video {
     object-fit: cover;
-    height: 90vw;
+    height: 170vw;
   }
   .bg::after {
     background-size: cover;
