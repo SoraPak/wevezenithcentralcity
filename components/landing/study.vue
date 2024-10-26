@@ -153,7 +153,7 @@ onMounted(() => {
   margin: 0 auto;
   position: relative;
   z-index: 4;
-  padding-bottom: 30px;
+  padding-bottom: 60px;
 }
 .flag::after {
   content: "";
@@ -169,7 +169,7 @@ onMounted(() => {
 }
 .ttls {
   text-align: center;
-  padding: 50px 0 40px;
+  padding: 90px 0 40px;
 }
 .ttl01 {
   background: #fff;
