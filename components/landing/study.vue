@@ -480,6 +480,7 @@ onMounted(() => {
     background-size: 100% auto;
     height: 56vw;
     top: -56vw;
+    z-index: 3;
   }
   .img01 {
     width: 98vw;
