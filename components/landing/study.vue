@@ -1,7 +1,19 @@
 <template>
   <section id="study" class="study">
-    <div class="bg">
-      <img src="/images/landing/study/bg_space.png" width="100%" alt="">
+    <div class="bg" :class="{ 'video-loaded': isVideoLoaded }">
+      <img src="/images/landing/study/bg_space.png" width="100%" alt="" />
+      <video
+        ref="bgVideo"
+        autoplay
+        loop
+        muted
+        playsinline
+        preload="auto"
+        class="bg-video"
+        @loadeddata="handleVideoLoad"
+      >
+        <source src="/images/landing/study/bg.mp4" type="video/mp4" />
+      </video>
     </div>
     <div class="flag">
       <h1 class="ttls">
@@ -17,7 +29,10 @@
       </p>
       <dl class="event">
         <dt>종로엠스쿨 인적성 검사 실시</dt>
-        <dd>주말에 모델하우스에 방문하고 18만원 상당의 인적성 검사 받자!</dd>
+        <dd class="smr">
+          <img loading="lazy" src="/images/landing/study/jongro.png" width="350" alt="">
+          주말에 모델하우스에 방문하고 18만원 상당의 인적성 검사 받자!
+        </dd>
         <dd><span class="subTtl">일시</span>24년 10월 26(토) ~ 27(일) <br><em>주말 단 이틀!</em></dd>
         <dd><span class="subTtl">대상</span>모델하우스 방문 고객 <br>(성별 연령 제한 없음)</dd>
         <dd><span class="subTtl">위치</span>두산위브더제니스 센트럴시티 <br>모델하우스</dd>
@@ -51,6 +66,25 @@
   </section>
 </template>
 
+<script setup>
+import { ref, onMounted } from 'vue';
+
+const isVideoLoaded = ref(false);
+
+function handleVideoLoad() {
+  isVideoLoaded.value = true;
+}
+
+onMounted(() => {
+  const videoElement = document.querySelector('.bg-video');
+  if (videoElement && videoElement.readyState >= 3) {
+    isVideoLoaded.value = true;
+  }
+});
+</script>
+
+
+
 
 <style scoped>
 .study {
@@ -67,7 +101,18 @@
 }
 .bg > img {
   position: relative;
-  z-index: 2;
+  z-index: 3;
+}
+.bg-video {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  mix-blend-mode: hard-light;
+  opacity: 45%;
 }
 .bg::after {
   content: "";
@@ -83,13 +128,16 @@
   mix-blend-mode: hard-light;
   opacity: 45%;
 }
+.bg.video-loaded::after {
+  display: none;
+}
 .flag {
   background: url("/images/landing/study/bg01_bd.png") repeat-y center top;
   background-size: 100% auto;
   width: 878px;
   margin: 0 auto;
   position: relative;
-  z-index: 2;
+  z-index: 4;
   padding-bottom: 30px;
 }
 .flag::after {
@@ -180,6 +228,20 @@
   background: #ffd84473;
   mix-blend-mode: darken;
 }
+.event .smr {
+  margin-left: 0;
+  text-indent: 0;
+  font-size: 21px;
+  font-weight: bold;
+  word-break: keep-all;
+  padding: 0 30px;
+  text-align: center;
+  color: #db1983;
+}
+.event .smr > img {
+  display: block;
+  margin: 20px auto 8px;
+}
 .event .call {
   margin-left: 4.7em;
   text-indent: -4.7em;
@@ -249,7 +311,7 @@
 }
 .img01 {
   position: relative;
-  z-index: 2;
+  z-index: 4;
   margin-left: -110px;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -260,7 +322,7 @@
   position: absolute;
   right: 33px;
   top: 0;
-  z-index: 2;
+  z-index: 4;
 }
 .box_text01 > img:nth-child(1) {
   position: absolute;
@@ -312,6 +374,10 @@
     position: absolute;
     bottom: 0;
     width: 100%;
+  }
+  .bg-video {
+    object-fit: cover;
+    height: 90vw;
   }
   .bg::after {
     background-size: cover;
@@ -366,6 +432,13 @@
     height: 2vw;
     bottom: -.5vw;
   }
+  .event .smr {
+    padding: 0;
+    font-size: 4.3vw;
+  }
+  .event .smr img {
+    width: 90%;
+  }
   .event .call a {
     pointer-events: auto;
   }
@@ -404,7 +477,7 @@
   .box_text01 > img:nth-child(2) {
     width: 29vw;
     top: 3vw;
-    left: 3vw;
+    left: 7vw;
   }
   .box_text01 > img:nth-child(3) {
     width: 25vw;
