@@ -31,7 +31,7 @@
         <dt>종로엠스쿨 인적성 검사 실시</dt>
         <dd class="smr">
           <img loading="lazy" src="/images/landing/study/jongro.png" width="350" alt="">
-          주말에 모델하우스에 방문하고 18만원 상당의 인적성 검사 받자!
+          주말에 모델하우스 방문하고 18만원 상당의 인적성 검사 받자!
         </dd>
         <dd><span class="subTtl">일시</span>24년 11월 2(토) ~ 3(일) <br><em>주말 단 이틀!</em></dd>
         <dd><span class="subTtl">대상</span>모델하우스 방문 고객 <br>(성별 연령 제한 없음)</dd>
@@ -187,9 +187,23 @@ onMounted(() => {
   justify-content: center;
   align-items: center;
 }
-.medals img {
-  margin-bottom: 20px
+
+@keyframes floatOnly {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
+
+.medals img {
+  margin-bottom: 20px;
+  animation: floatOnly 3s ease-in-out infinite;
+  transform-origin: center;
+  will-change: transform;
+}
+
 .text01 {
   padding-top: 75px;
   padding-bottom: 30px;
