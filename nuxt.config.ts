@@ -41,14 +41,14 @@ export default defineNuxtConfig({
         { property: 'og:site_name', content: '학정역 두산위브더제니스 센트럴시티' },
         { property: 'og:title', content: '학정역 두산위브더제니스 센트럴시티' },
         { property: 'og:description', content: '학정역, 칠곡경대병원역 더블 역세권, 중도금 무이자, 전매 무제한, 계약금500만원! 모델하우스에서 박소라 과정을 찾아주시면 푸짐한 사은품 증정' },
-        { property: 'og:image', content: 'https://xn--hu1bq8p65bh1h6oby7bg90c.kr/og_img_sora.png' },
+        { property: 'og:image', content: 'https://학정역두산위브.kr/og_img_sora.png' },
         { property: 'og:image:type', content: 'image/png' },
         { property: 'og:image:width', content: '1200' },
         { property: 'og:image:height', content: '622' },
         { name: 'twitter:card', content: 'summary' },
         { name: 'twitter:title', content: '학정역 두산위브더제니스 센트럴시티' },
         { name: 'twitter:description', content: '학정역, 칠곡경대병원역 더블 역세권, 중도금 무이자, 전매 무제한, 계약금500만원! 모델하우스에서 박소라 과정을 찾아주시면 푸짐한 사은품 증정' },
-        { name: 'twitter:image', content: 'https://xn--hu1bq8p65bh1h6oby7bg90c.kr/og_img_sora.png' },
+        { name: 'twitter:image', content: 'https://학정역두산위브.kr/og_img_sora.png' },
         { name: 'google-site-verification', content: '8XjrzoC28K-Keo7hRTrzehBGCffpPWP85oDamXsNgI0' },
         { name: 'robots', content: 'index,follow' }
       ],
@@ -62,7 +62,7 @@ export default defineNuxtConfig({
         { rel: 'shortcut icon', href: '/icon.svg' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
-        { rel: 'canonical', href: 'https://xn--hu1bq8p65bh1h6oby7bg90c.kr/' },
+        { rel: 'canonical', href: 'https://학정역두산위브.kr/' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap' },
       ],
       script: [
@@ -94,7 +94,7 @@ export default defineNuxtConfig({
     '@nuxtjs/robots',
   ],
   sitemap: {
-    hostname: 'https://xn--hu1bq8p65bh1h6oby7bg90c.kr',
+    hostname: 'https://학정역두산위브.kr',
     gzip: true,
     routes: async () => {
       // 동적으로 라우트를 가져오는 부분 (예: 데이터베이스나 API로부터 가져옴)
@@ -106,6 +106,6 @@ export default defineNuxtConfig({
   robots: {
     UserAgent: '*',
     Disallow: '',
-    Sitemap: 'https://xn--hu1bq8p65bh1h6oby7bg90c.kr/sitemap.xml'
+    Sitemap: 'https://학정역두산위브.kr/sitemap.xml'
   }
 })

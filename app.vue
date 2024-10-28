@@ -9,7 +9,7 @@ import { useHead } from "#app";
 
 useHead({
   meta: [
-    { property: 'og:image', content: 'https://xn--hu1bq8p65bh1h6oby7bg90c.kr/og_img_sora.png', id: 'dynamic-og-image' }
+    { property: 'og:image', content: 'https://학정역두산위브.kr/og_img_sora.png', id: 'dynamic-og-image' }
   ]
 });
 </script>

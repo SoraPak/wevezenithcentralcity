@@ -6,11 +6,11 @@ export default defineNuxtPlugin(() => {
       const ogImageMeta = document.getElementById('dynamic-og-image');
 
       // 기본 OG 이미지
-      let newImage = "https://xn--hu1bq8p65bh1h6oby7bg90c.kr/og_img_sora.png";
+      let newImage = "https://학정역두산위브.kr/og_img_sora.png";
 
       // 특정 해시 값에 따라 OG 이미지 변경
       if (hash === "#study") {
-        newImage = "https://xn--hu1bq8p65bh1h6oby7bg90c.kr/og_img_study.png";
+        newImage = "https://학정역두산위브.kr/og_img_study.png";
       }
 
       // meta 태그 업데이트
