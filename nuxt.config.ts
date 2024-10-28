@@ -1,8 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   router: {
-    base: '/',
-    middleware: ['dynamic-og'],
+    base: '/'
   },
   target: 'static', // 정적 사이트 빌드용 설정
   compatibilityDate: '2024-04-03',
