@@ -332,15 +332,16 @@
   }
   .mainImg {
     width: 100vw;
-    top: 122vw;
-    right: -13vw;
+    right: 3vw;
+    position: inherit;
   }
   .itd{
     padding: 5vw;
     margin: 2vw;  
     font-size: 4.3vw;
     border-radius: 2vw;
-    margin-top: 80.5vw;
+    margin-top: -13vw;
+    position: relative;
   }
 }
 </style>
