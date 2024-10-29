@@ -201,7 +201,7 @@
 }
 .career::before {
   position: absolute;
-  top: 3px;
+  top: -5px;
   left: 9px;
   bottom: 0;
   content: "";
@@ -320,7 +320,7 @@
   }
   .career::before {
     top: -2vw;
-    left: 2.5vw;
+    left: 2.6vw;
     width: .6vw;
     bottom: -1vw;
   }
