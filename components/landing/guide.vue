@@ -181,6 +181,7 @@
 }
 .contact a {
   color: #131313;
+  pointer-events: none;
 }
 .contact a:hover {
   color: #d90000;
@@ -309,6 +310,9 @@
   .contact li::before {
     width: 4vw;
     height: 4vw;
+  }
+  .contact a {
+    pointer-events: auto;
   }
   .career {
     margin: 3vw;
