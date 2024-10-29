@@ -4,14 +4,14 @@
       <h1 class="ttl"><img loading="lazy" src="/images/landing/guide/ttl01.png" width="648" alt="당신의 프리미엄 라이프를 안내할 분양팀 상담사"></h1>
       <p class="text" ref="textRef"><img loading="lazy" src="/images/landing/guide/text01.png" height="76" alt="카톡으로 예약 단디 하고 오이소~^^"></p>
       <div class="guideImgs">
-        <img class="name03" ref="name03Ref" src="/images/landing/guide/name03.png" width="165" alt="신현주 팀장">
+        <!-- img class="name03" ref="name03Ref" src="/images/landing/guide/name03.png" width="165" alt="신현주 팀장">
         <img class="img03" ref="img03Ref" src="/images/landing/guide/img03.png" width="449" alt="">
         <img class="name02" ref="name02Ref" src="/images/landing/guide/name02.png" width="165" alt="이서은 과장">
         <img class="img02" ref="img02Ref" src="/images/landing/guide/img02.png" width="361" alt="">
         <img class="name01" ref="name01Ref" src="/images/landing/guide/name01.png" width="165" alt="박소라 과장">
-        <img class="img01" ref="img01Ref" src="/images/landing/guide/img01.png" width="420" alt="">
-        <!-- a @click="showPopup('popup3')">
-          <img class="name03" ref="name03Ref" src="/images/landing/guide/name03.png" width="165" alt="신현주 팀장">
+        <img class="img01" ref="img01Ref" src="/images/landing/guide/img01.png" width="420" alt="" -->
+        <a @click="showPopup('popup3')">
+          <img class="name01" ref="name01Ref" src="/images/landing/guide/name01.png" width="165" alt="박소라 과장">
           <img class="img03" ref="img03Ref" src="/images/landing/guide/img03.png" width="449" alt="">
         </a>
         <a @click="showPopup('popup2')">
@@ -19,9 +19,9 @@
           <img class="img02" ref="img02Ref" src="/images/landing/guide/img02.png" width="361" alt="">
         </a>
         <a @click="showPopup('popup1')">
-          <img class="name01" ref="name01Ref" src="/images/landing/guide/name01.png" width="165" alt="박소라 과장">
+          <img class="name03" ref="name03Ref" src="/images/landing/guide/name03.png" width="165" alt="신현주 팀장">
           <img class="img01" ref="img01Ref" src="/images/landing/guide/img01.png" width="420" alt="">
-        </a -->
+        </a>
         </div>
       <div class="section01">
         <!-- div class="location">
@@ -49,19 +49,301 @@
     </div>
   </section>
   <!-- 팝업 정의 -->
-<Popup ref="popup1">
-  <h1 class="popup_ttl"><img loading="lazy" src="/images/landing/guide/popupTtl.svg" width="420" alt="고것좀 알고 잡다"></h1>
-  <img class="popup_img01" loading="lazy" src="/images/landing/guide/popupImg01.jpg" width="100%" alt="">
+<Popup class="guidePopup" ref="popup1">
+  <!-- h1 class="popup_ttl">
+    <img loading="lazy" src="/images/landing/guide/popupTtl.svg" width="420" alt="고것좀 알고 잡다">
+  </h1 -->
+  <div class="main">
+    <p class="mainSTtl"><img loading="lazy" src="/images/landing/guide/popupTtl.svg" width="150" alt="고것좀 알고 잡다"></p>
+    <h1 class="mainTtl">신현주 <small>팀장</small></h1>
+    <img class="weveLogo" loading="lazy" src="/images/logo.svg" width="200" alt="">
+    <ul class="contact">
+      <li><a href="tel:010-9357-0669">010 9357 0669</a></li>
+      <li><a href="mailto:a01093570669@gmail.com?subject=[두산위브더제니스 문의]">a01093570669@gmail.com</a></li>
+    </ul>
+    <ul class="career">
+      <li><i></i>대구과학대학교 부동산학과 졸업</li>
+      <li><i></i><strong>2003</strong> 대구대학교 부동산 자산관리사 수료</li>
+      <li><i></i><strong>2004</strong> 대구대학교 부동산 투자상담사 수료</li>
+      <li><i></i><strong>2009</strong> 부동산 권리 분석사 자격증 취득</li>
+      <li><i></i><strong>2009</strong> 부동산 경매사 자격증 취득</li>
+    </ul>
+    <img class="mainImg" loading="lazy" src="/images/landing/guide/pop01_img01.png" width="480" alt="">
+  </div>
+  
+  <div class="itd">
+    <p>안녕하세요, 신현주 팀장입니다.</p>
+
+    <p>저는 1995년 보성명가타운을 시작으로 <strong>약 30년간 전국의 다양한 분양 시장에서 활동해온</strong> 분양 베테랑입니다. 여러 경제 위기를 겪으면서도 언제나 고객님께 최적의 분양 솔루션을 제공하기 위해 노력해왔습니다.</p>
+
+    <p>IMF와 글로벌 금융 위기로 시장이 큰 타격을 입었을 때도, 저는 빠르게 변화에 적응하며 새로운 기회를 찾아냈습니다. 당시 분양 시장이 침체되면서 아파트 분양은 어려웠지만, 틈새시장으로 빌라에 대한 수요가 생기기 시작했죠. 저는 이 기회를 포착해 빌라 분양으로 눈을 돌려 기획, 광고, 금융 상담을 새로 공부하며, 고객들의 다양한 니즈에 맞춘 맞춤형 분양 전략을 개발했습니다. 그간 서울, 부산, 울산, 포항, 안동, 인천, 대구 등 전국 각지에서 많은 분들과 인연을 맺고 고객님께는 합리적이고 가치 있는 선택을 제안드릴 수 있었습니다.</p>
+
+    <p>30년간 쌓아온 전문 지식과 경험을 바탕으로 고객님이 가진 걱정이나 고민을 누구보다 잘 이해하고 있습니다. 상담을 통해 모든 궁금증을 명쾌하게 해결해드리고, 내 집 마련에 대한 확신을 드리는 것이 저의 목표입니다.</p>
+
+    <p>두산위브더제니스 센트럴시티는 두산위브의 최상위 하이브랜드로, 최신 설계와 고급 마감재, 수려한 조경, 넉넉한 주차공간, 프리미엄 커뮤니티 시설까지 갖춘 최고의 품질을 자랑합니다. 저는 <strong>잔여 동호수 조회부터 고객님의 니즈에 맞춘 추천, 계약까지</strong> 든든한 파트너가 되어드리고 있으며, 맞춤형 상담과 세심한 배려로 고객님이 꿈꾸는 이상적인 집을 찾을 수 있도록 늘 준비되어 있습니다.</p>
+
+    <p>고객의 입장에서 깊이 고민하고, 마음을 이해하는 상담을 원하신다면, 저 신현주 팀장을 찾아주세요. 고객님의 꿈을 현실로 만들어드리겠습니다!</p>
+
+  </div>
+
+  
+  
+  <!-- img class="popup_img01" loading="lazy" src="/images/landing/guide/popupImg01.jpg" width="600" alt="" -->
 </Popup>
 
 <Popup ref="popup2">
+  <h1 class="popup_ttl">
+    <img loading="lazy" src="/images/landing/guide/popupTtl.svg" width="420" alt="고것좀 알고 잡다">
+    <span class="subTtl">이서은 <small>과장</small></span>
+  </h1>
   coming soon..
 </Popup>
 
 <Popup ref="popup3">
+  <h1 class="popup_ttl">
+    <img loading="lazy" src="/images/landing/guide/popupTtl.svg" width="420" alt="고것좀 알고 잡다">
+    <span class="subTtl">박소라 <small>과장</small></span>
+  </h1>
   coming soon..
 </Popup>
 </template>
+<style>
+.guidePopup .popupCon {
+  width: 100%;
+  max-width: 800px;
+  color: #131313;
+}
+</style>
+<style scoped>
+.popup_ttl {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+.popup_ttl > img{
+  display: block;
+}
+.popup_ttl .subTtl {
+  display: block;
+  margin-top: -36px;
+  font-size: 30px;
+}
+.popup_ttl .subTtl small {
+  font-size: 70%;
+}
+.main {
+  text-align: left;
+  position: relative;
+  margin-top: 10px;
+}
+.mainSTtl {
+  text-align: center;
+  width: 340px;
+  margin-bottom: -20px;
+}
+.mainTtl {
+  font-size: 60px;
+  font-weight: 800;
+  color: #013287;
+  line-height: 120%;
+  margin-left: 20px;
+}
+.weveLogo {
+  margin-left: 20px;
+}
+.contact {
+  display: flex;
+  font-size: 13px;
+  margin-left: 20px;
+}
+.contact li {
+  margin-right: 10px;
+  position: relative;
+  padding-left: 20px;
+}
+.contact li::before {
+  content: "";
+  display: block;
+  width: 17px;
+  height: 17px;
+  background: url("/images/common/ic_call.svg") no-repeat center center;
+  background-size: 100% auto;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.contact li:last-child {
+  margin-right: 0;
+}
+.contact li:last-child::before {
+  background-image: url("/images/common/ic_mail.svg");
+}
+.contact a {
+  color: #131313;
+}
+.contact a:hover {
+  color: #d90000;
+}
+.mainImg {
+  position: absolute;
+  right: -70px;
+  top: -9px;
+}
+.career {
+  text-align: left;
+  position: relative;
+  padding-left: 27px;
+  margin: 20px;
+  color: #000c38;
+  word-break: keep-all;
+}
+.career::before {
+  position: absolute;
+  top: 3px;
+  left: 9px;
+  bottom: 0;
+  content: "";
+  display: block;
+  width: 2px;
+  background: #aaa;
+}
+.career li {
+  margin-top: 10px;
+}
+.career li:has(strong) {
+  margin-left: 3em;
+  text-indent: -3em;
+}
+.career li:nth-child(even) {
+  color: #013287;
+}
+
+.career i {
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  background: #000c38;
+  display: block;
+  position: absolute;
+  left: 0;
+  border-radius: 50%;
+}
+.career i::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.career li:nth-child(even) i{
+  background: #013287;
+}
+.itd {
+  padding: 30px;
+  margin: 10px;
+  line-height: 180%;
+  text-align: left;
+  background: #be9167;
+  color: #fff;
+  border-radius: 1px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+.itd p {
+  margin-top: 20px;
+}
+.itd strong {
+  color: #f3ff1e;
+}
+
+.itd p:first-child {
+  margin-top: 0;
+}
+/* sp */
+@media only screen and (max-width: 950px) {
+  .popup_ttl {
+    width: 100%;
+  }
+  .popup_ttl img {
+    width: 100%;
+  }
+  .main {
+    margin-top: 2vw;
+  }
+  .mainSTtl {
+    width: 100%;
+    margin-bottom: -5vw;
+  }
+  .mainSTtl img {
+    width: 36vw;
+  }
+  .mainTtl {
+    margin: 0;
+    text-align: center;
+    font-size: 15vw;
+    margin-bottom: -3vw;
+  }
+  .mainTtl small {
+    font-size: 60%;
+  }
+  .weveLogo {
+    margin: 0 auto;
+    display: block;
+    width: 46vw;
+  }
+  .contact {
+    margin: 3vw;
+    display: block;
+    font-size: 3.5vw;
+  }
+  .contact li {
+    margin-right: 0;
+    padding-left: 5vw;
+  }
+  .contact li::before {
+    width: 4vw;
+    height: 4vw;
+  }
+  .career {
+    margin: 3vw;
+    font-size: 4.5vw;
+  }
+  .career::before {
+    top: -2vw;
+    left: 2.5vw;
+    width: .6vw;
+  }
+  .career li {
+    margin-top: 2vw;
+  }
+  .career i {
+    width: 6vw;
+    height: 6vw;
+  }
+  .career i::after {
+    width: 3vw;
+    height: 3vw;
+  }
+  .mainImg {
+    width: 100vw;
+    top: 122vw;
+    right: -13vw;
+  }
+  .itd{
+    padding: 5vw;
+    margin: 2vw;  
+    font-size: 4.3vw;
+    border-radius: 2vw;
+    margin-top: 80.5vw;
+  }
+}
+</style>
 
 <script setup>
 import Popup from '~/components/landing/popup.vue';
@@ -141,9 +423,6 @@ onMounted(() => {
 
 
 <style scoped>
-
-
-
   .guide {
     background: #082379;
     color: #fff;
@@ -187,6 +466,18 @@ onMounted(() => {
     left: 0;
     right: 0;
     top: 460px;
+  }
+  .guideImgs > a {
+    cursor: pointer;
+  }
+  .guideImgs > a:hover img {
+    transform: scale(1.1);
+  }  
+  .guideImgs > a:hover img[class*='img']{
+    z-index: 3;
+  }
+  .guideImgs > a:hover img[class*='name']{
+    z-index: 4;
   }
   .guideImgs img {
     position: absolute;
@@ -235,6 +526,7 @@ onMounted(() => {
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
+    z-index: 10;
   }
 
   /* 

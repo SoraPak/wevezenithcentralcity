@@ -116,6 +116,7 @@ defineExpose({
     overflow: hidden;
     border-radius: 10px;
     transition: transform 0.5s ease, opacity 0.5s ease;
+    margin: 40px;
   }
   .hide-popup .popupCon {
     transform: translateY(50px);
