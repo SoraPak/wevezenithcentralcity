@@ -331,8 +331,8 @@
     height: 3vw;
   }
   .mainImg {
-    width: 100vw;
-    right: 3vw;
+    width: 110vw;
+    right: 4vw;
     position: inherit;
   }
   .itd{
@@ -340,7 +340,7 @@
     margin: 2vw;  
     font-size: 4.3vw;
     border-radius: 2vw;
-    margin-top: -13vw;
+    margin-top: -15vw;
     position: relative;
   }
 }
