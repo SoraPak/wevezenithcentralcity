@@ -318,6 +318,7 @@
     top: -2vw;
     left: 2.5vw;
     width: .6vw;
+    bottom: -1vw;
   }
   .career li {
     margin-top: 2vw;
