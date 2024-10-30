@@ -442,6 +442,10 @@
   .career_subDl {
     margin-top: 1vw;
   }
+  .career_subDl dt{
+    margin-right: 1vw;
+  }
+  
   .career_subUl {
     margin-top: 2vw;
   }
@@ -472,7 +476,7 @@
     margin: 2vw;  
     font-size: 4.3vw;
     border-radius: 2vw;
-    margin-top: -97vw;
+    margin-top: -100vw;
   }
   .popup_img01 {
     width: 102vw;
