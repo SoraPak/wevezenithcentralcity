@@ -349,7 +349,7 @@
     margin: 2vw;  
     font-size: 4.3vw;
     border-radius: 2vw;
-    margin-top: -23vw;
+    margin-top: -82vw;
   }
 }
 </style>
