@@ -358,7 +358,7 @@
   }
   .popup_img01 {
     width: 102vw;
-    margin-top: -7vw;
+    margin-top: -3vw;
   }
 }
 </style>
