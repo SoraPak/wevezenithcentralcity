@@ -282,12 +282,12 @@
     margin-bottom: -5vw;
   }
   .mainSTtl img {
-    width: 36vw;
+    width: 61vw;
   }
   .mainTtl {
     margin: 0;
     text-align: center;
-    font-size: 15vw;
+    font-size: 18vw;
     margin-bottom: -3vw;
   }
   .mainTtl small {
@@ -300,6 +300,7 @@
   }
   .contact {
     margin: 3vw;
+    margin-bottom: 7vw;
     display: block;
     font-size: 3.5vw;
   }
@@ -316,6 +317,7 @@
   }
   .career {
     margin: 3vw;
+    margin-bottom: 7vw;
     font-size: 4.5vw;
     padding-left: 6vw;
   }
