@@ -415,7 +415,7 @@
   }
   .career {
     margin: 3vw;
-    margin-bottom: 7vw;
+    margin-bottom: 14vw;
     font-size: 4.5vw;
     padding-left: 6vw;
     width: 78vw;
