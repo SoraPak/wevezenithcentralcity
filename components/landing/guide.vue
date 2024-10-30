@@ -49,7 +49,7 @@
     </div>
   </section>
   <!-- 팝업 정의 -->
-<Popup class="guidePopup" ref="popup1">
+<Popup class="guidePopup  guidePopup1" ref="popup1">
   <!-- h1 class="popup_ttl">
     <img loading="lazy" src="/images/landing/guide/popupTtl.svg" width="420" alt="고것좀 알고 잡다">
   </h1 -->
@@ -63,10 +63,10 @@
     </ul>
     <ul class="career">
       <li><i></i>대구과학대학교 부동산학과 졸업</li>
-      <li><i></i><strong>2003</strong> 대구대학교 부동산 자산관리사 수료</li>
-      <li><i></i><strong>2004</strong> 대구대학교 부동산 투자상담사 수료</li>
-      <li><i></i><strong>2009</strong> 부동산 권리 분석사 자격증 취득</li>
-      <li><i></i><strong>2009</strong> 부동산 경매사 자격증 취득</li>
+      <li><i></i><strong class="indent">2003</strong> 대구대학교 부동산 자산관리사 수료</li>
+      <li><i></i><strong class="indent">2004</strong> 대구대학교 부동산 투자상담사 수료</li>
+      <li><i></i><strong class="indent">2009</strong> 부동산 권리 분석사 자격증 취득</li>
+      <li><i></i><strong class="indent">2009</strong> 부동산 경매사 자격증 취득</li>
     </ul>
     <img class="mainImg" loading="lazy" src="/images/landing/guide/pop01_img01.png" width="480" alt="">
   </div>
@@ -85,10 +85,6 @@
     <p>고객의 입장에서 깊이 고민하고, 마음을 이해하는 상담을 원하신다면, 저 신현주 팀장을 찾아주세요. 고객님의 꿈을 현실로 만들어드리겠습니다! <strong>두산위브더제니스 센트럴시티로 오셔서 모두 부자 되세요~~!!</strong></p>
     <img class="popup_img01" loading="lazy" src="/images/landing/guide/popupImg01.jpg" width="600" alt="">
   </div>
-
-  
-  
-  
 </Popup>
 
 <Popup ref="popup2">
@@ -99,13 +95,66 @@
   coming soon..
 </Popup>
 
-<Popup ref="popup3">
+<Popup class="guidePopup guidePopup3" ref="popup3">
+  <div class="main">
+    <p class="mainSTtl"><img loading="lazy" src="/images/landing/guide/popupTtl.svg" width="200" alt="고것좀 알고 잡다"></p>
+    <h1 class="mainTtl">박소라 <small>과장</small></h1>
+    <img class="weveLogo" loading="lazy" src="/images/logo.svg" width="200" alt="">
+    <ul class="contact">
+      <li><a href="tel:1555-1924">1555-1924</a></li>
+      <li><a href="mailto:pak.sora@keio.jp?subject=[두산위브더제니스 문의]">pak.sora@keio.jp</a></li>
+    </ul>
+    <ul class="career">
+      <li><i></i>게이오기주쿠대학 대학원 Keio University <br>미디어디자인 연구과 졸업(일본)
+        <dl class="career_subDl">
+          <dt>논문:</dt>
+          <dd>
+            Design of 'Ticketcaptor Akira': An e-ticket <br>System Considering Post-use Value
+            <ul class="career_buts">
+              <li class="career_but"><a href="https://koara.lib.keio.ac.jp/xoonips/modules/xoonips/detail.php?koara_id=KO40001001-00002023-1043" target="_blank">논문보기</a></li>
+              <li class="career_but"><a href="https://docs.google.com/presentation/d/1DM3jHFJXZ5Cd7vXvqXmXNTBjUZDrRdtG-C4_4nFqy2U/edit?usp=sharing" target="_blank">발표자료</a></li>
+            </ul>
+          </dd>
+        </dl>
+        <ul class="career_subUl">
+          <li>서비스디자인코스 수료(36호)</li>
+          <li>SecCap10(보안전문가 인정) 정보보안 실천적 인재육성코스</li>
+        </ul>
+      </li>
+      <li><i></i><strong>2008~2010</strong> iDEACROSS INC.(일본)
+        <ul class="career_subUl">
+          <li>개발부 | 디자이너&amp;마크업엔지니어</li>
+        </ul>
+      </li>
+      <li><i></i><strong>2011~2012</strong> sonicmoov Co.,Ltd.(일본)
+        <ul class="career_subUl">
+          <li>솔루션 사업부 | 디자이너&amp;마크업엔지니어</li>
+        </ul>
+      </li>
+      <li><i></i><strong>2013~2022</strong> DeNA Co.,Ltd. (일본)
+        <ul class="career_subUl">
+          <li>한국전략실 | 디자이너&amp;프론트엔드 엔지니어</li>
+          <li>게임사업본부 | 프론트엔드 엔지니어</li>
+          <li>오픈플랫폼사업본부 | 프론트엔드 엔지니어</li>
+          <li>디자인본부 엔지니어링그룹 | 프론트엔드 엔지니어</li>
+        </ul>
+      </li>
+
+    </ul>
+    <img class="mainImg" loading="lazy" src="/images/landing/guide/pop02_img01.png" width="480" alt="">
+  </div>
+  
+  <div class="itd">
+    coming soon..
+  </div>
+</Popup>
+<!-- Popup ref="popup3">
   <h1 class="popup_ttl">
     <img loading="lazy" src="/images/landing/guide/popupTtl.svg" width="420" alt="고것좀 알고 잡다">
     <span class="subTtl">박소라 <small>과장</small></span>
   </h1>
   coming soon..
-</Popup>
+</Popup -->
 </template>
 <style>
 .guidePopup .popupCon {
@@ -189,7 +238,7 @@
 .mainImg {
   position: absolute;
   right: -70px;
-  top: -9px;
+  top: -30px;
 }
 .career {
   text-align: left;
@@ -198,6 +247,9 @@
   margin: 20px;
   color: #000c38;
   word-break: keep-all;
+  width: 550px;
+  box-sizing: border-box;
+
 }
 .career::before {
   position: absolute;
@@ -209,14 +261,14 @@
   width: 2px;
   background: #aaa;
 }
-.career li {
+.career > li {
   margin-top: 10px;
 }
-.career li:has(strong) {
+.career >  li:has(.indent) {
   margin-left: 3em;
   text-indent: -3em;
 }
-.career li:nth-child(even) {
+.career >  li:nth-child(even) {
   color: #013287;
 }
 
@@ -242,8 +294,47 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.career li:nth-child(even) i{
+.career > li:nth-child(even) i{
   background: #013287;
+}
+.career_subDl {
+  display: flex;
+  font-size: 80%;
+  line-height: 130%;
+}
+.career_subDl dt {
+  margin-right: 10px;
+}
+.career_subUl {
+  font-size: 80%;
+  line-height: 130%;
+  margin-top: 8px;
+}
+.career_subUl li {
+  margin-top: 4px;
+  margin-left: 1em;
+  text-indent: -1em;
+}
+.career_subUl li::before {
+  content: "・";
+}
+.career_buts {
+  display: flex;
+  margin-top: 6px;
+  font-size: 90%;
+}
+.career_but {
+  margin-right: 10px;
+}
+.career_but:last-child {
+  margin-right: 0
+}
+.career_but a {
+  display: block;
+  background: #082379;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 3px;
 }
 .itd {
   padding: 30px;
@@ -327,13 +418,17 @@
     margin-bottom: 7vw;
     font-size: 4.5vw;
     padding-left: 6vw;
+    width: 78vw;
   }
   .career::before {
     top: -2vw;
     left: 2.1vw;
     width: .6vw;
   }
-  .career li {
+  .career br{
+    display: none;
+  }
+  .career > li {
     margin-top: 2vw;
   }
   .career i {
@@ -343,6 +438,29 @@
   .career i::after {
     width: 2.2vw;
     height: 2.2vw;
+  }
+  .career_subDl {
+    margin-top: 1vw;
+  }
+  .career_subUl {
+    margin-top: 2vw;
+  }
+  .career_subUl li {
+    margin-top: 1vw;
+  }
+  .career_buts {
+    display: flex;
+    margin-top: 1vw;
+  }
+  .career_but {
+    margin-right: 3vw;
+  }
+  .career_but:last-child {
+    margin-right: 0
+  }
+  .career_but a {
+    padding: 2vw 3vw;
+    border-radius: 1.5vw;
   }
   .mainImg {
     width: 110vw;
@@ -354,7 +472,7 @@
     margin: 2vw;  
     font-size: 4.3vw;
     border-radius: 2vw;
-    margin-top: -82vw;
+    margin-top: -97vw;
   }
   .popup_img01 {
     width: 102vw;
