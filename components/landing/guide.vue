@@ -82,13 +82,13 @@
 
     <p>두산위브더제니스 센트럴시티는 두산위브의 최상위 하이브랜드로, 최신 설계와 고급 마감재, 수려한 조경, 넉넉한 주차공간, 프리미엄 커뮤니티 시설까지 갖춘 최고의 품질을 자랑합니다. 저는 <strong>잔여 동호수 조회부터 고객님의 니즈에 맞춘 추천, 계약까지</strong> 든든한 파트너가 되어드리고 있으며, 맞춤형 상담과 세심한 배려로 고객님이 꿈꾸는 이상적인 집을 찾을 수 있도록 늘 준비되어 있습니다.</p>
 
-    <p>고객의 입장에서 깊이 고민하고, 마음을 이해하는 상담을 원하신다면, 저 신현주 팀장을 찾아주세요. 고객님의 꿈을 현실로 만들어드리겠습니다!</p>
-
+    <p>고객의 입장에서 깊이 고민하고, 마음을 이해하는 상담을 원하신다면, 저 신현주 팀장을 찾아주세요. 고객님의 꿈을 현실로 만들어드리겠습니다! <strong>두산위브더제니스 센트럴시티로 오셔서 모두 부자 되세요~~!!</strong></p>
+    <img class="popup_img01" loading="lazy" src="/images/landing/guide/popupImg01.jpg" width="600" alt="">
   </div>
 
   
   
-  <!-- img class="popup_img01" loading="lazy" src="/images/landing/guide/popupImg01.jpg" width="600" alt="" -->
+  
 </Popup>
 
 <Popup ref="popup2">
@@ -268,6 +268,11 @@
 .itd p:first-child {
   margin-top: 0;
 }
+.popup_img01 {
+  transform: rotate(-8deg) translateX(-50%);
+  position: relative;
+  left: 50%;
+}
 /* sp */
 @media only screen and (max-width: 950px) {
   .popup_ttl {
@@ -350,6 +355,10 @@
     font-size: 4.3vw;
     border-radius: 2vw;
     margin-top: -82vw;
+  }
+  .popup_img01 {
+    width: 102vw;
+    margin-top: -7vw;
   }
 }
 </style>
