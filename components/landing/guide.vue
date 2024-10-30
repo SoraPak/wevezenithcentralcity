@@ -54,7 +54,7 @@
     <img loading="lazy" src="/images/landing/guide/popupTtl.svg" width="420" alt="고것좀 알고 잡다">
   </h1 -->
   <div class="main">
-    <p class="mainSTtl"><img loading="lazy" src="/images/landing/guide/popupTtl.svg" width="150" alt="고것좀 알고 잡다"></p>
+    <p class="mainSTtl"><img loading="lazy" src="/images/landing/guide/popupTtl.svg" width="200" alt="고것좀 알고 잡다"></p>
     <h1 class="mainTtl">신현주 <small>팀장</small></h1>
     <img class="weveLogo" loading="lazy" src="/images/logo.svg" width="200" alt="">
     <ul class="contact">
@@ -142,7 +142,7 @@
   margin-bottom: -20px;
 }
 .mainTtl {
-  font-size: 60px;
+  font-size: 68px;
   font-weight: 800;
   color: #013287;
   line-height: 120%;
@@ -248,6 +248,7 @@
 .itd {
   padding: 30px;
   margin: 10px;
+  margin-top: 30px;
   line-height: 180%;
   text-align: left;
   background: #be9167;
@@ -255,6 +256,7 @@
   border-radius: 1px;
   font-size: 16px;
   border-radius: 10px;
+  position: relative;
 }
 .itd p {
   margin-top: 20px;
@@ -347,8 +349,7 @@
     margin: 2vw;  
     font-size: 4.3vw;
     border-radius: 2vw;
-    margin-top: -15vw;
-    position: relative;
+    margin-top: -23vw;
   }
 }
 </style>
