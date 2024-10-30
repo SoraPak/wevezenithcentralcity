@@ -317,23 +317,23 @@
   .career {
     margin: 3vw;
     font-size: 4.5vw;
+    padding-left: 6vw;
   }
   .career::before {
     top: -2vw;
-    left: 2.6vw;
+    left: 2.1vw;
     width: .6vw;
-    bottom: -1vw;
   }
   .career li {
     margin-top: 2vw;
   }
   .career i {
-    width: 6vw;
-    height: 6vw;
+    width: 4.4vw;
+    height: 4.4vw;
   }
   .career i::after {
-    width: 3vw;
-    height: 3vw;
+    width: 2.2vw;
+    height: 2.2vw;
   }
   .mainImg {
     width: 110vw;
