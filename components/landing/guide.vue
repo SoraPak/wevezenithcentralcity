@@ -105,7 +105,7 @@
       <li><a href="mailto:pak.sora@keio.jp?subject=[두산위브더제니스 문의]">pak.sora@keio.jp</a></li>
     </ul>
     <ul class="career">
-      <li><i></i>게이오기주쿠대학 대학원 Keio University <br>미디어디자인 연구과 졸업(일본)
+      <li><i></i>게이오기주쿠대학 대학원 Keio University <br>미디어디자인 연구과 졸업 (일본)
         <dl class="career_subDl">
           <dt>논문:</dt>
           <dd>
@@ -121,14 +121,14 @@
           <li>SecCap10(보안전문가 인정) 정보보안 실천적 인재육성코스</li>
         </ul>
       </li>
-      <li><i></i><strong>2008~2010</strong> iDEACROSS INC.(일본)
+      <li><i></i><strong>2008~2010</strong> iDEACROSS INC. (일본)
         <ul class="career_subUl">
-          <li>개발부 | 디자이너&amp;마크업엔지니어</li>
+          <li>개발부 | 디자이너&amp;마크업 엔지니어</li>
         </ul>
       </li>
-      <li><i></i><strong>2011~2012</strong> sonicmoov Co.,Ltd.(일본)
+      <li><i></i><strong>2011~2012</strong> sonicmoov Co.,Ltd. (일본)
         <ul class="career_subUl">
-          <li>솔루션 사업부 | 디자이너&amp;마크업엔지니어</li>
+          <li>솔루션사업부 | 디자이너&amp;마크업 엔지니어</li>
         </ul>
       </li>
       <li><i></i><strong>2013~2022</strong> DeNA Co.,Ltd. (일본)
