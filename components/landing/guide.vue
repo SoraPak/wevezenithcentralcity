@@ -123,17 +123,17 @@
       </li>
       <li><i></i><strong>2008~2010</strong> iDEACROSS INC. (일본)
         <ul class="career_subUl">
-          <li>개발부 | 디자이너&amp;마크업 엔지니어</li>
+          <li>개발부 | 디자이너 &amp; 마크업 엔지니어</li>
         </ul>
       </li>
       <li><i></i><strong>2011~2012</strong> sonicmoov Co.,Ltd. (일본)
         <ul class="career_subUl">
-          <li>솔루션사업부 | 디자이너&amp;마크업 엔지니어</li>
+          <li>솔루션사업부 | 디자이너 &amp; 마크업 엔지니어</li>
         </ul>
       </li>
       <li><i></i><strong>2013~2022</strong> DeNA Co.,Ltd. (일본)
         <ul class="career_subUl">
-          <li>한국전략실 | 디자이너&amp;프론트엔드 엔지니어</li>
+          <li>한국전략실 | 디자이너 &amp; 프론트엔드 엔지니어</li>
           <li>게임사업본부 | 프론트엔드 엔지니어</li>
           <li>오픈플랫폼사업본부 | 프론트엔드 엔지니어</li>
           <li>디자인본부 엔지니어링그룹 | 프론트엔드 엔지니어</li>
