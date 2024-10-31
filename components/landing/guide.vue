@@ -117,6 +117,7 @@
           </dd>
         </dl>
         <ul class="career_subUl">
+          <li>네트워크 미디어 프로젝트</li>
           <li>서비스디자인코스 수료(36호)</li>
           <li>SecCap10(보안전문가 인정) 정보보안 실천적 인재육성코스</li>
         </ul>
@@ -137,6 +138,7 @@
           <li>게임사업본부 | 프론트엔드 엔지니어</li>
           <li>오픈플랫폼사업본부 | 프론트엔드 엔지니어</li>
           <li>디자인본부 엔지니어링그룹 | 프론트엔드 엔지니어</li>
+          <li>디자인본부 마케팅디자인부 | 디자이너</li>
         </ul>
       </li>
 
@@ -254,6 +256,13 @@
   box-sizing: border-box;
 
 }
+.career a {
+  color: #000c38;
+  text-decoration: underline;
+}
+.career a:hover {
+  text-decoration: none;
+}
 .career::before {
   position: absolute;
   top: -5px;
@@ -338,6 +347,7 @@
   color: #fff;
   padding: 5px 10px;
   border-radius: 3px;
+  text-decoration: none;
 }
 .itd {
   padding: 30px;
