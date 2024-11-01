@@ -209,6 +209,7 @@
   display: flex;
   font-size: 13px;
   margin-left: 20px;
+  line-height: 140%;
 }
 .contact li {
   margin-right: 10px;
@@ -489,7 +490,7 @@
     margin: 2vw;  
     font-size: 4.3vw;
     border-radius: 2vw;
-    margin-top: -182vw;
+    margin-top: -180vw;
   }
   .popup_img01 {
     width: 102vw;
