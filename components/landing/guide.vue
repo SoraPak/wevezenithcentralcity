@@ -68,7 +68,7 @@
       <li><i></i><strong class="indent">2009</strong> 부동산 권리 분석사 자격증 취득</li>
       <li><i></i><strong class="indent">2009</strong> 부동산 경매사 자격증 취득</li>
     </ul>
-    <img class="mainImg" src="/images/landing/guide/pop01_img01.png" width="480" alt="">
+    <img class="mainImg" src="/images/landing/guide/pop01_img01.png" width="700" alt="">
   </div>
   
   <div class="itd">
@@ -143,7 +143,7 @@
       </li>
 
     </ul>
-    <img class="mainImg" src="/images/landing/guide/pop02_img01.png" width="480" alt="">
+    <img class="mainImg" src="/images/landing/guide/pop02_img01.png" width="700" alt="">
   </div>
   
   <div class="itd">
@@ -254,7 +254,7 @@
   word-break: keep-all;
   width: 550px;
   box-sizing: border-box;
-
+  line-height: 140%;
 }
 .career a {
   color: #000c38;
@@ -480,8 +480,8 @@
     border-radius: 1.5vw;
   }
   .mainImg {
-    width: 110vw;
-    right: 4vw;
+    width: 160vw;
+    right: 48vw;
     position: inherit;
   }
   .itd{
@@ -489,7 +489,7 @@
     margin: 2vw;  
     font-size: 4.3vw;
     border-radius: 2vw;
-    margin-top: -100vw;
+    margin-top: -182vw;
   }
   .popup_img01 {
     width: 102vw;
