@@ -9,7 +9,7 @@
         <img class="name02" ref="name02Ref" src="/images/landing/guide/name02.png" width="165" alt="이서은 과장">
         <img class="img02" ref="img02Ref" src="/images/landing/guide/img02.png" width="361" alt="">
         <img class="name01" ref="name01Ref" src="/images/landing/guide/name01.png" width="165" alt="박소라 과장">
-        <img class="img01" ref="img01Ref" src="/images/landing/guide/img01.png" width="420" alt="" -->
+        <img class="img01" ref="img01Ref" src="/images/landing/guide/img01.png" width="510" alt="" -->
         <a @click="showPopup('popup3')">
           <img class="name01" ref="name01Ref" src="/images/landing/guide/name01.png" width="165" alt="박소라 과장">
           <img class="img03" ref="img03Ref" src="/images/landing/guide/img03.png" width="449" alt="">
@@ -20,7 +20,7 @@
         </a>
         <a @click="showPopup('popup1')">
           <img class="name03" ref="name03Ref" src="/images/landing/guide/name03.png" width="165" alt="신현주 팀장">
-          <img class="img01" ref="img01Ref" src="/images/landing/guide/img01.png" width="420" alt="">
+          <img class="img01" ref="img01Ref" src="/images/landing/guide/img01.png" width="510" alt="">
         </a>
         </div>
       <div class="section01">
@@ -51,7 +51,7 @@
   <!-- 팝업 정의 -->
 <Popup class="guidePopup  guidePopup1" ref="popup1">
   <!-- h1 class="popup_ttl">
-    <img loading="lazy" src="/images/landing/guide/popupTtl.svg" width="420" alt="고것좀 알고 잡다">
+    <img loading="lazy" src="/images/landing/guide/popupTtl.svg" width="510" alt="고것좀 알고 잡다">
   </h1 -->
   <div class="main">
     <p class="mainSTtl"><img loading="lazy" src="/images/landing/guide/popupTtl.svg" width="200" alt="고것좀 알고 잡다"></p>
@@ -89,7 +89,7 @@
 
 <Popup ref="popup2">
   <h1 class="popup_ttl">
-    <img loading="lazy" src="/images/landing/guide/popupTtl.svg" width="420" alt="고것좀 알고 잡다">
+    <img loading="lazy" src="/images/landing/guide/popupTtl.svg" width="510" alt="고것좀 알고 잡다">
     <span class="subTtl">이서은 <small>과장</small></span>
   </h1>
   coming soon..
@@ -155,7 +155,7 @@
 </Popup>
 <!-- Popup ref="popup3">
   <h1 class="popup_ttl">
-    <img loading="lazy" src="/images/landing/guide/popupTtl.svg" width="420" alt="고것좀 알고 잡다">
+    <img loading="lazy" src="/images/landing/guide/popupTtl.svg" width="510" alt="고것좀 알고 잡다">
     <span class="subTtl">박소라 <small>과장</small></span>
   </h1>
   coming soon..
@@ -242,7 +242,7 @@
 }
 .mainImg {
   position: absolute;
-  right: -70px;
+  right: -130px;
   top: -30px;
 }
 .career {
