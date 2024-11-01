@@ -9,7 +9,7 @@
         <img class="name02" ref="name02Ref" src="/images/landing/guide/name02.png" width="165" alt="이서은 과장">
         <img class="img02" ref="img02Ref" src="/images/landing/guide/img02.png" width="361" alt="">
         <img class="name01" ref="name01Ref" src="/images/landing/guide/name01.png" width="165" alt="박소라 과장">
-        <img class="img01" ref="img01Ref" src="/images/landing/guide/img01.png" width="510" alt="" -->
+        <img class="img01" ref="img01Ref" src="/images/landing/guide/img01.png" width="420" alt="" -->
         <a @click="showPopup('popup3')">
           <img class="name01" ref="name01Ref" src="/images/landing/guide/name01.png" width="165" alt="박소라 과장">
           <img class="img03" ref="img03Ref" src="/images/landing/guide/img03.png" width="449" alt="">
@@ -20,7 +20,7 @@
         </a>
         <a @click="showPopup('popup1')">
           <img class="name03" ref="name03Ref" src="/images/landing/guide/name03.png" width="165" alt="신현주 팀장">
-          <img class="img01" ref="img01Ref" src="/images/landing/guide/img01.png" width="510" alt="">
+          <img class="img01" ref="img01Ref" src="/images/landing/guide/img01.png" width="420" alt="">
         </a>
         </div>
       <div class="section01">
