@@ -581,7 +581,7 @@ onMounted(() => {
     background: #082379;
     color: #fff;
     position: relative;
-    margin-top: 390px;  /* halloween */
+    margin-top: 370px;
   }
   .guide::before {
     content: "";
@@ -929,7 +929,7 @@ onMounted(() => {
 /* sp */
 @media only screen and (max-width: 950px) {
   .guide {
-    margin-top: 88vw;
+    margin-top: 11vw;
   }
 
   .guide::before {

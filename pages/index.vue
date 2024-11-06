@@ -12,8 +12,7 @@
     <Community />
     <Reviews class="reviews" />
     <Sp_reviews class="sp_reviews" />
-    <Model_house />
-    <Halloween />
+    <Giveaway />
     <Guide />
     <G_footer />
   </div>
@@ -67,7 +66,7 @@ import School_bus from '~/components/landing/school_bus.vue'
 import Community from '~/components/landing/community.vue'
 import Reviews from '~/components/landing/reviews.vue'
 import Sp_reviews from '~/components/landing/sp_reviews.vue'
-import Model_house from '~/components/landing/model_house.vue'
+import Giveaway from '~/components/landing/giveaway.vue'
 import Guide from '~/components/landing/guide.vue'
 import Halloween from '~/components/landing/halloween.vue'
 import G_footer from '~/components/footer.vue'
