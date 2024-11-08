@@ -13,7 +13,7 @@
     <Reviews class="reviews" />
     <Sp_reviews class="sp_reviews" />
     <Giveaway />
-    <Guide />
+    <Fall />
     <G_footer />
   </div>
  
@@ -68,7 +68,7 @@ import Reviews from '~/components/landing/reviews.vue'
 import Sp_reviews from '~/components/landing/sp_reviews.vue'
 import Giveaway from '~/components/landing/giveaway.vue'
 import Guide from '~/components/landing/guide.vue'
-import Halloween from '~/components/landing/halloween.vue'
+import Fall from '~/components/landing/fall.vue'
 import G_footer from '~/components/footer.vue'
 
 const landingWrap = ref(null);
