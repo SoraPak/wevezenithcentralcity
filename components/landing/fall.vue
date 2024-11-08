@@ -169,7 +169,7 @@
   }
   .fall_btBg {
     height: 70vw;
-    bottom: 2vw;
+    bottom: 0;
   }
   .fall_btBg2 {
     display: none;
