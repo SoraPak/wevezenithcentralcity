@@ -115,10 +115,10 @@
     position: relative;
   }
   .gift_ttl {
-    width: 90vw;
+    width: 80vw;
   }
   .gift_ttl > img {
-    width: 90vw;
+    width: 80vw;
   }
   .gift_ttl::before {
     width: 120vw;
@@ -146,7 +146,7 @@
     margin-bottom: 2vw;
   }
   .gift_text > img {
-    width: 70vw;
+    width: 65vw;
   }
   .couponBtn {
     position: absolute;
