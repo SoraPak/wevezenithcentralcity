@@ -88,29 +88,26 @@
 .gift_ul li {
   margin-top: 5px;
 }
+.popupCon_body > p {
+  margin-bottom: 10px;
+}
+.coupon {
+  height: 80vh;
+  display: block;
+}
+.couponPopup_comment {
+  margin-bottom: 10px;
+}
+.couponPopup_img {
+  height: 80vh;
+  display: block;
+}
   /* sp */
 @media only screen and (max-width: 950px) {
   .fall {
     background-size: 417vw auto;
     background-position: -100vw bottom;
     margin-top: -88vw;
-  }
-  .fall_btBg {
-    position: absolute;
-    width: 100%;
-    height: 530px;
-    background: url("/images/landing/fall/deco_bt.png") repeat-x center bottom;
-    background-size: auto 55%;
-    
-    bottom: -3px;
-  }
-  .fall_btBg2 {
-    position: absolute;
-    width: 100%;
-    height: 530px;
-    background: url("/images/landing/fall/deco_bt.png") repeat-x -60% bottom;
-    background-size: auto 68%;
-    bottom: -53px;
   }
   .gift {
     padding-top: 70vw;
@@ -171,11 +168,19 @@
     margin-top: 1vw;
   }
   .fall_btBg {
-    height: 70vw;
+    height: 60vw;
     bottom: 0;
+    background-size: auto 100%;
   }
   .fall_btBg2 {
     display: none;
+  }
+  .couponPopup_comment {
+    margin-bottom: 2vw;
+  }
+  .couponPopup_img {
+    width: 100%;
+    height: auto;
   }
 }
 </style>
@@ -249,9 +254,9 @@
   </div>
 
   <!-- 팝업 정의 -->
-<Popup ref="coupon">
-  
-  coming soon..
+<Popup class="couponPopup" ref="coupon">
+  <p class="couponPopup_comment">아래 쿠폰을 저장 해 주세요</p>
+  <img class="couponPopup_img" loading="lazy" src="/images/landing/fall/2411-02-web.png" alt="쿠폰">
 </Popup>
 <Popup class="guidePopup  guidePopup1" ref="popup1">
   <div class="main">
