@@ -75,6 +75,9 @@
 .gift_text {
   margin-bottom: 20px;
 }
+.couponBtn {
+  cursor: pointer;
+}
 .gift_ul {
   font-size: 18px;
   text-align: center;
@@ -190,7 +193,7 @@
             <p class="gift_text">
               <img loading="lazy" src="/images/landing/fall/text.png" width="425" alt="쿠폰 다운받고 모델하우스에 오셔서 박소라 과장을 찾아주세요! 박소라 과장과 함께하는 특별한 만남으로 국수 선물 세트까지 챙겨가세요.">
             </p>
-            <a class="couponBtn">
+            <a @click="showPopup('coupon')" class="couponBtn">
               <img loading="lazy" src="/images/landing/fall/btn.png" width="381" alt="쿠폰 다운로드">
             </a>
           </div>
@@ -246,6 +249,10 @@
   </div>
 
   <!-- 팝업 정의 -->
+<Popup ref="coupon">
+  
+  coming soon..
+</Popup>
 <Popup class="guidePopup  guidePopup1" ref="popup1">
   <div class="main">
     <p class="mainSTtl"><img loading="lazy" src="/images/landing/guide/popupTtl.svg" width="200" alt="고것좀 알고 잡다"></p>
@@ -695,6 +702,7 @@ import { ref, onMounted } from 'vue';
 const popup1 = ref(null);
 const popup2 = ref(null);
 const popup3 = ref(null);
+const coupon = ref(null);
 
 // 팝업을 여는 함수
 const showPopup = (popupId) => {
@@ -704,6 +712,8 @@ const showPopup = (popupId) => {
     popup2.value.openPopup();
   } else if (popupId === 'popup3' && popup3.value) {
     popup3.value.openPopup();
+  } else if (popupId === 'coupon' && coupon.value) {
+    coupon.value.openPopup();
   }
 };
 
