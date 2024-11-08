@@ -2,7 +2,7 @@
   <section id="giveaway" class="giveaway">
     <div class="giveaway_inner">
       <div class="bg"></div>
-      <h1 class="ttl"><img loading="lazy" src="/images/landing/giveaway/ttl01.png" width="577" alt="박소라 과장 찾고 선물 받자"></h1>
+      <h1 id="event" class="ttl"><img loading="lazy" src="/images/landing/giveaway/ttl01.png" width="577" alt="박소라 과장 찾고 선물 받자"></h1>
 
       <div class="box">
         <img loading="lazy" src="/images/landing/giveaway/gift01.png" width="532" alt="">
