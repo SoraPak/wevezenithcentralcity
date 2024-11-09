@@ -1,25 +1,9 @@
 <style scoped>
 .fall {
-  background: url("/images/landing/fall/bg.jpg") repeat-x center bottom;
-  background-size: 2114px auto;
+  background: url("/images/landing/fall/bg.jpg") repeat-x center top #102274;
+  background-size: 1554px auto;
   position: relative;
   margin-top: -360px;
-}
-.fall_btBg {
-  position: absolute;
-  width: 100%;
-  height: 530px;
-  background: url("/images/landing/fall/deco_bt.png") repeat-x center bottom;
-  background-size: auto 55%;
-  bottom: -3px;
-}
-.fall_btBg2 {
-  position: absolute;
-  width: 100%;
-  height: 530px;
-  background: url("/images/landing/fall/deco_bt.png") repeat-x -60% bottom;
-  background-size: auto 68%;
-  bottom: -53px;
 }
 .gift {
   padding-top: 378px;
@@ -30,6 +14,27 @@
   max-width: 840px;
   margin: 0 auto;
   position: relative;
+}
+.gift_btBg {
+  position: absolute;
+  width: 100%;
+  height: 710px;
+  background: url("/images/landing/fall/deco_bt.png") repeat-x center bottom;
+  background-size: auto 100%;
+  bottom: -223px;
+  pointer-events: none;
+  z-index: 1;
+}
+.gift_btBg2 {
+  position: absolute;
+  width: 100%;
+  height: 710px;
+  background: url("/images/landing/fall/deco_bt.png") repeat-x -60% bottom;
+  background-size: auto 100%;
+  bottom: -303px;
+  transform: scaleX(-1);
+  pointer-events: none;
+  z-index: 1;
 }
 .gift_ttl {
   position: relative;
@@ -64,7 +69,7 @@
 }
 .gift_layout {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   margin-top: 50px;
 }
@@ -78,12 +83,40 @@
 .couponBtn {
   cursor: pointer;
 }
+.gift_layout2 {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  margin-top: 35px;
+}
+.gift_layout2_img {
+  width: 270px;
+  padding: 6px;
+  background: #fff;
+  border-radius: 50%;
+}
+.gift_layout2_img > img {
+  display: block;
+}
+.gift_layout2 .right{
+  margin-left: 40px;
+  text-align: center;
+}
+.gift_text2 {
+  margin-top: -70px;
+  margin-bottom: 20px;
+}
+.couponBtn2 {
+  cursor: pointer;
+}
 .gift_ul {
   font-size: 18px;
   text-align: center;
   line-height: 140%;
   margin-top: 20px;
   color: #040b20;
+  position: relative;
+  z-index: 2;
   text-shadow: rgb(255, 255, 255) 2px 0px 0px, rgb(255, 255, 255) 1.75517px 0.958851px 0px, rgb(255, 255, 255) 1.0806px 1.68294px 0px, rgb(255, 255, 255) 0.141474px 1.99499px 0px, rgb(255, 255, 255) -0.832294px 1.81859px 0px, rgb(255, 255, 255) -1.60229px 1.19694px 0px, rgb(255, 255, 255) -1.97998px 0.28224px 0px, rgb(255, 255, 255) -1.87291px -0.701566px 0px, rgb(255, 255, 255) -1.30729px -1.5136px 0px, rgb(255, 255, 255) -0.421592px -1.95506px 0px, rgb(255, 255, 255) 0.567324px -1.91785px 0px, rgb(255, 255, 255) 1.41734px -1.41108px 0px, rgb(255, 255, 255) 1.92034px -0.558831px 0px;
 }
 .gift_ul li {
@@ -106,8 +139,8 @@
   /* sp */
 @media only screen and (max-width: 950px) {
   .fall {
-    background-size: 417vw auto;
-    background-position: -100vw bottom;
+    background-size: 347vw auto;
+    background-position: -80vw top;
     margin-top: -88vw;
   }
   .gift {
@@ -115,11 +148,18 @@
     margin-bottom: 3vw;
     position: relative;
   }
+  .gift_btBg {
+    height: 100vw;
+    bottom: -24vw;
+  }
+  .gift_btBg2 {
+    display: none;
+  }
   .gift_ttl {
-    width: 80vw;
+    width: 95vw;
   }
   .gift_ttl > img {
-    width: 80vw;
+    width: 100%;
   }
   .gift_ttl::before {
     width: 120vw;
@@ -136,7 +176,7 @@
     position: relative;
   }
   .gift_layout > img {
-    width: 90vw;
+    width: 65vw;
     display: block;
     margin: 0 auto;
   }
@@ -153,29 +193,53 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -4vw;
+    bottom: -14vw;
   }
   .couponBtn > img {
     width: 70vw;
   }
+
+  .gift_layout2 {
+    display: block;
+    margin-top: 18vw;
+    position: relative;
+  }
+  .gift_layout2 .right{
+    margin-left: 0;
+  }
+  .gift_layout2_img {
+    position: absolute;
+    padding: 1.2vw;
+    width: 50vw;
+    top: 36vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .couponBtn {
+    position: absolute;
+  }
+  .gift_text2 {
+    margin-top: 0;
+    margin-bottom: 60vw;
+  }
+  .gift_text2 > img {
+    width: 70vw;
+  }
+  .couponBtn2 > img {
+    width: 70vw;
+  }
+
   .gift_ul {
     font-size: 3.9vw;
     text-align: center;
     line-height: 160%;
-    margin-top: 5vw;
+    margin-top: 1vw;
     color: #040b20;
   }
   .gift_ul li {
     margin-top: 1vw;
   }
-  .fall_btBg {
-    height: 60vw;
-    bottom: 0;
-    background-size: auto 100%;
-  }
-  .fall_btBg2 {
-    display: none;
-  }
+  
   .couponPopup_comment {
     margin-bottom: 2vw;
   }
@@ -192,12 +256,12 @@
     <section id="fall_gift" class="gift">
       <div class="gift_inner">
         <h1 class="gift_ttl">
-          <img loading="lazy" src="/images/landing/fall/ttl.png" width="610" alt="11월의 맛!! 박소라 과장이 국수세트 드려요!">
+          <img loading="lazy" src="/images/landing/fall/ttl.png" width="700" alt="11월의 맛!! 박소라 과장이 국수세트 X 스타벅스 쿠폰 드려요!">
         </h1>
         <div class="gift_layout">
           <div class="lft">
             <p class="gift_text">
-              <img loading="lazy" src="/images/landing/fall/text.png" width="425" alt="쿠폰 다운받고 모델하우스에 오셔서 박소라 과장을 찾아주세요! 박소라 과장과 함께하는 특별한 만남으로 국수 선물 세트까지 챙겨가세요.">
+              <img loading="lazy" src="/images/landing/fall/text.png" width="425" alt="쿠폰 다운받고 모델하우스에 오셔서 박소라 과장을 찾아주세요! 박소라 과장과 함께하는 특별한 만남으로 국수 선물 세트까지 챙겨가세요">
             </p>
             <a @click="showPopup('coupon')" class="couponBtn">
               <img loading="lazy" src="/images/landing/fall/btn.png" width="381" alt="쿠폰 다운로드">
@@ -205,18 +269,31 @@
           </div>
           <img loading="lazy" src="/images/landing/fall/img.png" width="412" alt="">
         </div>
+        <div class="gift_layout2">
+          <div class="gift_layout2_img"><img loading="lazy" src="/images/landing/fall/logo_starbucks.svg" width="100%" alt=""></div>
+          <div class="right">
+            <p class="gift_text2">
+              <img loading="lazy" src="/images/landing/fall/text02.png" width="483" alt="지금 오시면 스타벅스 쿠폰까지 추가 증정! 따뜻한 선물과 함께 특별한 기회를 놓치지 마세요!!">
+            </p>
+            <a @click="showPopup('coupon2')" class="couponBtn2">
+              <img loading="lazy" src="/images/landing/fall/btn02.png" width="390" alt="쿠폰 다운로드">
+            </a>
+          </div>
+        </div>
         <ul class="gift_ul">
           <li>
             ※ 출발전 예약 필수(당일 예약 가능)
           </li>
           <li>
-            ※ 경품은 방문 한팀당 하나
+            ※ 경품은 방문 한 팀당 각각 한 개씩 제공
           </li>
           <li>
             ※ 모델하우스 유닛 투어와 팀장의 상담 완료 시
           </li>
         </ul>
       </div>
+      <div class="gift_btBg"></div>
+      <div class="gift_btBg2"></div>
     </section>
     <section id="guide" class="guide">
       <div class="guide_inner">
@@ -250,14 +327,17 @@
 
       </div>
     </section>
-    <div class="fall_btBg"></div>
-    <div class="fall_btBg2"></div>
+    
   </div>
 
   <!-- 팝업 정의 -->
 <Popup class="couponPopup" ref="coupon">
   <p class="couponPopup_comment">아래 쿠폰을 저장 해 주세요</p>
-  <img class="couponPopup_img" loading="lazy" src="/images/landing/fall/2411-02-web.png" alt="쿠폰">
+  <img class="couponPopup_img" loading="lazy" src="/images/landing/fall/2411-02-web.png" alt="국수세트쿠폰">
+</Popup>
+<Popup class="couponPopup" ref="coupon2">
+  <p class="couponPopup_comment">아래 쿠폰을 저장 해 주세요</p>
+  <img class="couponPopup_img" loading="lazy" src="/images/landing/fall/2411-02-web_2.png" alt="스타벅스쿠폰">
 </Popup>
 <Popup class="guidePopup  guidePopup1" ref="popup1">
   <div class="main">
@@ -709,6 +789,8 @@ const popup1 = ref(null);
 const popup2 = ref(null);
 const popup3 = ref(null);
 const coupon = ref(null);
+const coupon2 = ref(null);
+
 
 // 팝업을 여는 함수
 const showPopup = (popupId) => {
@@ -720,6 +802,8 @@ const showPopup = (popupId) => {
     popup3.value.openPopup();
   } else if (popupId === 'coupon' && coupon.value) {
     coupon.value.openPopup();
+  } else if (popupId === 'coupon2' && coupon2.value) {
+    coupon2.value.openPopup();
   }
 };
 
@@ -780,10 +864,19 @@ onMounted(() => {
 
 
 
+
+
+
+
+
+
+
 <style scoped>
   .guide {
     color: #fff;
     position: relative;
+    background: url("/images/landing/guide/bg_top.png") no-repeat center 120px;
+    background-size: 2688px auto;
   }
   .guide_inner {
     max-width: 840px;
@@ -797,6 +890,7 @@ onMounted(() => {
     left: 50%;
     transform: translate(-50%, 0);
     top: 0;
+    z-index: 1;
   }
   .text {
     position: absolute;
@@ -1052,6 +1146,8 @@ onMounted(() => {
 @media only screen and (max-width: 950px) {
   .guide {
     margin-top: 2vw;
+    background-size: 360% auto;
+    background-position: center 0;
   }
 
   .guide::before {
@@ -1063,7 +1159,7 @@ onMounted(() => {
   .guide_inner {
     max-width: 100%;
     height: auto;
-    padding-bottom: 18vw;
+    padding-bottom: 15vw;
     padding-top: 120vw;
   }
 
