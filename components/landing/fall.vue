@@ -31,7 +31,7 @@
   height: 710px;
   background: url("/images/landing/fall/deco_bt.png") repeat-x -60% bottom;
   background-size: auto 100%;
-  bottom: -303px;
+  bottom: -173px;
   transform: scaleX(-1);
   pointer-events: none;
   z-index: 1;
@@ -88,6 +88,8 @@
   align-items: start;
   justify-content: center;
   margin-top: 35px;
+  position: relative;
+  z-index: 2;
 }
 .gift_layout2_img {
   width: 270px;
@@ -298,7 +300,7 @@
     <section id="guide" class="guide">
       <div class="guide_inner">
         <h1 class="ttl"><img loading="lazy" src="/images/landing/guide/ttl01.png" width="648" alt="당신의 프리미엄 라이프를 안내할 분양팀 상담사"></h1>
-        <p class="text" ref="textRef"><img loading="lazy" src="/images/landing/fall/text01.png" height="76" alt="카톡으로 예약 단디 하고 오이소~^^"></p>
+        <p class="text" ref="textRef"><img loading="lazy" src="/images/landing/guide/text01.png" height="76" alt="카톡으로 예약 단디 하고 오이소~^^"></p>
         <div class="guideImgs">
           <a @click="showPopup('popup3')">
             <img class="name01" ref="name01Ref" src="/images/landing/guide/name01.png" width="165" alt="박소라 과장">
