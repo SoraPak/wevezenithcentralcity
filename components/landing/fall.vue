@@ -53,7 +53,7 @@
   background: url("/images/landing/fall/deco01.png") no-repeat center center;
   background-size: 100% auto;
   position: absolute;
-  left: -410px;
+  left: -580px;
   top: -70px;
 }
 .gift_ttl::after {
@@ -64,14 +64,18 @@
   background: url("/images/landing/fall/deco02.png") no-repeat center center;
   background-size: 100% auto;
   position: absolute;
-  right: -340px;
-  top: 0px;
+  right: -370px;
+  top: -160px;
 }
 .gift_layout {
   display: flex;
   align-items: start;
   justify-content: center;
   margin-top: 50px;
+  position: relative;
+}
+.gift_layout > img {
+  margin-top: -20px;
 }
 .gift_layout .lft{
   margin-right: 40px;
