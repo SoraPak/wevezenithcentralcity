@@ -29,9 +29,9 @@
   position: absolute;
   width: 100%;
   height: 710px;
-  background: url("/images/landing/fall/deco_bt.png") repeat-x -60% bottom;
+  background: url("/images/landing/fall/deco_bt.png") repeat-x -47% bottom;
   background-size: auto 100%;
-  bottom: -173px;
+  bottom: -223px;
   transform: scaleX(-1);
   pointer-events: none;
   z-index: 1;
@@ -869,19 +869,11 @@ onMounted(() => {
 </script>
 
 
-
-
-
-
-
-
-
-
 <style scoped>
   .guide {
     color: #fff;
     position: relative;
-    background: url("/images/landing/guide/bg_top.png") no-repeat center 120px;
+    background: url("/images/landing/guide/bg_top.png") no-repeat center 100px;
     background-size: 2688px auto;
   }
   .guide_inner {
