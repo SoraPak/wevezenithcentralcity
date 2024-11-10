@@ -109,7 +109,7 @@
   text-align: center;
 }
 .gift_text2 {
-  margin-top: -70px;
+  margin-top: -30px;
   margin-bottom: 20px;
 }
 .couponBtn2 {
@@ -217,7 +217,7 @@
     position: absolute;
     padding: 1.2vw;
     width: 50vw;
-    top: 36vw;
+    top: 28vw;
     left: 50%;
     transform: translateX(-50%);
   }
