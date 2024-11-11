@@ -259,9 +259,9 @@
   
   <div class="fall">
     
-    <section id="fall_gift" class="gift">
+    <section class="gift">
       <div class="gift_inner">
-        <h1 class="gift_ttl">
+        <h1 id="fall_gift" class="gift_ttl">
           <img loading="lazy" src="/images/landing/fall/ttl.png" width="700" alt="11월의 맛!! 박소라 과장이 국수세트 X 스타벅스 쿠폰 드려요!">
         </h1>
         <div class="gift_layout">
