@@ -86,6 +86,7 @@
 }
 .couponBtn {
   cursor: pointer;
+  display: inline-block;
 }
 .gift_layout2 {
   display: flex;
@@ -114,6 +115,7 @@
 }
 .couponBtn2 {
   cursor: pointer;
+  display: inline-block;
 }
 .gift_ul {
   font-size: 18px;
