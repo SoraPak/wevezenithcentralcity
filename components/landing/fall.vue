@@ -96,6 +96,10 @@
   position: relative;
   z-index: 2;
 }
+.gift_layout2 > img {
+  margin-top: -20px
+}
+/*
 .gift_layout2_img {
   width: 270px;
   padding: 6px;
@@ -104,7 +108,7 @@
 }
 .gift_layout2_img > img {
   display: block;
-}
+} */
 .gift_layout2 .right{
   margin-left: 40px;
   text-align: center;
@@ -212,6 +216,12 @@
     margin-top: 18vw;
     position: relative;
   }
+  .gift_layout2 > img {
+    width: 76vw;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 4vw;
+  }
   .gift_layout2 .right{
     margin-left: 0;
   }
@@ -228,7 +238,6 @@
   }
   .gift_text2 {
     margin-top: 0;
-    margin-bottom: 60vw;
   }
   .gift_text2 > img {
     width: 70vw;
@@ -264,7 +273,7 @@
     <section class="gift">
       <div class="gift_inner">
         <h1 id="fall_gift" class="gift_ttl">
-          <img loading="lazy" src="/images/landing/fall/ttl.png" width="700" alt="11월의 맛!! 박소라 과장이 국수세트 X 스타벅스 쿠폰 드려요!">
+          <img loading="lazy" src="/images/landing/fall/ttl.png" width="700" alt="11월의 맛!! 박소라 과장이 국수세트 X 스타벅스 기프트카드 드려요!">
         </h1>
         <div class="gift_layout">
           <div class="lft">
@@ -278,10 +287,10 @@
           <img loading="lazy" src="/images/landing/fall/img.png" width="412" alt="">
         </div>
         <div class="gift_layout2">
-          <div class="gift_layout2_img"><img loading="lazy" src="/images/landing/fall/logo_starbucks.svg" width="100%" alt=""></div>
+          <img loading="lazy" src="/images/landing/fall/starbucks_gift.png" width="468" alt="">
           <div class="right">
             <p class="gift_text2">
-              <img loading="lazy" src="/images/landing/fall/text02.png" width="483" alt="지금 오시면 스타벅스 쿠폰까지 추가 증정! 따뜻한 선물과 함께 특별한 기회를 놓치지 마세요!!">
+              <img loading="lazy" src="/images/landing/fall/text02.png" width="569" alt="지금 오시면 스타벅스 기프트카드까지 추가 증정! 따뜻한 선물과 함께 특별한 기회를 놓치지 마세요!!">
             </p>
             <a @click="showPopup('coupon2')" class="couponBtn2">
               <img loading="lazy" src="/images/landing/fall/btn02.png" width="390" alt="쿠폰 다운로드">

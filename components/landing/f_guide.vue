@@ -843,7 +843,7 @@ onMounted(() => {
     background-size: 100% auto;
     width: 201vw;
     height: 34vw;
-    top: -10vw;    
+    top: -17vw;    
   }
   .guide_inner {
     max-width: 100%;
