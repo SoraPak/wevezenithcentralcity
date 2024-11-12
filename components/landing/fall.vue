@@ -287,7 +287,7 @@
           <img loading="lazy" src="/images/landing/fall/img.png" width="412" alt="">
         </div>
         <div class="gift_layout2">
-          <img loading="lazy" src="/images/landing/fall/starbucks_gift.png" width="468" alt="">
+          <img loading="lazy" src="/images/landing/fall/starbucks_gift.png" width="477" alt="">
           <div class="right">
             <p class="gift_text2">
               <img loading="lazy" src="/images/landing/fall/text02.png" width="569" alt="지금 오시면 스타벅스 기프트카드까지 추가 증정! 따뜻한 선물과 함께 특별한 기회를 놓치지 마세요!!">
