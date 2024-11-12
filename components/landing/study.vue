@@ -33,7 +33,7 @@
           <img loading="lazy" src="/images/landing/study/jongro.png" width="350" alt="">
           주말에 모델하우스 방문하고 18만원 상당의 인적성 검사 받자!
         </dd>
-        <dd><span class="subTtl">일시</span>24년 11월 9(토) ~ 10(일) <br><em>주말 단 이틀!</em></dd>
+        <dd><span class="subTtl">일시</span>24년 11월 16(토) ~ 17(일) <br><em>주말 단 이틀!</em></dd>
         <dd><span class="subTtl">대상</span>모델하우스 방문 고객 <br>(성별 연령 제한 없음)</dd>
         <dd><span class="subTtl">위치</span>두산위브더제니스 센트럴시티 <br>모델하우스</dd>
         <dd class="call">
