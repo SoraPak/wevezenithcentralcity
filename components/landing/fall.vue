@@ -97,7 +97,8 @@
   z-index: 2;
 }
 .gift_layout2 > img {
-  margin-top: -20px
+  margin-top: -20px;
+  margin-left: -140px;
 }
 /*
 .gift_layout2_img {
@@ -110,7 +111,7 @@
   display: block;
 } */
 .gift_layout2 .right{
-  margin-left: 40px;
+  margin-left: -70px;
   text-align: center;
 }
 .gift_text2 {
@@ -133,7 +134,7 @@
   margin-top: 40px;
 }
 .gift_layout3 .lft {
-  margin-right: -160px;
+  margin-right: -150px;
   position: relative;
   z-index: 3;
 }
@@ -380,7 +381,7 @@
           <img loading="lazy" src="/images/landing/fall/starbucks_gift.png" width="477" alt="">
           <div class="right">
             <p class="gift_text2">
-              <img loading="lazy" src="/images/landing/fall/text02.png" width="569" alt="지금 오시면 스타벅스 기프트카드까지 추가 증정! 따뜻한 선물과 함께 특별한 기회를 놓치지 마세요!!">
+              <img loading="lazy" src="/images/landing/fall/text02.png" width="519" alt="지금 오시면 스타벅스 기프트카드까지 추가 증정! 따뜻한 선물과 함께 특별한 기회를 놓치지 마세요!!">
             </p>
             <a @click="showPopup('coupon2')" class="couponBtn2">
               <img loading="lazy" src="/images/landing/fall/btn02.png" width="390" alt="쿠폰 다운로드">
@@ -404,7 +405,7 @@
         <div class="gift_layout3">
           <div class="lft">
             <p class="gift_text03">
-              <img loading="lazy" src="/images/landing/fall/text03.png" width="655" alt=" 11월 15일 오후 2시부터 모델하우스에서 박소라 과장을 찾아 계약을 완료하시면 황금열쇠를 선물로 드립니다!">
+              <img loading="lazy" src="/images/landing/fall/text03.png" width="585" alt=" 11월 15일 오후 2시부터 모델하우스에서 박소라 과장을 찾아 계약을 완료하시면 황금열쇠를 선물로 드립니다!">
             </p>
           </div>
           <div class="right"><img loading="lazy" src="/images/landing/fall/golden_key.png" width="459" alt=""></div>
