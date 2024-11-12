@@ -1,7 +1,7 @@
 <style scoped>
 .fall {
   background: url("/images/landing/fall/bg.jpg") repeat-x center top #102274;
-  background-size: 1554px auto;
+  background-size: 1395px auto;
   position: relative;
   margin-top: -360px;
 }
@@ -121,6 +121,54 @@
   cursor: pointer;
   display: inline-block;
 }
+.gift_ttl02 {
+  text-align: center;
+  margin-top: 50px;
+  position: relative;
+  z-index: 2;
+}
+.gift_layout3 {
+  display: flex;
+  align-items: start;
+  margin-top: 40px;
+}
+.gift_layout3 .lft {
+  margin-right: -160px;
+  position: relative;
+  z-index: 3;
+}
+.gift_layout3 .right{
+  margin-top: -100px;
+  margin-right: -50px;
+  position: relative;
+}
+.gift_layout3 .right::after {
+  content: "";
+  display: block;
+  width: 1000px;
+  height: 1000px;
+  background: url("/images/landing/fall/layout3_bg.png") no-repeat center center;
+  background-size: 100% auto;
+  position: absolute;
+  top: -290px;
+  left: -290px;
+  mix-blend-mode: plus-lighter;
+  opacity: 60%;
+  animation: rotateInfinite 70s linear infinite;
+}
+ /* 회전 애니메이션 */
+ @keyframes rotateInfinite {
+    0% {
+      transform: rotate(0deg); /* 시작 상태 */
+    }
+    100% {
+      transform: rotate(360deg); /* 한 바퀴 회전 */
+    }
+  }
+.gift_layout3 .right > img {
+  position: absolute;
+  z-index: 2;
+}
 .gift_ul {
   font-size: 18px;
   text-align: center;
@@ -151,8 +199,8 @@
   /* sp */
 @media only screen and (max-width: 950px) {
   .fall {
-    background-size: 337vw auto;
-    background-position: -80vw top;
+    background-size: 306vw auto;
+    background-position: -60vw top;
     margin-top: -88vw;
   }
   .gift {
@@ -246,11 +294,53 @@
     width: 70vw;
   }
 
+  .gift_ttl02 {
+    margin-top: 5vw;
+  }
+  .gift_ttl02 > img {
+    width: 65vw;
+  }
+  .gift_layout3 {
+    display: block;
+    margin-top: 3vw;
+    position: relative;
+  }
+  .gift_layout3 .lft {
+    margin-right: 0;
+  }
+  .gift_layout3 .right{
+    margin-top: 0;
+    margin-right: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -71vw;
+    width: 100%;
+  }
+  .gift_layout3 .right > img {
+    width: 75vw;
+    left: 11vw;
+  }
+  .gift_text03 {
+    text-align: center;
+    margin-top: 74vw;
+  }
+  .gift_text03 > img {
+    width: 80vw;
+  }
+  .gift_layout3 .right::after {
+    width: 170vw;
+    height: 170vw;
+    top: -54vw;
+    left: -38vw;
+  }
+
+
   .gift_ul {
     font-size: 3.9vw;
     text-align: center;
     line-height: 160%;
-    margin-top: 1vw;
+    margin-top: 3vw;
     color: #040b20;
   }
   .gift_ul li {
@@ -278,7 +368,7 @@
         <div class="gift_layout">
           <div class="lft">
             <p class="gift_text">
-              <img loading="lazy" src="/images/landing/fall/text.png" width="425" alt="쿠폰 다운받고 모델하우스에 오셔서 박소라 과장을 찾아주세요! 박소라 과장과 함께하는 특별한 만남으로 국수 선물 세트까지 챙겨가세요">
+              <img loading="lazy" src="/images/landing/fall/text.png" width="425" alt="쿠폰을 다운받고 모델하우스에 오셔서 박소라 과장을 만나 국수 선물 세트 챙겨가세요. 일시: 11월15일(금) 하루 오후 2시 이후 방문 고객">
             </p>
             <a @click="showPopup('coupon')" class="couponBtn">
               <img loading="lazy" src="/images/landing/fall/btn.png" width="381" alt="쿠폰 다운로드">
@@ -296,6 +386,17 @@
               <img loading="lazy" src="/images/landing/fall/btn02.png" width="390" alt="쿠폰 다운로드">
             </a>
           </div>
+        </div>
+        <h1 id="golden_key" class="gift_ttl02">
+          <img loading="lazy" src="/images/landing/fall/ttl02.png" width="510" alt="계약하면 황금열쇠 드려요!">
+        </h1>
+        <div class="gift_layout3">
+          <div class="lft">
+            <p class="gift_text03">
+              <img loading="lazy" src="/images/landing/fall/text03.png" width="655" alt=" 11월 15일 오후 2시부터 모델하우스에서 박소라 과장을 찾아 계약을 완료하시면 황금열쇠를 선물로 드립니다!">
+            </p>
+          </div>
+          <div class="right"><img loading="lazy" src="/images/landing/fall/golden_key.png" width="459" alt=""></div>
         </div>
         <ul class="gift_ul">
           <li>
