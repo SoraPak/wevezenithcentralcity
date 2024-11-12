@@ -298,7 +298,7 @@
     margin-top: 5vw;
   }
   .gift_ttl02 > img {
-    width: 65vw;
+    width: 75vw;
   }
   .gift_layout3 {
     display: block;
