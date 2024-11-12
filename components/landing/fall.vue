@@ -21,7 +21,7 @@
   height: 710px;
   background: url("/images/landing/fall/deco_bt.png") repeat-x center bottom;
   background-size: auto 100%;
-  bottom: -223px;
+  bottom: -360px;
   pointer-events: none;
   z-index: 1;
 }
@@ -31,7 +31,7 @@
   height: 710px;
   background: url("/images/landing/fall/deco_bt.png") repeat-x -47% bottom;
   background-size: auto 100%;
-  bottom: -293px;
+  bottom: -383px;
   transform: scaleX(-1);
   pointer-events: none;
   z-index: 1;
@@ -209,8 +209,8 @@
     position: relative;
   }
   .gift_btBg {
-    height: 100vw;
-    bottom: -37vw;
+    height: 160vw;
+    bottom: -45vw;
   }
   .gift_btBg2 {
     display: none;
@@ -387,17 +387,6 @@
             </a>
           </div>
         </div>
-        <h1 id="golden_key" class="gift_ttl02">
-          <img loading="lazy" src="/images/landing/fall/ttl02.png" width="510" alt="계약하면 황금열쇠 드려요!">
-        </h1>
-        <div class="gift_layout3">
-          <div class="lft">
-            <p class="gift_text03">
-              <img loading="lazy" src="/images/landing/fall/text03.png" width="655" alt=" 11월 15일 오후 2시부터 모델하우스에서 박소라 과장을 찾아 계약을 완료하시면 황금열쇠를 선물로 드립니다!">
-            </p>
-          </div>
-          <div class="right"><img loading="lazy" src="/images/landing/fall/golden_key.png" width="459" alt=""></div>
-        </div>
         <ul class="gift_ul">
           <li>
             ※ 출발전 예약 필수(당일 예약 가능)
@@ -409,6 +398,18 @@
             ※ 모델하우스 유닛 투어와 팀장의 상담 완료 시
           </li>
         </ul>
+        <h1 id="golden_key" class="gift_ttl02">
+          <img loading="lazy" src="/images/landing/fall/ttl02.png" width="510" alt="계약하면 황금열쇠 드려요!">
+        </h1>
+        <div class="gift_layout3">
+          <div class="lft">
+            <p class="gift_text03">
+              <img loading="lazy" src="/images/landing/fall/text03.png" width="655" alt=" 11월 15일 오후 2시부터 모델하우스에서 박소라 과장을 찾아 계약을 완료하시면 황금열쇠를 선물로 드립니다!">
+            </p>
+          </div>
+          <div class="right"><img loading="lazy" src="/images/landing/fall/golden_key.png" width="459" alt=""></div>
+        </div>
+        
       </div>
       <div class="gift_btBg"></div>
       <div class="gift_btBg2"></div>

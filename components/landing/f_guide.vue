@@ -555,7 +555,7 @@ onMounted(() => {
     background: #082379;
     color: #fff;
     position: relative;
-    margin-top: 450px;
+    margin-top: 520px;
   }
   .guide::before {
     content: "";
@@ -564,7 +564,7 @@ onMounted(() => {
     background-size: 2688px auto;
     width: 2688px;
     height: 923px;
-    top: -745px;
+    top: -776px;
     left: 50%;
     transform: translate(-50%, 0);
     
