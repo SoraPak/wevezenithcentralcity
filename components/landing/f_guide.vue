@@ -564,7 +564,7 @@ onMounted(() => {
     background-size: 2688px auto;
     width: 2688px;
     height: 923px;
-    top: -776px;
+    top: -844px;
     left: 50%;
     transform: translate(-50%, 0);
     

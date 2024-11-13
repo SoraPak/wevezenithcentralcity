@@ -21,7 +21,7 @@
   height: 710px;
   background: url("/images/landing/fall/deco_bt.png") repeat-x center bottom;
   background-size: auto 100%;
-  bottom: -360px;
+  bottom: -230px;
   pointer-events: none;
   z-index: 1;
 }
@@ -31,7 +31,7 @@
   height: 710px;
   background: url("/images/landing/fall/deco_bt.png") repeat-x -47% bottom;
   background-size: auto 100%;
-  bottom: -383px;
+  bottom: -265px;
   transform: scaleX(-1);
   pointer-events: none;
   z-index: 1;
@@ -157,6 +157,18 @@
   opacity: 60%;
   animation: rotateInfinite 70s linear infinite;
 }
+.gift_text03_2 {
+  position: relative;
+  z-index: 2;
+  margin-top: 30px;
+}
+.gift_text03_2 > img {
+ display: block;
+ margin: 0 auto; 
+}
+.gift_text03_2 .sp {
+  display: none;
+}
  /* 회전 애니메이션 */
  @keyframes rotateInfinite {
     0% {
@@ -200,7 +212,7 @@
   /* sp */
 @media only screen and (max-width: 950px) {
   .fall {
-    background-size: 306vw auto;
+    background-size: 329vw auto;
     background-position: -60vw top;
     margin-top: -88vw;
   }
@@ -355,6 +367,16 @@
     width: 100%;
     height: auto;
   }
+  .gift_text03_2 {
+    margin-top: 4vw;
+  }
+  .gift_text03_2 .pc {
+    display: none;
+  }
+  .gift_text03_2 .sp {
+    display: block;
+    width: 65vw;
+  }
 }
 </style>
 <template>
@@ -410,6 +432,10 @@
           </div>
           <div class="right"><img loading="lazy" src="/images/landing/fall/golden_key.png" width="459" alt=""></div>
         </div>
+        <p class="gift_text03_2">
+          <img class="pc" loading="lazy" src="/images/landing/fall/text03_2.png" width="952" alt="">
+          <img class="sp" loading="lazy" src="/images/landing/fall/text03_2_sp.png" alt="준비물: 인감도장 ,인감증명서 1통(용도 아파트계약용) ,주민등록등본 1통 ,신분증">
+        </p>
         
       </div>
       <div class="gift_btBg"></div>
