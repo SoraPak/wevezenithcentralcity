@@ -512,7 +512,7 @@ onMounted(() => {
   const rootMarginValue = `0px 0px -${0.1 * viewportHeight}px 0px`; // 동적으로 rootMargin 계산
 
   const options = {
-    threshold: 0.1, // 요소가 10% 보이면 애니메이션 트리거
+    threshold: .05, // 요소가 5% 보이면 애니메이션 트리거
     rootMargin: rootMarginValue, // 계산된 rootMargin 값 사용
   };
 
@@ -542,15 +542,15 @@ onMounted(() => {
   // 순차적으로 이름 애니메이션 적용
   setTimeout(() => {
     nameObserver.observe(name03Ref.value);
-  }, 1500);
+  }, 0);
 
   setTimeout(() => {
     nameObserver.observe(name01Ref.value);
-  }, 1800);
+  }, 300);
 
   setTimeout(() => {
     nameObserver.observe(name02Ref.value);
-  }, 2100);
+  }, 500);
 });
 </script>
 
@@ -674,7 +674,7 @@ onMounted(() => {
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: center center;
-    animation: rotateInfinite 40s linear infinite;
+    animation: rotateInfinite 30s linear infinite;
   }
   .guideImgs .name01::after {
     background-image: url("/images/landing/guide/ring01.png");
