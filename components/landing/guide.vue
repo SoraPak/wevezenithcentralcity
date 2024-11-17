@@ -1038,7 +1038,7 @@ onMounted(() => {
     height: 30vw;
   }
   .guideImgs .name01 {
-    right: 34vw;
+    right: 37vw;
     bottom: 27vw;
   }
   .guideImgs .name02{
