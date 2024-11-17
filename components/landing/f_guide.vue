@@ -22,7 +22,7 @@
           </div>
           <img class="img01" ref="img01Ref" src="/images/landing/guide/img01.png" width="420" alt="">
         </a>
-        </div>
+      </div>
       <div class="section01">
         <div class="left">
           <p class="tel"><img loading="lazy" src="/images/landing/guide/img_tel.png" width="410" alt="두산위브더제니스 센트럴시티 전화번호:15551924"></p>
@@ -936,12 +936,12 @@ onMounted(() => {
     top: 97vw;
   }
   .guideImgs .img02 {
-    left: -36px;
+    left: -13vw;
     bottom: 3vw;
     width: 49.8vw;
   }
   .guideImgs .img03 {
-    right: -50px;
+    right: -15vw;
     bottom: 9vw;
     width: 64vw;
   }
@@ -969,7 +969,7 @@ onMounted(() => {
   }
   .guideImgs .name03 {
     bottom: 20vw;
-    right: 1vw;
+    right: 2vw;
   }
   .guideImgs .name01 > img,
   .guideImgs .name02 > img,

@@ -4,25 +4,25 @@
       <h1 class="ttl"><img loading="lazy" src="/images/landing/guide/ttl01.png" width="648" alt="당신의 프리미엄 라이프를 안내할 분양팀 상담사"></h1>
       <p class="text" ref="textRef"><img loading="lazy" src="/images/landing/guide/text01.png" height="76" alt="카톡으로 예약 단디 하고 오이소~^^"></p>
       <div class="guideImgs">
-        <!-- img class="name03" ref="name03Ref" src="/images/landing/guide/name03.png" width="165" alt="신현주 팀장">
-        <img class="img03" ref="img03Ref" src="/images/landing/guide/img03.png" width="449" alt="">
-        <img class="name02" ref="name02Ref" src="/images/landing/guide/name02.png" width="165" alt="이서은 과장">
-        <img class="img02" ref="img02Ref" src="/images/landing/guide/img02.png" width="361" alt="">
-        <img class="name01" ref="name01Ref" src="/images/landing/guide/name01.png" width="165" alt="박소라 과장">
-        <img class="img01" ref="img01Ref" src="/images/landing/guide/img01.png" width="420" alt="" -->
         <a @click="showPopup('popup3')">
-          <img class="name01" ref="name01Ref" src="/images/landing/guide/name01.png" width="165" alt="박소라 과장">
+          <div class="name03" ref="name03Ref">
+            <img src="/images/landing/guide/name03.png" width="109" alt="박소라 과장">
+          </div>
           <img class="img03" ref="img03Ref" src="/images/landing/guide/img03.png" width="449" alt="">
         </a>
         <a @click="showPopup('popup2')">
-          <img class="name02" ref="name02Ref" src="/images/landing/guide/name02.png" width="165" alt="이서은 과장">
+          <div class="name02" ref="name02Ref">
+            <img src="/images/landing/guide/name02.png" width="109" alt="이서은 과장">
+          </div>
           <img class="img02" ref="img02Ref" src="/images/landing/guide/img02.png" width="361" alt="">
         </a>
         <a @click="showPopup('popup1')">
-          <img class="name03" ref="name03Ref" src="/images/landing/guide/name03.png" width="165" alt="신현주 팀장">
+          <div class="name01" ref="name01Ref">
+            <img src="/images/landing/guide/name01.png" width="115" alt="신현주 팀장">
+          </div>
           <img class="img01" ref="img01Ref" src="/images/landing/guide/img01.png" width="420" alt="">
         </a>
-        </div>
+      </div>
       <div class="section01">
         <!-- div class="location">
           <img loading="lazy" src="/images/landing/guide/map.jpg" width="309" alt="">
@@ -624,13 +624,13 @@ onMounted(() => {
   .guideImgs > a {
     cursor: pointer;
   }
-  .guideImgs > a:hover img {
+  .guideImgs > a:hover > img[class*='img'] {
     transform: scale(1.1);
   }  
   .guideImgs > a:hover img[class*='img']{
     z-index: 3;
   }
-  .guideImgs > a:hover img[class*='name']{
+  .guideImgs > a:hover div[class*='name']{
     z-index: 4;
   }
   .guideImgs img {
@@ -651,19 +651,72 @@ onMounted(() => {
   .guideImgs .name01,
   .guideImgs .name02,
   .guideImgs .name03 {
+    position: absolute;
     z-index: 1;
+    width: 152px;
+    height: 152px;
   }
   .guideImgs .name01 {
-    bottom: 90px;
-    right: -60px;
+    right: 224px;
+    bottom: 160px;
   }
   .guideImgs .name02{
     left: -70px;
     bottom: 90px;
   }
   .guideImgs .name03 {
-    right: 224px;
-    bottom: 160px;
+    bottom: 90px;
+    right: -60px;
+  }
+
+  .guideImgs .name01::after,
+  .guideImgs .name02::after,
+  .guideImgs .name03::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+    animation: rotateInfinite 40s linear infinite;
+  }
+  .guideImgs .name01::after {
+    background-image: url("/images/landing/guide/ring01.png");
+  }
+  .guideImgs .name02::after {
+    background-image: url("/images/landing/guide/ring02.png");
+  }
+  .guideImgs .name03::after {
+    background-image: url("/images/landing/guide/ring03.png");
+  }
+
+  .guideImgs .name01 > img,
+  .guideImgs .name02 > img,
+  .guideImgs .name03 > img {
+    display: block;
+    position: relative;
+    margin: 42px auto 0;
+  }
+
+  .guideImgs .name01::before,
+  .guideImgs .name02::before,
+  .guideImgs .name03::before {
+    content: "";
+    display: block;
+    width: 34px;
+    height: 34px;
+    background: url("/images/landing/guide/arrow.png") no-repeat center center;
+    background-size: 100% auto;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .section01 {
@@ -961,12 +1014,12 @@ onMounted(() => {
     top: 97vw;
   }
   .guideImgs .img02 {
-    left: -36px;
+    left: -13vw;
     bottom: 3vw;
     width: 49.8vw;
   }
   .guideImgs .img03 {
-    right: -50px;
+    right: -15vw;
     bottom: 9vw;
     width: 64vw;
   }
@@ -975,25 +1028,49 @@ onMounted(() => {
     bottom: 5vw;
     width: 60vw;
   }
+
   .guideImgs .name01,
   .guideImgs .name02,
   .guideImgs .name03 {
-    width: 24vw;
     opacity: 0; /* 처음에 보이지 않음 */
     transform: translateX(100px); /* 오른쪽에서 시작 */
+    width: 30vw;
+    height: 30vw;
   }
-
   .guideImgs .name01 {
+    right: 34vw;
     bottom: 27vw;
-    right: 9vw;
   }
   .guideImgs .name02{
-    left: 2vw;
-    bottom: 27vw;
+    left: -2.5vw;
+    bottom: 20vw;
   }
   .guideImgs .name03 {
-    right: 39vw;
-    bottom: 21vw;
+    bottom: 20vw;
+    right: 2vw;
+  }
+  .guideImgs .name01 > img,
+  .guideImgs .name02 > img,
+  .guideImgs .name03 > img {
+    margin: 8vw auto 0;
+  }
+
+  .guideImgs .name03 > img {
+    width: 22vw;
+  }
+  .guideImgs .name01 > img {
+    width: 23vw;
+  }
+  .guideImgs .name02 > img {
+    width: 22vw;
+  }
+
+  .guideImgs .name01::before,
+  .guideImgs .name02::before,
+  .guideImgs .name03::before {
+    width: 8vw;
+    height: 8vw;
+    bottom: 3.5vw;
   }
   
   .section01 {
