@@ -924,13 +924,13 @@ onMounted(() => {
     top: -35vw;
   }
   .ttl img{
-    width: 90vw;
+    width: 98vw;
   }
   .text {
     top: -9vw;
   }
   .text img {
-    height: 12vw;
+    height: 14vw;
   }
   .guideImgs {
     top: 97vw;
