@@ -674,7 +674,7 @@ onMounted(() => {
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: center center;
-    animation: rotateInfinite 30s linear infinite;
+    animation: rotateInfinite 10s linear infinite;
   }
   .guideImgs .name01::after {
     background-image: url("/images/landing/guide/ring01.png");
