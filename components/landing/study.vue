@@ -27,7 +27,7 @@
         <img loading="lazy" src="/images/landing/study/text01.png" width="443" alt="">
         <img loading="lazy" src="/images/landing/study/jongro_logo.svg" width="437" alt="">
       </p>
-      <dl class="event">
+      <!-- dl class="event">
         <dt>종로엠스쿨 인적성 검사 실시</dt>
         <dd class="smr">
           <img loading="lazy" src="/images/landing/study/jongro.png" width="350" alt="">
@@ -46,7 +46,7 @@
         <dd class="comment">
           ※ 모델하우스는 예약, 담당자 지정제로 운영되고 있습니다. 카운터에서 <em>박소라</em> 과장을 찾아주세요!
         </dd>
-      </dl>
+      </dl -->
     </div>
     <div class="box">
       <div class="box_inner">
@@ -404,7 +404,7 @@ onMounted(() => {
   }
 
   .bg {
-    height: 170vw;
+    height: 130vw;
   }
   .bg > img {
     position: absolute;
@@ -413,7 +413,7 @@ onMounted(() => {
   }
   .bg-video {
     object-fit: cover;
-    height: 170vw;
+    height: 130vw;
   }
   .bg::after {
     background-size: cover;
@@ -487,7 +487,7 @@ onMounted(() => {
   }
   .box {
     padding-bottom: 10.5vw;
-    margin-top: 36vw;
+    margin-top: 43vw;
   }
   .box::after {
     background: url("/images/landing/study/bg02_sp.png") no-repeat center bottom;
@@ -499,13 +499,13 @@ onMounted(() => {
   .img01 {
     width: 98vw;
     margin-left: -25vw;
-    margin-top: -23vw;
+    margin-top: -28vw;
     margin-bottom: -11vw;
   }
   .box_text01 {
     width: 50vw;
     right: 3vw;
-    top: -20vw;
+    top: -25vw;
   }
   .box_text01 > img:nth-child(1) {
     width: 17vw;
@@ -533,7 +533,7 @@ onMounted(() => {
     right: 0;
   }
   .box_text02 {
-    top: 18vw;
+    top: 13vw;
     right: 2vw;
   }
   .box_text02 > img {
