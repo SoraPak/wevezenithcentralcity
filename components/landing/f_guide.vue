@@ -647,7 +647,7 @@ onMounted(() => {
     height: 152px;
   }
   .guideImgs .name01 {
-    right: 224px;
+    right: 331px;
     bottom: 160px;
   }
   .guideImgs .name02{
@@ -995,10 +995,6 @@ onMounted(() => {
     bottom: 3.5vw;
   }
 
-
-
-  
-  
   .section01 {
     width: 94vw;
     border: 0.6vw solid #0d2161;

@@ -368,14 +368,14 @@
     height: auto;
   }
   .gift_text03_2 {
-    margin-top: 4vw;
+    margin-top: 2vw;
   }
   .gift_text03_2 .pc {
     display: none;
   }
   .gift_text03_2 .sp {
     display: block;
-    width: 65vw;
+    width: 80vw;
   }
 }
 </style>
@@ -433,7 +433,7 @@
           <div class="right"><img loading="lazy" src="/images/landing/fall/golden_key.png" width="459" alt=""></div>
         </div>
         <p class="gift_text03_2">
-          <img class="pc" loading="lazy" src="/images/landing/fall/text03_2.png" width="952" alt="">
+          <img class="pc" loading="lazy" src="/images/landing/fall/text03_2.png" width="100%" alt="">
           <img class="sp" loading="lazy" src="/images/landing/fall/text03_2_sp.png" alt="준비물: 인감도장 ,인감증명서 1통(용도 아파트계약용) ,주민등록등본 1통 ,신분증">
         </p>
         
