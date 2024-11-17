@@ -18,7 +18,7 @@
         </a>
         <a @click="showPopup('popup1')">
           <div class="name01" ref="name01Ref">
-            <img src="/images/landing/guide/name01.png" width="115" alt="신현주 팀장">
+            <img src="/images/landing/guide/name01.png" width="124" alt="신현주 팀장">
           </div>
           <img class="img01" ref="img01Ref" src="/images/landing/guide/img01.png" width="420" alt="">
         </a>
@@ -1059,7 +1059,7 @@ onMounted(() => {
     width: 22vw;
   }
   .guideImgs .name01 > img {
-    width: 23vw;
+    width: 25vw;
   }
   .guideImgs .name02 > img {
     width: 22vw;
