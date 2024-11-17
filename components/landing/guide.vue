@@ -18,7 +18,7 @@
         </a>
         <a @click="showPopup('popup1')">
           <div class="name01" ref="name01Ref">
-            <img src="/images/landing/guide/name01.png" width="124" alt="신현주 팀장">
+            <img src="/images/landing/guide/name01.png" width="128" alt="신현주 팀장">
           </div>
           <img class="img01" ref="img01Ref" src="/images/landing/guide/img01.png" width="420" alt="">
         </a>
@@ -1059,7 +1059,7 @@ onMounted(() => {
     width: 22vw;
   }
   .guideImgs .name01 > img {
-    width: 25vw;
+    width: 26vw;
   }
   .guideImgs .name02 > img {
     width: 22vw;
@@ -1068,8 +1068,8 @@ onMounted(() => {
   .guideImgs .name01::before,
   .guideImgs .name02::before,
   .guideImgs .name03::before {
-    width: 8vw;
-    height: 8vw;
+    width: 7vw;
+    height: 7vw;
     bottom: 3.5vw;
   }
   
