@@ -995,7 +995,7 @@ onMounted(() => {
     max-width: 100%;
     height: auto;
     padding-bottom: 20vw;
-    padding-top: 80vw;
+    padding-top: 84vw;
   }
 
   .ttl{
@@ -1005,13 +1005,13 @@ onMounted(() => {
     width: 98vw;
   }
   .text {
-    top: -9vw;
+    top: -6vw;
   }
   .text img {
     height: 14vw;
   }
   .guideImgs {
-    top: 97vw;
+    top: 101vw;
   }
   .guideImgs .img02 {
     left: -13vw;

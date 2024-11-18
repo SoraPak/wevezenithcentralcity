@@ -67,11 +67,17 @@
   right: -370px;
   top: -160px;
 }
+.gift_mainText {
+  text-align: center;
+  position: relative;
+  margin-top: 30px;
+  z-index: 3;
+}
 .gift_layout {
   display: flex;
   align-items: start;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 100px;
   position: relative;
 }
 .gift_layout > img {
@@ -79,10 +85,26 @@
 }
 .gift_layout .lft{
   margin-right: 40px;
+  margin-top: 95px;
   text-align: center;
 }
 .gift_text {
   margin-bottom: 20px;
+  position: relative;
+}
+.gift_text::before {
+  content: "";
+  display: block;
+  width: 269px;
+  height: 212px;
+  background: url("/images/landing/fall/text02_no.png") no-repeat center center;
+  background-size: 100% auto;
+  position: absolute;
+  right: -110px;
+  bottom: 145px;
+}
+.gift_text > img {
+  position: relative;
 }
 .couponBtn {
   cursor: pointer;
@@ -92,12 +114,12 @@
   display: flex;
   align-items: start;
   justify-content: center;
-  margin-top: 35px;
+  margin-top: 100px;
   position: relative;
   z-index: 2;
 }
 .gift_layout2 > img {
-  margin-top: -20px;
+  margin-top: -40px;
   margin-left: -140px;
 }
 /*
@@ -117,6 +139,23 @@
 .gift_text2 {
   margin-top: -30px;
   margin-bottom: 20px;
+  position: relative;
+}
+.gift_text2::before {
+  content: "";
+  display: block;
+  width: 274px;
+  height: 228px;
+  background: url("/images/landing/fall/text_no.png") no-repeat center center;
+  background-size: 100% auto;
+  position: absolute;
+  left: -180px;
+  bottom: 50px;
+}
+
+.gift_text2 > img {
+  position: relative;
+  z-index: 1;
 }
 .couponBtn2 {
   cursor: pointer;
@@ -243,6 +282,12 @@
   .gift_ttl::after {
     display: none;
   }
+  .gift_mainText {
+    margin-top: 4vw;
+  }
+  .gift_mainText > img {
+    width: 90vw;
+  }
   .gift_layout {
     display: block;
     margin-top: 2vw;
@@ -251,13 +296,24 @@
   .gift_layout > img {
     width: 65vw;
     display: block;
-    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -63vw;
   }
   .gift_layout .lft{
     margin-right: 0;
+    margin-top: 75vw;
   }
   .gift_text {
     margin-bottom: 2vw;
+  }
+  .gift_text::before {
+    width: 34vw;
+    height: 28vw;
+    right: 2vw;
+    bottom: 80vw;
+    z-index: 1;
   }
   .gift_text > img {
     width: 65vw;
@@ -266,7 +322,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -14vw;
+    bottom: -22vw;
   }
   .couponBtn > img {
     width: 70vw;
@@ -274,7 +330,7 @@
 
   .gift_layout2 {
     display: block;
-    margin-top: 18vw;
+    margin-top: 1vw;
     position: relative;
   }
   .gift_layout2 > img {
@@ -294,11 +350,16 @@
     left: 50%;
     transform: translateX(-50%);
   }
-  .couponBtn {
-    position: absolute;
-  }
   .gift_text2 {
     margin-top: 0;
+    margin-bottom: 3vw;
+  }
+  .gift_text2::before {
+    width: 34vw;
+    height: 28vw;
+    right: 8vw;
+    left: auto;
+    bottom: 55vw
   }
   .gift_text2 > img {
     width: 70vw;
@@ -353,7 +414,7 @@
     font-size: 3.9vw;
     text-align: center;
     line-height: 160%;
-    margin-top: 3vw;
+    margin-top: 26vw;
     color: #040b20;
   }
   .gift_ul li {
@@ -388,10 +449,24 @@
         <h1 id="fall_gift" class="gift_ttl">
           <img loading="lazy" src="/images/landing/fall/ttl.png" width="700" alt="11월의 맛!! 박소라 과장이 국수세트 X 스타벅스 기프트카드 드려요!">
         </h1>
+        <p class="gift_mainText">
+          <img loading="lazy" src="/images/landing/fall/main_text.png" width="766" alt="박소라 과장을 찾아주신 고객님들께 감사의 마음을 담아 준비한 특별 선물! 선물쿠폰 다운 받고 모델 하우스 방문 하실 때 안내카운터와 박소라 과장에게 제시 해 주세요.">
+        </p>
+        <div class="gift_layout2">
+          <img loading="lazy" src="/images/landing/fall/starbucks_gift.png" width="477" alt="">
+          <div class="right">
+            <p class="gift_text2">
+              <img loading="lazy" src="/images/landing/fall/text.png" width="525" alt="박소라 과장과 유닛 투어 후 신현주 팀장과 상담까지 완료하면 스타벅스 기프트카드 증정">
+            </p>
+            <a @click="showPopup('coupon2')" class="couponBtn2">
+              <img loading="lazy" src="/images/landing/fall/btn02.png" width="390" alt="쿠폰 다운로드">
+            </a>
+          </div>
+        </div>
         <div class="gift_layout">
           <div class="lft">
             <p class="gift_text">
-              <img loading="lazy" src="/images/landing/fall/text.png" width="425" alt="쿠폰을 다운받고 모델하우스에 오셔서 박소라 과장을 만나 국수 선물 세트 챙겨가세요. 일시: 11월15일(금) 하루 오후 2시 이후 방문 고객">
+              <img loading="lazy" src="/images/landing/fall/text02.png" width="378" alt="직계 가족 1인 이상 동반하여 방문하신 분께 국수세트 증정!">
             </p>
             <a @click="showPopup('coupon')" class="couponBtn">
               <img loading="lazy" src="/images/landing/fall/btn.png" width="381" alt="쿠폰 다운로드">
@@ -399,17 +474,7 @@
           </div>
           <img loading="lazy" src="/images/landing/fall/img.png" width="412" alt="">
         </div>
-        <div class="gift_layout2">
-          <img loading="lazy" src="/images/landing/fall/starbucks_gift.png" width="477" alt="">
-          <div class="right">
-            <p class="gift_text2">
-              <img loading="lazy" src="/images/landing/fall/text02.png" width="519" alt="지금 오시면 스타벅스 기프트카드까지 추가 증정! 따뜻한 선물과 함께 특별한 기회를 놓치지 마세요!!">
-            </p>
-            <a @click="showPopup('coupon2')" class="couponBtn2">
-              <img loading="lazy" src="/images/landing/fall/btn02.png" width="390" alt="쿠폰 다운로드">
-            </a>
-          </div>
-        </div>
+        
         <ul class="gift_ul">
           <li>
             ※ 출발전 예약 필수(당일 예약 가능)
@@ -418,9 +483,10 @@
             ※ 경품은 방문 한 팀당 각각 한 개씩 제공
           </li>
           <li>
-            ※ 모델하우스 유닛 투어와 팀장의 상담 완료 시
+            ※ 사은품은 수량한정으로 소진 시 다른 상품으로 대체 될 수 있음
           </li>
         </ul>
+        <!--
         <h1 id="golden_key" class="gift_ttl02">
           <img loading="lazy" src="/images/landing/fall/ttl02.png" width="510" alt="계약하면 황금열쇠 드려요!">
         </h1>
@@ -436,7 +502,7 @@
           <img class="pc" loading="lazy" src="/images/landing/fall/text03_2.png" width="100%" alt="">
           <img class="sp" loading="lazy" src="/images/landing/fall/text03_2_sp.png" alt="준비물: 인감도장 ,인감증명서 1통(용도 아파트계약용) ,주민등록등본 1통 ,신분증">
         </p>
-        
+        -->
       </div>
       <div class="gift_btBg"></div>
       <div class="gift_btBg2"></div>
