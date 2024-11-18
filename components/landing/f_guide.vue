@@ -582,7 +582,7 @@ onMounted(() => {
     top: -844px;
     left: 50%;
     transform: translate(-50%, 0);
-    
+    pointer-events: none;
   }
   .guide_inner {
     max-width: 840px;

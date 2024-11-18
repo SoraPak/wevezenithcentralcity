@@ -510,15 +510,15 @@
     <F_guide />
   </div>
 
-<!-- 팝업 정의 -->
-<Popup class="couponPopup" ref="coupon">
-  <p class="couponPopup_comment">아래 쿠폰을 저장 해 주세요</p>
-  <img :src="couponImageSrc" class="couponPopup_img" loading="lazy" alt="국수세트쿠폰">
-</Popup>
-<Popup class="couponPopup" ref="coupon2">
-  <p class="couponPopup_comment">아래 쿠폰을 저장 해 주세요</p>
-  <img :src="couponImageSrc2" class="couponPopup_img" loading="lazy" alt="스타벅스쿠폰">
-</Popup>
+  <!-- 팝업 정의 -->
+  <Popup class="couponPopup" ref="coupon">
+    <p class="couponPopup_comment">아래 쿠폰을 저장 해 주세요</p>
+    <img :src="couponImageSrc" @error="handleImageError('couponImageSrc')" class="couponPopup_img" loading="lazy" alt="국수세트쿠폰">
+  </Popup>
+  <Popup class="couponPopup" ref="coupon2">
+    <p class="couponPopup_comment">아래 쿠폰을 저장 해 주세요</p>
+    <img :src="couponImageSrc2" @error="handleImageError('couponImageSrc2')" class="couponPopup_img" loading="lazy" alt="스타벅스쿠폰">
+  </Popup>
 </template>
 
 <script setup>
@@ -536,10 +536,19 @@ const couponImageSrc2 = ref('');
 const setCouponImages = () => {
   const urlParams = new URLSearchParams(window.location.search);
   const cfromParam = urlParams.get('cfrom') || 'web'; // cfrom이 없으면 기본값 'web'
-  
+
   // 이미지 경로 설정
   couponImageSrc.value = `/images/landing/fall/coupons/noodle/2411-04-${cfromParam}.png`;
   couponImageSrc2.value = `/images/landing/fall/coupons/starbucks/2411-04-${cfromParam}.png`;
+};
+
+// 이미지 로드 실패 시 기본값으로 복구
+const handleImageError = (imageRef) => {
+  if (imageRef === 'couponImageSrc') {
+    couponImageSrc.value = '/images/landing/fall/coupons/noodle/2411-04-web.png';
+  } else if (imageRef === 'couponImageSrc2') {
+    couponImageSrc2.value = '/images/landing/fall/coupons/starbucks/2411-04-web.png';
+  }
 };
 
 onMounted(() => {
