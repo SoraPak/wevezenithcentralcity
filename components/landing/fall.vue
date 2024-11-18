@@ -120,7 +120,7 @@
 }
 .gift_layout2 > img {
   margin-top: -40px;
-  margin-left: -140px;
+  margin-left: -100px;
 }
 /*
 .gift_layout2_img {
@@ -133,7 +133,6 @@
   display: block;
 } */
 .gift_layout2 .right{
-  margin-left: -70px;
   text-align: center;
 }
 .gift_text2 {
@@ -316,7 +315,7 @@
     z-index: 1;
   }
   .gift_text > img {
-    width: 65vw;
+    width: 58vw;
   }
   .couponBtn {
     position: absolute;
@@ -456,7 +455,7 @@
           <img loading="lazy" src="/images/landing/fall/starbucks_gift.png" width="477" alt="">
           <div class="right">
             <p class="gift_text2">
-              <img loading="lazy" src="/images/landing/fall/text.png" width="525" alt="박소라 과장과 유닛 투어 후 신현주 팀장과 상담까지 완료하면 스타벅스 기프트카드 증정">
+              <img loading="lazy" src="/images/landing/fall/text.png" width="461" alt="박소라 과장과 유닛 투어 후 신현주 팀장과 상담까지 완료하면 스타벅스 기프트카드 증정">
             </p>
             <a @click="showPopup('coupon2')" class="couponBtn2">
               <img loading="lazy" src="/images/landing/fall/btn02.png" width="390" alt="쿠폰 다운로드">
