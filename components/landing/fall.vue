@@ -538,8 +538,8 @@ const setCouponImages = () => {
   const cfromParam = urlParams.get('cfrom') || 'web'; // cfrom이 없으면 기본값 'web'
   
   // 이미지 경로 설정
-  couponImageSrc.value = `/images/landing/fall/coupons/noodle/2411-03-${cfromParam}.png`;
-  couponImageSrc2.value = `/images/landing/fall/coupons/starbucks/2411-03-${cfromParam}.png`;
+  couponImageSrc.value = `/images/landing/fall/coupons/noodle/2411-04-${cfromParam}.png`;
+  couponImageSrc2.value = `/images/landing/fall/coupons/starbucks/2411-04-${cfromParam}.png`;
 };
 
 onMounted(() => {
