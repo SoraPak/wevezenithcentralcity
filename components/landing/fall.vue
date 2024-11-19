@@ -285,7 +285,7 @@
     margin-top: 4vw;
   }
   .gift_mainText > img {
-    width: 90vw;
+    width: 98vw;
   }
   .gift_layout {
     display: block;
