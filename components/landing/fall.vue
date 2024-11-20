@@ -38,7 +38,7 @@
 }
 .gift_ttl {
   position: relative;
-  width: 610px;
+  width: 700px;
   margin: 0 auto;
 }
 .gift_ttl > img {
@@ -64,7 +64,7 @@
   background: url("/images/landing/fall/deco02.png") no-repeat center center;
   background-size: 100% auto;
   position: absolute;
-  right: -370px;
+  right: -280px;
   top: -160px;
 }
 .gift_mainText {
