@@ -446,32 +446,32 @@
     <section class="gift">
       <div class="gift_inner">
         <h1 id="fall_gift" class="gift_ttl">
-          <img loading="lazy" src="/images/landing/fall/ttl.png" width="700" alt="11월의 맛!! 박소라 과장이 국수세트 X 스타벅스 기프트카드 드려요!">
+          <img src="/images/landing/fall/ttl.png" width="700" alt="11월의 맛!! 박소라 과장이 국수세트 X 스타벅스 기프트카드 드려요!">
         </h1>
         <p class="gift_mainText">
-          <img loading="lazy" src="/images/landing/fall/main_text.png" width="766" alt="박소라 과장을 찾아주신 고객님들께 감사의 마음을 담아 준비한 특별 선물! 선물쿠폰 다운 받고 모델 하우스 방문 하실 때 안내카운터와 박소라 과장에게 제시 해 주세요.">
+          <img src="/images/landing/fall/main_text.png" width="766" alt="박소라 과장을 찾아주신 고객님들께 감사의 마음을 담아 준비한 특별 선물! 선물쿠폰 다운 받고 모델 하우스 방문 하실 때 안내카운터와 박소라 과장에게 제시 해 주세요.">
         </p>
         <div class="gift_layout2">
-          <img loading="lazy" src="/images/landing/fall/starbucks_gift.png" width="477" alt="">
+          <img src="/images/landing/fall/starbucks_gift.png" width="477" alt="">
           <div class="right">
             <p class="gift_text2">
-              <img loading="lazy" src="/images/landing/fall/text.png" width="461" alt="박소라 과장과 유닛 투어 후 신현주 팀장과 상담까지 완료하면 스타벅스 기프트카드 증정">
+              <img src="/images/landing/fall/text.png" width="461" alt="박소라 과장과 유닛 투어 후 신현주 팀장과 상담까지 완료하면 스타벅스 기프트카드 증정">
             </p>
             <a @click="showPopup('coupon2')" class="couponBtn2">
-              <img loading="lazy" src="/images/landing/fall/btn02.png" width="390" alt="쿠폰 다운로드">
+              <img src="/images/landing/fall/btn02.png" width="390" alt="쿠폰 다운로드">
             </a>
           </div>
         </div>
         <div class="gift_layout">
           <div class="lft">
             <p class="gift_text">
-              <img loading="lazy" src="/images/landing/fall/text02.png" width="378" alt="직계 가족 1인 이상 동반하여 방문하신 분께 국수세트 증정!">
+              <img src="/images/landing/fall/text02.png" width="378" alt="직계 가족 1인 이상 동반하여 방문하신 분께 국수세트 증정!">
             </p>
             <a @click="showPopup('coupon')" class="couponBtn">
-              <img loading="lazy" src="/images/landing/fall/btn.png" width="381" alt="쿠폰 다운로드">
+              <img src="/images/landing/fall/btn.png" width="381" alt="쿠폰 다운로드">
             </a>
           </div>
-          <img loading="lazy" src="/images/landing/fall/img.png" width="412" alt="">
+          <img src="/images/landing/fall/img.png" width="412" alt="">
         </div>
         
         <ul class="gift_ul">
