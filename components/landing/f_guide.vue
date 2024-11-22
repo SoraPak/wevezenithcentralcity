@@ -579,7 +579,7 @@ onMounted(() => {
     background-size: 2688px auto;
     width: 2688px;
     height: 923px;
-    top: -844px;
+    top: -714px;
     left: 50%;
     transform: translate(-50%, 0);
     pointer-events: none;

@@ -1,7 +1,7 @@
 <style scoped>
 .fall {
-  background: url("/images/landing/fall/bg.jpg") repeat-x center top #102274;
-  background-size: 1395px auto;
+  background: url("/images/landing/fall/bg.jpg") repeat-x center top #000f3a;
+  background-size: 1485px auto;
   position: relative;
   margin-top: -360px;
 }
@@ -9,6 +9,7 @@
   padding-top: 378px;
   margin-bottom: 30px;
   position: relative;
+
 }
 .gift_inner {
   max-width: 840px;
@@ -162,7 +163,7 @@
 }
 .gift_ttl02 {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 30px;
   position: relative;
   z-index: 2;
 }
@@ -368,7 +369,7 @@
   }
 
   .gift_ttl02 {
-    margin-top: 5vw;
+    margin-top: 28vw;
   }
   .gift_ttl02 > img {
     width: 75vw;
@@ -413,7 +414,6 @@
     font-size: 3.9vw;
     text-align: center;
     line-height: 160%;
-    margin-top: 26vw;
     color: #040b20;
   }
   .gift_ul li {
@@ -474,18 +474,6 @@
           <img src="/images/landing/fall/img.png" width="412" alt="">
         </div>
         
-        <ul class="gift_ul">
-          <li>
-            ※ 출발전 예약 필수(당일 예약 가능)
-          </li>
-          <li>
-            ※ 경품은 방문 한 팀당 각각 한 개씩 제공
-          </li>
-          <li>
-            ※ 사은품은 수량한정으로 소진 시 다른 상품으로 대체 될 수 있음
-          </li>
-        </ul>
-        <!--
         <h1 id="golden_key" class="gift_ttl02">
           <img loading="lazy" src="/images/landing/fall/ttl02.png" width="510" alt="계약하면 황금열쇠 드려요!">
         </h1>
@@ -501,7 +489,17 @@
           <img class="pc" loading="lazy" src="/images/landing/fall/text03_2.png" width="100%" alt="">
           <img class="sp" loading="lazy" src="/images/landing/fall/text03_2_sp.png" alt="준비물: 인감도장 ,인감증명서 1통(용도 아파트계약용) ,주민등록등본 1통 ,신분증">
         </p>
-        -->
+        <ul class="gift_ul">
+          <li>
+            ※ 출발전 예약 필수(당일 예약 가능)
+          </li>
+          <li>
+            ※ 경품은 방문 한 팀당 각각 한 개씩 제공
+          </li>
+          <li>
+            ※ 사은품은 수량한정으로 소진 시 다른 상품으로 대체 될 수 있음
+          </li>
+        </ul>
       </div>
       <div class="gift_btBg"></div>
       <div class="gift_btBg2"></div>
