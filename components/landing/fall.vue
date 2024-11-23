@@ -435,7 +435,7 @@
   }
   .gift_text03_2 .sp {
     display: block;
-    width: 80vw;
+    width: 90vw;
   }
 }
 </style>
