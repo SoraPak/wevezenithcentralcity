@@ -480,7 +480,7 @@
         <div class="gift_layout3">
           <div class="lft">
             <p class="gift_text03">
-              <img loading="lazy" src="/images/landing/fall/text03.png" width="585" alt=" 11월 15일 오후 2시부터 모델하우스에서 박소라 과장을 찾아 계약을 완료하시면 황금열쇠를 선물로 드립니다!">
+              <img loading="lazy" src="/images/landing/fall/text03.png" width="585" alt=" 11월 23일 오후 2시부터 모델하우스에서 박소라 과장을 찾아 계약을 완료하시면 황금열쇠를 선물로 드립니다!">
             </p>
           </div>
           <div class="right"><img loading="lazy" src="/images/landing/fall/golden_key.png" width="459" alt=""></div>
