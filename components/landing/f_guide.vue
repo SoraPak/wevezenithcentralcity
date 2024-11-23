@@ -150,7 +150,6 @@
 <style scoped>
 .popup_ttl {
   width: 100%;
-  max-width: 420px;
   margin: 0 auto;
 }
 .popup_ttl > img{
