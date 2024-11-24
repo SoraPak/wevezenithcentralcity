@@ -322,6 +322,7 @@ onMounted(() => {
   padding-bottom: 41px;
   max-width: 1344px;
   margin: 120px auto 0;
+  z-index: 3;
 }
 .box::after {
   content: "";

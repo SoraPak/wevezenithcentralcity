@@ -250,6 +250,8 @@ function correctPosition() {
 .ttl {
   margin-top: -20px;
   text-align: center;
+  position: relative;
+  z-index: 3;
 }
 
 /* 롤링 배너 스타일 */

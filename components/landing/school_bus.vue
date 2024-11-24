@@ -169,6 +169,7 @@ onMounted(() => {
   background-size: 1px auto;
   text-align: center;
   color: #000f3a;
+  z-index: 3;
 }
 .school_bus::before {
   content: "";
