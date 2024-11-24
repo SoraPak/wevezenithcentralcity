@@ -333,6 +333,7 @@ onMounted(() => {
   background-size: 100% auto;
   position: absolute;
   top: -395px;
+  z-index: 3;
 }
 .box_inner {
   max-width: 840px;
