@@ -415,6 +415,7 @@
     text-align: center;
     line-height: 160%;
     color: #040b20;
+    margin-top: 24vw;
   }
   .gift_ul li {
     margin-top: 1vw;
