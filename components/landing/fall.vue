@@ -1,7 +1,7 @@
 <style scoped>
 .fall {
   background: url("/images/landing/fall/bg.jpg") repeat-x center top #000f3a;
-  background-size: 1485px auto;
+  background-size: 1125px auto;
   position: relative;
   margin-top: -360px;
 }
@@ -251,7 +251,7 @@
   /* sp */
 @media only screen and (max-width: 950px) {
   .fall {
-    background-size: 329vw auto;
+    background-size: 209vw auto;
     background-position: -60vw top;
     margin-top: -88vw;
   }
