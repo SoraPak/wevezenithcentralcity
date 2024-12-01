@@ -535,16 +535,16 @@ const setCouponImages = () => {
   const cfromParam = urlParams.get('cfrom') || 'web'; // cfrom이 없으면 기본값 'web'
 
   // 이미지 경로 설정
-  couponImageSrc.value = `/images/landing/fall/coupons/noodle/2411-04-${cfromParam}.png`;
-  couponImageSrc2.value = `/images/landing/fall/coupons/starbucks/2411-04-${cfromParam}.png`;
+  couponImageSrc.value = `/images/landing/fall/coupons/noodle/2412-01-${cfromParam}.png`;
+  couponImageSrc2.value = `/images/landing/fall/coupons/starbucks/2412-01-${cfromParam}.png`;
 };
 
 // 이미지 로드 실패 시 기본값으로 복구
 const handleImageError = (imageRef) => {
   if (imageRef === 'couponImageSrc') {
-    couponImageSrc.value = '/images/landing/fall/coupons/noodle/2411-04-web.png';
+    couponImageSrc.value = '/images/landing/fall/coupons/noodle/2412-01-web.png';
   } else if (imageRef === 'couponImageSrc2') {
-    couponImageSrc2.value = '/images/landing/fall/coupons/starbucks/2411-04-web.png';
+    couponImageSrc2.value = '/images/landing/fall/coupons/starbucks/2412-01-web.png';
   }
 };
 
