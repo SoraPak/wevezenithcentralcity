@@ -474,7 +474,7 @@
           <img src="/images/landing/fall/img.png" width="412" alt="">
         </div>
         
-        <h1 id="golden_key" class="gift_ttl02">
+        <!-- h1 id="golden_key" class="gift_ttl02">
           <img loading="lazy" src="/images/landing/fall/ttl02.png" width="510" alt="계약하면 황금열쇠 드려요!">
         </h1>
         <div class="gift_layout3">
@@ -488,7 +488,7 @@
         <p class="gift_text03_2">
           <img class="pc" loading="lazy" src="/images/landing/fall/text03_2.png" width="100%" alt="">
           <img class="sp" loading="lazy" src="/images/landing/fall/text03_2_sp.png" alt="준비물: 인감도장 ,인감증명서 1통(용도 아파트계약용) ,주민등록등본 1통 ,신분증">
-        </p>
+        </p -->
         <ul class="gift_ul">
           <li>
             ※ 출발전 예약 필수(당일 예약 가능)
@@ -497,7 +497,7 @@
             ※ 경품은 방문 한 팀당 각각 한 개씩 제공
           </li>
           <li>
-            ※ 사은품은 수량한정으로 소진 시 다른 상품으로 대체 될 수 있음<br>(스타벅스 기프트카드: 12월 15일까지 선착순 / 황금열쇠: 11월 30일까지 선착순)
+            ※ 사은품은 수량한정으로 소진 시 다른 상품으로 대체 될 수 있음<br>(스타벅스 기프트카드: 12월 15일까지 선착순)
           </li>
         </ul>
       </div>
