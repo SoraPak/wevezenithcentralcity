@@ -162,6 +162,16 @@
 </Popup -->
 </template>
 <style>
+ /* 회전 애니메이션 */
+ @keyframes rotateInfinite {
+    0% {
+      transform: rotate(0deg); /* 시작 상태 */
+    }
+    100% {
+      transform: rotate(360deg); /* 한 바퀴 회전 */
+    }
+  }
+
 .guidePopup .popupCon {
   width: 100%;
   max-width: 800px;
@@ -683,7 +693,7 @@ onMounted(() => {
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: center center;
-    animation: rotateInfinite 30s linear infinite;
+    animation: rotateInfinite 15s linear infinite;
   }
   .guideImgs .name01::after {
     background-image: url("/images/landing/guide/ring01.png");
