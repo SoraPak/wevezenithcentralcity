@@ -315,7 +315,7 @@
   }
   .gift_ttl > img:nth-child(1) {
     width: 70vw;
-    margin-bottom: 9vw;
+    margin-bottom: 13vw;
   }
   .gift_ttl::before {
     width: 120vw;
