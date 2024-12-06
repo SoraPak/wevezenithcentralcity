@@ -616,6 +616,7 @@ onMounted(() => {
     left: 50%;
     transform: translate(-50%, 0);
     top: -410px;
+    z-index: 2;
   }
   .text {
     position: absolute;

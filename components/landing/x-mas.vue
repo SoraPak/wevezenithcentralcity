@@ -1,72 +1,95 @@
 <style scoped>
 .x-mas {
+  
   background-color: #0a4d2a;
   position: relative;
+  margin-bottom: -170px;
 }
 .gift {
   background: url("/images/landing/x-mas/bg.jpg") repeat center center #fff;
   background-size: 600px auto;
-  padding-top: 378px;
-  margin-bottom: 30px;
+  padding-top: 30px;
   position: relative;
-
-
+  max-width: 2114px;
+  margin: 0 auto;
+}
+.gift_bg1,
+.gift_bg2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1466px;
+  background: url("/images/landing/x-mas/deco_bg.png") repeat-y center top;
+  background-size: 100% auto;
+}
+.gift_bg1 {
+  right: -920px;
+}
+.gift_bg2 {
+  transform: scaleX(-1);
+  left: -920px;
+}
+.gift::before,
+.gift::after{
+  content: "";
+  width: 100vw;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  right: 0;
+  height: 438px;
+  background: url("/images/landing/x-mas/bt_bg.png") repeat-x center bottom;
+  background-size: auto 100%;
+  z-index: 1;
+}
+.gift::after {
+  transform: scaleY(-1) translateX(-50%);
+  top: -60px;
+  bottom: auto;
 }
 .gift_inner {
   max-width: 840px;
   margin: 0 auto;
   position: relative;
+  padding-bottom: 450px;
 }
 .gift_ttl {
   position: relative;
-  width: 700px;
-  margin: 0 auto;
 }
 .gift_ttl > img {
   position: relative;
   z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
 }
-.gift_ttl::before {
-  content: "";
-  display: block;
-  width: 762px;
-  height: 482px;
-  background: url("/images/landing/x-mas/deco01.png") no-repeat center center;
-  background-size: 100% auto;
-  position: absolute;
-  left: -580px;
-  top: -70px;
-}
-.gift_ttl::after {
-  content: "";
-  display: block;
-  width: 351px;
-  height: 360px;
-  background: url("/images/landing/x-mas/deco02.png") no-repeat center center;
-  background-size: 100% auto;
-  position: absolute;
-  right: -280px;
-  top: -160px;
+.gift_ttl > img:nth-child(2) {
+  margin-top: -70px;
 }
 .gift_mainText {
-  text-align: center;
   position: relative;
-  margin-top: 30px;
+  margin-top: -105px;
   z-index: 3;
+}
+.gift_mainText > img {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .gift_layout {
   display: flex;
   align-items: start;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 60px;
   position: relative;
+  z-index: 3;
 }
 .gift_layout > img {
   margin-top: -20px;
 }
 .gift_layout .lft{
   margin-right: 40px;
-  margin-top: 95px;
+  margin-top: 0;
   text-align: center;
 }
 .gift_text {
@@ -76,13 +99,13 @@
 .gift_text::before {
   content: "";
   display: block;
-  width: 269px;
-  height: 212px;
+  width: 244px;
+  height: 335px;
   background: url("/images/landing/x-mas/text02_no.png") no-repeat center center;
   background-size: 100% auto;
   position: absolute;
-  right: -110px;
-  bottom: 145px;
+  right: -630px;
+  bottom: 25px;
 }
 .gift_text > img {
   position: relative;
@@ -95,7 +118,7 @@
   display: flex;
   align-items: start;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 70px;
   position: relative;
   z-index: 2;
 }
@@ -124,13 +147,13 @@
 .gift_text2::before {
   content: "";
   display: block;
-  width: 274px;
-  height: 228px;
+  width: 226px;
+  height: 437px;
   background: url("/images/landing/x-mas/text_no.png") no-repeat center center;
   background-size: 100% auto;
   position: absolute;
-  left: -180px;
-  bottom: 50px;
+  left: -500px;
+  bottom: 46px;
 }
 
 .gift_text2 > img {
@@ -150,19 +173,18 @@
 .gift_layout3 {
   display: flex;
   align-items: start;
-  margin-top: 40px;
+  margin-top: -100px;
 }
 .gift_layout3 .lft {
-  margin-right: -150px;
   position: relative;
-  z-index: 3;
+  margin-left: -97px;
+
 }
-.gift_layout3 .right{
-  margin-top: -100px;
-  margin-right: -50px;
+.gift_layout3 .lft > img {
   position: relative;
+  z-index: 1;
 }
-.gift_layout3 .right::after {
+.gift_layout3 .lft::after {
   content: "";
   display: block;
   width: 1000px;
@@ -170,11 +192,32 @@
   background: url("/images/landing/x-mas/layout3_bg.png") no-repeat center center;
   background-size: 100% auto;
   position: absolute;
-  top: -290px;
-  left: -290px;
-  mix-blend-mode: plus-lighter;
-  opacity: 60%;
+  top: -320px;
+  left: -200px;
+  mix-blend-mode: multiply;
+  opacity: 40%;
   animation: rotateInfinite 70s linear infinite;
+
+}
+.gift_layout3 .right{
+  margin-top: 110px;
+  margin-left: -35px;
+  position: relative;
+}
+.gift_text03 {
+  position: relative;
+}
+.gift_text03::before {
+  content: "";
+  display: block;
+  width: 249px;
+  height: 477px;
+  background: url("/images/landing/x-mas/text03_no.png") no-repeat center center;
+  background-size: 100% auto;
+  position: absolute;
+  left: -598px;
+    bottom: 225px;
+  z-index: 2;
 }
 .gift_text03_2 {
   position: relative;
@@ -233,25 +276,46 @@
   .x-mas {
     background-size: 209vw auto;
     background-position: -60vw top;
-    margin-top: -88vw;
+    margin-top: -18vw;
+    margin-bottom: -9vw;
   }
   .gift {
-    padding-top: 70vw;
-    margin-bottom: 3vw;
+    padding-top: 0;
+    margin-bottom: 17vw;
     position: relative;
   }
-  .gift_btBg {
-    height: 160vw;
-    bottom: -45vw;
+  .gift::before,
+  .gift::after {
+    height: 59vw;
   }
-  .gift_btBg2 {
-    display: none;
+  .gift::after {
+    top: -9vw;
   }
+  .gift_bg1,
+  .gift_bg2 {
+    width: 140vw;
+  }
+  .gift_bg1 {
+    right: -104vw;
+  }
+  .gift_bg2 {
+    transform: scaleX(-1);
+    left: -104vw;
+  }
+  .gift_inner {
+    padding-bottom: 47vw;
+  }
+  
+  
   .gift_ttl {
     width: 95vw;
   }
   .gift_ttl > img {
     width: 100%;
+  }
+  .gift_ttl > img:nth-child(1) {
+    width: 70vw;
+    margin-bottom: 9vw;
   }
   .gift_ttl::before {
     width: 120vw;
@@ -263,10 +327,10 @@
     display: none;
   }
   .gift_mainText {
-    margin-top: 4vw;
+    margin-top: -12vw;
   }
   .gift_mainText > img {
-    width: 98vw;
+    width: 122vw;
   }
   .gift_layout {
     display: block;
@@ -289,10 +353,10 @@
     margin-bottom: 2vw;
   }
   .gift_text::before {
-    width: 34vw;
-    height: 28vw;
+    width: 28vw;
+    height: 38vw;
     right: 2vw;
-    bottom: 80vw;
+    bottom: 68vw;
     z-index: 1;
   }
   .gift_text > img {
@@ -310,7 +374,7 @@
 
   .gift_layout2 {
     display: block;
-    margin-top: 1vw;
+    margin-top: -3vw;
     position: relative;
   }
   .gift_layout2 > img {
@@ -335,11 +399,11 @@
     margin-bottom: 3vw;
   }
   .gift_text2::before {
-    width: 34vw;
-    height: 28vw;
-    right: 8vw;
-    left: auto;
-    bottom: 55vw
+    width: 26vw;
+    height: 50vw;
+    left: 3vw;
+    bottom: 55vw;
+    top: -83vw;
   }
   .gift_text2 > img {
     width: 70vw;
@@ -356,20 +420,23 @@
   }
   .gift_layout3 {
     display: block;
-    margin-top: 3vw;
+    margin-top: 23vw;
     position: relative;
   }
   .gift_layout3 .lft {
     margin-right: 0;
   }
+  .gift_layout3 .lft > img {
+    width: 103vw;
+    left: 26vw;
+  }
   .gift_layout3 .right{
     margin-top: 0;
     margin-right: 0;
-    position: absolute;
+    position: relative;
     left: 0;
     right: 0;
-    top: -71vw;
-    width: 100%;
+    width: 100vw;
   }
   .gift_layout3 .right > img {
     width: 75vw;
@@ -377,10 +444,13 @@
   }
   .gift_text03 {
     text-align: center;
-    margin-top: 74vw;
+    margin-top: -6vw;
+    margin-bottom: -14vw;
+    margin-left: 18vw;
+    z-index: 1;
   }
   .gift_text03 > img {
-    width: 80vw;
+    width: 60vw;
   }
   .gift_layout3 .right::after {
     width: 170vw;
@@ -393,7 +463,7 @@
     text-align: center;
     line-height: 160%;
     color: #040b20;
-    margin-top: 24vw;
+    margin-top: 7vw;
   }
   .gift_ul li {
     margin-top: 1vw;
@@ -420,15 +490,18 @@
 </style>
 <template>
   
-  <div class="x-mas">
+  <section class="x-mas">
     
-    <section class="gift">
+    <div class="gift">
+      <div class="gift_bg1"></div>
+      <div class="gift_bg2"></div>
       <div class="gift_inner">
         <h1 id="x-mas_gift" class="gift_ttl">
-          <img src="/images/landing/x-mas/ttl.png" width="700" alt="11월의 맛!! 박소라 과장이 국수세트 X 스타벅스 기프트카드 드려요!">
+          <img src="/images/landing/x-mas/ttl_sub.png"width="756" alt="Happy New year">
+          <img src="/images/landing/x-mas/ttl.png" width="1002" alt="박소라 과장이 국수세트 X 스타벅스 기프트카드 드려요!">
         </h1>
         <p class="gift_mainText">
-          <img src="/images/landing/x-mas/main_text.png" width="766" alt="박소라 과장을 찾아주신 고객님들께 감사의 마음을 담아 준비한 특별 선물! 선물쿠폰 다운 받고 모델 하우스 방문 하실 때 안내카운터와 박소라 과장에게 제시 해 주세요.">
+          <img src="/images/landing/x-mas/main_text.png" width="1049" alt="박소라 과장을 찾아주신 고객님들께 감사의 마음을 담아 준비한 특별 선물! 선물쿠폰 다운 받고 모델 하우스 방문 하실 때 안내카운터와 박소라 과장에게 제시 해 주세요.">
         </p>
         <div class="gift_layout2">
           <img src="/images/landing/x-mas/starbucks_gift.png" width="477" alt="">
@@ -453,16 +526,15 @@
           <img src="/images/landing/x-mas/img.png" width="412" alt="">
         </div>
         
-        <h1 id="golden_key" class="gift_ttl02">
-          <img loading="lazy" src="/images/landing/x-mas/ttl02.png" width="510" alt="계약하면 황금열쇠 드려요!">
-        </h1>
         <div class="gift_layout3">
           <div class="lft">
+            <img loading="lazy" src="/images/landing/x-mas/cake.png" width="561" alt="">
+          </div>
+          <div class="right">
             <p class="gift_text03">
-              <img loading="lazy" src="/images/landing/x-mas/text03.png" width="585" alt=" 11월 23일 오후 2시부터 모델하우스에서 박소라 과장을 찾아 계약을 완료하시면 황금열쇠를 선물로 드립니다!">
+              <img loading="lazy" src="/images/landing/x-mas/text03.png" width="410" alt=" 11월 23일 오후 2시부터 모델하우스에서 박소라 과장을 찾아 계약을 완료하시면 황금열쇠를 선물로 드립니다!">
             </p>
           </div>
-          <div class="right"><img loading="lazy" src="/images/landing/x-mas/golden_key.png" width="459" alt=""></div>
         </div>
         <p class="gift_text03_2">
           <img class="pc" loading="lazy" src="/images/landing/x-mas/text03_2.png" width="100%" alt="">
@@ -482,8 +554,8 @@
       </div>
       <!-- div class="gift_btBg"></div>
       <div class="gift_btBg2"></div -->
-    </section>
-  </div>
+      </div>
+  </section>
 
   <!-- 팝업 정의 -->
   <Popup class="couponPopup" ref="coupon">
