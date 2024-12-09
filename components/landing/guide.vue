@@ -10,17 +10,11 @@
           </div>
           <img class="img03" ref="img03Ref" src="/images/landing/guide/img03.png" width="449" alt="">
         </a>
-        <a @click="showPopup('popup2')">
-          <div class="name02" ref="name02Ref">
-            <img src="/images/landing/guide/name02.png" width="109" alt="이서은 과장">
-          </div>
-          <img class="img02" ref="img02Ref" src="/images/landing/guide/img02.png" width="361" alt="">
-        </a>
         <a @click="showPopup('popup1')">
           <div class="name01" ref="name01Ref">
             <img src="/images/landing/guide/name01.png" width="128" alt="신현주 팀장">
           </div>
-          <img class="img01" ref="img01Ref" src="/images/landing/guide/img01.png" width="420" alt="">
+          <img class="img01" ref="img01Ref" src="/images/landing/guide/img01.png" width="410" alt="">
         </a>
       </div>
       <div class="section01">
@@ -85,14 +79,6 @@
     <p>고객의 입장에서 깊이 고민하고, 마음을 이해하는 상담을 원하신다면, 저 신현주 팀장을 찾아주세요. 고객님의 꿈을 현실로 만들어드리겠습니다! <strong>두산위브더제니스 센트럴시티로 오셔서 모두 대박 나세요~~!!</strong></p>
     <img class="popup_img01" src="/images/landing/guide/popupImg01.jpg" width="600" alt="">
   </div>
-</Popup>
-
-<Popup ref="popup2">
-  <h1 class="popup_ttl">
-    <img loading="lazy" src="/images/landing/guide/popupTtl.svg" width="510" alt="고것좀 알고 잡다">
-    <span class="subTtl">이서은 <small>과장</small></span>
-  </h1>
-  coming soon..
 </Popup>
 
 <Popup class="guidePopup guidePopup3" ref="popup3">
@@ -514,26 +500,21 @@ import { ref, onMounted } from 'vue';
 
 // 팝업 레퍼런스 설정
 const popup1 = ref(null);
-const popup2 = ref(null);
 const popup3 = ref(null);
 
 // 팝업을 여는 함수
 const showPopup = (popupId) => {
   if (popupId === 'popup1' && popup1.value) {
     popup1.value.openPopup();
-  } else if (popupId === 'popup2' && popup2.value) {
-    popup2.value.openPopup();
   } else if (popupId === 'popup3' && popup3.value) {
     popup3.value.openPopup();
   }
 };
 
 const img01Ref = ref(null);
-const img02Ref = ref(null);
 const img03Ref = ref(null);
 const textRef = ref(null);
 const name01Ref = ref(null);
-const name02Ref = ref(null);
 const name03Ref = ref(null);
 
 onMounted(() => {
@@ -556,7 +537,6 @@ onMounted(() => {
   // 요소들에 대해 옵저버 적용
   observer.observe(img01Ref.value);
   observer.observe(img03Ref.value);
-  observer.observe(img02Ref.value);
   observer.observe(textRef.value);
 
   // 이름 애니메이션 순서 적용
@@ -577,9 +557,7 @@ onMounted(() => {
     nameObserver.observe(name01Ref.value);
   }, 300);
 
-  setTimeout(() => {
-    nameObserver.observe(name02Ref.value);
-  }, 500);
+
 });
 </script>
 
@@ -590,7 +568,7 @@ onMounted(() => {
     background: #082379;
     color: #fff;
     position: relative;
-    margin-top: 370px;
+    margin-top: 350px;
   }
   .guide::before {
     content: "";
@@ -615,14 +593,14 @@ onMounted(() => {
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
-    top: -410px;
+    top: -390px;
     z-index: 2;
   }
   .text {
     position: absolute;
     width: 100%;
     text-align: center;
-    top: -233px;
+    top: -193px;
     z-index: 1;
   }
   .guideImgs {
@@ -651,12 +629,12 @@ onMounted(() => {
     bottom: -68px;
   }
   .guideImgs .img03 {
-    right: -75px;
+    right: 47px;
     bottom: 0;
   }
   .guideImgs .img01 {
-    right: 234px;
-    bottom: 0;
+    left: 54px;
+    bottom: -40px;
   }
   .guideImgs .name01,
   .guideImgs .name02,
@@ -667,7 +645,7 @@ onMounted(() => {
     height: 152px;
   }
   .guideImgs .name01 {
-    right: 331px;
+    left: 0;
     bottom: 160px;
   }
   .guideImgs .name02{
@@ -675,8 +653,8 @@ onMounted(() => {
     bottom: 90px;
   }
   .guideImgs .name03 {
-    bottom: 90px;
-    right: -60px;
+    bottom: 160px;
+    right: 0;
   }
 
   .guideImgs .name01::after,
@@ -992,7 +970,7 @@ onMounted(() => {
 /* sp */
 @media only screen and (max-width: 950px) {
   .guide {
-    margin-top: 11vw;
+    margin-top: 31vw;
   }
 
   .guide::before {
@@ -1009,13 +987,13 @@ onMounted(() => {
   }
 
   .ttl{
-    top: -35vw;
+    top: -50vw;
   }
   .ttl img{
     width: 98vw;
   }
   .text {
-    top: -6vw;
+    top: -21vw;
   }
   .text img {
     height: 14vw;
@@ -1029,14 +1007,14 @@ onMounted(() => {
     width: 49.8vw;
   }
   .guideImgs .img03 {
-    right: -15vw;
+    right: -16vw;
     bottom: 9vw;
-    width: 64vw;
+    width: 79vw;
   }
   .guideImgs .img01 {
-    right: 25vw;
-    bottom: 5vw;
-    width: 60vw;
+    left: -13vw;
+    bottom: 3vw;
+    width: 70vw;
   }
 
   .guideImgs .name01,
@@ -1044,12 +1022,12 @@ onMounted(() => {
   .guideImgs .name03 {
     opacity: 0; /* 처음에 보이지 않음 */
     transform: translateX(100px); /* 오른쪽에서 시작 */
-    width: 30vw;
-    height: 30vw;
+    width: 35vw;
+    height: 35vw;
   }
   .guideImgs .name01 {
-    right: 37vw;
-    bottom: 27vw;
+    left: 2vw;
+    bottom: 20vw;
   }
   .guideImgs .name02{
     left: -2.5vw;
@@ -1062,14 +1040,14 @@ onMounted(() => {
   .guideImgs .name01 > img,
   .guideImgs .name02 > img,
   .guideImgs .name03 > img {
-    margin: 8vw auto 0;
+    margin: 9vw auto 0;
   }
 
   .guideImgs .name03 > img {
-    width: 22vw;
+    width: 27vw;
   }
   .guideImgs .name01 > img {
-    width: 26vw;
+    width: 31vw;
   }
   .guideImgs .name02 > img {
     width: 22vw;
@@ -1078,8 +1056,8 @@ onMounted(() => {
   .guideImgs .name01::before,
   .guideImgs .name02::before,
   .guideImgs .name03::before {
-    width: 7vw;
-    height: 7vw;
+    width: 8.5vw;
+    height: 8.5vw;
     bottom: 3.5vw;
   }
   
