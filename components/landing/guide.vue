@@ -1013,8 +1013,8 @@ onMounted(() => {
   }
   .guideImgs .img01 {
     left: -13vw;
-    bottom: 3vw;
-    width: 70vw;
+    bottom: 1vw;
+    width: 71.5vw;
   }
 
   .guideImgs .name01,
