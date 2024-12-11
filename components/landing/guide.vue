@@ -17,9 +17,9 @@
           <img class="img01" ref="img01Ref" src="/images/landing/guide/img01.png" width="410" alt="">
         </a>
       </div>
-      <div class="job">
+      <!-- div class="job">
         <a href="http://bunyangline.com/share/?id=656" target="_blank"><img src="/images/landing/guide/text_ job.png" width="379" alt="분양팀에서 새로운 가족을 모십니다!"><i></i></a>
-      </div>
+      </div -->
       <div class="section01">
         <!-- div class="location">
           <img loading="lazy" src="/images/landing/guide/map.jpg" width="309" alt="">
