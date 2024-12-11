@@ -767,13 +767,14 @@ onMounted(() => {
     display: block;
   }
   .job > a > i {
-    background: url("/images/landing/guide/arrow02.png") no-repeat center center #fff;
+    background: url("/images/landing/guide/arrow02.png") no-repeat center center;
     background-size: 13px auto;
     width: 25px;
     height: 25px;
     border-radius: 50%;
     display: block;
     margin-left: auto;
+    border: 2px solid #fff;
   }
 
   .section01 {
@@ -1169,10 +1170,11 @@ onMounted(() => {
     width: 67vw;
   }
   .job > a > i {
-    background: url("/images/landing/guide/arrow02.png") no-repeat center center #fff;
+    background: url("/images/landing/guide/arrow02.png") no-repeat center center;
     background-size: 3vw auto;
-    width: 5.5vw;
-    height: 5.5vw;
+    width: 4.5vw;
+    height: 4.5vw;
+    border: 0.4vw solid #fff;
   }
 
   .section01 {
