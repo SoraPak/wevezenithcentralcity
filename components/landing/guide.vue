@@ -18,7 +18,7 @@
         </a>
       </div>
       <div class="job">
-        <a href="http://bunyangline.com/share/?id=656" target="_blank"><img src="/images/landing/guide/text_ job.png" width="379" alt=""><i></i></a>
+        <a href="http://bunyangline.com/share/?id=656" target="_blank"><img src="/images/landing/guide/text_ job.png" width="379" alt="분양팀에서 새로운 가족을 모십니다!"><i></i></a>
       </div>
       <div class="section01">
         <!-- div class="location">
