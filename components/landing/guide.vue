@@ -17,6 +17,9 @@
           <img class="img01" ref="img01Ref" src="/images/landing/guide/img01.png" width="410" alt="">
         </a>
       </div>
+      <div class="job">
+        <a href="http://bunyangline.com/share/?id=656" target="_blank"><img src="/images/landing/guide/text_ job.png" width="379" alt=""><i></i></a>
+      </div>
       <div class="section01">
         <!-- div class="location">
           <img loading="lazy" src="/images/landing/guide/map.jpg" width="309" alt="">
@@ -586,7 +589,7 @@ onMounted(() => {
     max-width: 840px;
     margin: 0 auto;
     position: relative;
-    height: 730px;
+    height: 780px;
   }
 
   .ttl{
@@ -705,6 +708,72 @@ onMounted(() => {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
+  }
+  .job {
+    display: block;
+    width: 480px;
+    position: absolute;
+    top: 680px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .job::before,
+  .job::after {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 70px;
+    border: 3px solid #0d2161;
+    background: #fff;
+    position: absolute;
+    top: -12px;
+    left: 2.5%;
+    border-radius: 10px;
+  }
+  .job::after {
+    left: auto;
+    right: 2.5%;
+  }
+  .job > a {
+    display: flex;
+    align-items: center;
+    background: #be9167;
+    color: #fff;
+    padding: 10px 30px;
+    border: 3px solid #0d2161;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+  }
+  .job > a::before,
+  .job > a::after {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 3px solid #0d2161;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2%;
+  }
+  .job > a::after {
+    left: auto;
+    right: 2%;
+  }
+  .job > a > img {
+    display: block;
+  }
+  .job > a > i {
+    background: url("/images/landing/guide/arrow02.png") no-repeat center center #fff;
+    background-size: 13px auto;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
   }
 
   .section01 {
@@ -982,8 +1051,10 @@ onMounted(() => {
   .guide_inner {
     max-width: 100%;
     height: auto;
-    padding-bottom: 20vw;
+    padding-bottom: 35vw;
     padding-top: 84vw;
+    display: flex;
+    flex-direction: column;
   }
 
   .ttl{
@@ -1061,6 +1132,49 @@ onMounted(() => {
     bottom: 3.5vw;
   }
   
+  .job {
+    width: 88vw;
+    top: 190vw;
+  }
+  .job::before,
+  .job::after {
+    width: 2vw;
+    height: 19vw;
+    border: 0.6vw solid #0d2161;
+    top: -5vw;
+    left: 2.5%;
+    border-radius: 20vw;
+  }
+  .job::after {
+    left: auto;
+    right: 2.5%;
+  }
+  .job > a {
+    padding: 3vw 6.5vw;
+    border: .6vw solid #0d2161;
+    border-radius: 2vw;
+  }
+  .job > a::before,
+  .job > a::after {
+    width: 2vw;
+    height: 2vw;
+    border: 0.6vw solid #0d2161;
+    left: 2%;
+  }
+  .job > a::after {
+    left: auto;
+    right: 2%;
+  }
+  .job > a > img {
+    width: 67vw;
+  }
+  .job > a > i {
+    background: url("/images/landing/guide/arrow02.png") no-repeat center center #fff;
+    background-size: 4.5vw auto;
+    width: 5.5vw;
+    height: 5.5vw;
+  }
+
   .section01 {
     width: 94vw;
     border: 0.6vw solid #0d2161;
@@ -1070,7 +1184,9 @@ onMounted(() => {
     font-size: 5vw;
     left: auto;
     position: relative;
-    display: block;
+    display: table-cell;
+    vertical-align: middle;
+    height: 104vw;
   }
   /*
     .location {
@@ -1125,8 +1241,11 @@ onMounted(() => {
   .comment {
     border: 0.5vw solid #092379;
     border-radius: 1vw;
-    padding: 2vw 3vw;
-    font-size: 4.2vw;
+    padding: 0 3vw;
+    font-size: 4vw;
+    display: table-cell;
+    vertical-align: middle;
+    height: 30vw;
   }
   /* 
   .telText:before {
