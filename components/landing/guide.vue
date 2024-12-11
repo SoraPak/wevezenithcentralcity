@@ -1170,7 +1170,7 @@ onMounted(() => {
   }
   .job > a > i {
     background: url("/images/landing/guide/arrow02.png") no-repeat center center #fff;
-    background-size: 4.5vw auto;
+    background-size: 3vw auto;
     width: 5.5vw;
     height: 5.5vw;
   }
