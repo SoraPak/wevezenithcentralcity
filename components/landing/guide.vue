@@ -17,9 +17,9 @@
           <img class="img01" ref="img01Ref" src="/images/landing/guide/img01.png" width="410" alt="">
         </a>
       </div>
-      <!-- div class="job">
-        <a href="http://bunyangline.com/share/?id=656" target="_blank"><img src="/images/landing/guide/text_ job.png" width="379" alt="분양팀에서 새로운 가족을 모십니다!"><i></i></a>
-      </div -->
+      <div class="job">
+        <a @click="showPopup('jobPopup')"><img src="/images/landing/guide/text_ job.png" width="379" alt="분양팀에서 새로운 가족을 모십니다!"><i></i></a>
+      </div>
       <div class="section01">
         <!-- div class="location">
           <img loading="lazy" src="/images/landing/guide/map.jpg" width="309" alt="">
@@ -46,6 +46,7 @@
     </div>
   </section>
   <!-- 팝업 정의 -->
+  <Job ref="jobPopup" />
 <Popup class="guidePopup  guidePopup1" ref="popup1">
   <!-- h1 class="popup_ttl">
     <img loading="lazy" src="/images/landing/guide/popupTtl.svg" width="510" alt="고것좀 알고 잡다">
@@ -499,21 +500,26 @@
 
 <script setup>
 import Popup from '~/components/landing/popup.vue';
-import { ref, onMounted } from 'vue';
+import Job from '~/components/landing/job.vue';
+import { ref } from 'vue';
 
 // 팝업 레퍼런스 설정
 const popup1 = ref(null);
 const popup3 = ref(null);
+const jobPopup = ref(null);
 
-// 팝업을 여는 함수
+// 팝업 여는 함수
 const showPopup = (popupId) => {
   if (popupId === 'popup1' && popup1.value) {
     popup1.value.openPopup();
   } else if (popupId === 'popup3' && popup3.value) {
     popup3.value.openPopup();
+  } else if (popupId === 'jobPopup' && jobPopup.value) {
+    jobPopup.value.openPopup();
+  } else {
+    console.error(`Popup not found or not defined: ${popupId}`);
   }
 };
-
 const img01Ref = ref(null);
 const img03Ref = ref(null);
 const textRef = ref(null);

@@ -12,7 +12,7 @@
 </template>
 
 <script setup>
-import { ref, watch, onMounted, nextTick } from 'vue';
+import { ref, watch, onMounted, nextTick, defineExpose } from 'vue';
 
 // 팝업 상태 관리
 const isPopupOpen = ref(false);
