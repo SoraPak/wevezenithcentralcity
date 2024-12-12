@@ -750,6 +750,7 @@ onMounted(() => {
     border-radius: 10px;
     position: relative;
     z-index: 1;
+    cursor: pointer;
   }
   .job > a::before,
   .job > a::after {
