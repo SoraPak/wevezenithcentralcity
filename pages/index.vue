@@ -12,7 +12,6 @@
     <Community />
     <Reviews class="reviews" />
     <Sp_reviews class="sp_reviews" />
-    <Giveaway />
     <X_mas />
     <Guide/>
     <!-- Fall / -->

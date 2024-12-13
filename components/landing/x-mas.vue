@@ -8,7 +8,6 @@
 .gift {
   background: url("/images/landing/x-mas/bg.jpg") repeat center center #fff;
   background-size: 600px auto;
-  padding-top: 30px;
   position: relative;
   max-width: 2114px;
   margin: 0 auto;
@@ -44,7 +43,8 @@
   z-index: 1;
 }
 .gift::after {
-  transform: scaleY(-1) translateX(-50%);
+  background: url("/images/landing/x-mas/top_bg.png") repeat-x center bottom;
+  background-size: auto 100%;
   top: -60px;
   bottom: auto;
 }
@@ -230,6 +230,58 @@
 }
 .gift_text03_2 .sp {
   display: none;
+}
+
+.gift_layout4 {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  margin-top: 20px;
+  position: relative;
+  z-index: 3;
+}
+.gift_layout4 .lft{
+  margin-right: -30px;
+  margin-left: 100px;
+  margin-top: 0;
+  text-align: center;
+}
+.gift_layout4 .lft > ul {
+  word-break: keep-all;
+  text-align: left;
+  font-size: 20px;
+  line-height: 160%;
+  padding: 20px 20px 20px 40px;
+  text-shadow: rgb(8 112 75) 3px 0px 0px, rgb(8 112 75) 2.83487px 0.981584px 0px, rgb(8 112 75) 2.35766px 1.85511px 0px, rgb(8 112 75) 1.62091px 2.52441px 0px, rgb(8 112 75) 0.705713px 2.91581px 0px, rgb(8 112 75) -0.287171px 2.98622px 0px, rgb(8 112 75) -1.24844px 2.72789px 0px, rgb(8 112 75) -2.07227px 2.16926px 0px, rgb(8 112 75) -2.66798px 1.37182px 0px, rgb(8 112 75) -2.96998px 0.42336px 0px, rgb(8 112 75) -2.94502px -0.571704px 0px, rgb(8 112 75) -2.59586px -1.50383px 0px, rgb(8 112 75) -1.96093px -2.27041px 0px, rgb(8 112 75) -1.11013px -2.78704px 0px, rgb(8 112 75) -0.137119px -2.99686px 0px, rgb(8 112 75) 0.850987px -2.87677px 0px, rgb(8 112 75) 1.74541px -2.43999px 0px, rgb(8 112 75) 2.44769px -1.73459px 0px, rgb(8 112 75) 2.88051px -0.838247px 0px;
+}
+.gift_layout4 .lft > ul li {
+  text-indent: -1.6rem;
+  padding-left: 1rem;
+}
+.gift_layout4 .lft > ul li::before {
+  content: "○ ";
+}
+.gift_layout4 .lft > ul li:last-child {
+  font-size: 90%;
+  line-height: 150%;
+  margin-right: -170px;
+}
+.gift_layout4 .lft > ul li:last-child::before {
+  content: "⭐ ";
+}
+.gift_text04 {
+  position: relative;
+}
+.gift_text04::before {
+  content: "";
+  display: block;
+  width: 254px;
+  height: 479px;
+  background: url("/images/landing/x-mas/text04_no.png") no-repeat center center;
+  background-size: 100% auto;
+  position: absolute;
+  right: -638px;
+  top: -322px;
 }
  /* 회전 애니메이션 */
  @keyframes rotateInfinite {
@@ -470,6 +522,7 @@
     line-height: 160%;
     color: #040b20;
     margin-top: 7vw;
+    padding: 0 4vw;
   }
   .gift_ul li {
     margin-top: 1vw;
@@ -483,7 +536,7 @@
     height: auto;
   }
   .gift_text03_2 {
-    margin-top: 6vw;
+    margin-top: 3vw;
   }
   .gift_text03_2 .pc {
     display: none;
@@ -491,6 +544,46 @@
   .gift_text03_2 .sp {
     display: block;
     width: 90vw;
+  }
+
+  .gift_layout4 {
+    display: block;
+    margin-top: 2vw;
+    position: relative;
+  }
+  .gift_layout4 > img {
+    width: 96vw;
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -84vw;
+  }
+  .gift_layout4 .lft{
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 88vw;
+  }
+  .gift_text04 {
+    margin-bottom: 2vw;
+  }
+  .gift_text04::before {
+    width: 28vw;
+    height: 53vw;
+    right: -2vw;
+    top: -91vw;
+    z-index: 1;
+  }
+  .gift_text04 > img {
+    width: 75vw;
+  }
+  .gift_layout4 .lft > ul {
+    font-size: 4.5vw;
+    padding: 2vw 4vw 2vw 8vw;
+  }
+  .gift_layout4 .lft > ul li:last-child {
+    margin-right: 0;
+    font-size: 100%;
   }
 }
 </style>
@@ -502,7 +595,7 @@
       <div class="gift_bg1"></div>
       <div class="gift_bg2"></div>
       <div class="gift_inner">
-        <h1 id="x-mas_gift" class="gift_ttl">
+        <h1 id="giveaway" class="gift_ttl">
           <img src="/images/landing/x-mas/ttl_sub.png"width="756" alt="Happy New year">
           <img src="/images/landing/x-mas/ttl.png" width="1002" alt="박소라 과장이 국수세트 X 스타벅스 기프트카드 드려요!">
         </h1>
@@ -542,6 +635,25 @@
             </p>
           </div>
         </div>
+
+        <div class="gift_layout4">
+          <div class="lft">
+            <p class="gift_text04">
+              <img src="/images/landing/x-mas/text04.png" width="491" alt="12월9일(월) ~ 12월15일(일) 추첨전 까지 계약을 완료하시면 전자제품 추첨권 추가 증정! 추첨일: 12월 15일(일) 오후 3시">
+            </p>
+            <ul>
+              <li>55인지 스마트 티비 (1대)</li>
+              <li>다이슨 청소기 (1대)</li>
+              <li>다이슨 드라이기 (1대)</li> 
+              <li>공기 청정기 (1대)</li>
+              <li>오븐형전기 그릴 (1대)</li>
+              <li>냄비(나머지)</li>
+              <li>추첨 당일, 계약자와 함께 방문한 지인에게 1만 원 상당의 온누리상품권 또는 스타벅스 기프트카드 증정(지인 한팀당 하나, 가족단위로 증정)</li>
+            </ul>
+          </div>
+          <img src="/images/landing/x-mas/layout4_img.png" width="541" alt="">
+        </div>
+        
         <p class="gift_text03_2">
           <img class="pc" loading="lazy" src="/images/landing/x-mas/text03_2.png" width="100%" alt="">
           <img class="sp" loading="lazy" src="/images/landing/x-mas/text03_2_sp.png" alt="준비물: 인감도장 ,인감증명서 1통(용도 아파트계약용) ,주민등록등본 1통 ,신분증">
@@ -554,7 +666,7 @@
             ※ 경품은 방문 한 팀당 각각 한 개씩 제공
           </li>
           <li>
-            ※ 사은품은 수량한정으로 소진 시 다른 상품으로 대체 될 수 있음<br>(스타벅스 기프트카드: 12월 15일까지 선착순)
+            ※ 사은품은 수량한정으로 소진 시 다른 상품으로 대체 될 수 있음
           </li>
         </ul>
       </div>
