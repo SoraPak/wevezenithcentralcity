@@ -449,6 +449,12 @@
     margin-left: 18vw;
     z-index: 1;
   }
+  .gift_text03::before {
+    width: 28vw;
+    height: 54vw;
+    left: -6vw;
+    bottom: 98vw;
+  }
   .gift_text03 > img {
     width: 60vw;
   }
@@ -477,7 +483,7 @@
     height: auto;
   }
   .gift_text03_2 {
-    margin-top: 2vw;
+    margin-top: 6vw;
   }
   .gift_text03_2 .pc {
     display: none;
@@ -507,7 +513,7 @@
           <img src="/images/landing/x-mas/starbucks_gift.png" width="477" alt="">
           <div class="right">
             <p class="gift_text2">
-              <img src="/images/landing/x-mas/text.png" width="461" alt="박소라 과장과 유닛 투어 후 신현주 팀장과 상담까지 완료하면 스타벅스 기프트카드 증정">
+              <img src="/images/landing/x-mas/text.png" width="461" alt="12월 31일 까지 박소라 과장과 유닛 투어 후 신현주 팀장과 상담까지 완료하면 스타벅스 기프트카드 증정">
             </p>
             <a @click="showPopup('coupon2')" class="couponBtn2">
               <img src="/images/landing/x-mas/btn02.png" width="390" alt="쿠폰 다운로드">
@@ -532,7 +538,7 @@
           </div>
           <div class="right">
             <p class="gift_text03">
-              <img loading="lazy" src="/images/landing/x-mas/text03.png" width="410" alt=" 11월 23일 오후 2시부터 모델하우스에서 박소라 과장을 찾아 계약을 완료하시면 황금열쇠를 선물로 드립니다!">
+              <img loading="lazy" src="/images/landing/x-mas/text03.png" width="410" alt="2월 24일까지 계약을 완료하시면 크리스마스 이브 날 크리스마스 케이크 배달해 드립니다!">
             </p>
           </div>
         </div>
