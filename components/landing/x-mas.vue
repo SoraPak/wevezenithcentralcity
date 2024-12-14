@@ -323,6 +323,20 @@
   height: 80vh;
   display: block;
 }
+
+@media only screen and (max-width: 1920px) {
+  .gift_bg1, .gift_bg2 {
+    background-size: 80vw auto;
+  }
+  .gift_bg1 {
+    right: -1020px;
+  }
+  .gift_bg2 {
+    left: -1020px;
+  }
+  
+}
+
   /* sp */
 @media only screen and (max-width: 950px) {
   .x-mas {
@@ -345,6 +359,7 @@
   }
   .gift_bg1,
   .gift_bg2 {
+    background-size: 100% auto;
     width: 140vw;
   }
   .gift_bg1 {
