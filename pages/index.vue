@@ -70,7 +70,7 @@ import Sp_reviews from '~/components/landing/sp_reviews.vue'
 import Giveaway from '~/components/landing/giveaway.vue'
 import Fall from '~/components/landing/fall.vue'
 import Guide from '~/components/landing/guide.vue'
-import X_mas from '~/components/landing/x-mas.vue'
+import X_mas from '~/components/landing/x-mas2.vue'
 import G_footer from '~/components/footer.vue'
 
 const landingWrap = ref(null);
