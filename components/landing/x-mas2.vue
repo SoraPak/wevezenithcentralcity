@@ -365,7 +365,9 @@
   
   
   .gift_ttl {
-    width: 95vw;
+    width: 114vw;
+    left: 50%;
+    transform: translateX(-50%);
   }
   .gift_ttl > img {
     width: 100%;
