@@ -605,7 +605,7 @@
       <div class="gift_inner">
         <h1 id="giveaway" class="gift_ttl">
           <img src="/images/landing/x-mas/ttl_sub.png"width="756" alt="Happy New year">
-          <img src="/images/landing/x-mas/ttl.png" width="1002" alt="박소라 과장이 국수세트 X 스타벅스 기프트카드 드려요!">
+          <img src="/images/landing/x-mas/ttl.png" width="1002" alt="박소라 과장이 크리스마스선물 드려요!">
         </h1>
         <p class="gift_mainText">
           <img src="/images/landing/x-mas/main_text_v2.png" width="686" alt="박소라 과장을 찾아주신 고객님들께 감사의 마음을 담아 준비한 특별 선물! 모델 하우스 방문 하실 때 안내카운에서 박소라 과장을 찾아 주세요.">
@@ -614,7 +614,7 @@
         <div class="gift_layout4">
           <div class="lft">
             <p class="gift_text04">
-              <img src="/images/landing/x-mas/text04.png" width="491" alt="12월9일(월) ~ 12월15일(일) 추첨전 까지 계약을 완료하시면 전자제품 추첨권 추가 증정! 추첨일: 12월 15일(일) 오후 3시">
+              <img src="/images/landing/x-mas/text04.png" width="491" alt="12/21(토),22일(일),25일(수) 모델하우스 방문하고 행운의 주인공이 되어보세요!!대상: 두산위브더제니스센트럴시티 모델하우스 방문 고객 ※ 카운터에서 박소라 과장 지정 (그냥 오시면 추첨권 배포가 안되요)추첨일: 12월21일(토), 22일(일), 25(수) 오후 3시 (10분전에 추첨권 배포)">
             </p>
             <ol>
               <li>다이슨 청소기</li>
