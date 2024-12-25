@@ -33,9 +33,10 @@ const termsItems = ref([]);
 
 const termsList = [
   { imgSrc: "/images/landing/hero/list01.png", altText: "학정 역 칠곡경대병원 역 더블역세권" },
+  { imgSrc: "/images/landing/hero/list04.png", altText: "계약금 500만원" },
   { imgSrc: "/images/landing/hero/list02.png", altText: "중도금 무이자" },
-  { imgSrc: "/images/landing/hero/list03.png", altText: "전매 무제한" },
-  { imgSrc: "/images/landing/hero/list04.png", altText: "계약금 500만원" }
+  { imgSrc: "/images/landing/hero/list03.png", altText: "전매 무제한" }
+  
 ];
 
 // termsItems 배열에 요소를 추가하는 함수
