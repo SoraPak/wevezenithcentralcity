@@ -58,6 +58,61 @@
 </template>
 
 <style scoped>
+@keyframes float1 {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(-10px, 5px) rotate(-2deg);
+  }
+  50% {
+    transform: translate(10px, -10px) rotate(1deg);
+  }
+  75% {
+    transform: translate(-5px, 10px) rotate(3deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes float2 {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(15px, -5px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-15px, 10px) rotate(-1.5deg);
+  }
+  75% {
+    transform: translate(5px, -10px) rotate(2deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes float3 {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(-12px, 8px) rotate(-1deg);
+  }
+  50% {
+    transform: translate(8px, -12px) rotate(1.5deg);
+  }
+  75% {
+    transform: translate(-6px, 12px) rotate(-2deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+
 .newYear {
   position: relative;
   min-height: 200px;
@@ -133,6 +188,7 @@
   right: -60px;
   top: 480px;
   opacity: .8;
+  animation: float1 8s infinite ease-in-out alternate;
 }
 .newYear_inner_bg02 {
   width: 117px;
@@ -141,6 +197,7 @@
   background-size: 100% auto;
   top: 70px;
   opacity: .7;
+  animation: float2 10s infinite ease-in-out alternate;
 }
 .ttl {
   width: 474px;
@@ -270,22 +327,26 @@
   width: 26%;
   right: 0;
   top: -1%;
+  animation: float3 9s infinite ease-in-out alternate;
 }
 .ttl_cir > img:nth-child(2) {
   width: 12%;
   right: -3%;
   bottom: 20%;
   opacity: .7;
+  animation: float1 11s infinite ease-in-out alternate;
 }
 .ttl_cir > img:nth-child(3) {
   width: 11%;
   left: 6%;
   top: 10%;
+  animation: float2 7s infinite ease-in-out alternate;
 }
 .ttl_cir > img:nth-child(4) {
   width: 26%;
   left: 1%;
   bottom: 0;
+  animation: float3 12s infinite ease-in-out alternate;
 }
 .comment {
   font-size: 30px;
