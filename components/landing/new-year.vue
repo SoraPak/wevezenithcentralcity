@@ -12,11 +12,11 @@
           <img src="/images/landing/new-year/gcl.png" alt="">
         </span>
         <span class="ttl_g">
-          <img src="/images/landing/new-year/logo.png" alt="">
-          <img src="/images/landing/new-year/ttl01.png" alt="">
-          <img src="/images/landing/new-year/ttl02.png" alt="">
-          <img src="/images/landing/new-year/ttl03.png" alt="">
-          <img src="/images/landing/new-year/ttl04.png" alt="">
+          <img src="/images/landing/new-year/logo.png" alt="두산위브더제니스 센트럴시티">
+          <img src="/images/landing/new-year/ttl01.png" alt="신년운세">
+          <img src="/images/landing/new-year/ttl02.png" alt="X">
+          <img src="/images/landing/new-year/ttl03.png" alt="타로점">
+          <img src="/images/landing/new-year/ttl04.png" alt="8만원 상당">
         </span>
         <span class="ttl_bg">
           <img src="/images/landing/new-year/cloud01.png" alt="">
