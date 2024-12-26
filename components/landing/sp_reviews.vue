@@ -209,6 +209,9 @@ onMounted(() => {
   background: #be9167;
   color: #fff;
   padding-top: 14vw;
+  margin-bottom: -21vw;
+        position: relative;
+        z-index: 3;
 }
 
 .ttl {

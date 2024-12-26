@@ -374,8 +374,10 @@ onMounted(() => {
   background: #be9167;
   color: #fff;
   padding-top: 30px;
-  /* padding-bottom: 255px; */
-  padding-bottom: 0;
+  padding-bottom: 91px;
+  position: relative;
+  z-index: 3;
+  margin-bottom: -40px;
 }
 
 .ttl {
