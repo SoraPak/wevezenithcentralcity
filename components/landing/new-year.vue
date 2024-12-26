@@ -1,6 +1,6 @@
 <template>
   
-  <section class="newYear">
+  <section id="giveaway" class="newYear">
     <div class="newYear_bg01"></div>
     <div class="newYear_bg02"></div>
     <div class="newYear_inner">
