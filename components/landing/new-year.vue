@@ -20,7 +20,9 @@
         </span>
         <span class="ttl_bg">
           <img src="/images/landing/new-year/cloud01.png" alt="">
-          <img src="/images/landing/new-year/cloud02.png" alt="">
+          <img class="cloud-loop" src="/images/landing/new-year/cloud02.png" alt="">
+          <img class="cloud-loop" src="/images/landing/new-year/cloud02.png" alt="">
+          <img class="cloud-loop" src="/images/landing/new-year/cloud02.png" alt="">
           <img src="/images/landing/new-year/mount.png" alt="">
           <img src="/images/landing/new-year/cloud03.png" alt="">
         </span>
@@ -111,8 +113,34 @@
     transform: translate(0, 0) rotate(0deg);
   }
 }
-
-
+@keyframes cloudMoveHorizontal {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes cloudFloat {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 .newYear {
   position: relative;
   min-height: 200px;
@@ -293,23 +321,32 @@
   bottom: 7%;
   left: 4%;
 }
-.ttl_bg > img:nth-child(2) {
+.cloud-loop {
   width: 100%;
   height: auto;
   bottom: 10%;
+  animation: cloudMoveHorizontal 20s linear infinite;
 }
 .ttl_bg > img:nth-child(3) {
+  animation-delay: 6.66s;
+}
+
+.ttl_bg > img:nth-child(4) {
+  animation-delay: 13.33s;
+}
+.ttl_bg > img:nth-child(5) {
   width: 130%;
   height: auto;
   left: 50%;
   transform: translateX(-50%);
   bottom: -5%;
 }
-.ttl_bg > img:nth-child(4) {
+.ttl_bg > img:nth-child(6) {
   width: 56%;
   height: auto;
   right: 0;
   bottom: 5%;
+  animation: cloudFloat 8s infinite ease-in-out;
 }
 .ttl_cir {
   display: block;
