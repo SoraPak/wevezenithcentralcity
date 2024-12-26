@@ -12,11 +12,11 @@
           <img src="/images/landing/new-year/gcl.png" alt="">
         </span>
         <span class="ttl_g">
-          <img src="/images/landing/new-year/logo.png" alt="두산위브더제니스 센트럴시티">
-          <img src="/images/landing/new-year/ttl01.png" alt="신년운세">
-          <img src="/images/landing/new-year/ttl02.png" alt="X">
-          <img src="/images/landing/new-year/ttl03.png" alt="타로점">
-          <img src="/images/landing/new-year/ttl04.png" alt="8만원 상당">
+          <img class="fade-in" src="/images/landing/new-year/logo.png" alt="두산위브더제니스 센트럴시티">
+          <img class="fade-in" src="/images/landing/new-year/ttl01.png" alt="신년운세">
+          <img class="fade-in" src="/images/landing/new-year/ttl02.png" alt="X">
+          <img class="fade-in" src="/images/landing/new-year/ttl03.png" alt="타로점">
+          <img class="fade-in" src="/images/landing/new-year/ttl04.png" alt="8만원 상당">
         </span>
         <span class="ttl_bg">
           <img src="/images/landing/new-year/cloud01.png" alt="">
@@ -34,8 +34,9 @@
         </span>
       </h1>
       <p class="comment">
-        박소라 과장을 찾아오시면 <br>8만 원 상당의 새해 운세와 타로 점이 무료!<br>
-        새해 행운, 지금 모델하우스에서 만나보세요!
+        <span class="fade-in">박소라 과장을 찾아오시면</span><br>
+        <span class="fade-in">8만 원 상당의 새해 운세와 타로 점이 무료!</span><br>
+        <span class="fade-in">새해 행운, 지금 모델하우스에서 만나보세요!</span>
       </p>
       <div class="details">
         <dl>
@@ -115,13 +116,10 @@
 }
 @keyframes cloudMoveHorizontal {
   0% {
-    transform: translateX(-100%);
-  }
-  50% {
-    transform: translateX(10%);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(100%);
+    transform: translateX(200%);
   }
 }
 @keyframes cloudFloat {
@@ -141,6 +139,17 @@
     transform: translateY(0px);
   }
 }
+.fade-in {
+  opacity: 0;
+  transform: translateY(50px) scale(0.9);
+  transition: all 1s cubic-bezier(0.6, 0.05, 0.28, 0.91);
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
 .newYear {
   position: relative;
   min-height: 200px;
@@ -327,12 +336,18 @@
   bottom: 10%;
   animation: cloudMoveHorizontal 20s linear infinite;
 }
+.ttl_bg > img:nth-child(2) {
+  left: -70%; 
+  animation-delay: 0s;
+}
 .ttl_bg > img:nth-child(3) {
-  animation-delay: 6.66s;
+  left: -100%;
+  animation-delay: 5s;
 }
 
 .ttl_bg > img:nth-child(4) {
-  animation-delay: 13.33s;
+  left: -130%;
+  animation-delay: 10s;
 }
 .ttl_bg > img:nth-child(5) {
   width: 130%;
@@ -499,4 +514,29 @@
   }
 }
 </style>
+
+<script setup>
+import { onMounted } from 'vue';
+
+onMounted(() => {
+  const elements = document.querySelectorAll('.fade-in');
+  const options = {
+    threshold: 0.1, // 요소가 10% 보일 때 애니메이션 트리거
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        // 요소가 보일 때 순서대로 클래스 추가
+        setTimeout(() => {
+          entry.target.classList.add('show');
+        }, index * 300); // 요소 간 300ms 지연
+      }
+    });
+  }, options);
+
+  elements.forEach((el) => observer.observe(el));
+});
+</script>
+
 
