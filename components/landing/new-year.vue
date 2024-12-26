@@ -108,6 +108,7 @@
 .newYear_bg02 {
   background: url("/images/landing/new-year/bg02.png") repeat center center;
   background-size: 960px auto;
+  opacity: 0.5%;
 }
 .newYear_inner {
   max-width: 840px;
@@ -349,6 +350,14 @@
   .newYear_inner {
     padding-top: 34vw;
     padding-bottom: 24vw;
+  }
+  .newYear_bg01, .newYear_bg02 {
+    left: -40vw;
+    right: -40vw;
+  }
+  .newYear_bg03 {
+    height: 59vw;
+    top: -1vw;
   }
   .newYear_inner_bg01 {
     width: 21vw;
