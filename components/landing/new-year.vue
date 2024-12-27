@@ -279,7 +279,7 @@
 }
 .ttl_g {
   position: relative;
-  z-index: 4;
+  z-index: 3;
 }
 .ttl_g > img {
   display: block;
@@ -297,6 +297,7 @@
   width: 15%;
   margin-top: -6%;
   position: relative;
+  z-index: 4;
 }
 .ttl_g > img:nth-child(4) {
   width: 71%;
