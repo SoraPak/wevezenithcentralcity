@@ -17,30 +17,32 @@
           <img class="img01" ref="img01Ref" src="/images/landing/guide/img01.png" width="410" alt="">
         </a>
       </div>
-      <div class="job">
-        <a @click="showPopup('jobPopup')"><img src="/images/landing/guide/text_ job.png" width="379" alt="분양팀에서 새로운 가족을 모십니다!"><i></i></a>
-      </div>
-      <div class="section01">
-        <!-- div class="location">
-          <img loading="lazy" src="/images/landing/guide/map.jpg" width="309" alt="">
-          <div class="right">
-            <dl>
-              <dt>모델하우스</dt>
-              <dd>대구광역시 북구 태전동 1213번지<br>(대구과학대 정문 앞 주차장)</dd>
-            </dl>
-            <a class="btMap" href="https://kko.to/P0aas7dXbe" target="_blank"> 카카오지도 <br>바로가기</a>
-            <p class="tel"><img loading="lazy" src="/images/landing/guide/img_tel.png" width="438" alt="두산위브더제니스 센트럴시티 전화번호:15551924"></p>
-          </div>
-        </div -->
-        <div class="left">
-          <p class="tel"><img loading="lazy" src="/images/landing/guide/img_tel.png" width="410" alt="두산위브더제니스 센트럴시티 전화번호:15551924"></p>
-          <p class="telText"><strong>일로 이사</strong> 오소!</p>
-          <p class="comment">모델하우스는 <strong>사전예약 및 담당자 지정제</strong>로 운영되고 있습니다(당일예약 가능). 모델하우스 카운터에서 <strong>박소라 과장</strong>을 찾아주세요.<br class="pc_br"><span style="display: inline-block; font-weight: bolder; font-size: 83%; color: #e20000;">그냥 오시면 선물이 제공 안되요ㅠㅠ</span></p>
+      <div class="section01Wrap">
+        <div class="job">
+          <a @click="showPopup('jobPopup')"><img src="/images/landing/guide/text_ job.png" width="379" alt="분양팀에서 새로운 가족을 모십니다!"><i></i></a>
         </div>
-        <ul class="links">
-          <li class="kakao"><a href="https://open.kakao.com/me/wevehj" target="_blank">카톡으로<br>모델하우스<br>투어 예약하기</a></li>
-          <li class="call"><a href="tel:1555-1924" target="_blank">전화로<br>모델하우스<br>투어 예약하기</a></li>
-        </ul>
+        <div class="section01">
+          <!-- div class="location">
+            <img loading="lazy" src="/images/landing/guide/map.jpg" width="309" alt="">
+            <div class="right">
+              <dl>
+                <dt>모델하우스</dt>
+                <dd>대구광역시 북구 태전동 1213번지<br>(대구과학대 정문 앞 주차장)</dd>
+              </dl>
+              <a class="btMap" href="https://kko.to/P0aas7dXbe" target="_blank"> 카카오지도 <br>바로가기</a>
+              <p class="tel"><img loading="lazy" src="/images/landing/guide/img_tel.png" width="438" alt="두산위브더제니스 센트럴시티 전화번호:15551924"></p>
+            </div>
+          </div -->
+          <div class="left">
+            <p class="tel"><img loading="lazy" src="/images/landing/guide/img_tel.png" width="410" alt="두산위브더제니스 센트럴시티 전화번호:15551924"></p>
+            <p class="telText"><strong>일로 이사</strong> 오소!</p>
+            <p class="comment">모델하우스는 <strong>사전예약 및 담당자 지정제</strong>로 운영되고 있습니다(당일예약 가능). 모델하우스 카운터에서 <strong>박소라 과장</strong>을 찾아주세요.<br class="pc_br"><span style="display: inline-block; font-weight: bolder; font-size: 83%; color: #e20000;">그냥 오시면 선물이 제공 안되요ㅠㅠ</span></p>
+          </div>
+          <ul class="links">
+            <li class="kakao"><a href="https://open.kakao.com/me/wevehj" target="_blank">카톡으로<br>모델하우스<br>투어 예약하기</a></li>
+            <li class="call"><a href="tel:1555-1924" target="_blank">전화로<br>모델하우스<br>투어 예약하기</a></li>
+          </ul>
+        </div>
       </div>
 
     </div>
@@ -595,7 +597,7 @@ onMounted(() => {
     max-width: 840px;
     margin: 0 auto;
     position: relative;
-    height: 780px;
+    padding-top: 500px;
   }
 
   .ttl{
@@ -715,11 +717,17 @@ onMounted(() => {
     left: 50%;
     transform: translateX(-50%);
   }
+  .section01Wrap {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    top: -110px;
+  }
   .job {
     display: block;
     width: 480px;
     position: absolute;
-    top: 680px;
+    bottom: -61px;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -785,15 +793,14 @@ onMounted(() => {
   }
 
   .section01 {
-    width: 100%;
+    
     border: 3px solid #0d2161;
-    margin: 0 auto;
+    
     background: #fff;
     color: #082379;
     padding: 25px;
-    position: absolute;
     border-radius: 25px;
-    top: 400px;
+    
     font-size: 22px;
     box-sizing: border-box;
     display: flex;
@@ -1141,10 +1148,16 @@ onMounted(() => {
     height: 8.5vw;
     bottom: 3.5vw;
   }
-  
+
+
+  .section01Wrap {
+    width: 94vw;
+    top: auto;
+    left: auto;
+  }
   .job {
     width: 88vw;
-    top: 190vw;
+    bottom: -15vw;
   }
   .job::before,
   .job::after {
@@ -1187,17 +1200,13 @@ onMounted(() => {
   }
 
   .section01 {
-    width: 94vw;
     border: 0.6vw solid #0d2161;
     padding: 5vw;
     border-radius: 5vw;
-    top: auto;
     font-size: 5vw;
-    left: auto;
     position: relative;
     display: table-cell;
     vertical-align: middle;
-    height: 104vw;
   }
   /*
     .location {
