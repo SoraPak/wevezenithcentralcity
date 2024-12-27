@@ -297,7 +297,6 @@
   width: 15%;
   margin-top: -6%;
   position: relative;
-  z-index: 4;
 }
 .ttl_g > img:nth-child(4) {
   width: 71%;
@@ -344,6 +343,7 @@
 .ttl_bg > img:nth-child(3) {
   left: -100%;
   animation-delay: 5s;
+  z-index: 4;
 }
 
 .ttl_bg > img:nth-child(4) {
