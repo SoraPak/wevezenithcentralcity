@@ -82,10 +82,24 @@ export default defineNuxtConfig({
           `,
           type: 'text/javascript',
           charset: 'utf-8'
+        },
+        // Boraware Script 추가
+        {
+          hid: 'boraware-script',
+          innerHTML: `
+            var protect_id = 'h574';
+          `,
+          type: 'text/javascript'
+        },
+        {
+          hid: 'boraware-src',
+          src: '//script.boraware.kr/protect_script_v2.js',
+          async: true
         }
       ],
       __dangerouslyDisableSanitizersByTagID: {
-        'gtag-config': ['innerHTML']
+        'gtag-config': ['innerHTML'],
+        'boraware-script': ['innerHTML']
       }
     }
   },
@@ -97,10 +111,7 @@ export default defineNuxtConfig({
     hostname: 'https://xn--hu1bq8p65bh1h6oby7bg90c.kr',
     gzip: true,
     routes: async () => {
-      // 동적으로 라우트를 가져오는 부분 (예: 데이터베이스나 API로부터 가져옴)
-      const staticRoutes = [
-        '/'
-      ];
+      const staticRoutes = ['/'];
     },
   },
   robots: {
@@ -108,4 +119,4 @@ export default defineNuxtConfig({
     Disallow: '',
     Sitemap: 'https://xn--hu1bq8p65bh1h6oby7bg90c.kr/sitemap.xml'
   }
-})
+});
