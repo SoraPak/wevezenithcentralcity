@@ -39,11 +39,11 @@
         <span class="fade-in">새해 행운, 지금 모델하우스에서 만나보세요!</span>
       </p>
       <div class="details">
-        <dl>
+        <dl class="fade-in">
           <dt>기간: </dt>
           <dd>12월 한달 토・일 오후 1~5시</dd>
         </dl>
-        <dl>
+        <dl class="fade-in">
           <dt>대상: </dt>
           <dd>두산위브더제니스 센트럴시티<br>모델하우스 방문자 (예약필수)</dd>
         </dl>
@@ -418,6 +418,7 @@
   margin-top: 30px;
   text-align: center;
   color: #deff00;
+  word-break: keep-all;
 }
 .details {
   display: table;
@@ -511,9 +512,12 @@
     font-size: 5vw;
     margin-top: 3vw;
   }
+  .details dt {
+    padding-right: 2vw;
+  }
   .comment02 {
-    font-size: 7vw;
-    padding: 3vw;
+    font-size: 6.3vw;
+    padding: 2vw 3vw;
     margin: 5vw auto;
   }
   .call {
