@@ -279,7 +279,7 @@
 }
 .ttl_g {
   position: relative;
-  z-index: 3;
+  z-index: 4;
 }
 .ttl_g > img {
   display: block;
