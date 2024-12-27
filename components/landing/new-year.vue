@@ -530,6 +530,7 @@
     font-size: 6vw;
     padding: 0vw 3vw;
     bottom: -7vw;
+    border-radius: 2vw;
   }
 }
 </style>
