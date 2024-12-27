@@ -92,7 +92,6 @@ export default defineNuxtConfig({
           type: 'text/javascript'
         },
         {
-          hid: 'boraware-src',
           src: '//script.boraware.kr/protect_script_v2.js',
           async: true
         }
