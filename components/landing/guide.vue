@@ -793,14 +793,12 @@ onMounted(() => {
   }
 
   .section01 {
-    
+    position: relative;
     border: 3px solid #0d2161;
-    
     background: #fff;
     color: #082379;
     padding: 25px;
     border-radius: 25px;
-    
     font-size: 22px;
     box-sizing: border-box;
     display: flex;
