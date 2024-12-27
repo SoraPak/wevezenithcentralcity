@@ -35,7 +35,7 @@
       </h1>
       <p class="comment">
         <span class="fade-in">박소라 과장을 찾아오시면</span><br>
-        <span class="fade-in">8만 원 상당의 새해 운세와 타로 점이 무료!</span><br>
+        <span class="fade-in">8만 원 상당의 새해 운세 타로 점이 무료!</span><br>
         <span class="fade-in">새해 행운, 지금 모델하우스에서 만나보세요!</span>
       </p>
       <div class="details">
