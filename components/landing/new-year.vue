@@ -527,10 +527,12 @@
     width: 85vw;
   }
   .call > span {
-    font-size: 6vw;
     padding: 0vw 3vw;
     bottom: -7vw;
     border-radius: 2vw;
+    font-size: 6vw;
+    line-height: 6vw;
+    padding: 2.5vw 3vw 2vw 2vw;
   }
 }
 </style>
