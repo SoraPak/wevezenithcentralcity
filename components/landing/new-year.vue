@@ -11,13 +11,6 @@
           <img src="/images/landing/new-year/rcl.png" alt="">
           <img src="/images/landing/new-year/gcl.png" alt="">
         </span>
-        <span class="ttl_g">
-          <img class="fade-in" src="/images/landing/new-year/logo.png" alt="두산위브더제니스 센트럴시티">
-          <img class="fade-in" src="/images/landing/new-year/ttl01.png" alt="신년운세">
-          <img class="fade-in" src="/images/landing/new-year/ttl02.png" alt="X">
-          <img class="fade-in" src="/images/landing/new-year/ttl03.png" alt="타로점">
-          <img class="fade-in" src="/images/landing/new-year/ttl04.png" alt="8만원 상당">
-        </span>
         <span class="ttl_bg">
           <img src="/images/landing/new-year/cloud01.png" alt="">
           <img class="cloud-loop" src="/images/landing/new-year/cloud02.png" alt="">
@@ -31,6 +24,13 @@
           <img src="/images/landing/new-year/rcir02.png" alt="">
           <img src="/images/landing/new-year/gcir02.png" alt="">
           <img src="/images/landing/new-year/gcir03.png" alt="">
+        </span>
+        <span class="ttl_g">
+          <img class="fade-in" src="/images/landing/new-year/logo.png" alt="두산위브더제니스 센트럴시티">
+          <img class="fade-in" src="/images/landing/new-year/ttl01.png" alt="신년운세">
+          <img class="fade-in" src="/images/landing/new-year/ttl02.png" alt="X">
+          <img class="fade-in" src="/images/landing/new-year/ttl03.png" alt="타로점">
+          <img class="fade-in" src="/images/landing/new-year/ttl04.png" alt="8만원 상당">
         </span>
       </h1>
       <p class="comment">
