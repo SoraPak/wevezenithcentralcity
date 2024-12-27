@@ -116,10 +116,18 @@
 }
 @keyframes cloudMoveHorizontal {
   0% {
-    transform: translateX(0);
+    transform: translateX(-100%);
+    opacity: 0; /* 처음에 투명 */
+  }
+  10% {
+    opacity: 1; /* 나타나는 효과 */
+  }
+  90% {
+    opacity: 1; /* 유지 */
   }
   100% {
     transform: translateX(200%);
+    opacity: 0; /* 사라지는 효과 */
   }
 }
 @keyframes cloudFloat {
@@ -333,22 +341,25 @@
 .cloud-loop {
   width: 100%;
   height: auto;
-  bottom: 10%;
+  
   animation: cloudMoveHorizontal 20s linear infinite;
 }
 .ttl_bg > img:nth-child(2) {
   left: -70%; 
   animation-delay: 0s;
+  bottom: 10%;
 }
 .ttl_bg > img:nth-child(3) {
   left: -100%;
   animation-delay: 5s;
   z-index: 4;
+  bottom: 20%;
 }
 
 .ttl_bg > img:nth-child(4) {
   left: -130%;
   animation-delay: 10s;
+  bottom: 15%;
 }
 .ttl_bg > img:nth-child(5) {
   width: 130%;
