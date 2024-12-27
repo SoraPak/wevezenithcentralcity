@@ -435,6 +435,9 @@
   display: table-cell;
   padding: 5px 0;
 }
+.details dt {
+  padding-right: 10px;
+}
 .comment02 {
   font-size: 40px;
   font-weight: 800;
