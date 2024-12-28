@@ -1,5 +1,6 @@
 <template>
   <div class="landingWrap" ref="landingWrap">
+    <Interacts />
     <R_nav class="rNav" />
     <Sp_r_nav class="sp_rNav" />
     <Hero />
@@ -56,6 +57,7 @@ definePageMeta({
 
 // 섹션 컴포넌트들 불러오기
 import Sp_r_nav from '~/components/landing/sp_r_nav.vue'
+import Interacts from '~/components/landing/interacts.vue'
 import R_nav from '~/components/landing/r_nav.vue'
 import Hero from '~/components/landing/hero.vue'
 import Point from '~/components/landing/point.vue'
