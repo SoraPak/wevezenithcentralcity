@@ -1,6 +1,6 @@
 <template>
   <div class="landingWrap" ref="landingWrap">
-    <Interacts />
+    <!-- Interacts / -->
     <R_nav class="rNav" />
     <Sp_r_nav class="sp_rNav" />
     <Hero />
