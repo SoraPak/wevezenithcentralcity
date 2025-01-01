@@ -18,7 +18,7 @@
     <!-- Fall / -->
     <G_footer />
   </div>
- 
+
 </template>
 
 <style scoped>
