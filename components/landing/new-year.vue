@@ -41,7 +41,7 @@
       <div class="details">
         <dl class="fade-in">
           <dt>기간: </dt>
-          <dd>12월 한달 토・일 오후 1~5시</dd>
+          <dd>1월 한달 토・일 오후 1~5시</dd>
         </dl>
         <dl class="fade-in">
           <dt>대상: </dt>
