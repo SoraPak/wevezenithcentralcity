@@ -33,11 +33,6 @@
           <img class="fade-in" src="/images/landing/new-year/ttl04.png" alt="8만원 상당">
         </span>
       </h1>
-      <p class="comment">
-        <span class="fade-in">박소라 과장을 찾아오시면</span><br>
-        <span class="fade-in">8만 원 상당의 새해 운세 타로 점이 무료!</span><br>
-        <span class="fade-in">새해 행운, 지금 모델하우스에서 만나보세요!</span>
-      </p>
       <div class="details">
         <dl class="fade-in">
           <dt>기간: </dt>
@@ -48,6 +43,23 @@
           <dd>두산위브더제니스 센트럴시티<br>모델하우스 방문자 (예약필수)</dd>
         </dl>
       </div>
+      <p class="comment">
+        <span class="fade-in">박소라 과장을 찾아오시면</span><br>
+        <span class="fade-in">8만 원 상당의 새해 운세 타로 점이 무료!</span><br>
+        <span class="fade-in">새해 행운, 지금 모델하우스에서 만나보세요!</span>
+      </p>
+      
+      <p class="comment03">
+        <span class="comment03_row">
+          <span class="fade-in">- 동진철학원 원장</span>
+          <span class="fade-in">- 북국성 사주 타로카드 원장</span>
+        </span>
+        <span class="comment03_row">
+          <span class="fade-in">- 타로상담사 1급</span>
+          <span class="fade-in">- 명리 심리상담사 1급</span>
+        </span>     
+        <span class="fade-in">- 색채 심리상담사 1급</span>
+      </p>
       <p class="comment02">운세만 보고 가셔도 됩니다!!</p>
       <p class="call">
         <img src="/images/landing/new-year/call.png" alt="">
@@ -446,7 +458,32 @@
   display: table;
   padding: 15px;
   background-color: #fece00;
-  margin: 20px auto;
+  margin: 30px auto;
+}
+.comment03 {
+  margin: 30px auto;
+  font-size: 20px;
+  line-height: 160%;
+  width: 585px;
+  display: table;
+  border: 2px solid;
+  border-radius: 5px;
+  padding: 10px 0;
+}
+.comment03 > span {
+  padding: 0 20px;
+}
+.comment03 .comment03_row {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.comment03_row span {
+  display: block;
+  width: 50%;
+  flex: 1;
+  padding: 0 20px;
 }
 .call {
   display: table;
@@ -519,6 +556,27 @@
     font-size: 6.3vw;
     padding: 2vw 3vw;
     margin: 5vw auto;
+  }
+  .comment03 {
+    margin: 6vw auto;
+    font-size: 5vw;
+    width: auto;
+    border: .6vw solid;
+    border-radius: 5px;
+    padding: 4vw;
+  }
+  .comment03 > span {
+    padding: 0;
+  }
+  .comment03 .comment03_row {
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+  .comment03_row span {
+    display: block;
+    width: auto;
+    padding: 0;
   }
   .call {
     margin: 5vw auto;
