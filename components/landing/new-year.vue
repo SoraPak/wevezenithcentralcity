@@ -559,11 +559,11 @@
   }
   .comment03 {
     margin: 6vw auto;
-    font-size: 5vw;
+    font-size: 4.5vw;
     width: auto;
     border: .6vw solid;
     border-radius: 5px;
-    padding: 4vw;
+    padding: 4vw 7vw;
   }
   .comment03 > span {
     padding: 0;
