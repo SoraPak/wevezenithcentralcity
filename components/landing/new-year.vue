@@ -33,6 +33,12 @@
           <img class="fade-in" src="/images/landing/new-year/ttl04.png" alt="8만원 상당">
         </span>
       </h1>
+      <p class="comment">
+        <span class="fade-in">박소라 과장을 찾아오시면</span><br>
+        <span class="fade-in">8만 원 상당의 새해 운세 타로 점이 무료!</span><br>
+        <span class="fade-in">새해 행운, 지금 모델하우스에서 만나보세요!</span>
+      </p>
+      
       <div class="details">
         <dl class="fade-in">
           <dt>기간: </dt>
@@ -43,11 +49,7 @@
           <dd>두산위브더제니스 센트럴시티<br>모델하우스 방문자 (예약필수)</dd>
         </dl>
       </div>
-      <p class="comment">
-        <span class="fade-in">박소라 과장을 찾아오시면</span><br>
-        <span class="fade-in">8만 원 상당의 새해 운세 타로 점이 무료!</span><br>
-        <span class="fade-in">새해 행운, 지금 모델하우스에서 만나보세요!</span>
-      </p>
+      
       
       <p class="comment03">
         <span class="comment03_row">
