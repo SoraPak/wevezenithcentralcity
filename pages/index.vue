@@ -13,9 +13,9 @@
     <Community />
     <Reviews class="reviews" />
     <Sp_reviews class="sp_reviews" />
-    <New_year />
+    <Newyear />
+    <!-- Event_2501 / -->
     <Guide/>
-    <!-- Fall / -->
     <G_footer />
   </div>
 
@@ -70,9 +70,10 @@ import Community from '~/components/landing/community.vue'
 import Reviews from '~/components/landing/reviews.vue'
 import Sp_reviews from '~/components/landing/sp_reviews.vue'
 import Giveaway from '~/components/landing/giveaway.vue'
+import Newyear from '~/components/landing/new-year.vue'
 import Fall from '~/components/landing/fall.vue'
 import Guide from '~/components/landing/guide.vue'
-import New_year from '~/components/landing/new-year.vue'
+import Event_2501 from '~/components/landing/event_2501.vue'
 import G_footer from '~/components/footer.vue'
 
 const landingWrap = ref(null);
