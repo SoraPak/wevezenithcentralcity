@@ -683,7 +683,7 @@ onMounted(chirpRandomly);
   }
   .sec02 {
     margin-top: 6vw;
-    padding-bottom: 21vw;
+    padding-bottom: 24vw;
   }
   .sec02_text01 > img {
     width: 73vw;
