@@ -30,7 +30,7 @@
         </div>
         
       </div>
-      <div class="ps01_08"></div>
+      <div class="ps01_08" :class="{ on: isChirping }"></div>
       <p class="ps01_remark">※이미지는 참고용으로 실제와 다를 수 있으며, 사정에 따라 상품이 변경될 수 있습니다.</p>
       
       <div class="sec02">
@@ -97,6 +97,54 @@ onMounted(() => {
     observer.observe(el);
   });
 });
+
+const isChirping = ref(false);
+
+const chirpRandomly = () => {
+  setTimeout(() => {
+    isChirping.value = true;
+
+    // 빠르게 두 번 짹짹 or 세 번 랜덤 짹짹
+    const chirpPattern = Math.random();
+    let chirpDuration = 150; // 기본 짹짹 지속 시간
+
+    setTimeout(() => {
+      isChirping.value = false;
+
+      if (chirpPattern < 0.4) {
+        // 짹! (한 번만)
+        chirpRandomly();
+      } else if (chirpPattern < 0.7) {
+        // 짹! 짹! (빠르게 두 번)
+        setTimeout(() => {
+          isChirping.value = true;
+          setTimeout(() => {
+            isChirping.value = false;
+            chirpRandomly();
+          }, 120);
+        }, 100);
+      } else {
+        // 짹! 짹! 짹! (세 번 랜덤 패턴)
+        setTimeout(() => {
+          isChirping.value = true;
+          setTimeout(() => {
+            isChirping.value = false;
+            setTimeout(() => {
+              isChirping.value = true;
+              setTimeout(() => {
+                isChirping.value = false;
+                chirpRandomly();
+              }, 100);
+            }, 150);
+          }, 120);
+        }, 100);
+      }
+    }, chirpDuration);
+
+  }, Math.random() * 1500 + 500); // 0.5~2초 랜덤 대기 후 짹짹
+};
+
+onMounted(chirpRandomly);
 </script>
 
 <style scoped>
@@ -374,12 +422,18 @@ onMounted(() => {
   }
   .ps01_08 {
     width: 150px;
-    height: 109px;
+    height: 111px;
     background: url("/images/landing/event(2501)/ps01_08.png") no-repeat center top;
     background-size: 100% auto;
     top: 519px;
     left: 95px;
+    transition: background-image 0.1s ease-in-out;
+
   }
+  .ps01_08.on {
+    background-image: url("/images/landing/event(2501)/ps01_08_on.png");
+  }
+
   .ps01_remark {
     font-size: 15px;
     text-align: center;
@@ -497,6 +551,15 @@ onMounted(() => {
 @media only screen and (max-width: 950px) {
   .event2501 {
     background-size: 333vw auto;
+    padding-top: 13vw;
+    z-index: 3;
+    background-position: center -41vw;
+    margin-top: 6vw;
+  }
+  .event2501::before {
+    background-size: 110vw;
+    top: -42vw;
+    height: 50vw;
   }
   .ttl {
     width: 85vw;
@@ -506,7 +569,7 @@ onMounted(() => {
   }
   .b01 {
     width: 44vw;
-    left: -14vw;
+    left: -18vw;
     height: 24vw;
     top: 3vw;
   }
@@ -600,9 +663,9 @@ onMounted(() => {
   }
   .ps01_08 {
     width: 30vw;
-    height: 22vw;
+    height: 23vw;
     left: -9vw;
-    top: 96vw;
+    top: 95.5vw;
   }
   .ps01_08 > span {
   }
