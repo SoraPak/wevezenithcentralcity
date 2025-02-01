@@ -256,7 +256,8 @@ onMounted(() => {
     height: 99px;
     background: url("/images/landing/event(2501)/b04.png") no-repeat center top;
     background-size: 100% auto;
-    left: 20px;
+    left: 90px;
+    top: 340px;
   }
   .ttl {
     width: 457px;
@@ -520,6 +521,12 @@ onMounted(() => {
     right: -38vw;
     height: 70vw;
     top: 11vw;
+  }
+  .b04 {
+    width: 20vw;
+    height: 20vw;
+    left: 75vw;
+    top: 115vw;
   }
   .sec01_text01 > img {
     width: 75vw;
