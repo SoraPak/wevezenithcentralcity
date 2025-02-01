@@ -655,8 +655,8 @@ onMounted(() => {
     height: 66vw;
   }
   .ps02_04 > span {
-    left: 22vw;
-    bottom: 13vw;
+    left: 17vw;
+    bottom: 43vw;
     z-index: 2;
   }
   .ps02_05 {
