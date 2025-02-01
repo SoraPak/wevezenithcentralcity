@@ -13,8 +13,8 @@
     <Community />
     <Reviews class="reviews" />
     <Sp_reviews class="sp_reviews" />
-    <Newyear />
-    <!-- Event_2501 / -->
+    <!-- Newyear / -->
+    <Event_2501 />
     <Guide/>
     <G_footer />
   </div>

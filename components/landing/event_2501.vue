@@ -34,7 +34,7 @@
       <p class="ps01_remark">※이미지는 참고용으로 실제와 다를 수 있으며, 사정에 따라 상품이 변경될 수 있습니다.</p>
       
       <div class="sec02">
-        <p class="sec02_text01"><img loading="lazy" src="/images/landing/event(2501)/sec02_text01.png" width="403" alt="신년맞이 방문자 경품 행사" /></p>
+        <p class="sec02_text01"><img loading="lazy" src="/images/landing/event(2501)/sec02_text01.png" width="411" alt="신년맞이 방문자 경품 행사" /></p>
         <p class="sec02_text02"><img loading="lazy" src="/images/landing/event(2501)/sec02_text02.png" width="628" alt="2월 1일(토) 모델하우스 방문하시면 경품 추첨권을드려요!" /></p>
         <p class="sec02_text03"><img loading="lazy" src="/images/landing/event(2501)/sec02_text03.png" width="471" alt="추첨 일시: 2025년 2월 1일(토) 오후 3시(10분 전 추첨권 배포) | 배포 조건: 박소라 과장 찾아오셔서 팀장 상담 완료 시(예약필수)" /></p>
         <div class="ps02G">
@@ -51,7 +51,7 @@
             <span>LG세탁건조기</span>
           </div>
           <div class="ps02_05">
-            <span>무선청소기</span>
+            <span>무선 청소기</span>
           </div>
           <div class="ps02_06">
             <span>다이슨<br> 헤어드라이기</span>
@@ -60,6 +60,7 @@
             <span>신세계 상품권</span>
           </div>
         </div>
+        <p class="ps02_remark">※이미지는 참고용으로 실제와 다를 수 있으며, 사정에 따라 상품이 변경될 수 있습니다.</p>
       </div>
     </div>
   </section>
@@ -85,8 +86,7 @@
   .event2501_inner {
     position: relative;
     margin: 0 auto;
-    width: 840px;
-    min-height: 1500px;
+    max-width: 840px;
   }
   .b01, .b02, .b03, .b04 {
     display: block;
@@ -125,10 +125,10 @@
   }
   .ttl {
     width: 457px;
-    height: 389px;
+    height: 457px;
     background: url("/images/landing/event(2501)/ttl.png") no-repeat center top;
     background-size: 100% auto;
-    margin: 0 auto;
+    margin: -20px auto;
     text-indent: -9999px;
   }
   .sec01_text01,
@@ -139,11 +139,14 @@
     position: absolute;
   }
   [class^="ps01_"] > span, [class^="ps02_"] > span {
+    word-break: keep-all;
     position: absolute;
     text-align: center;
     color: #b91210;
     font-weight: bolder;
     font-size: 20px;
+    line-height: 120%;
+    z-index: 2;
     text-shadow: rgb(255, 255, 255) 2px 0px 0px, rgb(255, 255, 255) 1.75517px 0.958851px 0px, rgb(255, 255, 255) 1.0806px 1.68294px 0px, rgb(255, 255, 255) 0.141474px 1.99499px 0px, rgb(255, 255, 255) -0.832294px 1.81859px 0px, rgb(255, 255, 255) -1.60229px 1.19694px 0px, rgb(255, 255, 255) -1.97998px 0.28224px 0px, rgb(255, 255, 255) -1.87291px -0.701566px 0px, rgb(255, 255, 255) -1.30729px -1.5136px 0px, rgb(255, 255, 255) -0.421592px -1.95506px 0px, rgb(255, 255, 255) 0.567324px -1.91785px 0px, rgb(255, 255, 255) 1.41734px -1.41108px 0px, rgb(255, 255, 255) 1.92034px -0.558831px 0px;
   }
   .ps01_01 {
@@ -151,8 +154,8 @@
     height: 244px;
     background: url("/images/landing/event(2501)/ps01_01.png") no-repeat center top;
     background-size: 100% auto;
-    left: 70px;
-    top: 536px;
+    left: 20px;
+    top: 566px;
   }
   .ps01_02 {
     width: 290px;
@@ -160,7 +163,7 @@
     background: url("/images/landing/event(2501)/ps01_02.png") no-repeat center top;
     background-size: 100% auto;
     right: 0;
-    top: 580px;
+    top: 600px;
   }
   .ps01G {
     position: relative;
@@ -238,25 +241,26 @@
     height: 109px;
     background: url("/images/landing/event(2501)/ps01_08.png") no-repeat center top;
     background-size: 100% auto;
-    top: 472px;
-    left: 105px;
+    top: 519px;
+    left: 95px;
   }
   .ps01_remark {
     font-size: 15px;
     text-align: center;
     width: 100%;
-    margin-top: 276px;
+    margin-top: 326px;
     position: relative;
+    z-index: 1;
+    word-break: keep-all;
   }
 
   .sec02 {
     margin-top: 50px;
+    padding-bottom: 80px;
     text-align: center;
   }
   .ps02G {
     position: relative;
-    background: #fff;
-    min-height: 20px;
   }
   .ps02_01 {
     width: 328px;
@@ -299,6 +303,11 @@
     left: 340px;
     top: 10px;
   }
+  .ps02_04 > span {
+    text-align: center;
+    bottom: 110px;
+    left: 90px;
+  } 
   .ps02_05 {
     width: 268px;
     height: 411px;
@@ -306,6 +315,10 @@
     background-size: 100% auto;
     right: 120px;
     top: 0;
+  }
+  .ps02_05 > span {
+    width: 100%;
+    top: 80px;
   }
   .ps02_06 {
     width: 160px;
@@ -316,6 +329,11 @@
     top: 160px;
     z-index: 1;
   }
+  .ps02_06 > span {
+    width: 100%;
+    bottom: 40px;
+    left: -10px;
+  }
   .ps02_07 {
     width: 143px;
     height: 234px;
@@ -324,13 +342,237 @@
     right: -10px;
     top: 142px;
   }
+  .ps02_07 > span {
+    top: -30px;
+  }
+  .ps02_remark {
+    font-size: 15px;
+    text-align: center;
+    width: 100%;
+    margin-top: 406px;
+    position: relative;
+    z-index: 1;
+    word-break: keep-all;
+  }
 
 
 
 /* sp */
 @media only screen and (max-width: 950px) {
+  .event2501 {
+    background-size: 333vw auto;
+  }
+  .ttl {
+    width: 85vw;
+    height: 85vw;
 
-
-
+    margin: -4vw auto;
+  }
+  .b01 {
+    width: 44vw;
+    left: -14vw;
+    height: 24vw;
+    top: 3vw;
+  }
+  .b02 {
+    width: 12vw;
+    height: 28vw;
+    top: 41vw;
+    left: 0vw;
+  }
+  .b03 {
+    width: 60vw;
+    right: -38vw;
+    height: 70vw;
+    top: 11vw;
+  }
+  .sec01_text01 > img {
+    width: 75vw;
+  }
+  .sec01_text02 > img {
+    width: 60vw;
+  }
+  [class^="ps01_"] > span, [class^="ps02_"] > span {
+    font-size: 4.5vw;
+  }
+  .ps01_01 {
+    width: 50vw;
+    height: 43vw;
+    top: 115vw;
+    left: -10vw;
+  }
+  .ps01_02 {
+    display: none;
+  }
+  .ps01_03 {
+    z-index: 1;
+    left: -19vw;
+    width: 56vw;
+    height: 39vw;
+    top: 21vw;
+  }
+  .ps01_03 > span {
+    bottom: auto;
+    top: -2vw;
+    left: 20vw;
+  }
+  .ps01_04 {
+    z-index: 1;
+    width: 59vw;
+    left: -10vw;
+    height: 31vw;
+    top: 47vw;
+  }
+  .ps01_04 > span {
+    bottom: 4vw;
+    left: 0;
+  }
+  .ps01_05 {
+    width: 45vw;
+    height: 61vw;
+    left: 26vw;
+    top: 0;
+  }
+  .ps01_05 > span {
+    bottom: 13vw;
+  }
+  .ps01_06 {
+    z-index: 1;
+    width: 48vw;
+    top: 38vw;
+    right: -7vw;
+    height: 36vw;
+  }
+  .ps01_06 > span {
+    bottom: 3vw;
+  }
+  .ps01_07 {
+    width: 54vw;
+    height: 34vw;
+    right: -12vw;
+    top: 11vw;
+  }
+  .ps01_07 > span {
+    bottom: 7vw;
+    left: -9vw;
+  }
+  .ps01_08 {
+    width: 30vw;
+    height: 22vw;
+    left: -9vw;
+    top: 96vw;
+  }
+  .ps01_08 > span {
+  }
+  .ps01_remark {
+    font-size: 3vw;
+    margin-top: 82vw;
+    padding: 0 2vw;
+    width: auto;
+  }
+  .ps02G {
+    margin-top: 3vw;
+  }
+  .sec02 {
+    margin-top: 6vw;
+    padding-bottom: 21vw;
+  }
+  .sec02_text01 > img {
+    width: 73vw;
+  }
+  .sec02_text02 {
+    position: relative;
+    height: 7.5vw;
+    left: 1.5vw;
+    width: 97vw;
+    overflow: hidden;
+    margin-top: -1vw;
+  }
+  .sec02_text02 > img {
+    width: 128%;
+    position: absolute;
+    left: -27vw;
+  }
+  .sec02_text03 > img {
+    width: 97vw;
+  }
+  .ps02_01 {
+    width: 60vw;
+    height: 47vw;
+    left: -12vw;
+    top: 16vw;
+  }
+  .ps02_01 > span {
+    left: 17vw;
+    top: -1vw;
+  }
+  .ps02_02 {
+    z-index: 2;
+    width: 24vw;
+    height: 40vw;
+    left: 18vw;
+    top: 5vw;
+  }
+  .ps02_03 {
+    width: 38vw;
+    height: 41vw;
+    left: 16vw;
+    top: 30vw;
+    z-index: 1;
+  }
+  .ps02_03 > span {
+    bottom: -3vw;
+  }
+  .ps02_04 {
+    left: 30vw;
+    width: 65vw;
+    top: 3vw;
+    height: 66vw;
+  }
+  .ps02_04 > span {
+    left: 22vw;
+    bottom: 13vw;
+    z-index: 2;
+  }
+  .ps02_05 {
+    width: 45vw;
+    height: 64vw;
+    right: 14vw;
+    top: 15vw;
+    z-index: 1;
+  }
+  .ps02_05 > span {
+    width: 20vw;
+    text-align: center;
+    top: -8vw;
+    left: 25vw;
+  }
+  .ps02_06 {
+    width: 25vw;
+    height: 39vw;
+    right: -2vw;
+    top: 37vw;
+  }
+  .ps02_06 > span {
+    bottom: 0vw;
+    left: -5vw;
+  }
+  .ps02_07 {
+    width: 27vw;
+    height: 41vw;
+    right: 0vw;
+    top: 7vw;
+  }
+  .ps02_07 > span {
+    top: -6vw;
+    right: 0vw;
+    width: 20vw;
+  }
+  .ps02_remark {
+    font-size: 3vw;
+    margin-top: 82vw;
+    padding: 0 2vw;
+    width: auto;
+  }
 }
 </style>
