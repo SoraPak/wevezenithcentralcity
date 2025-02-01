@@ -66,7 +66,132 @@
   </section>
 </template>
 
+<script setup>
+import { onMounted } from 'vue';
+
+onMounted(() => {
+  // IntersectionObserver 옵션: 요소가 50% 이상 보일 때 trigger
+  const observerOptions = {
+    threshold: 0.5
+  };
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        // 애니메이션 실행 후 더 이상 관찰하지 않습니다.
+        obs.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // .ps01G 내부의 [class^="ps01_"] 요소 관찰
+  const ps01Elements = document.querySelectorAll('.ps01G [class^="ps01_"]');
+  ps01Elements.forEach(el => {
+    observer.observe(el);
+  });
+
+  // .ps02G 내부의 [class^="ps02_"] 요소 관찰
+  const ps02Elements = document.querySelectorAll('.ps02G [class^="ps02_"]');
+  ps02Elements.forEach(el => {
+    observer.observe(el);
+  });
+});
+</script>
+
 <style scoped>
+/* 초기 상태: .ps01G 및 .ps02G 내부의 자식요소들은 투명하게 시작 */
+.ps01G [class^="ps01_"],
+.ps02G [class^="ps02_"] {
+  opacity: 0;
+}
+
+/* 애니메이션 keyframes 정의 */
+@keyframes flyInLeft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes flyInRight {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes flyInTop {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes flyInBottom {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ps01G 내부 자식 (총 5개) – 원하는 순서에 따라 방향 지정 */
+.ps01G > div:nth-child(1).in-view {
+  animation: flyInLeft 1s forwards;
+}
+.ps01G > div:nth-child(2).in-view {
+  animation: flyInRight 1s forwards;
+}
+.ps01G > div:nth-child(3).in-view {
+  animation: flyInTop 1s forwards;
+}
+.ps01G > div:nth-child(4).in-view {
+  animation: flyInBottom 1s forwards;
+}
+.ps01G > div:nth-child(5).in-view {
+  animation: flyInLeft 1s forwards;
+}
+
+/* ps02G 내부 자식 (총 7개) – 원하는 순서에 따라 방향 지정 */
+.ps02G > div:nth-child(1).in-view {
+  animation: flyInLeft 1s forwards;
+}
+.ps02G > div:nth-child(2).in-view {
+  animation: flyInRight 1s forwards;
+}
+.ps02G > div:nth-child(3).in-view {
+  animation: flyInTop 1s forwards;
+}
+.ps02G > div:nth-child(4).in-view {
+  animation: flyInBottom 1s forwards;
+}
+.ps02G > div:nth-child(5).in-view {
+  animation: flyInLeft 1s forwards;
+}
+.ps02G > div:nth-child(6).in-view {
+  animation: flyInRight 1s forwards;
+}
+.ps02G > div:nth-child(7).in-view {
+  animation: flyInTop 1s forwards;
+}
+
+
   .event2501 {
     background: url("/images/landing/event(2501)/bg.jpg") no-repeat center -70px #000f3a;
     background-size: 1500px auto;
