@@ -443,6 +443,7 @@ onMounted(chirpRandomly);
     position: relative;
     z-index: 1;
     word-break: keep-all;
+    line-height: 140%;
   }
 
   .sec02 {
@@ -544,6 +545,7 @@ onMounted(chirpRandomly);
     position: relative;
     z-index: 1;
     word-break: keep-all;
+    line-height: 140%;
   }
 
 
@@ -672,9 +674,9 @@ onMounted(chirpRandomly);
   }
   .ps01_remark {
     font-size: 3vw;
-    margin-top: 82vw;
+    margin: 84vw auto 0;
     padding: 0 2vw;
-    width: auto;
+    width: 80vw;
   }
   .ps02G {
     margin-top: 3vw;
@@ -750,8 +752,8 @@ onMounted(chirpRandomly);
   .ps02_05 > span {
     width: 20vw;
     text-align: center;
-    top: -8vw;
-    left: 25vw;
+    top: -6vw;
+    left: 24vw;
   }
   .ps02_06 {
     width: 25vw;
@@ -776,9 +778,9 @@ onMounted(chirpRandomly);
   }
   .ps02_remark {
     font-size: 3vw;
-    margin-top: 82vw;
+    margin: 84vw auto 0;
     padding: 0 2vw;
-    width: auto;
+    width: 80vw;
   }
 }
 </style>
