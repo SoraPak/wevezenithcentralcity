@@ -558,9 +558,9 @@
     left: -5vw;
   }
   .ps02_07 {
-    width: 27vw;
-    height: 41vw;
-    right: 0vw;
+    width: 24vw;
+    height: 36vw;
+    right: -2vw;
     top: 7vw;
   }
   .ps02_07 > span {
