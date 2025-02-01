@@ -414,6 +414,7 @@ onMounted(chirpRandomly);
     background-size: 100% auto;
     right: -97px;
     top: 114px;
+    z-index: -1;
   }
   .ps01_07 > span {
     width: 100%;
@@ -554,7 +555,7 @@ onMounted(chirpRandomly);
     padding-top: 13vw;
     z-index: 3;
     background-position: center -41vw;
-    margin-top: 6vw;
+    margin-top: 16vw;
   }
   .event2501::before {
     background-size: 110vw;
