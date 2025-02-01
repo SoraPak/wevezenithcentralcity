@@ -393,7 +393,7 @@
     width: 60vw;
   }
   [class^="ps01_"] > span, [class^="ps02_"] > span {
-    font-size: 4.5vw;
+    font-size: 3.8vw;
   }
   .ps01_01 {
     width: 50vw;
