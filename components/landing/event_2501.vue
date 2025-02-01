@@ -232,6 +232,16 @@ onMounted(() => {
     background-size: 100% auto;
     top: 195px;
     left: 1px;
+    transform-origin: top center; /* 회전축을 위쪽 중심으로 설정 */
+    animation: naturalLanternSwing 5s infinite alternate;
+  }
+  @keyframes naturalLanternSwing {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(6deg); animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1); } /* 부드러운 시작 */
+    40% { transform: rotate(-8deg); animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1); } /* 반대 방향으로 빠르게 */
+    60% { transform: rotate(5deg); animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1); } /* 다시 느려짐 */
+    80% { transform: rotate(-4deg); animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1); } /* 바람에 의해 살짝 변동 */
+    100% { transform: rotate(0deg); animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1); } /* 원래 상태로 */
   }
   .b03 {
     width: 284px;
