@@ -49,6 +49,7 @@ useHead({
   font-size: 25px;
   color: #fffe00;
   padding: 20px;
+  box-sizing: border-box;
 }
 @media only screen and (max-width: 950px) {
   .event_list {
