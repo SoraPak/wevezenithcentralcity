@@ -2,12 +2,14 @@
   <div class="event_list">
     <p class="comment">종료된 이벤트입니다</p>
     <Halloween />
+    <Event_nav />
   </div>
 </template>
 
 <script setup>
 import { useHead } from '#imports';
 import Halloween from '~/components/landing/halloween.vue';
+import Event_nav from '~/components/event_nav.vue';
 
 useHead({
   style: [

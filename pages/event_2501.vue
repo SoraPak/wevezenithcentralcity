@@ -2,13 +2,14 @@
   <div class="event_list">
     <p class="comment">종료된 이벤트입니다</p>
     <Event_2501 />
+    <Event_nav />
   </div>
 </template>
 
 <script setup>
 import { useHead } from '#imports';
 import Event_2501 from '~/components/landing/event_2501.vue';
-
+import Event_nav from '~/components/event_nav.vue';
 useHead({
   style: [
     {
@@ -48,6 +49,7 @@ useHead({
   color: #fffe00;
   padding: 20px;
 }
+
 @media only screen and (max-width: 950px) {
   .event_list {
     padding-bottom: 12vw;
