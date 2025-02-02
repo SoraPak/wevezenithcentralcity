@@ -415,7 +415,7 @@
     text-align: center;
     line-height: 160%;
     color: #040b20;
-    margin-top: 24vw;
+    margin-top: 4vw;
   }
   .gift_ul li {
     margin-top: 1vw;
@@ -475,7 +475,7 @@
           <img src="/images/landing/fall/img.png" width="412" alt="">
         </div>
         
-        <!-- h1 id="golden_key" class="gift_ttl02">
+        <h1 id="golden_key" class="gift_ttl02">
           <img loading="lazy" src="/images/landing/fall/ttl02.png" width="510" alt="계약하면 황금열쇠 드려요!">
         </h1>
         <div class="gift_layout3">
@@ -489,7 +489,7 @@
         <p class="gift_text03_2">
           <img class="pc" loading="lazy" src="/images/landing/fall/text03_2.png" width="100%" alt="">
           <img class="sp" loading="lazy" src="/images/landing/fall/text03_2_sp.png" alt="준비물: 인감도장 ,인감증명서 1통(용도 아파트계약용) ,주민등록등본 1통 ,신분증">
-        </p -->
+        </p>
         <ul class="gift_ul">
           <li>
             ※ 출발전 예약 필수(당일 예약 가능)
@@ -505,7 +505,7 @@
       <div class="gift_btBg"></div>
       <div class="gift_btBg2"></div>
     </section>
-    <F_guide />
+    <!-- F_guide / -->
   </div>
 
   <!-- 팝업 정의 -->

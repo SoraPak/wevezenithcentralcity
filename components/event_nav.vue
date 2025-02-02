@@ -15,6 +15,8 @@
   margin: 0 auto;
   border-top: 2px solid #fff;
   padding: 20px 0;
+  position: relative;
+  z-index: 10;
 }
 .nav li {
   margin: 10px;
@@ -23,6 +25,7 @@
   border: 2px solid #fff;
   padding: 10px 20px;
   color: #fff;
+  background-color: #000f3a;
 }
 
 /* sp */
