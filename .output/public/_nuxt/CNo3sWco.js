@@ -1,1 +1,0 @@
-import{_ as t,c as s,a as o,o as n}from"./WB7SSzr6.js";const a={};function c(l,e){return n(),s("div",null,e[0]||(e[0]=[o("h1",null,"complex",-1),o("p",null,"This is the about page of the website.",-1)]))}const p=t(a,[["render",c]]);export{p as default};

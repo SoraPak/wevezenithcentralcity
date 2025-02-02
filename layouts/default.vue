@@ -1,6 +1,6 @@
 <template>
   <div class="bodWrap">
-    <header>
+    <!--header>
       <h1 class="logo"><nuxt-link to="/"><img src="/images/logo.svg" alt="학정역 두산위브더제니스 센트럴시티"></nuxt-link></h1>
       <nav>
         <ul>
@@ -11,16 +11,23 @@
         </ul>
       </nav>
       <div class="tel"><small>)</small>1555.1924</div>
-    </header>
+    </header -->
     <main>
       <NuxtPage />
     </main>
-    <footer>
-      <p>Copyright © 2024 My Website</p>
-    </footer>
+    <Footer />
   </div>
 </template>
+<script>
+import Event_2501 from '~/components/landing/event_2501.vue'
+import Footer from '~/components/footer.vue';
 
+export default {
+  components: {
+    Footer,
+  },
+};
+</script>
 <style scoped>
 .bodWrap {
   display: flex;

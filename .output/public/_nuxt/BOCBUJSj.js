@@ -1,1 +1,0 @@
-import{_ as t,c as s,a as o,o as n}from"./WB7SSzr6.js";const a={},c={class:"location"};function l(r,e){return n(),s("section",c,e[0]||(e[0]=[o("h1",null,"location",-1),o("p",null,"This is the about page of the website.",-1)]))}const _=t(a,[["render",l]]);export{_ as default};
