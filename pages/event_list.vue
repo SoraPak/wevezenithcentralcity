@@ -12,6 +12,9 @@ useHead({
   style: [
     {
       children: `
+        .event2501 {
+          background-position: center -150px !important;
+        }
         .event2501::before {
           display: none !important;
         }
@@ -21,6 +24,7 @@ useHead({
         @media only screen and (max-width: 950px) {
           .event2501 {
             margin-top: 0 !important;
+            background-position: center -50vw !important;
           }
           .event2501_inner {
             margin-top: -12vw !important;
