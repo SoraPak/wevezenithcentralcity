@@ -34,7 +34,7 @@
     width: 90%;
     margin: 0 auto;
     border-top: .4vw solid #fff;
-    padding: 3vw 0;
+    padding: 3vw 0 5vw;
   }
   .nav li {
     margin: 3vw;
