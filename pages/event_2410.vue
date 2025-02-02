@@ -17,6 +17,7 @@ useHead({
         }
         .halloween {
           margin-bottom: 60px !important;
+          margin-top: -60px;
         }
       
         @media only screen and (max-width: 950px) {
