@@ -1,43 +1,51 @@
 <template>
   <div class="bodWrap">
-    <!--header>
-      <h1 class="logo"><nuxt-link to="/"><img src="/images/logo.svg" alt="학정역 두산위브더제니스 센트럴시티"></nuxt-link></h1>
-      <nav>
-        <ul>
-          <li><nuxt-link to="/about">사업개요</nuxt-link></li>
-          <li><nuxt-link to="/location">입지여건</nuxt-link></li>
-          <li><nuxt-link to="/complex">단지안내</nuxt-link></li>
-          <li><nuxt-link to="/space">세대안내</nuxt-link></li>
-        </ul>
-      </nav>
-      <div class="tel"><small>)</small>1555.1924</div>
-    </header -->
+    <R_nav class="rNav" />
+    <Sp_r_nav class="sp_rNav" />
     <main>
       <NuxtPage />
     </main>
     <Footer />
   </div>
 </template>
-<script>
-import Event_2501 from '~/components/landing/event_2501.vue'
+
+<script setup>
+import { onMounted, nextTick } from 'vue';
+import Sp_r_nav from '~/components/landing/sp_r_nav.vue';
+import R_nav from '~/components/landing/r_nav.vue';
 import Footer from '~/components/footer.vue';
 
-export default {
-  components: {
-    Footer,
-  },
+const checkResponsiveAndReload = () => {
+  let lastWidth = window.innerWidth;
+  window.addEventListener('resize', () => {
+    const currentWidth = window.innerWidth;
+    if (lastWidth > 950 && currentWidth <= 950) {
+      window.location.reload();
+    }
+    lastWidth = currentWidth;
+  });
 };
+
+onMounted(() => {
+  nextTick(() => {
+    document.querySelector('.bodWrap').style.opacity = '1';
+  });
+
+  checkResponsiveAndReload();
+});
 </script>
+
 <style scoped>
 .bodWrap {
   display: flex;
   flex-direction: column;
   height: 100%;
+  opacity: 0; /* 초기 상태에서 안 보이게 설정 */
+  transition: opacity 0.5s ease-in-out; /* 페이드인 애니메이션 */
 }
-header{
-  display:flex;
+header {
+  display: flex;
   justify-content: center;
-  
   min-height: 80px;
   padding: 0 10px;
   border-bottom: 5px solid #084290;
@@ -45,62 +53,18 @@ header{
 main {
   flex: 1;
 }
-.logo {
-  display: flex;
-  margin-right: auto;
+.sp_reviews, .sp_rNav {
+  display: none;
 }
-.logo a{
-  display: flex;
-  align-items: center;
-}
-.logo img{
-  width: 200px;
-  height: auto;
-
-}
-.tel {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-  font-size: 30px;
-  font-weight: 600;
-}
-.tel small {
-  font-size: 60%;
-}
-nav {
-  display: flex;
-  justify-content: center;
-  flex: 1;
-  text-align: center;
-  margin: 0 10px;
-  max-width: 500px;
-}
-nav a,
-nav a:hover {
-  color: #3b3838;
-}
-nav ul {
-  display: flex;
-  flex: 1;
-}
-nav ul li {
-  display: flex;
-  flex: 1;
-  text-align: center;
-}
-nav ul li a{
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-}
-nav ul li a::before{
-  content: "";
-  display: block;
-  width: 54px;
-  height: 54px;
-  background: #e06f6f;
+@media only screen and (max-width: 950px) {
+  .reviews, .rNav {
+    display: none;
+  }
+  .sp_reviews {
+    display: block;
+  }
+  .sp_rNav {
+    display: flex;
+  }
 }
 </style>

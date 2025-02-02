@@ -25,6 +25,9 @@ useHead({
           .event2501_inner {
             margin-top: -12vw !important;
           }
+          .sec02 {
+            padding-bottom: 7vw;
+          }
         }
       `
     }
@@ -34,5 +37,10 @@ useHead({
 <style scoped>
 .event_list {
   overflow: hidden;
+}
+@media only screen and (max-width: 950px) {
+  .event_list {
+    padding-bottom: 12vw;
+  }
 }
 </style>

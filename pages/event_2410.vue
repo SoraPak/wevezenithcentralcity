@@ -38,4 +38,9 @@ useHead({
   flex: 1;
   
 }
+@media only screen and (max-width: 950px) {
+  .event_list {
+    padding-bottom: 12vw;
+  }
+}
 </style>
