@@ -1,5 +1,6 @@
 <template>
   <div class="event_list">
+    <p class="comment">종료된 이벤트입니다</p>
     <Halloween />
   </div>
 </template>
@@ -38,9 +39,22 @@ useHead({
   flex: 1;
   
 }
+.comment {
+  position: absolute;
+  z-index: 10;
+  text-align: center;
+  width: 100%;
+  font-size: 25px;
+  color: #fffe00;
+  padding: 20px;
+}
 @media only screen and (max-width: 950px) {
   .event_list {
     padding-bottom: 12vw;
+  }
+  .comment {
+    padding: 3vw;
+    font-size: 5vw;
   }
 }
 </style>

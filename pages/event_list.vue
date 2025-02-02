@@ -26,7 +26,7 @@ useHead({
             margin-top: -12vw !important;
           }
           .sec02 {
-            padding-bottom: 7vw !important;
+            padding-bottom: 12vw !important;
           }
         }
       `
