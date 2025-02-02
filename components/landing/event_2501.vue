@@ -414,7 +414,6 @@ onMounted(chirpRandomly);
     background-size: 100% auto;
     right: -97px;
     top: 114px;
-    z-index: -1;
   }
   .ps01_07 > span {
     width: 100%;
@@ -659,6 +658,7 @@ onMounted(chirpRandomly);
     height: 34vw;
     right: -12vw;
     top: 11vw;
+    z-index: -1;
   }
   .ps01_07 > span {
     bottom: 7vw;
