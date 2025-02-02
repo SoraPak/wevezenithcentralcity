@@ -414,6 +414,7 @@ onMounted(chirpRandomly);
     background-size: 100% auto;
     right: -97px;
     top: 114px;
+    z-index: -1;
   }
   .ps01_07 > span {
     width: 100%;
@@ -442,6 +443,7 @@ onMounted(chirpRandomly);
     position: relative;
     z-index: 1;
     word-break: keep-all;
+    line-height: 140%;
   }
 
   .sec02 {
@@ -543,6 +545,7 @@ onMounted(chirpRandomly);
     position: relative;
     z-index: 1;
     word-break: keep-all;
+    line-height: 140%;
   }
 
 
@@ -554,7 +557,7 @@ onMounted(chirpRandomly);
     padding-top: 13vw;
     z-index: 3;
     background-position: center -41vw;
-    margin-top: 6vw;
+    margin-top: 16vw;
   }
   .event2501::before {
     background-size: 110vw;
@@ -671,16 +674,16 @@ onMounted(chirpRandomly);
   }
   .ps01_remark {
     font-size: 3vw;
-    margin-top: 82vw;
+    margin: 84vw auto 0;
     padding: 0 2vw;
-    width: auto;
+    width: 80vw;
   }
   .ps02G {
     margin-top: 3vw;
   }
   .sec02 {
     margin-top: 6vw;
-    padding-bottom: 21vw;
+    padding-bottom: 24vw;
   }
   .sec02_text01 > img {
     width: 73vw;
@@ -749,8 +752,8 @@ onMounted(chirpRandomly);
   .ps02_05 > span {
     width: 20vw;
     text-align: center;
-    top: -8vw;
-    left: 25vw;
+    top: -6vw;
+    left: 24vw;
   }
   .ps02_06 {
     width: 25vw;
@@ -775,9 +778,9 @@ onMounted(chirpRandomly);
   }
   .ps02_remark {
     font-size: 3vw;
-    margin-top: 82vw;
+    margin: 84vw auto 0;
     padding: 0 2vw;
-    width: auto;
+    width: 80vw;
   }
 }
 </style>

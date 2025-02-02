@@ -580,6 +580,7 @@ onMounted(() => {
     color: #fff;
     position: relative;
     margin-top: 350px;
+    z-index: 3;
   }
   .guide::before {
     content: "";
