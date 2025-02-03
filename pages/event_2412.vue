@@ -28,11 +28,11 @@ useHead({
             margin-bottom: 0 !important;
           }
           .gift::before {
-            height: 39vw;
-            bottom: -6vw;
+            height: 39vw !important;
+            bottom: -6vw !important;
           }
           .gift_inner {
-            padding-bottom: 26vw;
+            padding-bottom: 26vw !important;
           }
         }
       `
