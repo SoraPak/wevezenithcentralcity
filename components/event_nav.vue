@@ -42,6 +42,7 @@
   .nav a {
     border: .4vw solid #fff;
     padding: 2vw 4vw;
+    font-size: 4vw;
   }
 }
 </style>
