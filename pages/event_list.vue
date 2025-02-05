@@ -2,7 +2,7 @@
   <div class="eventList">
     <Event_2501 />
     <section class="list" id="list">
-      <h1 class="ttl">종료된 이벤트</h1>
+      <h1 class="ttl">종료된 행사</h1>
       <ul>
         <li>
         <nuxt-link to="/event_2501">
