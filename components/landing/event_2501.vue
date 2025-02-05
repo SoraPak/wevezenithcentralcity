@@ -447,7 +447,7 @@ onMounted(chirpRandomly);
 
   .sec02 {
     margin-top: 50px;
-    padding-bottom: 80px;
+    padding-bottom: 40px;
     text-align: center;
   }
   .ps02G {
@@ -683,7 +683,7 @@ onMounted(chirpRandomly);
   }
   .sec02 {
     margin-top: 6vw;
-    padding-bottom: 24vw;
+    padding-bottom: 5vw;
   }
   .sec02_text01 > img {
     width: 73vw;

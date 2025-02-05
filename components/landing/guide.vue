@@ -1,4 +1,25 @@
+<style scoped>
+.BtnEvent {
+  border: 2px solid #fff;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #000f3a;
+  position: relative;
+  z-index: 1;
+  display: table;
+  margin: 0 auto;
+}
+  /* sp */
+@media only screen and (max-width: 950px) {
+  .BtnEvent {
+    border: .4vw solid #fff;
+    padding: 2vw 4vw;
+    font-size: 4vw;
+  }
+}
+</style>
 <template>
+  <nuxt-link to="/event_list#list" class="BtnEvent">종료된 행사</nuxt-link>
   <section id="guide" class="guide">
     <div class="guide_inner">
       <h1 id="guide" class="ttl"><img loading="lazy" src="/images/landing/guide/ttl01.png" width="648" alt="당신의 프리미엄 라이프를 안내할 분양팀 상담사"></h1>
@@ -579,7 +600,7 @@ onMounted(() => {
     background: #082379;
     color: #fff;
     position: relative;
-    margin-top: 350px;
+    margin-top: 400px;
     z-index: 3;
   }
   .guide::before {
@@ -1055,7 +1076,7 @@ onMounted(() => {
     display: none;
   }
   .guide {
-    margin-top: 31vw;
+    margin-top: 52vw;
   }
 
   .guide::before {
