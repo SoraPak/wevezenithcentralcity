@@ -1,30 +1,40 @@
 <template>
   <div class="event_list">
-    <p class="comment">종료된 이벤트입니다</p>
-    <Giveaway />
+    <p class="comment">종료된 행사입니다</p>
+    <Event_con />
+    <Event_list />
     <Event_nav />
   </div>
 </template>
 
 <script setup>
 import { useHead } from '#imports';
-import Giveaway from '~/components/landing/giveaway.vue';
+import Event_con from '~/components/landing/new-year.vue';
 import Event_nav from '~/components/event_nav.vue';
+import Event_list from '~/components/event_list.vue';
 
 useHead({
   style: [
     {
       children: `
-        .giveaway {
-          margin-top: 130px !important;
+        .gift {
+          padding-top: 70px !important;
+        }
+        .gift::after {
+          display: none !important;
         }
       
         @media only screen and (max-width: 950px) {
-          .giveaway {
-            margin-top: 10vw !important;
+          .gift {
+            padding-top: 29vw !important;
+            margin-bottom: 0 !important;
           }
-          .giveaway_inner {
-            padding-bottom: 20vw !important;
+          .gift::before {
+            height: 39vw !important;
+            bottom: -6vw !important;
+          }
+          .gift_inner {
+            padding-bottom: 26vw !important;
           }
         }
       `
@@ -44,7 +54,6 @@ useHead({
   text-align: center;
   width: 100%;
   font-size: 25px;
-  color: #fffe00;
   padding: 20px;
   box-sizing: border-box;
 }

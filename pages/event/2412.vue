@@ -1,7 +1,8 @@
 <template>
   <div class="event_list">
-    <p class="comment">종료된 이벤트입니다</p>
+    <p class="comment">종료된 행사입니다</p>
     <Xmas />
+    <Event_list />
     <Event_nav />
   </div>
 </template>
@@ -10,6 +11,7 @@
 import { useHead } from '#imports';
 import Xmas from '~/components/landing/x-mas.vue';
 import Event_nav from '~/components/event_nav.vue';
+import Event_list from '~/components/event_list.vue';
 
 useHead({
   style: [

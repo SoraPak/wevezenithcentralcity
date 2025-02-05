@@ -1,39 +1,34 @@
 <template>
   <div class="event_list">
     <p class="comment">종료된 행사입니다</p>
-    <Event_2501 />
+    <Fall />
+    <Event_list />
     <Event_nav />
   </div>
 </template>
 
 <script setup>
 import { useHead } from '#imports';
-import Event_2501 from '~/components/landing/event_2501.vue';
+import Fall from '~/components/landing/fall.vue';
 import Event_nav from '~/components/event_nav.vue';
+import Event_list from '~/components/event_list.vue';
+
 useHead({
   style: [
     {
       children: `
-        .event2501 {
-          background-position: center -150px !important;
+        .fall {
+          margin-top: -310px !important;
+          background-position: center 410px !important;
         }
-        .event2501::before {
-          display: none !important;
-        }
-        .event2501_inner {
-          margin-top: -100px !important;
-        }
+      
         @media only screen and (max-width: 950px) {
-          .event2501 {
-            margin-top: 0 !important;
-            background-position: center -50vw !important;
+          .fall {
+            margin-top: -58vw !important;
+            background-position: center 44vw !important;
+            background-size: 280vw auto !important;
           }
-          .event2501_inner {
-            margin-top: -12vw !important;
-          }
-          .sec02 {
-            padding-bottom: 12vw !important;
-          }
+        
         }
       `
     }
@@ -43,6 +38,8 @@ useHead({
 <style scoped>
 .event_list {
   overflow: hidden;
+  flex: 1;
+  
 }
 .comment {
   position: absolute;
@@ -54,7 +51,6 @@ useHead({
   padding: 20px;
   box-sizing: border-box;
 }
-
 @media only screen and (max-width: 950px) {
   .event_list {
     padding-bottom: 12vw;

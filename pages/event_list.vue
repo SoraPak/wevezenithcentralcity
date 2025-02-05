@@ -1,41 +1,7 @@
 <template>
   <div class="eventList">
     <Event_2501 />
-    <section class="list" id="list">
-      <h1 class="ttl">종료된 행사</h1>
-      <ul>
-        <li>
-        <nuxt-link to="/event_2501">
-          <img src="/og_img_2501.png" width="100%" alt="">
-        </nuxt-link>
-        </li>
-        <li>
-        <nuxt-link to="/event_2412_2">
-          <img src="/og_img_2412_2.png" width="100%" alt="">
-        </nuxt-link>
-        </li>
-        <li>
-        <nuxt-link to="/event_2412">
-          <img src="/og_img_2412.png" width="100%" alt="">
-        </nuxt-link>
-        </li>
-        <li>
-        <nuxt-link to="/event_2411">
-          <img src="/og_img_2411.png" width="100%" alt="">
-        </nuxt-link>
-        </li>
-        <li>
-        <nuxt-link to="/event_2410">
-          <img src="/og_img_2410.jpg" width="100%" alt="">
-        </nuxt-link>
-        </li>
-        <li>
-        <nuxt-link to="/event_24">
-          <img src="/og_img_24.png" width="100%" alt="">
-        </nuxt-link>
-        </li>
-      </ul>
-    </section>
+    <Event_list />
     <Event_nav :hideEventList="true" />
   </div>
 </template>
@@ -46,7 +12,6 @@
 .list {
   max-width: 840px;
   margin: 0 auto;
-  border-top: 2px solid #fff;
   padding: 30px 0;
 }
 .list .ttl {
@@ -94,6 +59,7 @@
 import { useHead } from '#imports';
 import Event_2501 from '~/components/landing/event_2501.vue';
 import Event_nav from '~/components/event_nav.vue';
+import Event_list from '~/components/event_list.vue';
 
 useHead({
   style: [

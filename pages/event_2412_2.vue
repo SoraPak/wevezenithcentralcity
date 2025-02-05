@@ -1,6 +1,6 @@
 <template>
   <div class="event_list">
-    <p class="comment">종료된 이벤트입니다</p>
+    <p class="comment">종료된 행사입니다</p>
     <Event_con />
     <Event_nav />
   </div>

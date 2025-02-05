@@ -1,7 +1,7 @@
 <template>
   <ul class="nav">
-    <li v-if="!hideEventList"><nuxt-link to="/event_list#list">이벤트 목록</nuxt-link></li>
-    <li><nuxt-link to="/">메인 페이지</nuxt-link></li>
+    <li v-if="!hideEventList"><nuxt-link to="/event_list">행사 메인</nuxt-link></li>
+    <li><nuxt-link to="/">홈 메인</nuxt-link></li>
   </ul>
 </template>
 
