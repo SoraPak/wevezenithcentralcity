@@ -1,9 +1,15 @@
 <template>
   <ul class="nav">
-    <li><nuxt-link to="/event_list">이벤트 목록</nuxt-link></li>
+    <li v-if="!hideEventList"><nuxt-link to="/event_list#list">이벤트 목록</nuxt-link></li>
     <li><nuxt-link to="/">메인 페이지</nuxt-link></li>
   </ul>
 </template>
+
+<script setup>
+defineProps({
+  hideEventList: Boolean // true이면 "이벤트 목록"을 숨김
+});
+</script>
 
 <style scoped>
 .nav, .nav li {
