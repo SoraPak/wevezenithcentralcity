@@ -41,6 +41,8 @@
   max-width: 840px;
   margin: 0 auto;
   padding: 30px 0;
+  position: relative;
+  z-index: 1;
 }
 .list .ttl {
   text-align: center;
