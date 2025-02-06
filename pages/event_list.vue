@@ -63,7 +63,7 @@
 
 <script setup>
 import { useHead } from '#imports';
-import SeoMeta from '~/components/SeoMeta.vue';
+import SeoMeta from '~/components/seometa.vue';
 import Event_2501 from '~/components/landing/event_2501.vue';
 import Event_nav from '~/components/event_nav.vue';
 import Event_list from '~/components/event_list.vue';
