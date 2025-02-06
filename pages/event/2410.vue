@@ -1,4 +1,10 @@
 <template>
+  <SeoMeta 
+    title="행사 - 학정역 두산위브더제니스 센트럴시티"
+    description="박소라 과장 찾아 계약하면 할로윈(핼러윈)선물이 팡팡!"
+    image="https://xn--hu1bq8p65bh1h6oby7bg90c.kr/og_img_2410.jpg"
+    url="https://xn--hu1bq8p65bh1h6oby7bg90c.kr/event/2410"
+  />
   <div class="event_list">
     <p class="comment">종료된 행사입니다</p>
     <Halloween />
@@ -9,6 +15,7 @@
 
 <script setup>
 import { useHead } from '#imports';
+import SeoMeta from '~/components/seometa.vue';
 import Halloween from '~/components/landing/halloween.vue';
 import Event_nav from '~/components/event_nav.vue';
 import Event_list from '~/components/event_list.vue';

@@ -1,7 +1,7 @@
 <template>
   <SeoMeta 
     title="행사 - 학정역 두산위브더제니스 센트럴시티"
-    description="두산위브더제니스 센트럴시티 행사"
+    description="박소라 과장 찾아오시면 행운의 경품 복권 + 전자제품 추첨권을 드립니다!"
     image="https://xn--hu1bq8p65bh1h6oby7bg90c.kr/og_img_event_list.png"
     url="https://xn--hu1bq8p65bh1h6oby7bg90c.kr/event_list"
   />

@@ -1,4 +1,10 @@
 <template>
+  <SeoMeta 
+    title="행사 - 학정역 두산위브더제니스 센트럴시티"
+    description="박소라 과장을 찾아오시면 8만 원 상당의 새해 운세 타로 점이 무료!"
+    image="https://xn--hu1bq8p65bh1h6oby7bg90c.kr/og_img_2412_2.png"
+    url="https://xn--hu1bq8p65bh1h6oby7bg90c.kr/event/2412_2"
+  />
   <div class="event_list">
     <p class="comment">종료된 행사입니다</p>
     <Event_con />
@@ -9,6 +15,7 @@
 
 <script setup>
 import { useHead } from '#imports';
+import SeoMeta from '~/components/seometa.vue';
 import Event_con from '~/components/landing/new-year.vue';
 import Event_nav from '~/components/event_nav.vue';
 import Event_list from '~/components/event_list.vue';
