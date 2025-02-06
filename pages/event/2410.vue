@@ -1,6 +1,6 @@
 <template>
   <SeoMeta 
-    title="행사 - 학정역 두산위브더제니스 센트럴시티"
+    title="할로윈행사 - 학정역 두산위브더제니스 센트럴시티"
     description="박소라 과장 찾아 계약하면 할로윈(핼러윈)선물이 팡팡!"
     image="https://xn--hu1bq8p65bh1h6oby7bg90c.kr/og_img_2410.jpg"
     url="https://xn--hu1bq8p65bh1h6oby7bg90c.kr/event/2410"

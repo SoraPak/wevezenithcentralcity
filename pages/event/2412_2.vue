@@ -1,6 +1,6 @@
 <template>
   <SeoMeta 
-    title="행사 - 학정역 두산위브더제니스 센트럴시티"
+    title="새해운세 방문자 행사 - 학정역 두산위브더제니스 센트럴시티"
     description="박소라 과장을 찾아오시면 8만 원 상당의 새해 운세 타로 점이 무료!"
     image="https://xn--hu1bq8p65bh1h6oby7bg90c.kr/og_img_2412_2.png"
     url="https://xn--hu1bq8p65bh1h6oby7bg90c.kr/event/2412_2"

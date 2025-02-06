@@ -1,6 +1,6 @@
 <template>
   <SeoMeta 
-    title="행사 - 학정역 두산위브더제니스 센트럴시티"
+    title="새해맞이 행사 - 학정역 두산위브더제니스 센트럴시티"
     description="두산위브더제니스 센트럴시티 행사"
     image="https://xn--hu1bq8p65bh1h6oby7bg90c.kr/og_img_event_list.png"
     url="https://xn--hu1bq8p65bh1h6oby7bg90c.kr/event/event_list"
