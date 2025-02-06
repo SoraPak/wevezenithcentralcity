@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   router: {
     base: '/'
   },
+  ssr: true,
   target: 'static', // 정적 사이트 빌드용 설정
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
