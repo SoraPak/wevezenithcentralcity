@@ -65,6 +65,9 @@
   display: block;
 }
 @media only screen and (max-width: 950px) {
+  .list .ttl {
+    font-size: 5vw;
+  }
   .list {
     border-top: .4vw solid #fff;
     padding: 5vw 0;
