@@ -35,8 +35,8 @@
       
       <div class="sec02">
         <p class="sec02_text01"><img loading="lazy" src="/images/landing/event(2501)/sec02_text01.png" width="411" alt="신년맞이 방문자 경품 행사" /></p>
-        <p class="sec02_text02"><img loading="lazy" src="/images/landing/event(2501)/sec02_text02.png" width="628" alt="2월 1일(토) 모델하우스 방문하시면 경품 추첨권을드려요!" /></p>
-        <p class="sec02_text03"><img loading="lazy" src="/images/landing/event(2501)/sec02_text03.png" width="471" alt="추첨 일시: 2025년 2월 1・2일(토・일) 오후 3시(10분 전 추첨권 배포) | 배포 조건: 박소라 과장 찾아오셔서 팀장 상담 완료 시(예약필수)" /></p>
+        <p class="sec02_text02"><img loading="lazy" src="/images/landing/event(2501)/sec02_text02.png" width="455" alt="모델하우스 방문하시면 경품 추첨권을드려요!" /></p>
+        <p class="sec02_text03"><img loading="lazy" src="/images/landing/event(2501)/sec02_text03.png" width="492" alt="추첨 일시: 2025년 2월 15・16일(토・일) 오후 3시(10분 전 추첨권 배포) | 배포 조건: 박소라 과장 찾아오셔서 팀장 상담 완료 시(예약필수)" /></p>
         <div class="ps02G">
           <div class="ps02_01">
             <span>삼성 TV</span>
@@ -688,21 +688,11 @@ onMounted(chirpRandomly);
   .sec02_text01 > img {
     width: 73vw;
   }
-  .sec02_text02 {
-    position: relative;
-    height: 7.5vw;
-    left: 1.5vw;
-    width: 97vw;
-    overflow: hidden;
-    margin-top: -1vw;
-  }
   .sec02_text02 > img {
-    width: 128%;
-    position: absolute;
-    left: -27vw;
+    width: 98vw;
   }
   .sec02_text03 > img {
-    width: 97vw;
+    width: 93vw;
   }
   .ps02_01 {
     width: 60vw;
