@@ -20,6 +20,8 @@
 </style>
 <template>
   <nuxt-link to="/event_list#list" class="BtnEvent">종료된 행사</nuxt-link>
+  <!-- button class="share" @click="openShareModal">셰어</!-->
+
   <section id="guide" class="guide">
     <div class="guide_inner">
       <h1 id="guide" class="ttl"><img loading="lazy" src="/images/landing/guide/ttl01.png" width="648" alt="당신의 프리미엄 라이프를 안내할 분양팀 상담사"></h1>
@@ -166,13 +168,7 @@
     <p>제가 가진 기술을 통해 이 아파트의 진정한 가치를 고객님께 전달하고, 최고의 선택을 하실 수 있도록 최선을 다하겠습니다.</p>
   </div>
 </Popup>
-<!-- Popup ref="popup3">
-  <h1 class="popup_ttl">
-    <img loading="lazy" src="/images/landing/guide/popupTtl.svg" width="510" alt="고것좀 알고 잡다">
-    <span class="subTtl">박소라 <small>과장</small></span>
-  </h1>
-  coming soon..
-</Popup -->
+<EventShare ref="eventShareRef" />
 </template>
 <style>
  /* 회전 애니메이션 */
@@ -522,9 +518,10 @@
 </style>
 
 <script setup>
+import { ref } from 'vue';
 import Popup from '~/components/landing/popup.vue';
 import Job from '~/components/landing/job.vue';
-import { ref } from 'vue';
+import EventShare from '~/components/event_share.vue';
 
 // 팝업 레퍼런스 설정
 const popup1 = ref(null);
@@ -543,6 +540,15 @@ const showPopup = (popupId) => {
     console.error(`Popup not found or not defined: ${popupId}`);
   }
 };
+
+// 공유 모달 참조
+const eventShareRef = ref(null);
+
+// 공유 모달 열기 함수
+const openShareModal = () => {
+  eventShareRef.value?.openShare();
+};
+
 const img01Ref = ref(null);
 const img03Ref = ref(null);
 const textRef = ref(null);

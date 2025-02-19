@@ -67,6 +67,17 @@ export default defineNuxtConfig({
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap' },
       ],
       script: [
+        // Google Tag Manager (GTM) 코드 – head 최상단에 삽입
+        {
+          hid: 'gtm',
+          innerHTML: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WN5JDZ92');`,
+          type: 'text/javascript',
+          charset: 'utf-8'
+        },
         // Google Tag Manager 스크립트 추가
         {
           hid: 'gtag',

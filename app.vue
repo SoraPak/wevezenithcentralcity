@@ -4,27 +4,23 @@
   </NuxtLayout>
 </template>
 <script setup>
-if (process.client) {
-  function updateOgImage() {
-    const hash = window.location.hash;
-    const ogImageMeta = document.querySelector('meta[property="og:image"]');
+import { useHead } from '#imports';
 
-    // 기본 OG 이미지
-    let newImage = "https://xn--hu1bq8p65bh1h6oby7bg90c.kr/og_img_sora.png";
-
-    // 특정 해시 값에 따라 OG 이미지 변경
-    if (hash === "#study") {
-      newImage = "https://xn--hu1bq8p65bh1h6oby7bg90c.kr/og_img_study.png";
+useHead({
+  script: [
+    {
+      innerHTML: `
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-WN5JDZ92');
+      `,
+      type: 'text/javascript'
     }
-
-    // meta 태그 업데이트
-    if (ogImageMeta) {
-      ogImageMeta.setAttribute("content", newImage);
-    }
+  ],
+  bodyAttrs: {
+    class: 'gtm-enabled' // 필요 시 추가
   }
-
-  // 페이지 로드 시와 해시 변경 시 업데이트
-  window.addEventListener('load', updateOgImage);
-  window.addEventListener('hashchange', updateOgImage);
-}
+});
 </script>
