@@ -80,20 +80,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         },
         // Google Tag Manager 스크립트 추가
         {
-          hid: 'gtag',
-          src: 'https://www.googletagmanager.com/gtag/js?id=G-L9HLE0RYGD',
+          src: "https://www.googletagmanager.com/gtag/js?id=AW-16885055165",
           async: true
         },
         {
-          hid: 'gtag-config',
-          innerHTML: `
+          children: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-L9HLE0RYGD');
+            gtag('config', 'AW-16885055165');
           `,
-          type: 'text/javascript',
-          charset: 'utf-8'
+          type: "text/javascript"
         },
         // Boraware Script 추가
         {
