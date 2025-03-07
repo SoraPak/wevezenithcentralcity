@@ -1,13 +1,13 @@
 <template>
-  <section id="meal" class="meal">
-    <div class="meal_inner">
+  <section id="meal" ref="mealRef" class="meal off">
+    <div class="meal_inner" ref="mealInnerRef">
       <div class="bg">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+        <span class="bg-item"></span>
+        <span class="bg-item"></span>
+        <span class="bg-item"></span>
+        <span class="bg-item"></span>
+        <span class="bg-item"></span>
+        <span class="bg-item"></span>
       </div>
       <div class="bg2">
         <span></span>
@@ -36,14 +36,74 @@
         <img src="/images/landing/meal/text03.svg" width="134" alt="엘지 아워홈">
       </p>
     </div>
-
   </section>
 </template>
 
+<script setup>
+import { ref, onMounted, onUnmounted } from "vue";
+
+const mealRef = ref(null);
+const mealInnerRef = ref(null);
+let animationFrame = null;
+
+const handleScroll = () => {
+  if (!process.client) return;
+  if (!mealRef.value || !mealInnerRef.value) return;
+
+  const mealTop = mealRef.value.getBoundingClientRect().top;
+  const windowHeight = window.innerHeight;
+
+  if (mealTop < windowHeight * 0.8) {
+    mealRef.value.classList.remove("off");
+
+    if (animationFrame) cancelAnimationFrame(animationFrame);
+    animationFrame = requestAnimationFrame(() => {
+      mealInnerRef.value.style.maxHeight = "1530px";
+
+      // 애니메이션이 끝난 후 bg-item들에 class 추가
+      setTimeout(() => {
+        document.querySelectorAll(".bg-item").forEach((el, index) => {
+          setTimeout(() => {
+            el.classList.add("animate");
+          }, index * 200); // 요소마다 애니메이션 딜레이 추가
+        });
+      }, 1500); // meal_inner 애니메이션이 끝난 후 실행
+    });
+  } else {
+    if (animationFrame) cancelAnimationFrame(animationFrame);
+    animationFrame = requestAnimationFrame(() => {
+      mealInnerRef.value.style.maxHeight = "600px";
+      document.querySelectorAll(".bg-item").forEach(el => el.classList.remove("animate"));
+    });
+  }
+};
+
+onMounted(() => {
+  if (process.client) {
+    mealInnerRef.value.style.maxHeight = "600px";
+    window.addEventListener("scroll", handleScroll);
+  }
+});
+
+onUnmounted(() => {
+  if (process.client) {
+    window.removeEventListener("scroll", handleScroll);
+  }
+});
+</script>
+
+
+
 <style scoped>
+.off .meal_inner {
+  min-height: 607px;
+  opacity: 0;
+  transition: max-height 1s ease-out, opacity 0.8s ease-out;
+}
 .meal {
   padding-top: 180px;
   background: #fff;
+  overflow: hidden;
 }
 .meal_inner {
   min-height: 1530px;
@@ -51,6 +111,8 @@
   margin: 0 auto;
   position: relative;
   padding: 1px;
+  opacity: 1;
+  transition: max-height 1s ease-in, opacity 1s ease-in;
 }
 .bg, .bg2 {
   position: absolute;
@@ -65,7 +127,6 @@
   opacity: 0.6;
 }
 
-.bg > span,
 .bg2 > span {
   display: block;
   width: 400px;
@@ -75,35 +136,67 @@
   background-position: center center;
   position: absolute;
 }
-.bg > span:nth-child(1) {
+
+/* 초기 상태 */
+.bg-item {
+  display: block;
+  width: 400px;
+  height: 400px;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  transform: translateY(50px) scale(0.7) rotate(0deg);
+  opacity: 0;
+  will-change: transform, opacity;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+/* 나타날 때 애니메이션 */
+.bg-item.animate {
+  animation: slideRotate 1.2s ease-out forwards;
+}
+
+/* 개별 위치 */
+.bg-item:nth-child(1) {
   background-image: url("/images/landing/meal/cf01.png");
   right: -270px;
   top: -170px;
 }
-.bg > span:nth-child(2) {
+.bg-item:nth-child(2) {
   background-image: url("/images/landing/meal/cf02.png");
   left: 280px;
   top: -130px;
 }
-.bg > span:nth-child(3) {
+.bg-item:nth-child(3) {
   background-image: url("/images/landing/meal/cf03.png");
   left: -240px;
 }
-.bg > span:nth-child(4) {
+.bg-item:nth-child(4) {
   background-image: url("/images/landing/meal/cf04.png");
   right: -160px;
   top: 310px;
 }
-.bg > span:nth-child(5) {
+.bg-item:nth-child(5) {
   background-image: url("/images/landing/meal/cf05.png");
   left: 219px;
   top: 360px;
 }
-.bg > span:nth-child(6) {
+.bg-item:nth-child(6) {
   background-image: url("/images/landing/meal/cf06.png");
   left: -140px;
   top: 420px;
+}
 
+@keyframes slideRotate {
+  0% {
+    transform: translateY(50px) scale(0.7) rotate(0deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1) rotate(360deg);
+    opacity: 1;
+  }
 }
 
 .bg2 > span {
@@ -198,38 +291,44 @@
 
 /* sp */
 @media only screen and (max-width: 950px) {
+  .off.meal {
+    margin-top: -40vw;
+  }
+  .off .meal_inner {
+    min-height: 0;
+  }
   .meal {
     padding-top: 0;
   }
   .meal_inner {
     min-height: 186vw;
   }
-  .bg > span {
+  .bg-item {
     width: 55vw;
     height: 55vw;
   }
-  .bg > span:nth-child(1) {
+  .bg-item:nth-child(1) {
     top: 58vw;
     right: -16vw;
     transform: rotate(-165deg);
   }
-  .bg > span:nth-child(2) {
+  .bg-item:nth-child(2) {
     left: 31vw;
     top: -20vw;
     transform: rotate(-15deg);
   }
-  .bg > span:nth-child(3) {
+  .bg-item:nth-child(3) {
     left: -12vw;
     top: -16vw;
   }
-  .bg > span:nth-child(4) {
+  .bg-item:nth-child(4) {
     right: -20vw;
     top: -15vw;
   }
-  .bg > span:nth-child(5) {
+  .bg-item:nth-child(5) {
     display: none;
   }
-  .bg > span:nth-child(6) {
+  .bg-item:nth-child(6) {
     left: -14vw;
     top: 72vw;
   }
