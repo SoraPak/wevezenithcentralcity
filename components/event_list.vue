@@ -13,11 +13,11 @@
 </template>
 <script setup>
   const eventList = [
-    { id: '2412_2', link: '/event/2412_2', img: 'og_img_2412_2.png' },
-    { id: '2412', link: '/event/2412', img: 'og_img_2412.png' },
-    { id: '2411', link: '/event/2411', img: 'og_img_2411.png' },
-    { id: '2410', link: '/event/2410', img: 'og_img_2410.jpg' },
-    { id: '24', link: '/event/24', img: 'og_img_24.png' }
+    { id: '2412_2', link: '/event/2412_2', img: '/og_img_2412_2.png' },
+    { id: '2412', link: '/event/2412', img: '/og_img_2412.png' },
+    { id: '2411', link: '/event/2411', img: '/og_img_2411.png' },
+    { id: '2410', link: '/event/2410', img: '/og_img_2410.jpg' },
+    { id: '24', link: '/event/24', img: '/og_img_24.png' }
   ];
 </script>
 <style scoped>
