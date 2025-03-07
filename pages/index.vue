@@ -6,6 +6,7 @@
     <Hero />
     <Point />
     <Location />
+    <Meal />
     <Ansim />
     <Why />
     <Study />
@@ -62,6 +63,7 @@ import R_nav from '~/components/landing/r_nav.vue'
 import Hero from '~/components/landing/hero.vue'
 import Point from '~/components/landing/point.vue'
 import Location from '~/components/landing/location.vue'
+import Meal from '~/components/landing/meal.vue'
 import Ansim from '~/components/landing/ansim.vue'
 import Why from '~/components/landing/why.vue'
 import Study from '~/components/landing/study.vue'

@@ -76,7 +76,8 @@ onMounted(() => {
   background: #0182e0;
   color: #fff;
   position: relative;
-  padding-bottom: 785px;
+  padding-bottom: 455px;
+  z-index: 1;
 }
 
 .location::before {
@@ -85,17 +86,17 @@ onMounted(() => {
   left: 0;
   right: 0;
   top: 0;
-  bottom: -1px;
+  bottom: -380px;
   width: 100%;
   background: url("/images/landing/location/bg_bottom.png") no-repeat center bottom;
   background-size: 2688px auto;
+  pointer-events: none;
 }
 
 .location_inner {
   max-width: 840px;
   margin: 0 auto;
   position: relative;
-  height: 635px;
 }
 
 .ttl, .img01, .img02, .img03, .img04, .text01, .text02, .text03, .text04 {
@@ -261,12 +262,13 @@ onMounted(() => {
 @media only screen and (max-width: 950px) {
   .location {
     padding-bottom: 0;
+    padding-bottom: 108vw;
   }
   .location::before {
     background-size: 101vw auto;
+    bottom: -13.5vw;
   }
   .location_inner {
-    height: 141vw;
     max-width: 100%;
   }
   .ttl {

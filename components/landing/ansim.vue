@@ -59,15 +59,28 @@ onMounted(() => {
 
 <style scoped>
   .ansim {
-    background: #000f3a;
+   
     color: #fff;
     position: relative;
+  }
+  .ansim::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: -800px;
+    pointer-events: none;
+    background: url("/images/landing/ansim/bg_top.png") no-repeat center top;
+    background-size: 2688px auto;
   }
   .ansim_inner {
     max-width: 840px;
     margin: 0 auto;
     position: relative;
     height: 490px;
+    
   }
   .ansim_inner::after {
     content: "";
@@ -81,6 +94,7 @@ onMounted(() => {
     top: -870px;
     mix-blend-mode: screen;
     animation: rotateInfinite 70s linear infinite;
+    pointer-events:none;
   }
   /* 회전 애니메이션 */
   @keyframes rotateInfinite {
@@ -266,7 +280,6 @@ onMounted(() => {
   .section01 {
     width: 622px;
     margin: 0 auto;
-    margin-top: -197px;
     color: #606563;
     background: #fff;
     padding: 33px;
@@ -321,6 +334,10 @@ onMounted(() => {
 
 /* sp */
 @media only screen and (max-width: 950px) {
+  .ansim::before {
+    background-size: 101vw auto;
+    top: -36vw;
+  }
   .ansim_inner {
     max-width: 100%;
     padding-top: 95vw;
