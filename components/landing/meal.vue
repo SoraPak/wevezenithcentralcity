@@ -62,7 +62,7 @@
   top: 0;
 }
 .bg2 {
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
 .bg > span,
@@ -196,10 +196,6 @@
   margin-top: 5px;
 }
 
-.bg2 {
-  display: none;
-}
-
 /* sp */
 @media only screen and (max-width: 950px) {
   .meal {
@@ -238,39 +234,40 @@
     top: 72vw;
   }
   .bg2 > span {
-    width: 17vw;
-    height: 17vw;
+    width: 21vw;
+    height: 21vw;
   }
   .bg2 > span:nth-child(1) {
     left: 78vw;
     top: 107vw;
   }
   .bg2 > span:nth-child(2) {
-    left: 33vw;
-    top: 5vw;
+    left: 53vw;
+    top: 9vw;
   }
   .bg2 > span:nth-child(3) {
-    left: 560px;
+    left: -3vw;
+    top: 58vw;
   }
   .bg2 > span:nth-child(4) {
-    left: 870px;
-    top: 150px;
+    left: 82vw;
+    top: 41vw;
   }
   .bg2 > span:nth-child(5) {
-    top: 340px;
-    left: 520px;
+    top: 121vw;
+    left: -1vw;
   }
   .bg2 > span:nth-child(6) {
-    top: 590px;
-    left: 880px;
+    top: 130vw;
+    left: 87vw;
   }
   .bg2 > span:nth-child(7) {
-    top: 720px;
-    left: 710px;
+    left: 4vw;
+    top: 144vw;
   }
   .bg2 > span:nth-child(8) {
-    left: -290px;
-    top: 780px;
+    left: 1vw;
+    top: 25vw;
   }
   .ttl {
     margin-top: 24vw;
