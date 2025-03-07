@@ -21,19 +21,19 @@
       </div>
       <h1 class="ttl">
         <span class="ttlG1">
-          <img src="/images/landing/meal/ttl01.png" width="402" alt="">
-          <img src="/images/landing/meal/ttl02.png" width="187" alt="187">
+          <img src="/images/landing/meal/ttl01.png" width="402" alt="역시 제니스 프리미엄">
+          <img src="/images/landing/meal/ttl02.png" width="187" alt="대구최초">
         </span>
         <span class="ttlG2">
-          <img src="/images/landing/meal/ttl03.png" width="461" alt="">
-          <img src="/images/landing/meal/ttl04.png" width="381" alt="">
+          <img src="/images/landing/meal/ttl03.png" width="461" alt="조식,중식,석식 주는">
+          <img src="/images/landing/meal/ttl04.png" width="381" alt="최고급 아파트">
         </span>
       </h1>
       <img class="sora" src="/images/landing/meal/sora.png" width="421" alt="">
       <p class="textG1">
-        <img src="/images/landing/meal/text01.png" width="326" alt="">
-        <img src="/images/landing/meal/text02.png" width="148" alt="">
-        <img src="/images/landing/meal/text03.svg" width="134" alt="">
+        <img src="/images/landing/meal/text01.png" width="326" alt="매일 뭐 먹지?">
+        <img src="/images/landing/meal/text02.png" width="148" alt="고민 끝!">
+        <img src="/images/landing/meal/text03.svg" width="134" alt="엘지 아워홈">
       </p>
     </div>
 
