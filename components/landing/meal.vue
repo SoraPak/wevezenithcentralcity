@@ -62,21 +62,24 @@ const handleIntersection = (entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       if (mealRef.value) {
-        mealRef.value.classList.remove("off"); // ✅ 스크롤 시 height 애니메이션 실행
+        mealRef.value.classList.remove("off"); // ✅ height 애니메이션 실행
 
-        // ✅ height 애니메이션 후 `.active` 추가 (video 표시)
+        // ✅ height 애니메이션이 끝난 후 실행 (1.5초 후)
         setTimeout(() => {
           mealRef.value.classList.add("active"); 
-        }, 1500); // height 애니메이션이 끝나는 시간과 맞춤
+
+          // ✅ .active가 붙은 후 .bg-item 애니메이션 실행
+          setTimeout(() => {
+            document.querySelectorAll(".bg-item").forEach((el, index) => {
+              setTimeout(() => {
+                el.classList.add("animate");
+              }, index * 200);
+            });
+          }, 300); // `.active` 추가 후 약간의 지연 추가
+          
+        }, 1500); 
 
         observer.unobserve(entry.target); // ✅ 한 번 실행 후 감지 중지
-
-        // ✅ `.bg-item` 애니메이션 추가
-        document.querySelectorAll(".bg-item").forEach((el, index) => {
-          setTimeout(() => {
-            el.classList.add("animate");
-          }, index * 200);
-        });
       }
     }
   });
@@ -85,8 +88,8 @@ const handleIntersection = (entries, observer) => {
 onMounted(() => {
   if (process.client && mealRef.value) {
     const observer = new IntersectionObserver(handleIntersection, {
-      root: null, // viewport 기준
-      threshold: 0.3, // 30% 보이면 실행
+      root: null,
+      threshold: 0.7, // 70% 보이면 실행
     });
     observer.observe(mealRef.value);
   }
@@ -321,11 +324,8 @@ onMounted(() => {
 
 /* sp */
 @media only screen and (max-width: 950px) {
-  .off.meal {
-    margin-top: -40vw;
-  }
   .off .meal_inner {
-    max-height: 0;
+    max-height: 34vw;
   }
   .meal {
     padding-top: 0;
