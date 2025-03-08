@@ -43,6 +43,7 @@
           <source src="/images/landing/meal/steam.mp4" type="video/mp4" />
         </video>
         <!-- img class="sora_img2" src="/images/landing/meal/steam.jpg" alt="" -->
+         
       </div>
       <p class="textG1">
         <img src="/images/landing/meal/text01.png" width="326" alt="매일 뭐 먹지?">
