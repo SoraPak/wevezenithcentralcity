@@ -1,6 +1,6 @@
 <template>
   <section id="meal" ref="mealRef" class="meal off">
-    <div class="meal_inner" ref="mealInnerRef">
+    <div class="meal_inner">
       <div class="bg">
         <span class="bg-item"></span>
         <span class="bg-item"></span>
@@ -29,7 +29,7 @@
           <img src="/images/landing/meal/ttl04.png" width="381" alt="최고급 아파트">
         </span>
       </h1>
-      <div class="sora" :class="{ 'video-loaded': isVideoLoaded }">
+      <div class="sora">
         <img src="/images/landing/meal/sora.png" alt="">
         <video
           ref="bgVideo"
@@ -39,7 +39,6 @@
           playsinline
           preload="auto"
           class="bg-video"
-          @loadeddata="handleVideoLoad"
         >
           <source src="/images/landing/meal/steam.mp4" type="video/mp4" />
         </video>
@@ -54,63 +53,50 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref, onMounted } from "vue";
 
 const mealRef = ref(null);
-const isVideoLoaded = ref(false); // 비디오 로딩 상태
-const bgVideo = ref(null);
 
-const handleVideoLoad = () => {
-  isVideoLoaded.value = true; // 비디오 로딩 완료되면 true로 변경
-};
+const handleIntersection = (entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      if (mealRef.value) {
+        mealRef.value.classList.remove("off"); // ✅ 스크롤 시 height 애니메이션 실행
 
-const handleScroll = () => {
-  if (!process.client) return;
-  if (!mealRef.value) return;
-
-  const mealTop = mealRef.value.getBoundingClientRect().top;
-  const windowHeight = window.innerHeight;
-
-  if (mealTop < windowHeight * 0.8) {
-    mealRef.value.classList.remove("off");
-
-    // 일정 시간 후 steam video 및 bg-item 애니메이션 활성화
-    setTimeout(() => {
-      mealRef.value.classList.add("active"); // steam 애니메이션 활성화
-      document.querySelectorAll(".bg-item").forEach((el, index) => {
+        // ✅ height 애니메이션 후 `.active` 추가 (video 표시)
         setTimeout(() => {
-          el.classList.add("animate");
-        }, index * 200); // 개별 애니메이션 지연 시간 추가
-      });
-    }, 1500); // height 애니메이션이 끝난 후 실행
-  } else {
-    mealRef.value.classList.add("off");
-    mealRef.value.classList.remove("active");
+          mealRef.value.classList.add("active"); 
+        }, 1500); // height 애니메이션이 끝나는 시간과 맞춤
 
-    // bg-item 애니메이션 제거
-    document.querySelectorAll(".bg-item").forEach(el => el.classList.remove("animate"));
-  }
+        observer.unobserve(entry.target); // ✅ 한 번 실행 후 감지 중지
+
+        // ✅ `.bg-item` 애니메이션 추가
+        document.querySelectorAll(".bg-item").forEach((el, index) => {
+          setTimeout(() => {
+            el.classList.add("animate");
+          }, index * 200);
+        });
+      }
+    }
+  });
 };
 
 onMounted(() => {
-  if (process.client) {
-    window.addEventListener("scroll", handleScroll);
-  }
-});
-
-onUnmounted(() => {
-  if (process.client) {
-    window.removeEventListener("scroll", handleScroll);
+  if (process.client && mealRef.value) {
+    const observer = new IntersectionObserver(handleIntersection, {
+      root: null, // viewport 기준
+      threshold: 0.3, // 30% 보이면 실행
+    });
+    observer.observe(mealRef.value);
   }
 });
 </script>
 
 
 
-
 <style scoped>
 .off .meal_inner {
-  min-height: 607px;
+  max-height: 607px;
   opacity: 0;
   transition: max-height 1s ease-out, opacity 0.8s ease-out;
 }
@@ -120,7 +106,8 @@ onUnmounted(() => {
   overflow: hidden;
 }
 .meal_inner {
-  min-height: 1530px;
+  height: 1530px;
+  max-height: 1530px;
   max-width: 840px;
   margin: 0 auto;
   position: relative;
@@ -303,8 +290,7 @@ onUnmounted(() => {
   transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
 }
 
-.active .sora > video,
-.video-loaded > video {
+.active .sora > video {
   opacity: 1;
   visibility: visible;
 }
@@ -332,13 +318,14 @@ onUnmounted(() => {
     margin-top: -40vw;
   }
   .off .meal_inner {
-    min-height: 0;
+    max-height: 0;
   }
   .meal {
     padding-top: 0;
   }
   .meal_inner {
-    min-height: 186vw;
+    height: 186vw;
+    max-height: 186vw;
   }
   .bg-item {
     width: 55vw;
