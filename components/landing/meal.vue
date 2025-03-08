@@ -29,7 +29,7 @@
           <img src="/images/landing/meal/ttl04.png" width="381" alt="최고급 아파트">
         </span>
       </h1>
-      <div class="sora">
+      <div class="sora" :class="{ 'video-loaded': isVideoLoaded }">
         <img src="/images/landing/meal/sora.png" alt="">
         <video
           ref="bgVideo"
@@ -49,7 +49,6 @@
         <img src="/images/landing/meal/text02.png" width="148" alt="고민 끝!">
         <img src="/images/landing/meal/text03.svg" width="134" alt="엘지 아워홈">
       </p>
-      
     </div>
   </section>
 </template>
@@ -58,12 +57,16 @@
 import { ref, onMounted, onUnmounted } from "vue";
 
 const mealRef = ref(null);
-const mealInnerRef = ref(null);
-let animationFrame = null;
+const isVideoLoaded = ref(false); // 비디오 로딩 상태
+const bgVideo = ref(null);
+
+const handleVideoLoad = () => {
+  isVideoLoaded.value = true; // 비디오 로딩 완료되면 true로 변경
+};
 
 const handleScroll = () => {
   if (!process.client) return;
-  if (!mealRef.value || !mealInnerRef.value) return;
+  if (!mealRef.value) return;
 
   const mealTop = mealRef.value.getBoundingClientRect().top;
   const windowHeight = window.innerHeight;
@@ -71,31 +74,26 @@ const handleScroll = () => {
   if (mealTop < windowHeight * 0.8) {
     mealRef.value.classList.remove("off");
 
-    if (animationFrame) cancelAnimationFrame(animationFrame);
-    animationFrame = requestAnimationFrame(() => {
-      mealInnerRef.value.style.maxHeight = "1530px";
-
-      // 애니메이션이 끝난 후 bg-item들에 class 추가
-      setTimeout(() => {
-        document.querySelectorAll(".bg-item").forEach((el, index) => {
-          setTimeout(() => {
-            el.classList.add("animate");
-          }, index * 200); // 요소마다 애니메이션 딜레이 추가
-        });
-      }, 1500); // meal_inner 애니메이션이 끝난 후 실행
-    });
+    // 일정 시간 후 steam video 및 bg-item 애니메이션 활성화
+    setTimeout(() => {
+      mealRef.value.classList.add("active"); // steam 애니메이션 활성화
+      document.querySelectorAll(".bg-item").forEach((el, index) => {
+        setTimeout(() => {
+          el.classList.add("animate");
+        }, index * 200); // 개별 애니메이션 지연 시간 추가
+      });
+    }, 1500); // height 애니메이션이 끝난 후 실행
   } else {
-    if (animationFrame) cancelAnimationFrame(animationFrame);
-    animationFrame = requestAnimationFrame(() => {
-      mealInnerRef.value.style.maxHeight = "600px";
-      document.querySelectorAll(".bg-item").forEach(el => el.classList.remove("animate"));
-    });
+    mealRef.value.classList.add("off");
+    mealRef.value.classList.remove("active");
+
+    // bg-item 애니메이션 제거
+    document.querySelectorAll(".bg-item").forEach(el => el.classList.remove("animate"));
   }
 };
 
 onMounted(() => {
   if (process.client) {
-    mealInnerRef.value.style.maxHeight = "600px";
     window.addEventListener("scroll", handleScroll);
   }
 });
@@ -106,6 +104,7 @@ onUnmounted(() => {
   }
 });
 </script>
+
 
 
 
@@ -299,7 +298,17 @@ onUnmounted(() => {
   width: 500px;
   mix-blend-mode: screen;
   z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
 }
+
+.active .sora > video,
+.video-loaded > video {
+  opacity: 1;
+  visibility: visible;
+}
+
 .textG1 {
   position: absolute;
   top: 670px;
