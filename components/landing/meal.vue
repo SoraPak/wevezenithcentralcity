@@ -29,12 +29,27 @@
           <img src="/images/landing/meal/ttl04.png" width="381" alt="최고급 아파트">
         </span>
       </h1>
-      <img class="sora" src="/images/landing/meal/sora.png" width="421" alt="">
+      <div class="sora">
+        <img src="/images/landing/meal/sora.png" alt="">
+        <video
+          ref="bgVideo"
+          autoplay
+          loop
+          muted
+          playsinline
+          preload="auto"
+          class="bg-video"
+          @loadeddata="handleVideoLoad"
+        >
+          <source src="/images/landing/meal/steam.mp4" type="video/mp4" />
+        </video>
+      </div>
       <p class="textG1">
         <img src="/images/landing/meal/text01.png" width="326" alt="매일 뭐 먹지?">
         <img src="/images/landing/meal/text02.png" width="148" alt="고민 끝!">
         <img src="/images/landing/meal/text03.svg" width="134" alt="엘지 아워홈">
       </p>
+      
     </div>
   </section>
 </template>
@@ -268,9 +283,22 @@ onUnmounted(() => {
   margin-right: 17px;
 }
 .sora {
+  width: 421px;
   position: absolute;
   left: 40px;
   top: 460px;
+}
+.sora > img {
+  width: 100%;
+  height: auto;
+}
+.sora > video {
+  position: absolute;
+  left: -100px;
+  top: -10px;
+  width: 500px;
+  mix-blend-mode: screen;
+  z-index: 2;
 }
 .textG1 {
   position: absolute;
@@ -397,6 +425,11 @@ onUnmounted(() => {
     width: 70vw;
     top: 65vw;
     left: 15vw;
+  }
+  .sora > video {
+    width: 83vw;
+    left: -16vw;
+    top: -4vw;
   }
   .textG1 {
     flex-direction: row;
