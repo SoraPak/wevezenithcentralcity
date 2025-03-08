@@ -30,7 +30,7 @@
         </span>
       </h1>
       <div class="sora">
-        <img src="/images/landing/meal/sora.png" alt="">
+        <img class="sora_img" src="/images/landing/meal/sora.png" alt="">
         <video
           ref="bgVideo"
           autoplay
@@ -42,6 +42,7 @@
         >
           <source src="/images/landing/meal/steam.mp4" type="video/mp4" />
         </video>
+        <img class="sora_img2" src="/images/landing/meal/steam.jpg" alt="">
       </div>
       <p class="textG1">
         <img src="/images/landing/meal/text01.png" width="326" alt="매일 뭐 먹지?">
@@ -274,20 +275,26 @@ onMounted(() => {
   left: 40px;
   top: 460px;
 }
-.sora > img {
+.sora > .sora_img {
   width: 100%;
   height: auto;
 }
-.sora > video {
+.sora > video,
+.sora > .sora_img2 {
   position: absolute;
   left: -100px;
   top: -10px;
   width: 500px;
   mix-blend-mode: screen;
   z-index: 2;
+  transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+
+}
+.sora > video,
+.active .sora_img2 {
   opacity: 0;
   visibility: hidden;
-  transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+
 }
 
 .active .sora > video {
@@ -422,7 +429,8 @@ onMounted(() => {
     top: 65vw;
     left: 15vw;
   }
-  .sora > video {
+  .sora > video,
+  .sora > .sora_img2 {
     width: 83vw;
     left: -16vw;
     top: -4vw;
