@@ -10,14 +10,14 @@
         <span class="bg-item"></span>
       </div>
       <div class="bg2">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+        <span class="bubble"></span>
+        <span class="bubble"></span>
+        <span class="bubble"></span>
+        <span class="bubble"></span>
+        <span class="bubble"></span>
+        <span class="bubble"></span>
+        <span class="bubble"></span>
+        <span class="bubble"></span>
       </div>
       <h1 class="ttl">
         <span class="ttlG1">
@@ -43,7 +43,7 @@
           <source src="/images/landing/meal/steam.mp4" type="video/mp4" />
         </video>
         <!-- img class="sora_img2" src="/images/landing/meal/steam.jpg" alt="" -->
-         
+
       </div>
       <p class="textG1">
         <img src="/images/landing/meal/text01.png" width="326" alt="매일 뭐 먹지?">
@@ -65,19 +65,28 @@ const handleIntersection = (entries, observer) => {
       if (mealRef.value) {
         mealRef.value.classList.remove("off"); // ✅ height 애니메이션 실행
 
-        // ✅ height 애니메이션이 끝난 후 실행 (1.5초 후)
+        // ✅ height 애니메이션이 끝난 후 약간 딜레이 후 풍선 효과 실행 (300ms 후)
+        setTimeout(() => {
+          document.querySelectorAll(".bubble").forEach((el, index) => {
+            setTimeout(() => {
+              el.classList.add("pop");
+            }, index * 200); // 순차적으로 실행
+          });
+        }, 300);
+
+        // ✅ height 애니메이션이 끝난 후 `.active` 추가 (1.5초 후)
         setTimeout(() => {
           mealRef.value.classList.add("active"); 
 
-          // ✅ .active가 붙은 후 .bg-item 애니메이션 실행
+          // ✅ .bg-item 애니메이션 실행
           setTimeout(() => {
             document.querySelectorAll(".bg-item").forEach((el, index) => {
               setTimeout(() => {
                 el.classList.add("animate");
               }, index * 200);
             });
-          }, 300); // `.active` 추가 후 약간의 지연 추가
-          
+          }, 300);
+
         }, 1500); 
 
         observer.unobserve(entry.target); // ✅ 한 번 실행 후 감지 중지
@@ -129,19 +138,7 @@ onMounted(() => {
   bottom: 0;
   top: 0;
 }
-.bg2 {
-  opacity: 0.6;
-}
 
-.bg2 > span {
-  display: block;
-  width: 400px;
-  height: 400px;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-position: center center;
-  position: absolute;
-}
 
 /* 초기 상태 */
 .bg-item {
@@ -205,45 +202,81 @@ onMounted(() => {
   }
 }
 
-.bg2 > span {
+.bg2 {
+  opacity: 0.6;
+}
+
+.bubble {
+  display: block;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
   width: 175px;
   height: 175px;
+  transform: scale(0); /* 초기 상태 */
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
 }
-.bg2 > span:nth-child(1) {
+
+/* 📌 부풀어 오르는 애니메이션 */
+.bubble.pop {
+  animation: bouncePop 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* 📌 풍선 효과 (파앗! 뽁뽁뽁) */
+@keyframes bouncePop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  40% {
+    transform: scale(1.3); /* 빠르게 커졌다가 */
+    opacity: 1;
+  }
+  70% {
+    transform: scale(0.9); /* 살짝 수축 */
+  }
+  100% {
+    transform: scale(1); /* 정상 크기로 유지 */
+  }
+}
+
+
+.bubble:nth-child(1) {
   background-image: url("/images/landing/meal/f01.png");
   left: -310px;
   top: 250px;
 }
-.bg2 > span:nth-child(2) {
+.bubble:nth-child(2) {
   background-image: url("/images/landing/meal/f02.png");
   left: -210px;
   top: 460px;
 }
-.bg2 > span:nth-child(3) {
+.bubble:nth-child(3) {
   background-image: url("/images/landing/meal/f03.png");
   left: 560px;
 }
-.bg2 > span:nth-child(4) {
+.bubble:nth-child(4) {
   background-image: url("/images/landing/meal/f04.png");
   left: 870px;
   top: 150px;
 }
-.bg2 > span:nth-child(5) {
+.bubble:nth-child(5) {
   background-image: url("/images/landing/meal/f05.png");
   top: 340px;
   left: 520px;
 }
-.bg2 > span:nth-child(6) {
+.bubble:nth-child(6) {
   background-image: url("/images/landing/meal/f06.png");
   top: 590px;
   left: 880px;
 }
-.bg2 > span:nth-child(7) {
+.bubble:nth-child(7) {
   background-image: url("/images/landing/meal/f07.png");
   top: 720px;
   left: 710px;
 }
-.bg2 > span:nth-child(8) {
+.bubble:nth-child(8) {
   background-image: url("/images/landing/meal/f08.png");
   left: -290px;
   top: 780px;
