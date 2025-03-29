@@ -7,7 +7,7 @@
       <p class="telNo"><a href="tel:1555-1924" target="_blank"><span>Tel:</span><span>1555</span><span>1924</span></a></p>
     </div>
     <div class="section03">
-      <a class="kakaoBut" href="https://open.kakao.com/me/wevehj" target="_blank">
+      <a class="kakaoBut" href="https://open.kakao.com/me/DZenith" target="_blank">
         
         <span><img loading="lazy" src="/images/landing/r_nav/kakao.svg" width="45" alt=""></span>
         톡상담/예약

@@ -62,7 +62,7 @@
             <p class="comment">모델하우스는 <strong>사전예약 및 담당자 지정제</strong>로 운영되고 있습니다(당일예약 가능). 모델하우스 카운터에서 <strong>박소라 과장</strong>을 찾아주세요.<br class="pc_br"><span style="display: inline-block; font-weight: bolder; font-size: 83%; color: #e20000;">그냥 오시면 선물이 제공 안되요ㅠㅠ</span></p>
           </div>
           <ul class="links">
-            <li class="kakao"><a href="https://open.kakao.com/me/wevehj" target="_blank">카톡으로<br>모델하우스<br>투어 예약하기</a></li>
+            <li class="kakao"><a href="https://open.kakao.com/me/DZenith" target="_blank">카톡으로<br>모델하우스<br>투어 예약하기</a></li>
             <li class="call"><a href="tel:1555-1924" target="_blank">전화로<br>모델하우스<br>투어 예약하기</a></li>
           </ul>
         </div>
