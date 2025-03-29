@@ -1,6 +1,6 @@
 <template>
   <section id="meal" ref="mealRef" class="meal off">
-    <div class="meal_inner" ref="mealInnerRef">
+    <div class="meal_inner">
       <div class="bg">
         <span class="bg-item"></span>
         <span class="bg-item"></span>
@@ -10,14 +10,14 @@
         <span class="bg-item"></span>
       </div>
       <div class="bg2">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+        <span class="bubble"></span>
+        <span class="bubble"></span>
+        <span class="bubble"></span>
+        <span class="bubble"></span>
+        <span class="bubble"></span>
+        <span class="bubble"></span>
+        <span class="bubble"></span>
+        <span class="bubble"></span>
       </div>
       <h1 class="ttl">
         <span class="ttlG1">
@@ -29,7 +29,22 @@
           <img src="/images/landing/meal/ttl04.png" width="381" alt="최고급 아파트">
         </span>
       </h1>
-      <img class="sora" src="/images/landing/meal/sora.png" width="421" alt="">
+      <div class="sora">
+        <img class="sora_img" src="/images/landing/meal/sora.png" alt="">
+        <video
+          ref="bgVideo"
+          autoplay
+          loop
+          muted
+          playsinline
+          preload="auto"
+          class="bg-video"
+        >
+          <source src="/images/landing/meal/steam.mp4" type="video/mp4" />
+        </video>
+        <!-- img class="sora_img2" src="/images/landing/meal/steam.jpg" alt="" -->
+
+      </div>
       <p class="textG1">
         <img src="/images/landing/meal/text01.png" width="326" alt="매일 뭐 먹지?">
         <img src="/images/landing/meal/text02.png" width="148" alt="고민 끝!">
@@ -40,54 +55,53 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref, onMounted } from "vue";
 
 const mealRef = ref(null);
-const mealInnerRef = ref(null);
-let animationFrame = null;
 
-const handleScroll = () => {
-  if (!process.client) return;
-  if (!mealRef.value || !mealInnerRef.value) return;
+const handleIntersection = (entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      if (mealRef.value) {
+        mealRef.value.classList.remove("off"); // ✅ height 애니메이션 실행
 
-  const mealTop = mealRef.value.getBoundingClientRect().top;
-  const windowHeight = window.innerHeight;
+        // ✅ height 애니메이션이 끝난 후 약간 딜레이 후 풍선 효과 실행 (300ms 후)
+        setTimeout(() => {
+          document.querySelectorAll(".bubble").forEach((el, index) => {
+            setTimeout(() => {
+              el.classList.add("pop");
+            }, index * 200); // 순차적으로 실행
+          });
+        }, 300);
 
-  if (mealTop < windowHeight * 0.8) {
-    mealRef.value.classList.remove("off");
+        // ✅ height 애니메이션이 끝난 후 `.active` 추가 (1.5초 후)
+        setTimeout(() => {
+          mealRef.value.classList.add("active"); 
 
-    if (animationFrame) cancelAnimationFrame(animationFrame);
-    animationFrame = requestAnimationFrame(() => {
-      mealInnerRef.value.style.maxHeight = "1530px";
-
-      // 애니메이션이 끝난 후 bg-item들에 class 추가
-      setTimeout(() => {
-        document.querySelectorAll(".bg-item").forEach((el, index) => {
+          // ✅ .bg-item 애니메이션 실행
           setTimeout(() => {
-            el.classList.add("animate");
-          }, index * 200); // 요소마다 애니메이션 딜레이 추가
-        });
-      }, 1500); // meal_inner 애니메이션이 끝난 후 실행
-    });
-  } else {
-    if (animationFrame) cancelAnimationFrame(animationFrame);
-    animationFrame = requestAnimationFrame(() => {
-      mealInnerRef.value.style.maxHeight = "600px";
-      document.querySelectorAll(".bg-item").forEach(el => el.classList.remove("animate"));
-    });
-  }
+            document.querySelectorAll(".bg-item").forEach((el, index) => {
+              setTimeout(() => {
+                el.classList.add("animate");
+              }, index * 200);
+            });
+          }, 300);
+
+        }, 1500); 
+
+        observer.unobserve(entry.target); // ✅ 한 번 실행 후 감지 중지
+      }
+    }
+  });
 };
 
 onMounted(() => {
-  if (process.client) {
-    mealInnerRef.value.style.maxHeight = "600px";
-    window.addEventListener("scroll", handleScroll);
-  }
-});
-
-onUnmounted(() => {
-  if (process.client) {
-    window.removeEventListener("scroll", handleScroll);
+  if (process.client && mealRef.value) {
+    const observer = new IntersectionObserver(handleIntersection, {
+      root: null,
+      threshold: 0.7, // 70% 보이면 실행
+    });
+    observer.observe(mealRef.value);
   }
 });
 </script>
@@ -96,7 +110,7 @@ onUnmounted(() => {
 
 <style scoped>
 .off .meal_inner {
-  min-height: 607px;
+  max-height: 607px;
   opacity: 0;
   transition: max-height 1s ease-out, opacity 0.8s ease-out;
 }
@@ -106,7 +120,8 @@ onUnmounted(() => {
   overflow: hidden;
 }
 .meal_inner {
-  min-height: 1530px;
+  height: 1530px;
+  max-height: 1530px;
   max-width: 840px;
   margin: 0 auto;
   position: relative;
@@ -123,19 +138,7 @@ onUnmounted(() => {
   bottom: 0;
   top: 0;
 }
-.bg2 {
-  opacity: 0.6;
-}
 
-.bg2 > span {
-  display: block;
-  width: 400px;
-  height: 400px;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-position: center center;
-  position: absolute;
-}
 
 /* 초기 상태 */
 .bg-item {
@@ -199,45 +202,81 @@ onUnmounted(() => {
   }
 }
 
-.bg2 > span {
+.bg2 {
+  opacity: 0.6;
+}
+
+.bubble {
+  display: block;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
   width: 175px;
   height: 175px;
+  transform: scale(0); /* 초기 상태 */
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
 }
-.bg2 > span:nth-child(1) {
+
+/* 📌 부풀어 오르는 애니메이션 */
+.bubble.pop {
+  animation: bouncePop 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* 📌 풍선 효과 (파앗! 뽁뽁뽁) */
+@keyframes bouncePop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  40% {
+    transform: scale(1.3); /* 빠르게 커졌다가 */
+    opacity: 1;
+  }
+  70% {
+    transform: scale(0.9); /* 살짝 수축 */
+  }
+  100% {
+    transform: scale(1); /* 정상 크기로 유지 */
+  }
+}
+
+
+.bubble:nth-child(1) {
   background-image: url("/images/landing/meal/f01.png");
   left: -310px;
   top: 250px;
 }
-.bg2 > span:nth-child(2) {
+.bubble:nth-child(2) {
   background-image: url("/images/landing/meal/f02.png");
   left: -210px;
   top: 460px;
 }
-.bg2 > span:nth-child(3) {
+.bubble:nth-child(3) {
   background-image: url("/images/landing/meal/f03.png");
   left: 560px;
 }
-.bg2 > span:nth-child(4) {
+.bubble:nth-child(4) {
   background-image: url("/images/landing/meal/f04.png");
   left: 870px;
   top: 150px;
 }
-.bg2 > span:nth-child(5) {
+.bubble:nth-child(5) {
   background-image: url("/images/landing/meal/f05.png");
   top: 340px;
   left: 520px;
 }
-.bg2 > span:nth-child(6) {
+.bubble:nth-child(6) {
   background-image: url("/images/landing/meal/f06.png");
   top: 590px;
   left: 880px;
 }
-.bg2 > span:nth-child(7) {
+.bubble:nth-child(7) {
   background-image: url("/images/landing/meal/f07.png");
   top: 720px;
   left: 710px;
 }
-.bg2 > span:nth-child(8) {
+.bubble:nth-child(8) {
   background-image: url("/images/landing/meal/f08.png");
   left: -290px;
   top: 780px;
@@ -268,10 +307,38 @@ onUnmounted(() => {
   margin-right: 17px;
 }
 .sora {
+  width: 421px;
   position: absolute;
   left: 40px;
   top: 460px;
 }
+.sora > .sora_img {
+  width: 100%;
+  height: auto;
+}
+.sora > video,
+.sora > .sora_img2 {
+  position: absolute;
+  left: -100px;
+  top: -10px;
+  width: 500px;
+  mix-blend-mode: screen;
+  z-index: 2;
+  transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+
+}
+.sora > video,
+.active .sora_img2 {
+  opacity: 0;
+  visibility: hidden;
+
+}
+
+.active .sora > video {
+  opacity: 1;
+  visibility: visible;
+}
+
 .textG1 {
   position: absolute;
   top: 670px;
@@ -291,17 +358,15 @@ onUnmounted(() => {
 
 /* sp */
 @media only screen and (max-width: 950px) {
-  .off.meal {
-    margin-top: -40vw;
-  }
   .off .meal_inner {
-    min-height: 0;
+    max-height: 34vw;
   }
   .meal {
     padding-top: 0;
   }
   .meal_inner {
-    min-height: 186vw;
+    height: 186vw;
+    max-height: 186vw;
   }
   .bg-item {
     width: 55vw;
@@ -397,6 +462,12 @@ onUnmounted(() => {
     width: 70vw;
     top: 65vw;
     left: 15vw;
+  }
+  .sora > video,
+  .sora > .sora_img2 {
+    width: 83vw;
+    left: -16vw;
+    top: -4vw;
   }
   .textG1 {
     flex-direction: row;
