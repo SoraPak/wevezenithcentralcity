@@ -8,7 +8,11 @@
         <img loading="lazy" src="/images/landing/event(2504)/ttl02.png" width="305" alt="Spring" />
        </span>
        <!-- img loading="lazy" src="/images/images/logo.svg" width="384" alt="두산위브더제니스 센트럴시티" / -->
+       <img class="ttlB" loading="lazy" src="/images/logo.svg" width="384" alt="두산위브더제니스 센트럴시티">
       </h1>
+
+      <p class="sec01_text01"><img loading="lazy" src="/images/landing/event(2504)/sec01_text01.png" width="449" alt="박소라 과장 찾아오시면 행운의 경품 복권을 드립니다!!" /></p>
+      
       <div class="ps01G">
         <div class="ps01_03">
           <span>온누리 상품권</span>
@@ -25,9 +29,7 @@
         <div class="ps01_07">
           <span>리빙세트</span>
         </div>
-        
       </div>
-      <div class="ps01_08" :class="{ on: isChirping }"></div>
       <p class="ps01_remark">※이미지는 참고용으로 실제와 다를 수 있으며, 사정에 따라 상품이 변경될 수 있습니다.</p>
       
     </div>
