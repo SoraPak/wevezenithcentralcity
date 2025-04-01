@@ -1,17 +1,34 @@
 <template>
   <section id="event" class="event2504">
-    
+    <span class="bgC01"></span>
+    <span class="bgC02"></span>
     <div class="event2504_inner">
       <h1 class="ttl">
        <span class="ttlT">
         <img loading="lazy" src="/images/landing/event(2504)/ttl01.png" width="152" alt="HELLO" />
         <img loading="lazy" src="/images/landing/event(2504)/ttl02.png" width="305" alt="Spring" />
        </span>
-       <!-- img loading="lazy" src="/images/images/logo.svg" width="384" alt="두산위브더제니스 센트럴시티" / -->
        <img class="ttlB" loading="lazy" src="/images/logo.svg" width="384" alt="두산위브더제니스 센트럴시티">
       </h1>
-
-      <p class="sec01_text01"><img loading="lazy" src="/images/landing/event(2504)/sec01_text01.png" width="449" alt="박소라 과장 찾아오시면 행운의 경품 복권을 드립니다!!" /></p>
+      <div class="sec01">
+        <p class="text01"><img loading="lazy" src="/images/landing/event(2504)/sec01_text01.png" width="449" alt="박소라 과장 찾아오시면 행운의 경품 복권을 드립니다!!" /></p>
+        <div class="textBox">
+          <dl>
+            <dt><span>배포 장소</span></dt>
+            <dd>두산위브더제니스 센트럴시티 모델하우스</dd>
+          </dl>
+          <dl>
+            <dt><span>배포 조건</span></dt>
+            <dd>
+              <ul>
+                <li><span>방문예약</span> 하시고(필수!!) 팀장 <span>상담 완료 시</span></li>
+                <li>방문 시 <span>“경품 복권 주세요”</span> 라고 말 씀 해 주세요!</li>
+                <li>방문 팀 당 하나씩 제공(<span>가족단위방문 추천!</span>)</li>
+              </ul>
+            </dd>
+          </dl>
+        </div>
+      </div>
       
       <div class="ps01G">
         <div class="ps01_03">
@@ -149,11 +166,75 @@ onMounted(() => {
     width: 100%;
     background: url("/images/landing/event(2504)/bg.png") no-repeat center bottom;
     background-size: 2688px auto;
+    z-index: 2;
+  }
+
+  .bgC01, .bgC02 {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+  .bgC01 {
+    background: url("/images/landing/event(2504)/bg_c01.png") repeat-x center 40px;
+    background-size: 1990px auto;
   }
   .event2504_inner {
     position: relative;
     margin: 0 auto;
     max-width: 840px;
+  }
+  .ttl {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .textBox {
+    font-family: "Jua", sans-serif;
+    font-size: 22px;
+    background: #cb4a718c;
+    padding: 24px;
+    display: table;
+    margin: 0 auto;
+    border-radius: 15px;
+  }
+  .textBox dl{
+  display: table-row;
+
+  }
+  .textBox dt,
+  .textBox dd {
+    display: table-cell;
+    padding-bottom: 30px;
+  }
+  .textBox dt {
+    padding-right: 20px;
+  }
+  .textBox dl:last-child dt,
+  .textBox dl:last-child dd {
+    padding-bottom: 0;
+  }
+  .textBox dt span {
+    background: #f9ffa1;
+    color: #d15d81;
+
+    padding: 5px 10px 2px;
+    border-radius: 50px;
+    line-height: 24px;
+  }
+  .textBox dd span {
+    color: #f9ffa1;
+  }
+  .textBox dd li {
+    margin-top: 6px;
+  }
+  .textBox dd li::before {
+    content: "・";
+  }
+  .textBox dd li:first-child {
+    margin-top: 0;
   }
 
   @keyframes naturalLanternSwing {

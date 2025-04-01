@@ -65,6 +65,12 @@ export default defineNuxtConfig({
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
         { rel: 'canonical', href: 'https://xn--hu1bq8p65bh1h6oby7bg90c.kr/' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap' },
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
+        { 
+          rel: 'stylesheet', 
+          href: 'https://fonts.googleapis.com/css2?family=Jua&display=swap' 
+        }
       ],
       script: [
         // Google Tag Manager (GTM) 코드 – head 최상단에 삽입
