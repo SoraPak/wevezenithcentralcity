@@ -376,7 +376,7 @@ onMounted(() => {
   padding-top: 30px;
   padding-bottom: 40px;
   position: relative;
-  z-index: 3;
+  z-index: 13;
   margin-bottom: 0;
 }
 

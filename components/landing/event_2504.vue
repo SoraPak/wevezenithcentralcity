@@ -1,4 +1,38 @@
 <style scoped>
+  @keyframes fall {
+    0% {
+      transform: translateY(-150px) translateX(0px) rotate(0deg);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(1200px) translateX(200px) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  @keyframes ffFall {
+  0% {
+    transform: translateY(-20vh) translateX(0) rotate(0deg) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  30% {
+    transform: translateY(30vh) translateX(10vw) rotate(45deg) scale(1.05);
+  }
+  60% {
+    transform: translateY(70vh) translateX(-15vw) rotate(135deg) scale(1.1);
+  }
+  100% {
+    transform: translateY(120vh) translateX(20vw) rotate(360deg) scale(1);
+    opacity: 0;
+  }
+}
+
   .fSet, .ffSet  {
     position: absolute;
     top: 0;
@@ -14,6 +48,13 @@
     background-size: 100% auto;
     background-position: center center;
     background-repeat: no-repeat;
+
+    animation: fall linear infinite;
+    animation-duration: calc(6s + var(--i, 0) * 1s); /* 속도 다양화 */
+    animation-delay: calc(var(--i, 0) * 0.5s);       /* 시작 시간 차이 */
+    animation-fill-mode: both;                       /* 시작 전 스타일 유지 */
+    will-change: transform, opacity;                 /* 퍼포먼스 최적화 */
+    opacity: 0; 
   }
   .fSet .f_01 {
     background-image: url("/images/landing/event(2504)/f01.png");
@@ -95,6 +136,12 @@
     background-size: 100% auto;
     background-position: center center;
     background-repeat: no-repeat;
+
+    animation: ffFall linear infinite;
+    animation-duration: calc(8s + var(--j, 0) * 1.2s); /* 각자 다른 속도 */
+    animation-delay: calc(var(--j, 0) * 0.7s);         /* 시작 시간 차이 */
+    will-change: transform, opacity;
+    opacity: 0;
   }
   .ffSet .f_01 {
     background-image: url("/images/landing/event(2504)/f_f01.png");
@@ -208,28 +255,28 @@
     <span class="bgC02"></span>
     <div class="event2504_inner">
       <div class="fSet">
-        <span class="f_01"></span>
-        <span class="f_02"></span>
-        <span class="f_03"></span>
-        <span class="f_04"></span>
-        <span class="f_05"></span>
-        <span class="f_06"></span>
-        <span class="f_07"></span>
-        <span class="f_08"></span>
-        <span class="f_09"></span>
-        <span class="f_10"></span>
-        <span class="f_11"></span>
-        <span class="f_12"></span>
-        <span class="f_13"></span>
-        <span class="f_14"></span>
+        <span class="f_01" style="--i: 0"></span>
+        <span class="f_02" style="--i: 1"></span>
+        <span class="f_03" style="--i: 2"></span>
+        <span class="f_04" style="--i: 3"></span>
+        <span class="f_05" style="--i: 4"></span>
+        <span class="f_06" style="--i: 5"></span>
+        <span class="f_07" style="--i: 6"></span>
+        <span class="f_08" style="--i: 7"></span>
+        <span class="f_09" style="--i: 8"></span>
+        <span class="f_10" style="--i: 9"></span>
+        <span class="f_11" style="--i: 10"></span>
+        <span class="f_12" style="--i: 11"></span>
+        <span class="f_13" style="--i: 12"></span>
+        <span class="f_14" style="--i: 13"></span>
       </div>
       <span class="bgC01"></span>
       <span class="bgC02"></span>
       <div class="ffSet">
-        <span class="f_01"></span>
-        <span class="f_02"></span>
-        <span class="f_03"></span>
-        <span class="f_04"></span>
+        <span class="f_01" style="--j: 0"></span>
+        <span class="f_02" style="--j: 1"></span>
+        <span class="f_03" style="--j: 2"></span>
+        <span class="f_04" style="--j: 3"></span>
       </div>
       <h1 class="ttl">
         <span class="ttlT">
@@ -384,6 +431,7 @@ onMounted(() => {
     background-size: 100% 100%;
     position: relative;
     padding-top: 130px;
+    overflow: hidden; 
   }
   .event2504::before {
     content: "";
