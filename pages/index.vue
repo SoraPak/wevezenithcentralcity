@@ -75,7 +75,7 @@ import Giveaway from '~/components/landing/giveaway.vue'
 import Newyear from '~/components/landing/new-year.vue'
 import Fall from '~/components/landing/fall.vue'
 import Guide from '~/components/landing/guide.vue'
-import Event_2504 from '~/components/landing/event_2501.vue'
+import Event_2504 from '~/components/landing/event_2504.vue'
 import G_footer from '~/components/footer.vue'
 
 const landingWrap = ref(null);

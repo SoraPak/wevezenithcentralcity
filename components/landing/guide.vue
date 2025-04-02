@@ -1077,6 +1077,11 @@ onMounted(() => {
     margin-top: 52vw;
   }
 
+  .guide .bgT {
+    top: -67vw;
+    background-size: 104vw auto;
+  }
+
   .guide::before {
     background-size: 100% auto;
     width: 201vw;

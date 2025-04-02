@@ -179,6 +179,7 @@ onMounted(() => {
     right: 0;
     left: 0;
     bottom: 0;
+    pointer-events: none;
   }
   .event2504 > .bgC01 {
     background: url("/images/landing/event(2504)/bg_c01.png") repeat-x center 40px;
@@ -201,6 +202,7 @@ onMounted(() => {
     width: 546px;
     height: 546px;
     position: absolute;
+    pointer-events: none;
     
   }
   .event2504_inner > .bgC01 {
@@ -247,6 +249,7 @@ onMounted(() => {
   }
   .textBox dl{
   display: table-row;
+  line-height: 140%;
 
   }
   .textBox dt,
@@ -256,6 +259,8 @@ onMounted(() => {
   }
   .textBox dt {
     padding-right: 20px;
+    white-space:nowrap
+
   }
   .textBox dl:last-child dt,
   .textBox dl:last-child dd {
@@ -274,6 +279,8 @@ onMounted(() => {
   }
   .textBox dd li {
     margin-top: 6px;
+    text-indent: -1.5rem;
+    margin-left: 1.5rem;
   }
   .textBox dd li::before {
     content: "・";
@@ -412,8 +419,98 @@ onMounted(() => {
   }
   .event2504::before {
     background-size: 110vw;
-    top: -42vw;
+    top: -37vw;
     height: 50vw;
+  }
+
+
+  .event2504 > .bgC01 {
+    background-size: 280vw auto;
+    top: -4vw;
+  }
+  .event2504 > .bgC02 {
+    background-size: 300vw auto;
+    background-position: 98vw bottom;
+  }
+  .event2504_inner {
+    max-width: 840px;
+    padding: 30px 0;
+  }
+  .event2504_inner > .bgC01,
+  .event2504_inner > .bgC02 {
+    width: 94vw;
+    height: 94vw;
+    
+  }
+  .event2504_inner > .bgC01 {
+    left: -33vw;
+    top: -40vw;
+  }
+  .event2504_inner > .bgC02 {
+    right: -35vw;
+    top: -69vw;
+  } 
+
+  .ttl {
+    position: relative;
+  }
+  .ttl .ttlT {
+    flex-direction: column;
+    
+  }
+  .ttl .ttlT > img:first-child {
+    margin-right: 0;
+    width: 22vw;
+  }
+  .ttl .ttlT > img:last-child {
+    width: 43vw;
+    margin-top: 2vw;
+  }
+  .ttl .ttlB {
+    padding: 0 1vw;
+    border-radius: 1.5vw;
+    margin-top: 3vw;
+    width: 57vw;
+  }
+
+  .sec01 .text01 {
+    margin-top: 4vw;
+  }
+  .sec01 .text01 > img {
+    width: 85vw;
+  }
+
+
+  .textBox {
+    font-size: 4.3vw;
+    padding: 4.5vw;
+    margin: 5vw;
+    border-radius: 3vw;
+    word-break: keep-all;
+  }
+
+  .textBox dt,
+  .textBox dd {
+    padding-bottom: 3vw;
+  }
+  .textBox dt {
+    padding-right: 2vw;
+  }
+
+  .textBox dt span {
+    padding: 1vw 2vw .5vw;
+    border-radius: 5vw;
+    line-height: 4.3vw;
+  }
+  .textBox dd li {
+    margin-top: 2vw;
+  }
+  .textBox dd li::before {
+    margin-right: .5vw;
+  }
+
+  .ps01G {
+    margin-top: -8vw;
   }
   [class^="ps01_"] > span, [class^="ps02_"] > span {
     font-size: 3.8vw;
@@ -479,7 +576,7 @@ onMounted(() => {
   }
 
   .BtnEvent {
-    border: .4vw solid #fff;
+    border: .4vw solid #801c33;
     padding: 2vw 4vw;
     font-size: 4vw;
   }
