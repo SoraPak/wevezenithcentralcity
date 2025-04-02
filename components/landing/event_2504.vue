@@ -434,21 +434,21 @@ onMounted(() => {
   }
   .event2504_inner {
     max-width: 840px;
-    padding: 30px 0;
+    padding: 10vw 0 15vw;
   }
   .event2504_inner > .bgC01,
   .event2504_inner > .bgC02 {
-    width: 94vw;
-    height: 94vw;
+    width: 87vw;
+    height: 87vw;
     
   }
   .event2504_inner > .bgC01 {
-    left: -33vw;
+    left: -30vw;
     top: -40vw;
   }
   .event2504_inner > .bgC02 {
-    right: -35vw;
-    top: -69vw;
+    right: -33vw;
+    top: -61vw;
   } 
 
   .ttl {

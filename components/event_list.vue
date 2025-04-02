@@ -13,6 +13,7 @@
 </template>
 <script setup>
   const eventList = [
+    { id: '2501', link: '/event/2501', img: '/og_img_2501.png' },
     { id: '2412_2', link: '/event/2412_2', img: '/og_img_2412_2.png' },
     { id: '2412', link: '/event/2412', img: '/og_img_2412.png' },
     { id: '2411', link: '/event/2411', img: '/og_img_2411.png' },

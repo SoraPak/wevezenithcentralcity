@@ -1,12 +1,12 @@
 <template>
   <SeoMeta 
     title="행사 - 학정역 두산위브더제니스 센트럴시티"
-    description="박소라 과장 찾아오시면 행운의 경품 복권 + 전자제품 추첨권을 드립니다!"
+    description="싱그러운 봄, 박소라 과장 찾아오시면 행운의 경품 복권 드립니다!"
     image="https://xn--hu1bq8p65bh1h6oby7bg90c.kr/og_img_event_list.png"
     url="https://xn--hu1bq8p65bh1h6oby7bg90c.kr/event_list"
   />
   <div class="eventList">
-    <Event_2501 />
+    <Event_2504 />
     <Event_list />
     <Event_nav :hideEventList="true" />
   </div>
@@ -64,7 +64,7 @@
 <script setup>
 import { useHead } from '#imports';
 import SeoMeta from '~/components/seometa.vue';
-import Event_2501 from '~/components/landing/event_2501.vue';
+import Event_2504 from '~/components/landing/event_2504.vue';
 import Event_nav from '~/components/event_nav.vue';
 import Event_list from '~/components/event_list.vue';
 
@@ -72,25 +72,18 @@ useHead({
   style: [
     {
       children: `
-        .event2501 {
-          background-position: center -150px !important;
+        .event2504 {
+          margin-top: -104px !important;
         }
-        .event2501::before {
+        .event2504::before  {
           display: none !important;
         }
-        .event2501_inner {
-          margin-top: -100px !important;
+        .BtnEvent {
+          display: none !important;
         }
         @media only screen and (max-width: 950px) {
-          .event2501 {
-            margin-top: 0 !important;
-            background-position: center -50vw !important;
-          }
-          .event2501_inner {
-            margin-top: -12vw !important;
-          }
-          .sec02 {
-            padding-bottom: 12vw !important;
+          .event2504 {
+            margin-top: -10vw !important;
           }
         }
       `
