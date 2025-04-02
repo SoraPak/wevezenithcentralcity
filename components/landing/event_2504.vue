@@ -50,7 +50,7 @@
         </div>
       </div>
       <p class="ps01_remark">※이미지는 참고용으로 실제와 다를 수 있으며, 사정에 따라 상품이 변경될 수 있습니다.</p>
-      <nuxt-link to="/event_list#list" class="BtnEvent">종료된 행사</nuxt-link>
+      <nuxt-link to="/event_list#list" class="BtnEvent">종료된 행사 보기</nuxt-link>
     </div>
   </section>
 </template>
