@@ -245,6 +245,7 @@
   position: absolute;
   right: -130px;
   top: -30px;
+  pointer-events: none;
 }
 .career {
   text-align: left;
