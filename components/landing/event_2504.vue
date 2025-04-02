@@ -3,15 +3,17 @@
     <span class="bgC01"></span>
     <span class="bgC02"></span>
     <div class="event2504_inner">
+      <span class="bgC01"></span>
+      <span class="bgC02"></span>
       <h1 class="ttl">
        <span class="ttlT">
-        <img loading="lazy" src="/images/landing/event(2504)/ttl01.png" width="152" alt="HELLO" />
-        <img loading="lazy" src="/images/landing/event(2504)/ttl02.png" width="305" alt="Spring" />
+        <img loading="lazy" src="/images/landing/event(2504)/ttl01.png" width="116" alt="HELLO" />
+        <img loading="lazy" src="/images/landing/event(2504)/ttl02.png" width="233" alt="Spring" />
        </span>
-       <img class="ttlB" loading="lazy" src="/images/logo.svg" width="384" alt="두산위브더제니스 센트럴시티">
+       <img class="ttlB" loading="lazy" src="/images/logo.svg" width="314" alt="두산위브더제니스 센트럴시티">
       </h1>
       <div class="sec01">
-        <p class="text01"><img loading="lazy" src="/images/landing/event(2504)/sec01_text01.png" width="449" alt="박소라 과장 찾아오시면 행운의 경품 복권을 드립니다!!" /></p>
+        <p class="text01"><img loading="lazy" src="/images/landing/event(2504)/sec01_text01.png" width="533" alt="박소라 과장 찾아오시면 행운의 경품 복권을 드립니다!!" /></p>
         <div class="textBox">
           <dl>
             <dt><span>배포 장소</span></dt>
@@ -48,7 +50,7 @@
         </div>
       </div>
       <p class="ps01_remark">※이미지는 참고용으로 실제와 다를 수 있으며, 사정에 따라 상품이 변경될 수 있습니다.</p>
-      
+      <nuxt-link to="/event_list#list" class="BtnEvent">종료된 행사</nuxt-link>
     </div>
   </section>
 </template>
@@ -169,7 +171,8 @@ onMounted(() => {
     z-index: 2;
   }
 
-  .bgC01, .bgC02 {
+  .event2504 > .bgC01,
+  .event2504 > .bgC02 {
     display: block;
     position: absolute;
     top: 0;
@@ -177,28 +180,70 @@ onMounted(() => {
     left: 0;
     bottom: 0;
   }
-  .bgC01 {
+  .event2504 > .bgC01 {
     background: url("/images/landing/event(2504)/bg_c01.png") repeat-x center 40px;
-    background-size: 1990px auto;
+    background-size: 2280px auto;
+  }
+  .event2504 > .bgC02 {
+    background: url("/images/landing/event(2504)/bg_c02.png") repeat-x 20px bottom;
+    background-size: 1980px auto;
   }
   .event2504_inner {
     position: relative;
     margin: 0 auto;
     max-width: 840px;
+    padding: 30px 0;
+  }
+  .event2504_inner > .bgC01,
+  .event2504_inner > .bgC02 {
+    background: url("/images/landing/event(2504)/bg_f.png") no-repeat left top;
+    background-size: 100% auto;
+    width: 546px;
+    height: 546px;
+    position: absolute;
+    
+  }
+  .event2504_inner > .bgC01 {
+    left: -250px;
+    top: -150px;
+  }
+  .event2504_inner > .bgC02 {
+    transform: scaleX(-1) rotate(-20deg);
+    right: -230px;
+    top: -350px;
   }
   .ttl {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+  }
+  .ttl .ttlT {
+    display: flex;
+    align-items: center;
+  }
+  .ttl .ttlT > img:first-child {
+    margin-right: 20px;
+  }
+  .ttl .ttlB {
+    background: #fff;
+    padding: 0 2px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  .sec01 .text01 {
+    text-align: center;
+    margin-top: 30px;
   }
   .textBox {
     font-family: "Jua", sans-serif;
-    font-size: 22px;
+    font-size: 24px;
     background: #cb4a718c;
     padding: 24px;
     display: table;
     margin: 0 auto;
     border-radius: 15px;
+    margin-top: 20px;
   }
   .textBox dl{
   display: table-row;
@@ -232,6 +277,7 @@ onMounted(() => {
   }
   .textBox dd li::before {
     content: "・";
+    margin-right: 10px;
   }
   .textBox dd li:first-child {
     margin-top: 0;
@@ -269,8 +315,8 @@ onMounted(() => {
     height: 184px;
     background: url("/images/landing/event(2504)/ps01_03.png") no-repeat center top;
     background-size: 100% auto;
-    left: -70px;
-    top: 80px;
+    left: 10px;
+    top: -53px;
   }
   .ps01_03 > span {
     bottom: 30px;
@@ -282,7 +328,7 @@ onMounted(() => {
     background: url("/images/landing/event(2504)/ps01_04.png") no-repeat center top;
     background-size: 100% auto;
     left: 130px;
-    top: 130px;
+    top: 70px;
     z-index: 1;
   }
   .ps01_04 > span {
@@ -300,7 +346,7 @@ onMounted(() => {
   }
   .ps01_05 > span {
     width: 100%;
-    bottom: -10px;
+    bottom: -5px;
     left: 0;
   }
   .ps01_06 {
@@ -308,8 +354,8 @@ onMounted(() => {
     height: 177px;
     background: url("/images/landing/event(2504)/ps01_06.png") no-repeat center top;
     background-size: 100% auto;
-    right: 120px;
-    top: 140px;
+    right: 130px;
+    top: 49px;
     z-index: 1;
   }
   .ps01_06 > span {
@@ -322,26 +368,37 @@ onMounted(() => {
     height: 175px;
     background: url("/images/landing/event(2504)/ps01_07.png") no-repeat center top;
     background-size: 100% auto;
-    right: -97px;
-    top: 114px;
+    right: -37px;
+    top: -36px;
+    z-index: 1;
   }
   .ps01_07 > span {
     width: 100%;
-    left: -40px;
-    bottom: 31px;
+    left: -130px;
+    bottom: 111px;
   }
 
   .ps01_remark {
     font-size: 15px;
     text-align: center;
     width: 100%;
-    margin-top: 326px;
+    margin-top: 296px;
     position: relative;
     z-index: 1;
     word-break: keep-all;
     line-height: 140%;
+    color: #801c33;
   }
 
+  .BtnEvent {
+  border: 2px solid #801c33;
+  padding: 10px 20px;
+  color: #801c33;
+  position: relative;
+  z-index: 1;
+  display: table;
+  margin: 20px auto;
+}
 
 
 /* sp */
@@ -419,6 +476,12 @@ onMounted(() => {
     margin: 84vw auto 0;
     padding: 0 2vw;
     width: 80vw;
+  }
+
+  .BtnEvent {
+    border: .4vw solid #fff;
+    padding: 2vw 4vw;
+    font-size: 4vw;
   }
 }
 </style>
