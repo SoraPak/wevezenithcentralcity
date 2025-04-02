@@ -474,7 +474,7 @@ onMounted(() => {
   }
 
   .sec01 .text01 {
-    margin-top: 4vw;
+    margin-top: 9vw;
   }
   .sec01 .text01 > img {
     width: 85vw;
