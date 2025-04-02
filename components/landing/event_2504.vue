@@ -545,12 +545,12 @@ onMounted(() => {
     top: 0;
   }
   .ps01_05 > span {
-    bottom: 13vw;
+    bottom: 14vw;
   }
   .ps01_06 {
     z-index: 1;
     width: 48vw;
-    top: 38vw;
+    top: 43vw;
     right: -7vw;
     height: 36vw;
   }
