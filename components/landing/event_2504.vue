@@ -557,8 +557,8 @@ onMounted(() => {
   }
   .textBox dd li {
     margin-top: 6px;
-    text-indent: -1.5rem;
-    margin-left: 1.5rem;
+    text-indent: -.5rem;
+    margin-left: .5rem;
   }
   .textBox dd li::before {
     content: "・";
