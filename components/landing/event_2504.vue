@@ -1,16 +1,242 @@
+<style scoped>
+  .fSet, .ffSet  {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+  }
+  .fSet [class^="f_"] {
+    position: absolute;
+    width: 77px;
+    height: 77px;
+    background-size: 100% auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .fSet .f_01 {
+    background-image: url("/images/landing/event(2504)/f01.png");
+    left: 90px;
+    top: 200px;
+  }
+  .fSet .f_02 {
+    background-image: url("/images/landing/event(2504)/f02.png");
+    left: 290px;
+    top: 318px;
+  }
+  .fSet .f_03 {
+    background-image: url("/images/landing/event(2504)/f03.png");
+    left: -100px;
+    top: 478px;
+  }
+  .fSet .f_04 {
+    background-image: url("/images/landing/event(2504)/f04.png");
+    right: 60px;
+    top: 798px;
+  }
+  .fSet .f_05 {
+    background-image: url("/images/landing/event(2504)/f05.png");
+    right: 460px;
+    top: 948px;
+  }
+  .fSet .f_06 {
+    background-image: url("/images/landing/event(2504)/f06.png");
+    right: -70px;
+    top: 248px;
+  }
+  .fSet .f_07 {
+    background-image: url("/images/landing/event(2504)/f06.png");
+    left: 200px;
+    top: -2px;
+  }
+  .fSet .f_08 {
+    background-image: url("/images/landing/event(2504)/f01.png");
+    right: -190px;
+    top: 48px;
+  }
+  .fSet .f_09 {
+    background-image: url("/images/landing/event(2504)/f02.png");
+    right: -330px;
+    top: 488px;
+  }
+  .fSet .f_10 {
+    background-image: url("/images/landing/event(2504)/f03.png");
+    right: -180px;
+    top: 878px;
+  }
+  .fSet .f_11 {
+    background-image: url("/images/landing/event(2504)/f04.png");
+    left: -390px;
+    top: 398px;
+  }
+  .fSet .f_12 {
+    background-image: url("/images/landing/event(2504)/f05.png");
+    left: -290px;
+    top: 78px;
+  }
+  .fSet .f_13 {
+    background-image: url("/images/landing/event(2504)/f06.png");
+    left: 170px;
+    top: 838px;
+  }
+  .fSet .f_14 {
+    background-image: url("/images/landing/event(2504)/f01.png");
+    right: -160px;
+    top: 418px;
+  }
+  .ffSet {
+    z-index: 2;
+  }
+  .ffSet [class^="f_"] {
+    position: absolute;
+    width: 245px;
+    height: 245px;
+    background-size: 100% auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .ffSet .f_01 {
+    background-image: url("/images/landing/event(2504)/f_f01.png");
+    left: -390px;
+    top: -90px;
+  }
+  .ffSet .f_02 {
+    background-image: url("/images/landing/event(2504)/f_f02.png");
+    right: -30px;
+    top: 198px;
+  }
+  .ffSet .f_03 {
+    background-image: url("/images/landing/event(2504)/f_f03.png");
+    left: 180px;
+    top: 618px;
+  }
+  .ffSet .f_04 {
+    background-image: url("/images/landing/event(2504)/f_f04.png");
+    right: 10px;
+    top: 858px;
+  }
+  /* sp */
+  @media only screen and (max-width: 950px) {
+    .fSet [class^="f_"] {
+      width: 12vw;
+      height: 12vw;
+    }
+    .fSet .f_01 {
+      left: 15vw;
+      top: 28vw;
+    }
+    .fSet .f_02 {
+      left: 33vw;
+      top: 74vw;
+    }
+    .fSet .f_03 {
+      left: -3vw;
+      top: 55vw;
+    }
+    .fSet .f_04 {
+      right: -3vw;
+      top: 70vw;
+    }
+    .fSet .f_05 {
+      right: 80vw;
+      top: 230vw;
+    }
+    .fSet .f_06 {
+      right: 24vw;
+      top: 130vw;
+    }
+    .fSet .f_07 {
+      left: 40vw;
+      top: -7vw;
+    }
+    .fSet .f_08 {
+      right: 15vw;
+      top: 12vw;
+    }
+    .fSet .f_09 {
+      right: 14vw;
+      top: 150vw;
+    }
+    .fSet .f_10 {
+      right: 23vw;
+      top: 240vw;
+    }
+    .fSet .f_11 {
+      left: 10vw;
+      top: 120vw;
+    }
+    .fSet .f_12 {
+      left: 58vw;
+      top: 46vw;
+    }
+    .fSet .f_13 {
+      left: 24vw;
+      top: 160vw;
+    }
+    .fSet .f_14 {
+      right: 40vw;
+      top: 204vw;
+    }
+
+    .ffSet [class^="f_"] {
+      width: 34vw;
+      height: 34vw;
+    }
+
+    .ffSet .f_01 {
+      left: -16vw;
+      top: -19vw;
+    }
+    .ffSet .f_02 {
+      right: -15vw;
+      top: 40vw;
+    }
+    .ffSet .f_03 {
+      left: 20vw;
+      top: 160vw;
+    }
+    .ffSet .f_04 {
+      right: 20vw;
+      top: 236vw;
+    }
+  }
+</style>
 <template>
   <section id="event" class="event2504">
     <span class="bgC01"></span>
     <span class="bgC02"></span>
     <div class="event2504_inner">
+      <div class="fSet">
+        <span class="f_01"></span>
+        <span class="f_02"></span>
+        <span class="f_03"></span>
+        <span class="f_04"></span>
+        <span class="f_05"></span>
+        <span class="f_06"></span>
+        <span class="f_07"></span>
+        <span class="f_08"></span>
+        <span class="f_09"></span>
+        <span class="f_10"></span>
+        <span class="f_11"></span>
+        <span class="f_12"></span>
+        <span class="f_13"></span>
+        <span class="f_14"></span>
+      </div>
       <span class="bgC01"></span>
       <span class="bgC02"></span>
+      <div class="ffSet">
+        <span class="f_01"></span>
+        <span class="f_02"></span>
+        <span class="f_03"></span>
+        <span class="f_04"></span>
+      </div>
       <h1 class="ttl">
-       <span class="ttlT">
-        <img loading="lazy" src="/images/landing/event(2504)/ttl01.png" width="116" alt="HELLO" />
-        <img loading="lazy" src="/images/landing/event(2504)/ttl02.png" width="233" alt="Spring" />
-       </span>
-       <img class="ttlB" loading="lazy" src="/images/logo.svg" width="314" alt="두산위브더제니스 센트럴시티">
+        <span class="ttlT">
+          <img loading="lazy" src="/images/landing/event(2504)/ttl01.png" width="116" alt="HELLO" />
+          <img loading="lazy" src="/images/landing/event(2504)/ttl02.png" width="233" alt="Spring" />
+        </span>
+        <img class="ttlB" loading="lazy" src="/images/logo.svg" width="314" alt="두산위브더제니스 센트럴시티">
       </h1>
       <div class="sec01">
         <p class="text01"><img loading="lazy" src="/images/landing/event(2504)/sec01_text01.png" width="533" alt="박소라 과장 찾아오시면 행운의 경품 복권을 드립니다!!" /></p>
@@ -168,7 +394,7 @@ onMounted(() => {
     width: 100%;
     background: url("/images/landing/event(2504)/bg.png") no-repeat center bottom;
     background-size: 2688px auto;
-    z-index: 2;
+    z-index: 10;
   }
 
   .event2504 > .bgC01,
@@ -219,6 +445,7 @@ onMounted(() => {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
   }
   .ttl .ttlT {
     display: flex;
@@ -232,6 +459,9 @@ onMounted(() => {
     padding: 0 2px;
     border-radius: 5px;
     margin-top: 10px;
+  }
+  .sec01 {
+    position: relative;
   }
   .sec01 .text01 {
     text-align: center;
