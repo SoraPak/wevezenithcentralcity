@@ -789,6 +789,8 @@ onMounted(() => {
   }
   .textBox dd li {
     margin-top: 2vw;
+    margin-left: 5vw;
+    text-indent: -5vw;
   }
   .textBox dd li::before {
     margin-right: .5vw;
