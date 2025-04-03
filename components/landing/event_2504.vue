@@ -729,9 +729,6 @@ onMounted(() => {
     top: -61vw;
   } 
 
-  .ttl {
-    position: relative;
-  }
   .ttl .ttlT {
     flex-direction: column;
     
@@ -767,12 +764,22 @@ onMounted(() => {
     word-break: keep-all;
   }
 
+  .textBox dl,
+  .textBox dt,
+  .textBox dd {
+    display: block;
+  }
+
   .textBox dt,
   .textBox dd {
     padding-bottom: 3vw;
   }
   .textBox dt {
     padding-right: 2vw;
+  }
+
+  .textBox dl:last-child dt {
+    padding-bottom: 3vw;
   }
 
   .textBox dt span {
