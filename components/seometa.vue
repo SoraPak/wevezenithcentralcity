@@ -47,11 +47,6 @@
       gtag('config', 'G-L9HLE0RYGD');
     </Script>
 
-    <!-- Boraware Script -->
-    <Script hid="boraware-script" type="text/javascript">
-      var protect_id = 'h574';
-    </Script>
-    <Script src="//script.boraware.kr/protect_script_v2.js" async />
   </Head>
 </template>
 

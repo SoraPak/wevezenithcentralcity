@@ -98,23 +98,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           `,
           type: "text/javascript"
         },
-        // Boraware Script 추가
-        {
-          hid: 'boraware-script',
-          innerHTML: `
-            var protect_id = 'h574';
-          `,
-          type: 'text/javascript'
-        },
-        {
-          src: '//script.boraware.kr/protect_script_v2.js',
-          async: true
-        }
-      ],
-      __dangerouslyDisableSanitizersByTagID: {
-        'gtag-config': ['innerHTML'],
-        'boraware-script': ['innerHTML']
-      }
     }
   },
   modules: [
