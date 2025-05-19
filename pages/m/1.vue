@@ -4,6 +4,7 @@
     description="박소라 과장과 함께하는 모델하우스 방문 이벤트! 2025년 5월 1일(목) 부터 상품 소진 시 까지"
     image="https://xn--hu1bq8p65bh1h6oby7bg90c.kr/og_img_2505.png"
     url="https://xn--hu1bq8p65bh1h6oby7bg90c.kr/event/2505"
+    width="100%"
   />
   <div class="mailing">
     <div class="mailing_inner">
