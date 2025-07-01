@@ -22,10 +22,10 @@
       <h1 class="ttl">
         <span class="ttlG1">
           <img src="/images/landing/meal/ttl01.png" width="402" alt="역시 제니스 프리미엄">
-          <img src="/images/landing/meal/ttl02.png" width="187" alt="대구최초">
+          <img src="/images/landing/meal/ttl02.png" width="187" alt="칠곡최초">
         </span>
         <span class="ttlG2">
-          <img src="/images/landing/meal/ttl03.png" width="461" alt="조식,중식,석식 주는">
+          <img src="/images/landing/meal/ttl03.png" width="461" alt="조식,중식,석식 밥주는">
           <img src="/images/landing/meal/ttl04.png" width="381" alt="최고급 아파트">
         </span>
       </h1>
