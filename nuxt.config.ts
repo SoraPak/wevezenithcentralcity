@@ -37,7 +37,7 @@ export default defineNuxtConfig({
         { name: 'viewport', content: 'width=device-width,initial-scale=1' },
         { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
         { property: 'og:type', content: 'website' },
-        { name: 'keywords', content: '두산위브,제니스,학정동,학정역,분양,모델하우스,견본하우스,칠곡,대구,조식 중식 석식 서비스, 밥주는 아파트, 아침 점심 저녁 주는 아파트' },
+        { name: 'keywords', content: '두산위브,제니스,학정동,학정역,분양,모델하우스,견본하우스,칠곡,대구,식사 서비스, 밥주는 아파트, 아침 점심 저녁 주는 아파트' },
         { name: 'description', content: '학정역, 칠곡경대병원역 더블 역세권, 중도금 무이자, 전매 무제한, 계약금500만원! 모델하우스에서 박소라 과정을 찾아주시면 푸짐한 사은품 증정' },
         { property: 'og:site_name', content: '학정역 두산위브더제니스 센트럴시티' },
         { property: 'og:title', content: '학정역 두산위브더제니스 센트럴시티' },

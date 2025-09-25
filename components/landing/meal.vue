@@ -25,8 +25,8 @@
           <img src="/images/landing/meal/ttl02.png" width="187" alt="칠곡최초">
         </span>
         <span class="ttlG2">
-          <img src="/images/landing/meal/ttl03.png" width="461" alt="단지내 입주민 전용">
-          <img src="/images/landing/meal/ttl04.png" width="381" alt="레스토랑 운영">
+          <img src="/images/landing/meal/ttl03.png" width="480" alt="단지내 입주민 전용">
+          <img src="/images/landing/meal/ttl04.png" width="350" alt="레스토랑 운영">
         </span>
       </h1>
       <div class="sora">
@@ -449,14 +449,14 @@ onMounted(() => {
     margin-top: -21vw;
   }
   .ttlG2 > img:nth-child(1){
-    width: 80vw;
+    width: 90vw;
     display: block;
     margin: 14vw auto 0;
   }
   .ttlG2 > img:nth-child(2){
     width: 69vw;
     display: block;
-    margin: -6vw auto 0;
+    margin: -11vw auto 0;
   }
   .sora {
     width: 70vw;
