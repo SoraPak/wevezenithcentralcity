@@ -25,8 +25,8 @@
           <img src="/images/landing/meal/ttl02.png" width="187" alt="칠곡최초">
         </span>
         <span class="ttlG2">
-          <img src="/images/landing/meal/ttl03.png" width="461" alt="조식,중식,석식 밥주는">
-          <img src="/images/landing/meal/ttl04.png" width="381" alt="최고급 아파트">
+          <img src="/images/landing/meal/ttl03.png" width="461" alt="단지내 입주민 전용">
+          <img src="/images/landing/meal/ttl04.png" width="381" alt="레스토랑 운영">
         </span>
       </h1>
       <div class="sora">
