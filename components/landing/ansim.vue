@@ -201,7 +201,7 @@ onMounted(() => {
   }
   .img01 {
     right: -179px;
-    top: -430px;
+    top: -460px;
   }
   .spImg01 {
     display: none;
@@ -390,9 +390,9 @@ onMounted(() => {
   }
   .spImg01 {
     display: block;
-    right: -12vw;
-    top: 42vw;
-    width: 105vw;
+    right: -3vw;
+    top: 39vw;
+    width: 100vw;
   }
   .text01 {
     left: 0;
