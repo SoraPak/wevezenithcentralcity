@@ -15,7 +15,7 @@
     <Reviews class="reviews" />
     <Sp_reviews class="sp_reviews" />
     <!-- Newyear / -->
-    <Event_2504 />
+    <!-- Event_2504 / -->
     <Guide/>
     <G_footer />
   </div>

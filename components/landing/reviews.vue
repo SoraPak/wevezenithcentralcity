@@ -374,7 +374,7 @@ onMounted(() => {
   background: #be9167;
   color: #fff;
   padding-top: 30px;
-  padding-bottom: 40px;
+  padding-bottom: 120px;
   position: relative;
   z-index: 13;
   margin-bottom: 0;

@@ -1075,7 +1075,7 @@ onMounted(() => {
     display: none;
   }
   .guide {
-    margin-top: 52vw;
+    margin-top: 75vw;
   }
 
   .guide .bgT {
