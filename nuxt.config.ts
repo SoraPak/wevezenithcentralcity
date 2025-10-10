@@ -98,6 +98,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           `,
           type: "text/javascript"
         },
+        // ######## BORAWARE LOG SCRIPT.
+        {
+          id: 'boraware-protect',
+          type: 'text/javascript',
+          children: `var protect_id = 'h574';`
+        },
+        {
+          src: 'https://script.boraware.kr/protect_script_v2.js',
+          async: true,
+          type: 'text/javascript'
+        }
+
+        // ######## END OF BORAWARE LOG SCRIPT
       ],
       __dangerouslyDisableSanitizersByTagID: {
         'gtag-config': ['innerHTML'],
