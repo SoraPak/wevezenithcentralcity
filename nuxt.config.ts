@@ -101,19 +101,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         // ######## BORAWARE LOG SCRIPT.
         {
           id: 'boraware-protect',
+          innerHTML: `window.protect_id='h574';`,
           type: 'text/javascript',
-          children: `var protect_id = 'h574';`
+          tagPriority: 'critical' 
         },
         {
           src: 'https://script.boraware.kr/protect_script_v2.js',
           async: true,
-          type: 'text/javascript'
+          type: 'text/javascript',
+          tagPosition: 'bodyClose'
         }
 
         // ######## END OF BORAWARE LOG SCRIPT
       ],
       __dangerouslyDisableSanitizersByTagID: {
         'gtag-config': ['innerHTML'],
+        'boraware-protect': ['innerHTML']
       }
     }
   },
